@@ -12,6 +12,7 @@ import { NavigationProvider, useSafeNavigation } from './contexts/NavigationCont
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
 import SplashScreen from './components/SplashScreen.tsx';
+import EditingSystem from './components/EditingSystem.tsx';
 
 // Direct import all page components
 import HomePage from './components/HomePage.tsx';
@@ -435,6 +436,30 @@ const AppContent: React.FC = () => {
     const handleMediaUpdate = useCallback((key: string, url: string) => {
         setMediaContent(prev => ({ ...prev, [key]: url }));
     }, []);
+
+    const handleSaveChanges = useCallback((changes: Record<string, string>) => {
+        setMediaContent(prev => ({ ...prev, ...changes }));
+        
+        // Generate code for persistent changes
+        const updatedMedia = { ...mediaContent, ...changes };
+        const codeUpdate = `
+// Updated Media Content - Replace in App.tsx initialMediaContent
+const initialMediaContent: MediaContent = {
+${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('\n')}
+};
+        `.trim();
+        
+        // Log to console for now (in production, this could save to a file)
+        console.log('🔄 Media Content Update Code:');
+        console.log(codeUpdate);
+        
+        // Show success message
+        alert('Changes saved! Check the browser console for the code to update your App.tsx file.');
+    }, [mediaContent]);
+
+    const toggleEditMode = useCallback(() => {
+        setIsEditMode(prev => !prev);
+    }, []);
     
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -462,12 +487,12 @@ const AppContent: React.FC = () => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.ctrlKey && e.key === 'e') {
                 e.preventDefault();
-                setIsEditMode(prev => !prev);
+                toggleEditMode();
             }
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, []);
+    }, [toggleEditMode]);
 
     const pageProps = { mediaContent, isEditMode, onMediaUpdate: handleMediaUpdate };
 
@@ -527,13 +552,14 @@ const AppContent: React.FC = () => {
     return (
         <div className="bg-brand-bg-main text-brand-text-primary font-sans transition-colors duration-300 min-h-screen">
             {mountSplash && <SplashScreen isVisible={isSplashVisible} />}
+            <EditingSystem 
+                isEditMode={isEditMode}
+                onToggleEditMode={toggleEditMode}
+                onSaveChanges={handleSaveChanges}
+                mediaContent={mediaContent}
+            />
             <Header />
             <main className="pt-[88px] animate-page-fade max-content-width-lg" key={path}>
-                {isEditMode && (
-                    <div className="fixed bottom-4 right-4 bg-brand-secondary text-white px-4 py-2 rounded-full z-50 shadow-lg animate-pulse">
-                        Edit Mode ON (Ctrl+E)
-                    </div>
-                )}
                 {renderPage()}
             </main>
             <Footer />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MediaEditModal from './MediaEditModal.tsx';
+import MediaEditModal from './EnhancedMediaEditModal.tsx';
 import { EditIcon } from './icons.tsx';
 
 interface EditableMediaProps {
@@ -82,7 +82,9 @@ const EditableMedia: React.FC<EditableMediaProps> = ({
       {isModalOpen && (
         <MediaEditModal
           onClose={() => setIsModalOpen(false)}
-          onSave={handleSave}
+          onSave={(url, focalPoint) => handleSave(url)}
+          currentUrl={mediaUrl}
+          mediaKey={mediaKey}
         />
       )}
     </>

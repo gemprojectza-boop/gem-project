@@ -284,11 +284,29 @@
         }
       }
       
-      /* --- DOG PAGE RED HEADER OVERRIDES --- */
+      /* --- DOG PAGE RED THEME OVERRIDES --- */
       .dog-page-override {
-        --color-text-heading: red !important;
+        --color-text-heading: #dc2626 !important;
+        --brand-primary: #dc2626 !important;
       }
-      /* Red headings and text only on white/light backgrounds */
+      
+      /* Ensure body text stays readable (black) */
+      .dog-page-override p,
+      .dog-page-override li,
+      .dog-page-override span:not([class*="title"]):not([class*="heading"]),
+      .dog-page-override div:not([class*="title"]):not([class*="heading"]) {
+        color: var(--color-text-base) !important;
+      }
+      
+      /* Navigation should not be affected */
+      .dog-page-override nav,
+      .dog-page-override nav *,
+      .dog-page-override header,
+      .dog-page-override header * {
+        color: inherit;
+      }
+      
+      /* RED headings and text for ALL elements by default */
       .dog-page-override h1,
       .dog-page-override h2,
       .dog-page-override h3,
@@ -302,57 +320,32 @@
       .dog-page-override .text-blue-600,
       .dog-page-override .text-blue-700,
       .dog-page-override .text-blue-800,
-      .dog-page-override .text-brand-text-primary,
-      .dog-page-override [style*="color: #00AEEF"],
-      .dog-page-override [style*="color: blue"],
-      .dog-page-override .font-black,
-      .dog-page-override .font-bold {
-          color: red !important;
+      .dog-page-override .font-black:not(button):not(.btn):not(.button),
+      .dog-page-override .font-bold:not(button):not(.btn):not(.button),
+      .dog-page-override .font-semibold:not(button):not(.btn):not(.button),
+      .dog-page-override .font-extrabold:not(button):not(.btn):not(.button),
+      .dog-page-override .font-medium:not(button):not(.btn):not(.button) {
+          color: #dc2626 !important;
       }
+      
+      /* Links in headings should also be red */
       .dog-page-override h1 a,
       .dog-page-override h2 a,
       .dog-page-override h3 a,
       .dog-page-override h4 a,
       .dog-page-override h5 a,
-      .dog-page-override h6 a {
-          color: red !important;
+      .dog-page-override h6 a,
+      .dog-page-override [class*="title"] a,
+      .dog-page-override [class*="heading"] a {
+          color: #dc2626 !important;
       }
-      /* Force all headings to be red regardless of other classes */
-      .dog-page-override h1,
-      .dog-page-override h2,
-      .dog-page-override h3,
-      .dog-page-override h4,
-      .dog-page-override h5,
-      .dog-page-override h6 {
-          color: red !important;
-      }
-      /* Override any blue colors specifically */
-      .dog-page-override * {
-          --brand-primary: #dc2626 !important; /* Override CSS variable */
-      }
-      .dog-page-override *[style*="color"][style*="#00AEEF"],
-      .dog-page-override *[style*="color"][style*="blue"] {
-          color: red !important;
-      }
-      /* Override red text to white on red backgrounds for readability */
-      .dog-page-override .bg-brand-primary h1,
-      .dog-page-override .bg-brand-primary h2,
-      .dog-page-override .bg-brand-primary h3,
-      .dog-page-override .bg-brand-primary h4,
-      .dog-page-override .bg-brand-primary h5,
-      .dog-page-override .bg-brand-primary h6,
-      .dog-page-override .bg-brand-primary [class*="title"],
-      .dog-page-override .bg-brand-primary [class*="heading"],
-      .dog-page-override .bg-brand-primary .text-brand-primary,
-      .dog-page-override .bg-brand-primary .text-sanctuary-purple {
-          color: white !important;
-      }
+      
       /* Override background colors for dog pages */
       .dog-page-override .bg-brand-primary {
-          background-color: #dc2626 !important; /* red-600 */
+          background-color: #dc2626 !important;
       }
       .dog-page-override .hover\:bg-brand-primary:hover {
-          background-color: #b91c1c !important; /* red-700 */
+          background-color: #b91c1c !important;
       }
       .dog-page-override .bg-brand-primary\/10 {
           background-color: rgba(220, 38, 38, 0.1) !important;
@@ -360,25 +353,47 @@
       .dog-page-override .bg-brand-primary\/20 {
           background-color: rgba(220, 38, 38, 0.2) !important;
       }
-      /* Make text white on red backgrounds for better readability */
-      .dog-page-override .bg-brand-primary,
-      .dog-page-override .bg-brand-primary h1,
-      .dog-page-override .bg-brand-primary h2,
-      .dog-page-override .bg-brand-primary h3,
-      .dog-page-override .bg-brand-primary h4,
-      .dog-page-override .bg-brand-primary h5,
-      .dog-page-override .bg-brand-primary h6,
-      .dog-page-override .bg-brand-primary p,
-      .dog-page-override .bg-brand-primary span,
-      .dog-page-override .bg-brand-primary div {
-          color: white !important;
+
+      /* Ensure button text is always readable */
+      .dog-page-override button,
+      .dog-page-override .btn,
+      .dog-page-override .button {
+          color: inherit !important;
       }
 
-      /* --- HORSE PAGE GREEN HEADER OVERRIDES --- */
-      .horse-page-override {
-        --color-text-heading: green !important;
+      .dog-page-override button.bg-brand-primary,
+      .dog-page-override .btn.bg-brand-primary,
+      .dog-page-override .button.bg-brand-primary,
+      .dog-page-override button[class*="bg-red"],
+      .dog-page-override .btn[class*="bg-red"],
+      .dog-page-override .button[class*="bg-red"] {
+          color: white !important;
       }
-      /* Green headings and text only on white/light backgrounds */
+      
+
+      /* --- HORSE PAGE GREEN THEME OVERRIDES --- */
+      .horse-page-override {
+        --color-text-heading: #16a34a !important;
+        --brand-primary: #16a34a !important;
+      }
+      
+      /* Ensure body text stays readable (black) */
+      .horse-page-override p,
+      .horse-page-override li,
+      .horse-page-override span:not([class*="title"]):not([class*="heading"]),
+      .horse-page-override div:not([class*="title"]):not([class*="heading"]) {
+        color: var(--color-text-base) !important;
+      }
+      
+      /* Navigation should not be affected */
+      .horse-page-override nav,
+      .horse-page-override nav *,
+      .horse-page-override header,
+      .horse-page-override header * {
+        color: inherit;
+      }
+      
+      /* GREEN headings and text for ALL elements by default */
       .horse-page-override h1,
       .horse-page-override h2,
       .horse-page-override h3,
@@ -393,58 +408,32 @@
       .horse-page-override .text-blue-600,
       .horse-page-override .text-blue-700,
       .horse-page-override .text-blue-800,
-      .horse-page-override .text-brand-text-primary,
-      .horse-page-override [style*="color: #00AEEF"],
-      .horse-page-override [style*="color: blue"],
-      .horse-page-override .font-black,
-      .horse-page-override .font-bold {
-          color: green !important;
+      .horse-page-override .font-black:not(button):not(.btn):not(.button),
+      .horse-page-override .font-bold:not(button):not(.btn):not(.button),
+      .horse-page-override .font-semibold:not(button):not(.btn):not(.button),
+      .horse-page-override .font-extrabold:not(button):not(.btn):not(.button),
+      .horse-page-override .font-medium:not(button):not(.btn):not(.button) {
+          color: #16a34a !important;
       }
+      
+      /* Links in headings should also be green */
       .horse-page-override h1 a,
       .horse-page-override h2 a,
       .horse-page-override h3 a,
       .horse-page-override h4 a,
       .horse-page-override h5 a,
-      .horse-page-override h6 a {
-          color: green !important;
+      .horse-page-override h6 a,
+      .horse-page-override [class*="title"] a,
+      .horse-page-override [class*="heading"] a {
+          color: #16a34a !important;
       }
-      /* Force all headings to be green regardless of other classes */
-      .horse-page-override h1,
-      .horse-page-override h2,
-      .horse-page-override h3,
-      .horse-page-override h4,
-      .horse-page-override h5,
-      .horse-page-override h6 {
-          color: green !important;
-      }
-      /* Override any blue colors specifically */
-      .horse-page-override * {
-          --brand-primary: #16a34a !important; /* Override CSS variable */
-      }
-      .horse-page-override *[style*="color"][style*="#00AEEF"],
-      .horse-page-override *[style*="color"][style*="blue"] {
-          color: green !important;
-      }
-      /* Override green text to white on green backgrounds for readability */
-      .horse-page-override .bg-brand-primary h1,
-      .horse-page-override .bg-brand-primary h2,
-      .horse-page-override .bg-brand-primary h3,
-      .horse-page-override .bg-brand-primary h4,
-      .horse-page-override .bg-brand-primary h5,
-      .horse-page-override .bg-brand-primary h6,
-      .horse-page-override .bg-brand-primary [class*="title"],
-      .horse-page-override .bg-brand-primary [class*="heading"],
-      .horse-page-override .bg-brand-primary .text-brand-primary,
-      .horse-page-override .bg-brand-primary .text-sanctuary-purple,
-      .horse-page-override .bg-brand-primary .text-brand-accent {
-          color: white !important;
-      }
+      
       /* Override background colors for horse pages */
       .horse-page-override .bg-brand-primary {
-          background-color: #16a34a !important; /* green-600 */
+          background-color: #16a34a !important;
       }
       .horse-page-override .hover\:bg-brand-primary:hover {
-          background-color: #15803d !important; /* green-700 */
+          background-color: #15803d !important;
       }
       .horse-page-override .bg-brand-primary\/10 {
           background-color: rgba(22, 163, 74, 0.1) !important;
@@ -452,20 +441,165 @@
       .horse-page-override .bg-brand-primary\/20 {
           background-color: rgba(22, 163, 74, 0.2) !important;
       }
-      /* Make text white on green backgrounds for better readability */
-      .horse-page-override .bg-brand-primary,
-      .horse-page-override .bg-brand-primary h1,
-      .horse-page-override .bg-brand-primary h2,
-      .horse-page-override .bg-brand-primary h3,
-      .horse-page-override .bg-brand-primary h4,
-      .horse-page-override .bg-brand-primary h5,
-      .horse-page-override .bg-brand-primary h6,
-      .horse-page-override .bg-brand-primary p,
-      .horse-page-override .bg-brand-primary span,
-      .horse-page-override .bg-brand-primary div {
+
+      /* Ensure button text is always readable */
+      .horse-page-override button,
+      .horse-page-override .btn,
+      .horse-page-override .button {
+          color: inherit !important;
+      }
+
+      .horse-page-override button.bg-brand-primary,
+      .horse-page-override .btn.bg-brand-primary,
+      .horse-page-override .button.bg-brand-primary,
+      .horse-page-override button[class*="bg-green"],
+      .horse-page-override .btn[class*="bg-green"],
+      .horse-page-override .button[class*="bg-green"] {
+          color: white !important;
+      }
+
+      /* --- HERO SECTIONS ALWAYS HAVE WHITE TEXT --- */
+      .hero,
+      .hero *,
+      section[class*="hero"],
+      section[class*="hero"] *,
+      .hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6,
+      .hero p, .hero span, .hero div:not(.bg-brand-primary):not([class*="bg-"]) {
+          color: white !important;
+      }
+
+      /* Override theme colors specifically for hero sections */
+      .dog-page-override .hero h1,
+      .dog-page-override .hero h2,
+      .dog-page-override .hero h3,
+      .dog-page-override .hero h4,
+      .dog-page-override .hero h5,
+      .dog-page-override .hero h6,
+      .dog-page-override .hero p,
+      .dog-page-override .hero span,
+      .dog-page-override section[class*="hero"] h1,
+      .dog-page-override section[class*="hero"] h2,
+      .dog-page-override section[class*="hero"] h3,
+      .dog-page-override section[class*="hero"] h4,
+      .dog-page-override section[class*="hero"] h5,
+      .dog-page-override section[class*="hero"] h6,
+      .dog-page-override section[class*="hero"] p,
+      .dog-page-override section[class*="hero"] span,
+      .horse-page-override .hero h1,
+      .horse-page-override .hero h2,
+      .horse-page-override .hero h3,
+      .horse-page-override .hero h4,
+      .horse-page-override .hero h5,
+      .horse-page-override .hero h6,
+      .horse-page-override .hero p,
+      .horse-page-override .hero span,
+      .horse-page-override section[class*="hero"] h1,
+      .horse-page-override section[class*="hero"] h2,
+      .horse-page-override section[class*="hero"] h3,
+      .horse-page-override section[class*="hero"] h4,
+      .horse-page-override section[class*="hero"] h5,
+      .horse-page-override section[class*="hero"] h6,
+      .horse-page-override section[class*="hero"] p,
+      .horse-page-override section[class*="hero"] span {
           color: white !important;
       }
       
+      
+      /* --- LAYOUT ENHANCEMENTS - REMOVE NEGATIVE SPACE --- */
+      
+      /* Reduce excessive margins and padding */
+      .section-padding {
+        padding: 2rem 0 !important;
+      }
+      
+      .section-padding-lg {
+        padding: 3rem 0 !important;
+      }
+      
+      .section-padding-xl {
+        padding: 4rem 0 !important;
+      }
+      
+      /* Tighten container spacing */
+      .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      
+      /* Remove excessive gaps in grids */
+      .grid {
+        gap: 1.5rem !important;
+      }
+      
+      .grid.gap-6 {
+        gap: 1.5rem !important;
+      }
+      
+      .grid.gap-8 {
+        gap: 2rem !important;
+      }
+      
+      /* Compact content sections */
+      .content-bubble {
+        padding: 1.5rem !important;
+        margin: 1rem 0 !important;
+      }
+      
+      @media (min-width: 768px) {
+        .section-padding {
+          padding: 3rem 0 !important;
+        }
+        
+        .section-padding-lg {
+          padding: 4rem 0 !important;
+        }
+        
+        .section-padding-xl {
+          padding: 5rem 0 !important;
+        }
+        
+        .content-bubble {
+          padding: 2rem !important;
+        }
+        
+        .container {
+          padding-left: 1.5rem !important;
+          padding-right: 1.5rem !important;
+        }
+      }
+      
+      /* Remove excessive space between elements */
+      .space-y-8 > * + * {
+        margin-top: 2rem !important;
+      }
+      
+      .space-y-12 > * + * {
+        margin-top: 3rem !important;
+      }
+      
+      .space-y-16 > * + * {
+        margin-top: 4rem !important;
+      }
+      
+      /* Compact headers */
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0.75rem !important;
+        margin-top: 1rem !important;
+      }
+      
+      h1:first-child, h2:first-child, h3:first-child {
+        margin-top: 0 !important;
+      }
+      
+      /* Compact paragraphs */
+      p {
+        margin-bottom: 1rem !important;
+      }
+      
+      p:last-child {
+        margin-bottom: 0 !important;
+      }
+
       /* --- RESPONSIVE DESIGN IMPROVEMENTS --- */
       
       /* Enhanced responsive grid system */

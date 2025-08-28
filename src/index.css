@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS variables and styles from index.html */
+:root {
+  /* Brand Colors */
+  --brand-primary: #00AEEF;
+  --brand-primary-hover: #008FCC;
+  --brand-primary-light: #77D1F7;
+  --brand-secondary: #E30613;
+  --brand-accent: #39B54A;
+  --brand-text-primary-const: #333333;
+  --brand-text-secondary-const: #4D8FAC;
+
+  /* Light Theme */
+  --color-bg: #FAFAFA; /* Off-White */
+  --color-bg-subtle: #FFFFFF; /* White */
+  --color-surface: #FFFFFF; /* White */
+  --color-text-base: var(--brand-text-primary-const);
+  --color-text-muted: var(--brand-text-secondary-const);
+  --color-text-heading: var(--brand-primary);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-bubble-bg: var(--color-surface);
+  --color-bubble-border: rgba(0, 0, 0, 0.05);
+  --color-header-scrolled-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Base text colors for all content */
+body {
+  color: var(--color-text-base);
+  background-color: var(--color-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Text contrast rules */
+.bg-brand-primary:not(.preserve-color),
+.bg-brand-secondary:not(.preserve-color),
+.bg-brand-accent:not(.preserve-color),
+.bg-blue-600:not(.preserve-color),
+.bg-blue-700:not(.preserve-color),
+.bg-blue-800:not(.preserve-color),
+.bg-red-600:not(.preserve-color),
+.bg-green-600:not(.preserve-color),
+.bg-gray-700:not(.preserve-color),
+.bg-gray-800:not(.preserve-color),
+.bg-gray-900:not(.preserve-color),
+[class*="bg-dark"]:not(.preserve-color) {
+  color: white;
+}
+
+/* Light background text colors */
+.bg-brand-primary-light:not(.preserve-color),
+.bg-yellow-100:not(.preserve-color),
+.bg-yellow-200:not(.preserve-color),
+.bg-gray-100:not(.preserve-color),
+.bg-gray-200:not(.preserve-color),
+.bg-white:not(.preserve-color) {
+  color: var(--color-text-base);
+}
+
+/* Button text colors */
+.btn[class*="bg-"]:not(.bg-transparent),
+.button[class*="bg-"]:not(.bg-transparent),
+a.cta-button[class*="bg-"]:not(.bg-transparent) {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Scroll margin for anchor links */
+[id] { 
+  scroll-margin-top: 100px; 
+}
+
+/* Content bubble improvements - reduced margins for denser layout */
+.content-bubble {
+  background: var(--color-bubble-bg);
+  border-radius: 12px;
+  margin: 12px 0;
+  box-shadow: none;
+  border: none;
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.content-bubble:hover {
+  transform: translateY(-2px);
+}
+
+.content-bubble h1, .content-bubble h2, .content-bubble h3, .content-bubble h4 {
+  color: var(--color-text-heading);
+  margin-top: 0;
+  margin-bottom: 12px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.content-bubble p, .content-bubble li, .content-bubble dt, .content-bubble dd, .content-bubble span, .content-bubble div {
+  color: var(--color-text-base);
+  transition: color 0.3s ease;
+}
+
+.content-bubble.content-bubble-inverted h1,
+.content-bubble.content-bubble-inverted h2,
+.content-bubble.content-bubble-inverted h3,
+.content-bubble.content-bubble-inverted h4,
+.content-bubble.content-bubble-inverted p,
+.content-bubble.content-bubble-inverted li,
+.content-bubble.content-bubble-inverted dt,
+.content-bubble.content-bubble-inverted dd,
+.content-bubble.content-bubble-inverted span,
+.content-bubble.content-bubble-inverted div {
+  color: white;
+}
+
+/* Better image sizing within content bubbles */
+.content-bubble img,
+.content-bubble video {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease-out;
+}
+
+.content-bubble:hover img, .content-bubble:hover video {
+  transform: scale(1.05);
+}
+
+/* Prevent images from being too large */
+.content-bubble .media-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Animation utilities */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus states for accessibility */
+*:focus {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Global button styles for consistent contrast */
+.btn,
+.button,
+a.cta-button,
+.bg-brand-primary:not(nav *),
+.bg-brand-secondary:not(nav *),
+.bg-brand-accent:not(nav *),
+[class*="bg-"][class*="primary"]:not(nav *),
+[class*="bg-"][class*="secondary"]:not(nav *),
+[class*="bg-"][class*="accent"]:not(nav *) {
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Dog page overrides */
+.dog-page-override {
+  --brand-primary: #dc2626 !important;
+  --color-text-heading: #dc2626 !important;
+}
+
+/* Red headings for dog pages (when not on colored background) */
+.dog-page-override h1:not([class*="bg-"]),
+.dog-page-override h2:not([class*="bg-"]),
+.dog-page-override h3:not([class*="bg-"]),
+.dog-page-override h4:not([class*="bg-"]),
+.dog-page-override h5:not([class*="bg-"]),
+.dog-page-override h6:not([class*="bg-"]),
+.dog-page-override [class*="title"]:not([class*="bg-"]),
+.dog-page-override [class*="heading"]:not([class*="bg-"]) {
+  color: #dc2626 !important;
+}
+
+/* White text on red backgrounds in dog pages */
+.dog-page-override [class*="bg-brand"],
+.dog-page-override [class*="bg-red"],
+.dog-page-override [class*="bg-brand-primary"],
+.dog-page-override [class*="bg-brand-secondary"] {
+  color: white !important;
+}
+
+/* White text for buttons with backgrounds */
+.dog-page-override button[class*="bg-"]:not([class*="bg-transparent"]),
+.dog-page-override a[class*="bg-"].btn:not([class*="bg-transparent"]),
+.dog-page-override a[class*="bg-"].cta-button:not([class*="bg-transparent"]) {
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Red text for transparent buttons */
+.dog-page-override .bg-transparent.border-brand-secondary {
+  color: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+/* White text for transparent buttons on hover */
+.dog-page-override .bg-transparent.border-brand-secondary:hover {
+  background-color: #dc2626 !important;
+  color: white !important;
+}
+
+/* Horse page overrides */
+.horse-page-override {
+  --brand-primary: #16a34a !important;
+  --color-text-heading: #16a34a !important;
+}
+
+/* Green headings for horse pages (when not on colored background) */
+.horse-page-override h1:not([class*="bg-"]),
+.horse-page-override h2:not([class*="bg-"]),
+.horse-page-override h3:not([class*="bg-"]),
+.horse-page-override h4:not([class*="bg-"]),
+.horse-page-override h5:not([class*="bg-"]),
+.horse-page-override h6:not([class*="bg-"]),
+.horse-page-override [class*="title"]:not([class*="bg-"]),
+.horse-page-override [class*="heading"]:not([class*="bg-"]) {
+  color: #16a34a !important;
+}
+
+/* White text on green backgrounds in horse pages */
+.horse-page-override [class*="bg-brand"],
+.horse-page-override [class*="bg-green"],
+.horse-page-override [class*="bg-brand-primary"],
+.horse-page-override [class*="bg-brand-secondary"] {
+  color: white !important;
+}
+
+/* White text for buttons with backgrounds */
+.horse-page-override button[class*="bg-"]:not([class*="bg-transparent"]),
+.horse-page-override a[class*="bg-"].btn:not([class*="bg-transparent"]),
+.horse-page-override a[class*="bg-"].cta-button:not([class*="bg-transparent"]) {
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Green text for transparent buttons */
+.horse-page-override .bg-transparent.border-brand-secondary {
+  color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+
+/* White text for transparent buttons on hover */
+.horse-page-override .bg-transparent.border-brand-secondary:hover {
+  background-color: #16a34a !important;
+  color: white !important;
+}
+
+/* Compact spacing utilities for dense layouts */
+.compact-section {
+  padding: 2rem 0 !important;
+}
+
+@media (min-width: 768px) {
+  .compact-section {
+    padding: 3rem 0 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .compact-section {
+    padding: 4rem 0 !important;
+  }
+}
+
+.compact-grid {
+  gap: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .compact-grid {
+    gap: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .compact-grid {
+    gap: 2rem !important;
+  }
+}
+
+.compact-container {
+  max-width: 1600px !important;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .compact-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .compact-container {
+    padding: 0 2rem;
+  }
+}

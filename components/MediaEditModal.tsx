@@ -1,14 +1,37 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { XIcon, UploadIcon } from './icons.tsx';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
+import { XIcon, UploadIcon, SaveIcon, CopyIcon } from './icons.tsx';
+import RangeSlider from './RangeSlider.tsx';
 
 interface MediaEditModalProps {
   onClose: () => void;
-  onSave: (newUrl: string) => void;
+  onSave: (url: string, focalPoint?: { x: number; y: number }) => void;
+  currentUrl?: string;
+  mediaKey?: string;
 }
 
-const MediaEditModal: React.FC<MediaEditModalProps> = ({ onClose, onSave }) => {
-  const [urlInput, setUrlInput] = useState('');
+const formatTime = (time: number) => {
+  if (isNaN(time)) return '0:00';
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+};
+
+const MediaEditModal: React.FC<MediaEditModalProps> = ({ 
+  onClose, 
+  onSave, 
+  currentUrl,
+  mediaKey 
+}) => {
   const [file, setFile] = useState<File | null>(null);
+  const [mediaUrl, setMediaUrl] = useState<string>(currentUrl || '');
+  const [urlInput, setUrlInput] = useState<string>(currentUrl || '');
+  const [isMediaVideo, setIsMediaVideo] = useState(false);
+  const [focalPoint, setFocalPoint] = useState({ x: 0.5, y: 0.5 });
+  const [duration, setDuration] = useState(0);
+  const [trim, setTrim] = useState<[number, number]>([0, 0]);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [uploadMethod, setUploadMethod] = useState<'file' | 'url'>('file');
+  const [generatedCode, setGeneratedCode] = useState('');
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   
   const blobUrlRef = useRef<string | null>(null);
