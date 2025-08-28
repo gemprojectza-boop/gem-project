@@ -51,10 +51,10 @@ const HorseProfileCard: React.FC<HorseProfileCardProps> = ({ horse, mediaContent
                 </div>
             </div>
             <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-brand-text-primary group-hover:text-brand-primary transition-colors">{horse.name}</h3>
+                <h3 className="text-2xl font-bold text-green-800">{horse.name}</h3>
                 <p className="text-brand-text-secondary text-sm mb-2">{horse.petInfo.breed}</p>
                 <p className="text-brand-text-secondary text-sm mb-4 flex-grow">{horse.idealHome}</p>
-                <button className="mt-auto w-full bg-brand-primary text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 hover:bg-brand-primary-hover">
+                <button className="mt-auto w-full bg-green-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 hover:bg-green-700">
                     Meet {horse.name}
                 </button>
             </div>

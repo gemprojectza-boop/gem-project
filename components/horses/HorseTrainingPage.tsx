@@ -16,7 +16,7 @@ interface HorseTrainingPageProps {
 const ExploreMoreCard: React.FC<{title: string, links: {href: string, text: string}[]}> = ({ title, links }) => (
     <div className="content-bubble h-full">
         <div className="p-6 md:p-8">
-            <h3 className="text-xl font-bold text-sanctuary-dark mb-4">{title}</h3>
+            <h3 className="text-xl font-bold text-green-800 mb-4">{title}</h3>
             <ul className="space-y-3">
                 {links.map(link => (
                     <li key={link.href}>
@@ -34,7 +34,7 @@ const TrainingSectionCard: React.FC<HorseTrainingPageProps & {title: string, med
     <div className="content-bubble">
         <EditableMedia mediaKey={mediaKey} mediaUrl={props.mediaContent[mediaKey]!} alt={alt} {...props} className="rounded-t-lg aspect-video"/>
         <div className="p-6 md:p-8">
-            <h2 className="text-3xl font-bold text-brand-primary mb-4">{title}</h2>
+            <h2 className="text-3xl font-bold text-green-800 mb-4">{title}</h2>
             <div className="text-lg text-gray-700 space-y-4">
                 {children}
             </div>
@@ -120,7 +120,7 @@ const HorseTrainingPage: React.FC<HorseTrainingPageProps> = (props) => {
                 <div className="container mx-auto px-6 max-w-6xl">
                   <div className="content-bubble">
                     <div className="p-6 md:p-8">
-                        <h2 className="text-3xl md:text-4xl font-bold text-sanctuary-dark mb-8 text-center">Explore More of Our Horse Sanctuary</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-8 text-center">Explore More of Our Horse Sanctuary</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <ExploreMoreCard 
                                 title="Adoption & Rehoming"

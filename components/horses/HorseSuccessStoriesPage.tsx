@@ -60,10 +60,10 @@ const stories = [
 
 const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stories[0]; index: number }> = ({ story, index, ...props }) => {
     const colors = [
-        { bg: 'bg-brand-primary', accent: 'bg-brand-primary', text: 'text-white' },
-        { bg: 'bg-brand-accent', accent: 'bg-brand-accent', text: 'text-white' },
-        { bg: 'bg-brand-yellow', accent: 'bg-brand-yellow', text: 'text-brand-text-primary' },
-        { bg: 'bg-brand-secondary', accent: 'bg-brand-secondary', text: 'text-white' }
+        { bg: 'bg-green-600', accent: 'bg-green-600', text: 'text-white' },
+        { bg: 'bg-green-700', accent: 'bg-green-700', text: 'text-white' },
+        { bg: 'bg-green-500', accent: 'bg-green-500', text: 'text-white' },
+        { bg: 'bg-green-800', accent: 'bg-green-800', text: 'text-white' }
     ];
     const colorScheme = colors[index % 4];
     
@@ -95,7 +95,7 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                     {/* Main Content Section */}
                     <div className="xl:col-span-3 space-y-8">
                         <header className="mb-8">
-                            <h2 className="text-5xl lg:text-6xl font-black text-brand-text-primary leading-tight mb-4">{story.title}</h2>
+                            <h2 className="text-5xl lg:text-6xl font-black text-green-800 leading-tight mb-4">{story.title}</h2>
                             <div className={`w-32 h-1 ${colorScheme.bg} rounded-full`}></div>
                         </header>
                         
@@ -120,7 +120,7 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                         
                         {/* After Section - Below Text */}
                         <div className={`${colorScheme.bg}/10 rounded-2xl p-8 border-l-4 ${colorScheme.bg.replace('bg-', 'border-')}`}>
-                            <h4 className={`font-black ${colorScheme.bg.replace('bg-', 'text-')} mb-6 text-center uppercase tracking-wider text-lg`}>After Recovery</h4>
+                            <h4 className={`font-black text-green-800 mb-6 text-center uppercase tracking-wider text-lg`}>After Recovery</h4>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                 {story.afterKeys.slice(0, 4).map((key, idx) => (
                                     props.mediaContent[key] ? (
@@ -142,8 +142,8 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                     {/* Before Photos Sidebar */}
                     <div className="xl:col-span-1 space-y-6">
                         {/* Before Section - Right Side */}
-                        <div className="bg-gray-100 rounded-2xl p-6 border-l-4 border-gray-400">
-                            <h4 className="font-black text-gray-600 mb-6 text-center uppercase tracking-wider text-sm">Before</h4>
+                        <div className="bg-green-50 rounded-2xl p-6 border-l-4 border-green-400">
+                            <h4 className="font-black text-green-700 mb-6 text-center uppercase tracking-wider text-sm">Before</h4>
                             <div className="space-y-4">
                                 {story.beforeKeys.slice(0, 4).map((key, idx) => (
                                     props.mediaContent[key] ? (
@@ -166,8 +166,8 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                             <div className="mb-3">
                                 <PawIcon className={`w-8 h-8 mx-auto ${colorScheme.text}`} />
                             </div>
-                            <h5 className="font-black text-sm uppercase tracking-wider mb-2">Success Story</h5>
-                            <p className="text-sm opacity-90">From rescue to recovery</p>
+                            <h5 className="font-black text-sm uppercase tracking-wider mb-2 text-white">Success Story</h5>
+                            <p className="text-sm opacity-90 text-white">From rescue to recovery</p>
                         </div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
                 subtitle="Every rescue begins with a moment of urgency. These are the journeys from hardship to healing."
                 mediaKey="horse_stories_hero"
                 alt="A beautiful, healthy horse running freely in a pasture"
-                titleColorClass="text-brand-accent"
+                titleColorClass="text-green-700"
                 {...props}
             />
             
@@ -206,17 +206,17 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
                 <StorySection key={story.title} story={story} index={index} {...props} />
             ))}
 
-            <section className="py-20 bg-brand-primary">
+            <section className="py-20 bg-green-700">
                 <div className="container mx-auto px-6 text-center text-white">
                     <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Be Part of the Next Success Story</h2>
-                    <p className="max-w-3xl mx-auto text-lg text-gray-200 mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Be Part of the Next Success Story</h2>
+                    <p className="max-w-3xl mx-auto text-lg text-green-100 mb-8">
                         Your support makes these transformations possible. By donating, sponsoring, or volunteering, you help us give more horses the future they deserve.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <CtaButton href="/horses#adoption" className="bg-brand-accent hover:bg-brand-accent-hover text-white">Adopt a Horse</CtaButton>
-                        <CtaButton href="/horses#sponsor" className="bg-brand-accent hover:bg-brand-accent-hover text-white">Sponsor a Horse</CtaButton>
-                        <CtaButton href="/donate" className="bg-white text-brand-primary hover:bg-gray-200">Donate Now</CtaButton>
+                        <CtaButton href="/horses#adoption" className="bg-green-500 hover:bg-green-400 text-white">Adopt a Horse</CtaButton>
+                        <CtaButton href="/horses#sponsor" className="bg-green-600 hover:bg-green-500 text-white">Sponsor a Horse</CtaButton>
+                        <CtaButton href="/donate" className="bg-white text-green-700 hover:bg-green-50">Donate Now</CtaButton>
                     </div>
                 </div>
             </section>

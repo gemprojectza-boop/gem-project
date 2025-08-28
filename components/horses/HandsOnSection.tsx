@@ -21,14 +21,14 @@ const CarePackageCard: React.FC<{
     <div className="content-bubble flex flex-col h-full p-6">
         <div className="flex items-center mb-2">
             <PawIcon className="w-8 h-8 text-brand-text-primary mr-3" />
-            <h3 className="text-2xl font-bold text-brand-text-primary">{title}</h3>
+            <h3 className="text-2xl font-bold text-green-800">{title}</h3>
         </div>
-        <div className="text-4xl font-bold my-4 text-brand-primary">{price}</div>
+        <div className="text-4xl font-bold my-4 text-green-600">{price}</div>
         <p className="text-brand-text-secondary mb-6 flex-grow">{description}</p>
         <ul className="space-y-3 mb-8">
             {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                    <PawIcon className="w-5 h-5 text-brand-primary mr-3 mt-1 flex-shrink-0" />
+                    <PawIcon className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
                     <span className="text-brand-text-primary">{feature}</span>
                 </li>
             ))}

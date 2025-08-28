@@ -21,11 +21,12 @@ interface StoryProps extends DogStoriesPageProps {
 
 const Story: React.FC<StoryProps> = ({ name, mediaKey, alt, children, ...props }) => (
     <article className="magazine-story-layout max-w-7xl mx-auto relative overflow-hidden">
-        {/* Decorative Background Elements */}
+        {/* Decorative Background Elements - Dog Themed */}
         <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-12 right-12 w-32 h-32 bg-brand-accent/20 rounded-full"></div>
-            <div className="absolute bottom-24 left-8 w-24 h-24 bg-brand-yellow/30 rotate-45"></div>
-            <div className="absolute top-1/3 right-1/4 w-16 h-64 bg-brand-primary/10 rounded-full transform rotate-12"></div>
+            <div className="absolute top-16 left-16 w-40 h-20 bg-red-500/15 rounded-full transform -rotate-12"></div>
+            <div className="absolute bottom-32 right-12 w-28 h-28 bg-red-400/25 rounded-full"></div>
+            <div className="absolute top-1/2 left-8 w-20 h-20 bg-red-600/20 transform rotate-45"></div>
+            <div className="absolute bottom-12 left-1/3 w-12 h-48 bg-red-500/10 rounded-full transform rotate-45"></div>
         </div>
         
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
@@ -48,17 +49,17 @@ const Story: React.FC<StoryProps> = ({ name, mediaKey, alt, children, ...props }
             </div>
             
             {/* Right Page - Multi-column text with circular photo callouts */}
-            <div className="bg-gradient-to-br from-brand-bg-subtle to-white p-8 lg:p-12 relative">
+            <div className="bg-gradient-to-bl from-red-50 to-white p-8 lg:p-12 relative">
                 {/* Large Headline Treatment */}
                 <header className="mb-8">
                     <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 bg-brand-secondary rounded-full flex items-center justify-center mr-4">
+                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4">
                             <PawIcon className="w-6 h-6 text-white" />
                         </div>
-                        <span className="text-sm font-bold text-brand-secondary uppercase tracking-wider bg-white px-3 py-1 rounded-full">Success Story</span>
+                        <span className="text-sm font-bold text-red-700 uppercase tracking-wider bg-white px-3 py-1 rounded-full">Success Story</span>
                     </div>
-                    <h3 className="text-4xl lg:text-5xl font-black text-brand-secondary leading-tight">{name}'s Story</h3>
-                    <div className="w-24 h-2 bg-brand-secondary rounded-full mt-4"></div>
+                    <h3 className="text-4xl lg:text-5xl font-black text-red-800 leading-tight">{name}'s Story</h3>
+                    <div className="w-24 h-2 bg-red-600 rounded-full mt-4"></div>
                 </header>
                 
                 {/* Multi-column Text Layout */}
@@ -67,12 +68,12 @@ const Story: React.FC<StoryProps> = ({ name, mediaKey, alt, children, ...props }
                 </div>
                 
                 {/* Sidebar Section with Distinct Background */}
-                <div className="mt-8 bg-brand-secondary/10 rounded-2xl p-6 border-l-4 border-brand-secondary">
+                <div className="mt-8 bg-red-600/10 rounded-xl p-6 border-r-4 border-red-600">
                     <div className="flex items-center mb-3">
-                        <div className="w-8 h-8 bg-brand-secondary rounded-full flex items-center justify-center mr-3">
+                        <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center mr-3">
                             <PawIcon className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-bold text-brand-secondary">Transformation Complete</span>
+                        <span className="font-bold text-red-800">Transformation Complete</span>
                     </div>
                     <p className="text-sm text-brand-text-secondary">This rescue story represents the power of patience, care, and second chances.</p>
                 </div>
@@ -90,7 +91,7 @@ const DogStoriesPage: React.FC<DogStoriesPageProps> = (props) => {
         subtitle="Every dog who arrives at our sanctuary carries a story. These are just a few of them."
         mediaKey="stories_queenie"
         alt="A mother dog with her puppies"
-        titleColorClass="text-brand-secondary"
+        titleColorClass="text-red-700"
         {...props}
       />
       <ContentSection className="bg-brand-bg-main">
@@ -100,10 +101,17 @@ const DogStoriesPage: React.FC<DogStoriesPageProps> = (props) => {
 
       <div className="space-y-0">
         {/* Ruby's Story */}
-        <section className="relative">
-            <div className="container mx-auto px-6">
+        <section className="relative py-16 lg:py-20 overflow-hidden">
+            {/* Red Geometric Background Pattern */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-red-500/5"></div>
+                <div className="absolute top-0 left-0 w-1/3 h-full bg-red-600/8 transform -skew-x-12"></div>
+                <div className="absolute bottom-0 right-0 w-80 h-80 bg-red-400/12 rounded-full translate-x-40 translate-y-40"></div>
+                <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-red-700/10 transform rotate-45"></div>
+            </div>
+            <div className="container mx-auto px-6 relative z-10">
                 <Story name="Ruby" mediaKey="stories_ruby" alt="A sad, scared-looking dog" {...props}>
-                    <p className="font-bold text-xl text-brand-secondary mb-4">From hopeless to thriving...</p>
+                    <p className="font-bold text-xl text-red-800 mb-4">From hopeless to thriving...</p>
                     <p className="mb-4 text-lg text-brand-text-primary">Ruby had likely gone her entire life without knowing kindness. She flinched at every sound and shied away from every human touch. At first, she would barely eat or move. We gave her a quiet space to settle with soft blankets and round-the-clock monitoring.</p>
                     <p className="mb-4 text-lg text-brand-text-primary">Ruby was suffering from a severe skin condition, malnourishment, and a heavy infestation of worms, ticks and fleas. She also had undiagnosed arthritis and deep social anxiety after a lifetime of isolation.</p>
                     <p className="text-lg text-brand-text-primary">With dedicated veterinary care and slow, gentle rehabilitation, Ruby's health began to improve. As her physical strength returned, so did her personality. She started greeting caregivers with gentle tail wags and resting her head in our laps. Watching Ruby rediscover joy has been one of the most moving experiences at the sanctuary.</p>
@@ -112,10 +120,17 @@ const DogStoriesPage: React.FC<DogStoriesPageProps> = (props) => {
         </section>
 
         {/* Honey's Story */}
-        <section className="relative">
-            <div className="container mx-auto px-6">
+        <section className="relative py-16 lg:py-20 overflow-hidden">
+            {/* Red Geometric Background Pattern - Variation 2 */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-red-600/4"></div>
+                <div className="absolute top-0 right-0 w-2/5 h-full bg-red-500/7 transform skew-x-6"></div>
+                <div className="absolute top-0 left-0 w-48 h-48 bg-red-700/15 rounded-full -translate-x-24 -translate-y-24"></div>
+                <div className="absolute bottom-1/3 left-1/3 w-24 h-96 bg-red-400/8 transform -rotate-12"></div>
+            </div>
+            <div className="container mx-auto px-6 relative z-10">
                 <Story name="Honey" mediaKey="stories_honey" alt="A resilient dog with one eye" {...props}>
-                    <p className="font-bold text-xl text-brand-secondary mb-4">The dog who found us...</p>
+                    <p className="font-bold text-xl text-red-800 mb-4">The dog who found us...</p>
                     <p className="mb-4 text-lg text-brand-text-primary">Honey came to us in a way we will never forget. She walked herself to the sanctuary gate and collapsed, as if knowing she needed help. The fact that she chose to come to us spoke volumes about her will to survive.</p>
                     <p className="mb-4 text-lg text-brand-text-primary">She had recently lost sight in one eye, was dangerously underweight, covered in ticks, and suffering from a skin condition and open wounds. In the first days, we focused on stabilising her, treating her wounds, and offering gentle reassurance.</p>
                     <p className="text-lg text-brand-text-primary">Adapting to partial blindness has been difficult, but Honey continues to surprise us. Her physical health improved dramatically, and her emotional healing continues each day. She's developed strong bonds with a few of our long-term dogs and now walks confidently on familiar paths, slowly learning to trust the world again.</p>
@@ -124,10 +139,17 @@ const DogStoriesPage: React.FC<DogStoriesPageProps> = (props) => {
         </section>
         
         {/* Queenie's Story */}
-        <section className="relative">
-            <div className="container mx-auto px-6">
+        <section className="relative py-16 lg:py-20 overflow-hidden">
+            {/* Red Geometric Background Pattern - Variation 3 */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-red-500/6"></div>
+                <div className="absolute bottom-0 left-0 w-1/4 h-full bg-red-700/9 transform -skew-x-6"></div>
+                <div className="absolute top-1/3 right-0 w-72 h-72 bg-red-400/11 rounded-full translate-x-36"></div>
+                <div className="absolute top-0 left-1/2 w-16 h-40 bg-red-600/12 transform rotate-30"></div>
+            </div>
+            <div className="container mx-auto px-6 relative z-10">
                 <Story name="Queenie" mediaKey="stories_queenie" alt="A mother dog and her puppies" {...props}>
-                    <p className="font-bold text-xl text-brand-secondary mb-4">A mother's quiet strength...</p>
+                    <p className="font-bold text-xl text-red-800 mb-4">A mother's quiet strength...</p>
                     <p className="mb-4 text-lg text-brand-text-primary">Queenie and her puppies were among the dogs left behind by the previous owner of the farm where our sanctuary now stands. At the time, Queenie was undernourished and doing her best to care for her pups with almost nothing. Her resilience and devotion were undeniable.</p>
                     <p className="mb-4 text-lg text-brand-text-primary">From the very beginning, we knew we had to earn her trust. We gave her space, moved slowly, and ensured she felt secure. As food became regular and her pups grew stronger, Queenie began to soften.</p>
                     <p className="text-lg text-brand-text-primary">We treated her for mange and malnutrition. Today, Queenie is still with us, a gentle and affectionate soul. Her puppies have grown into healthy, confident young dogs, and two have already found loving forever homes. Queenie's journey from fierce protector to peaceful companion remains one of our most beautiful transformations.</p>
@@ -136,19 +158,19 @@ const DogStoriesPage: React.FC<DogStoriesPageProps> = (props) => {
         </section>
       </div>
 
-       <section className="py-20 bg-brand-bg-main">
+       <section className="py-20 bg-red-700">
         <div className="container mx-auto px-6 text-center">
           <div className="content-bubble">
             <div className="p-6 md:p-8">
-              <PawIcon className="w-10 h-10 text-brand-secondary mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-4">More Stories Coming Soon</h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-700 mb-10">
+              <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">More Stories Coming Soon</h2>
+              <p className="max-w-3xl mx-auto text-lg text-red-100 mb-10">
                   We are always updating this page as our dogs grow, heal, and show us what true resilience looks like. Keep checking back to follow the journeys of Angel, Jonah, and many others who are finding safety, comfort and joy at The Gem Project Sanctuary.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                  <CtaButton href="/dogs/sponsorship" className="bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary">Sponsor a Dog in Recovery</CtaButton>
-                  <CtaButton href="/donate" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover">Donate Toward Vet Care</CtaButton>
-                  <CtaButton href="/adopt-a-dog" className="bg-brand-primary text-white hover:bg-brand-primary-hover">Meet Our Adoptable Dogs</CtaButton>
+                  <CtaButton href="/dogs/sponsorship" className="bg-red-500 hover:bg-red-400 text-white">Sponsor a Dog in Recovery</CtaButton>
+                  <CtaButton href="/donate" className="bg-red-600 hover:bg-red-500 text-white">Donate Toward Vet Care</CtaButton>
+                  <CtaButton href="/adopt-a-dog" className="bg-white text-red-700 hover:bg-red-50">Meet Our Adoptable Dogs</CtaButton>
               </div>
             </div>
           </div>

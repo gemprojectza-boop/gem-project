@@ -288,6 +288,7 @@
       .dog-page-override {
         --color-text-heading: red !important;
       }
+      /* Red headings and text only on white/light backgrounds */
       .dog-page-override h1,
       .dog-page-override h2,
       .dog-page-override h3,
@@ -297,7 +298,15 @@
       .dog-page-override [class*="title"],
       .dog-page-override [class*="heading"],
       .dog-page-override .text-brand-primary,
-      .dog-page-override .text-sanctuary-purple {
+      .dog-page-override .text-sanctuary-purple,
+      .dog-page-override .text-blue-600,
+      .dog-page-override .text-blue-700,
+      .dog-page-override .text-blue-800,
+      .dog-page-override .text-brand-text-primary,
+      .dog-page-override [style*="color: #00AEEF"],
+      .dog-page-override [style*="color: blue"],
+      .dog-page-override .font-black,
+      .dog-page-override .font-bold {
           color: red !important;
       }
       .dog-page-override h1 a,
@@ -308,11 +317,68 @@
       .dog-page-override h6 a {
           color: red !important;
       }
+      /* Force all headings to be red regardless of other classes */
+      .dog-page-override h1,
+      .dog-page-override h2,
+      .dog-page-override h3,
+      .dog-page-override h4,
+      .dog-page-override h5,
+      .dog-page-override h6 {
+          color: red !important;
+      }
+      /* Override any blue colors specifically */
+      .dog-page-override * {
+          --brand-primary: #dc2626 !important; /* Override CSS variable */
+      }
+      .dog-page-override *[style*="color"][style*="#00AEEF"],
+      .dog-page-override *[style*="color"][style*="blue"] {
+          color: red !important;
+      }
+      /* Override red text to white on red backgrounds for readability */
+      .dog-page-override .bg-brand-primary h1,
+      .dog-page-override .bg-brand-primary h2,
+      .dog-page-override .bg-brand-primary h3,
+      .dog-page-override .bg-brand-primary h4,
+      .dog-page-override .bg-brand-primary h5,
+      .dog-page-override .bg-brand-primary h6,
+      .dog-page-override .bg-brand-primary [class*="title"],
+      .dog-page-override .bg-brand-primary [class*="heading"],
+      .dog-page-override .bg-brand-primary .text-brand-primary,
+      .dog-page-override .bg-brand-primary .text-sanctuary-purple {
+          color: white !important;
+      }
+      /* Override background colors for dog pages */
+      .dog-page-override .bg-brand-primary {
+          background-color: #dc2626 !important; /* red-600 */
+      }
+      .dog-page-override .hover\:bg-brand-primary:hover {
+          background-color: #b91c1c !important; /* red-700 */
+      }
+      .dog-page-override .bg-brand-primary\/10 {
+          background-color: rgba(220, 38, 38, 0.1) !important;
+      }
+      .dog-page-override .bg-brand-primary\/20 {
+          background-color: rgba(220, 38, 38, 0.2) !important;
+      }
+      /* Make text white on red backgrounds for better readability */
+      .dog-page-override .bg-brand-primary,
+      .dog-page-override .bg-brand-primary h1,
+      .dog-page-override .bg-brand-primary h2,
+      .dog-page-override .bg-brand-primary h3,
+      .dog-page-override .bg-brand-primary h4,
+      .dog-page-override .bg-brand-primary h5,
+      .dog-page-override .bg-brand-primary h6,
+      .dog-page-override .bg-brand-primary p,
+      .dog-page-override .bg-brand-primary span,
+      .dog-page-override .bg-brand-primary div {
+          color: white !important;
+      }
 
       /* --- HORSE PAGE GREEN HEADER OVERRIDES --- */
       .horse-page-override {
         --color-text-heading: green !important;
       }
+      /* Green headings and text only on white/light backgrounds */
       .horse-page-override h1,
       .horse-page-override h2,
       .horse-page-override h3,
@@ -323,7 +389,15 @@
       .horse-page-override [class*="heading"],
       .horse-page-override .text-brand-primary,
       .horse-page-override .text-sanctuary-purple,
-      .horse-page-override .text-brand-accent {
+      .horse-page-override .text-brand-accent,
+      .horse-page-override .text-blue-600,
+      .horse-page-override .text-blue-700,
+      .horse-page-override .text-blue-800,
+      .horse-page-override .text-brand-text-primary,
+      .horse-page-override [style*="color: #00AEEF"],
+      .horse-page-override [style*="color: blue"],
+      .horse-page-override .font-black,
+      .horse-page-override .font-bold {
           color: green !important;
       }
       .horse-page-override h1 a,
@@ -333,6 +407,63 @@
       .horse-page-override h5 a,
       .horse-page-override h6 a {
           color: green !important;
+      }
+      /* Force all headings to be green regardless of other classes */
+      .horse-page-override h1,
+      .horse-page-override h2,
+      .horse-page-override h3,
+      .horse-page-override h4,
+      .horse-page-override h5,
+      .horse-page-override h6 {
+          color: green !important;
+      }
+      /* Override any blue colors specifically */
+      .horse-page-override * {
+          --brand-primary: #16a34a !important; /* Override CSS variable */
+      }
+      .horse-page-override *[style*="color"][style*="#00AEEF"],
+      .horse-page-override *[style*="color"][style*="blue"] {
+          color: green !important;
+      }
+      /* Override green text to white on green backgrounds for readability */
+      .horse-page-override .bg-brand-primary h1,
+      .horse-page-override .bg-brand-primary h2,
+      .horse-page-override .bg-brand-primary h3,
+      .horse-page-override .bg-brand-primary h4,
+      .horse-page-override .bg-brand-primary h5,
+      .horse-page-override .bg-brand-primary h6,
+      .horse-page-override .bg-brand-primary [class*="title"],
+      .horse-page-override .bg-brand-primary [class*="heading"],
+      .horse-page-override .bg-brand-primary .text-brand-primary,
+      .horse-page-override .bg-brand-primary .text-sanctuary-purple,
+      .horse-page-override .bg-brand-primary .text-brand-accent {
+          color: white !important;
+      }
+      /* Override background colors for horse pages */
+      .horse-page-override .bg-brand-primary {
+          background-color: #16a34a !important; /* green-600 */
+      }
+      .horse-page-override .hover\:bg-brand-primary:hover {
+          background-color: #15803d !important; /* green-700 */
+      }
+      .horse-page-override .bg-brand-primary\/10 {
+          background-color: rgba(22, 163, 74, 0.1) !important;
+      }
+      .horse-page-override .bg-brand-primary\/20 {
+          background-color: rgba(22, 163, 74, 0.2) !important;
+      }
+      /* Make text white on green backgrounds for better readability */
+      .horse-page-override .bg-brand-primary,
+      .horse-page-override .bg-brand-primary h1,
+      .horse-page-override .bg-brand-primary h2,
+      .horse-page-override .bg-brand-primary h3,
+      .horse-page-override .bg-brand-primary h4,
+      .horse-page-override .bg-brand-primary h5,
+      .horse-page-override .bg-brand-primary h6,
+      .horse-page-override .bg-brand-primary p,
+      .horse-page-override .bg-brand-primary span,
+      .horse-page-override .bg-brand-primary div {
+          color: white !important;
       }
       
       /* --- RESPONSIVE DESIGN IMPROVEMENTS --- */
@@ -789,11 +920,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const pageCheck = (identifiers) => {
         // Handle both sandboxed (hash) and standard routing.
         const currentPath = (window.location.hash.startsWith('#/') ? window.location.hash.substring(1) : window.location.hash.substring(1)) || window.location.pathname;
+        const fullHash = window.location.hash.toLowerCase();
         const lowerPath = currentPath.toLowerCase();
         const lowerTitle = document.title.toLowerCase();
 
-        // Check if path or title contains any of the identifiers.
-        return identifiers.some(id => lowerPath.includes(id)) || identifiers.some(id => lowerTitle.includes(id));
+        // Check if path, hash, or title contains any of the identifiers.
+        return identifiers.some(id => lowerPath.includes(id)) || 
+               identifiers.some(id => lowerTitle.includes(id)) ||
+               identifiers.some(id => fullHash.includes(id));
     };
 
     const dogPageCheck = () => pageCheck(['dog', '/animal-health']);

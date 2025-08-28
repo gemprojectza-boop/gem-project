@@ -43,7 +43,7 @@ const TeamMemberCard: React.FC<{
 const TeamSection: React.FC<{ title: string; children: React.ReactNode; gridCols?: string }> = ({ title, children, gridCols = 'md:grid-cols-2' }) => (
     <section className="py-12">
         <div className="container mx-auto px-6 max-w-5xl">
-            <h2 className="text-3xl font-bold text-brand-primary text-center mb-8">{title}</h2>
+            <h2 className="text-3xl font-bold text-green-800 text-center mb-8">{title}</h2>
             <div className={`grid grid-cols-1 ${gridCols} lg:grid-cols-2 gap-8`}>
                 {children}
             </div>

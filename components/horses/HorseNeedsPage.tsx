@@ -51,7 +51,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
         <div className="container mx-auto px-6 max-w-7xl">
             <div className="content-bubble">
                 <div className="p-6 md:p-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-sanctuary-dark mb-12 text-center">What Our Horses Need Most</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-12 text-center">What Our Horses Need Most</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <NeedsCategory 
                             title="General Needs"
@@ -144,7 +144,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
             </div>
         </div>
 
-        <div className="mt-8 p-4 bg-blue-100 border-l-4 border-blue-500 text-blue-800 rounded-r-lg">
+        <div className="mt-8 p-4 bg-green-100 border-l-4 border-green-500 text-green-800 rounded-r-lg">
             <p><span className="font-bold">Tax-Deductible Giving:</span> We are a registered Public Benefit Organisation (PBO) and all qualifying monetary donations are eligible for a Section 18A tax certificate. This means your donation can be tax-deductible in South Africa. Simply let us know if you’d like a certificate issued.</p>
         </div>
 

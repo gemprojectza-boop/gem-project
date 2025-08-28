@@ -19,7 +19,7 @@ const ForeverHorsesSection: React.FC<SectionProps> = (props) => {
     <section id="forever" className="py-16 md:py-20 bg-brand-bg-main animate-on-scroll">
         <div className="container mx-auto px-6 max-w-6xl">
             <div className="content-bubble text-center max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-sanctuary-dark">Forever Sanctuary Horses</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-green-800">Forever Sanctuary Horses</h2>
                 <p className="mt-2 text-lg text-gray-600">They are not waiting for a home. They are already home.</p>
             </div>
             

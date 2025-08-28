@@ -23,7 +23,7 @@ const FacilitySection: React.FC<HorseFacilitiesPageProps & { title: string; medi
             className="rounded-t-lg aspect-video"
         />
         <div className="p-6 md:p-8">
-            <h2 className="text-3xl font-bold text-brand-primary mb-4">{title}</h2>
+            <h2 className="text-3xl font-bold text-green-800 mb-4">{title}</h2>
             <div className="text-lg text-gray-700 space-y-4">
                 {children}
             </div>
@@ -106,7 +106,7 @@ const HorseFacilitiesPage: React.FC<HorseFacilitiesPageProps> = (props) => {
                 <div className="relative container mx-auto px-6 text-center">
                     <div className="content-bubble max-w-4xl mx-auto" style={{background: 'rgba(0,0,0,0.3)', color: 'white'}}>
                         <div className="p-6 md:p-8">
-                          <h2 className="text-3xl md:text-4xl font-bold">Be Part of the Healing</h2>
+                          <h2 className="text-3xl md:text-4xl font-bold text-white">Be Part of the Healing</h2>
                           <p className="text-lg text-gray-200 my-6">Your support makes it possible to maintain and improve these life-changing spaces. Whether through donations, sponsorship or volunteering, your contribution helps keep our sanctuary safe, peaceful and purpose-built for healing.</p>
                           <div className="flex flex-wrap justify-center gap-4">
                               <CtaButton href="/horses/facilities" className="bg-brand-primary hover:bg-brand-primary-hover text-white">See Our Facilities</CtaButton>

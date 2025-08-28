@@ -67,7 +67,7 @@ const HandsOnSection: React.FC<SectionProps> = (props) => {
                         <p>This is your dog. Your connection. Your joy. We take care of their daily needs including food, shelter and vet care while you experience the love, presence and companionship of having your own dog.</p>
                     </div>
                 </div>
-                <div className="content-bubble mt-8 p-4 bg-blue-100 border-l-4 border-blue-500 text-blue-800">
+                <div className="content-bubble mt-8 p-4 bg-red-100 border-l-4 border-red-500 text-red-800">
                     <div className="p-4">
                       <p><strong>Part of a company or team?</strong> We offer unforgettable corporate team building experiences that combine connection, purpose and impact. Spend time together in a beautiful setting, bond through dog-friendly activities, and make a lasting difference in the lives of rescued animals.</p>
                     </div>
