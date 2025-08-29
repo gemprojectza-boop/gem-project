@@ -74,14 +74,14 @@ const Hero: React.FC<HeroProps> = ({ media, isEditMode }) => {
                  );
             })}
         </div>
-        <div className="relative z-20 text-center px-4 max-content-width">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider mb-4 animate-fade-in-down text-brand-primary text-shadow-strong" style={{ animationDelay: '200ms' }}>
+        <div className="relative z-20 text-center px-4 max-content-width" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider mb-4 animate-fade-in-down text-brand-primary text-shadow-strong" style={{ animationDelay: '200ms', textAlign: 'center', margin: '0 auto' }}>
             <span>Rescue, Rebuild, Rehome</span>
           </h1>
-          <p className="text-lg md:text-xl text-container mx-auto mb-8 animate-fade-in-up text-shadow-custom" style={{ animationDelay: '400ms' }}>
-            Every animal’s journey is honoured. From those waiting for a forever home to our permanent residents, each one receives the love, care and dignity they deserve.
+          <p className="text-lg md:text-xl text-container mx-auto mb-8 animate-fade-in-up text-shadow-custom" style={{ animationDelay: '400ms', textAlign: 'center', margin: '0 auto' }}>
+            Every animal's journey is honoured. From those waiting for a forever home to our permanent residents, each one receives the love, care and dignity they deserve.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', textAlign: 'center', margin: '0 auto'}}>
               <CtaButton href="/dogs" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white text-sm md:text-base btn-pulse animate-fade-in-up" style={{ animationDelay: '600ms' }}>Meet Our Dogs</CtaButton>
               <CtaButton href="/horses" className="bg-brand-accent hover:bg-brand-accent-hover text-white text-sm md:text-base btn-pulse animate-fade-in-up" style={{ animationDelay: '700ms' }}>Meet Our Horses</CtaButton>
               <CtaButton href="/get-involved#volunteer" className="bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary text-sm md:text-base animate-fade-in-up" style={{ animationDelay: '800ms' }}>Volunteer</CtaButton>

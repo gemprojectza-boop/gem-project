@@ -72,11 +72,11 @@ a.cta-button[class*="bg-"]:not(.bg-transparent) {
   scroll-margin-top: 100px; 
 }
 
-/* Content bubble improvements - reduced margins for denser layout */
+/* Content bubble improvements - optimized for dense layout */
 .content-bubble {
   background: var(--color-bubble-bg);
   border-radius: 12px;
-  margin: 12px 0;
+  margin: 8px 0;
   box-shadow: none;
   border: none;
   transition: transform 0.3s ease-out, background-color 0.3s ease;
@@ -176,112 +176,381 @@ a.cta-button,
   text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-/* Dog page overrides */
+/* ========== DOG PAGE OVERRIDES ========== */
 .dog-page-override {
   --brand-primary: #dc2626 !important;
   --color-text-heading: #dc2626 !important;
 }
 
-/* Red headings for dog pages (when not on colored background) */
-.dog-page-override h1:not([class*="bg-"]),
-.dog-page-override h2:not([class*="bg-"]),
-.dog-page-override h3:not([class*="bg-"]),
-.dog-page-override h4:not([class*="bg-"]),
-.dog-page-override h5:not([class*="bg-"]),
-.dog-page-override h6:not([class*="bg-"]),
-.dog-page-override [class*="title"]:not([class*="bg-"]),
-.dog-page-override [class*="heading"]:not([class*="bg-"]) {
+/* Header and Navigation remain unchanged on dog pages */
+.dog-page-override header,
+.dog-page-override header *,
+.dog-page-override nav,
+.dog-page-override nav * {
+  color: inherit !important;
+}
+
+/* Main content headings on dog pages - WHITE text on red backgrounds */
+.dog-page-override [class*="bg-brand-primary"] *,
+.dog-page-override [class*="bg-red"] *,
+.dog-page-override .bg-gradient-to-r *,
+.dog-page-override [class*="bg-"][class*="primary"] * {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Regular headings on white/light backgrounds - RED text */
+.dog-page-override main h1:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override main h2:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override main h3:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override main h4:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override main h5:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override main h6:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override main [class*="title"]:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override main [class*="heading"]:not([class*="bg-"]):not(.bg-gradient-to-r *),
+.dog-page-override section h1:not([class*="bg-"]):not(header h1):not(.bg-gradient-to-r *),
+.dog-page-override section h2:not([class*="bg-"]):not(header h2):not(.bg-gradient-to-r *),
+.dog-page-override section h3:not([class*="bg-"]):not(header h3):not(.bg-gradient-to-r *),
+.dog-page-override section h4:not([class*="bg-"]):not(header h4):not(.bg-gradient-to-r *),
+.dog-page-override section h5:not([class*="bg-"]):not(header h5):not(.bg-gradient-to-r *),
+.dog-page-override section h6:not([class*="bg-"]):not(header h6):not(.bg-gradient-to-r *) {
   color: #dc2626 !important;
 }
 
-/* White text on red backgrounds in dog pages */
-.dog-page-override [class*="bg-brand"],
-.dog-page-override [class*="bg-red"],
-.dog-page-override [class*="bg-brand-primary"],
-.dog-page-override [class*="bg-brand-secondary"] {
+/* Footer text should remain white on dog pages */
+.dog-page-override footer,
+.dog-page-override footer * {
   color: white !important;
 }
 
-/* White text for buttons with backgrounds */
-.dog-page-override button[class*="bg-"]:not([class*="bg-transparent"]),
-.dog-page-override a[class*="bg-"].btn:not([class*="bg-transparent"]),
-.dog-page-override a[class*="bg-"].cta-button:not([class*="bg-transparent"]) {
-  color: white !important;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+.dog-page-override footer a:hover {
+  color: #e5e5e5 !important;
+  opacity: 0.8;
 }
 
-/* Red text for transparent buttons */
-.dog-page-override .bg-transparent.border-brand-secondary {
-  color: #dc2626 !important;
-  border-color: #dc2626 !important;
-}
-
-/* White text for transparent buttons on hover */
-.dog-page-override .bg-transparent.border-brand-secondary:hover {
+/* Buttons and backgrounds on dog pages */
+.dog-page-override main [class*="bg-brand-primary"],
+.dog-page-override main [class*="bg-red"],
+.dog-page-override section [class*="bg-brand-primary"],
+.dog-page-override section [class*="bg-red"] {
   background-color: #dc2626 !important;
   color: white !important;
 }
 
-/* Horse page overrides */
+/* All buttons on red backgrounds must have white text */
+.dog-page-override button,
+.dog-page-override .btn,
+.dog-page-override .cta-button,
+.dog-page-override [class*="button"] {
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+/* Button text colors for dog pages - extra specificity */
+.dog-page-override main button[class*="bg-"]:not([class*="bg-transparent"]):not([class*="bg-white"]),
+.dog-page-override main a[class*="bg-"].btn:not([class*="bg-transparent"]):not([class*="bg-white"]),
+.dog-page-override main a[class*="bg-"].cta-button:not([class*="bg-transparent"]):not([class*="bg-white"]),
+.dog-page-override section button[class*="bg-"]:not([class*="bg-transparent"]):not([class*="bg-white"]),
+.dog-page-override section a[class*="bg-"].btn:not([class*="bg-transparent"]):not([class*="bg-white"]),
+.dog-page-override section a[class*="bg-"].cta-button:not([class*="bg-transparent"]):not([class*="bg-white"]) {
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+/* Ensure brand-primary and brand-secondary classes always have white text */
+.dog-page-override .text-brand-primary {
+  color: #dc2626 !important;
+}
+
+.dog-page-override .bg-brand-primary .text-brand-primary,
+.dog-page-override [class*="bg-brand-"] .text-brand-primary,
+.dog-page-override [class*="bg-red"] .text-brand-primary {
+  color: white !important;
+}
+
+/* Content bubbles and cards with backgrounds need white text */
+.dog-page-override [class*="content-bubble"][class*="bg-"],
+.dog-page-override [class*="card"][class*="bg-"],
+.dog-page-override [class*="bubble"][class*="bg-"] {
+  color: white !important;
+}
+
+.dog-page-override [class*="content-bubble"][class*="bg-"] *,
+.dog-page-override [class*="card"][class*="bg-"] *,
+.dog-page-override [class*="bubble"][class*="bg-"] * {
+  color: inherit !important;
+}
+
+/* Override any text-brand-primary inside red gradients or backgrounds */
+.dog-page-override [class*="bg-gradient"] .text-brand-primary,
+.dog-page-override [class*="from-brand-primary"] .text-brand-primary,
+.dog-page-override [class*="to-brand-primary"] .text-brand-primary,
+.dog-page-override [style*="background"] .text-brand-primary {
+  color: white !important;
+}
+
+/* Ensure readability for any red text on potentially red backgrounds */
+.dog-page-override [class*="text-red"] {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* Buttons and backgrounds on dog pages */
+.dog-page-override main button[class*="bg-"]:not([class*="bg-transparent"]),
+.dog-page-override main a[class*="bg-"].btn:not([class*="bg-transparent"]),
+.dog-page-override main a[class*="bg-"].cta-button:not([class*="bg-transparent"]),
+.dog-page-override section button[class*="bg-"]:not([class*="bg-transparent"]),
+.dog-page-override section a[class*="bg-"].btn:not([class*="bg-transparent"]),
+.dog-page-override section a[class*="bg-"].cta-button:not([class*="bg-transparent"]) {
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* ========== HORSE PAGE OVERRIDES ========== */
 .horse-page-override {
   --brand-primary: #16a34a !important;
   --color-text-heading: #16a34a !important;
 }
 
-/* Green headings for horse pages (when not on colored background) */
-.horse-page-override h1:not([class*="bg-"]),
-.horse-page-override h2:not([class*="bg-"]),
-.horse-page-override h3:not([class*="bg-"]),
-.horse-page-override h4:not([class*="bg-"]),
-.horse-page-override h5:not([class*="bg-"]),
-.horse-page-override h6:not([class*="bg-"]),
-.horse-page-override [class*="title"]:not([class*="bg-"]),
-.horse-page-override [class*="heading"]:not([class*="bg-"]) {
+/* Header and Navigation remain unchanged on horse pages */
+.horse-page-override header,
+.horse-page-override header *,
+.horse-page-override nav,
+.horse-page-override nav * {
+  color: inherit !important;
+}
+
+/* Main content headings on horse pages (exclude header/nav/footer) */
+.horse-page-override main h1:not([class*="bg-"]),
+.horse-page-override main h2:not([class*="bg-"]),
+.horse-page-override main h3:not([class*="bg-"]),
+.horse-page-override main h4:not([class*="bg-"]),
+.horse-page-override main h5:not([class*="bg-"]),
+.horse-page-override main h6:not([class*="bg-"]),
+.horse-page-override main [class*="title"]:not([class*="bg-"]),
+.horse-page-override main [class*="heading"]:not([class*="bg-"]),
+.horse-page-override section h1:not([class*="bg-"]):not(header h1),
+.horse-page-override section h2:not([class*="bg-"]):not(header h2),
+.horse-page-override section h3:not([class*="bg-"]):not(header h3),
+.horse-page-override section h4:not([class*="bg-"]):not(header h4),
+.horse-page-override section h5:not([class*="bg-"]):not(header h5),
+.horse-page-override section h6:not([class*="bg-"]):not(header h6) {
   color: #16a34a !important;
 }
 
-/* White text on green backgrounds in horse pages */
-.horse-page-override [class*="bg-brand"],
-.horse-page-override [class*="bg-green"],
-.horse-page-override [class*="bg-brand-primary"],
-.horse-page-override [class*="bg-brand-secondary"] {
+/* Footer text should remain white on horse pages */
+.horse-page-override footer,
+.horse-page-override footer * {
   color: white !important;
 }
 
-/* White text for buttons with backgrounds */
-.horse-page-override button[class*="bg-"]:not([class*="bg-transparent"]),
-.horse-page-override a[class*="bg-"].btn:not([class*="bg-transparent"]),
-.horse-page-override a[class*="bg-"].cta-button:not([class*="bg-transparent"]) {
-  color: white !important;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+.horse-page-override footer a:hover {
+  color: #e5e5e5 !important;
+  opacity: 0.8;
 }
 
-/* Green text for transparent buttons */
-.horse-page-override .bg-transparent.border-brand-secondary {
-  color: #16a34a !important;
-  border-color: #16a34a !important;
-}
-
-/* White text for transparent buttons on hover */
-.horse-page-override .bg-transparent.border-brand-secondary:hover {
+/* Buttons and backgrounds on horse pages */
+.horse-page-override main [class*="bg-brand-primary"],
+.horse-page-override main [class*="bg-green"],
+.horse-page-override section [class*="bg-brand-primary"],
+.horse-page-override section [class*="bg-green"] {
   background-color: #16a34a !important;
   color: white !important;
 }
 
-/* Compact spacing utilities for dense layouts */
+/* Button text colors for horse pages */
+.horse-page-override main button[class*="bg-"]:not([class*="bg-transparent"]),
+.horse-page-override main a[class*="bg-"].btn:not([class*="bg-transparent"]),
+.horse-page-override main a[class*="bg-"].cta-button:not([class*="bg-transparent"]),
+.horse-page-override section button[class*="bg-"]:not([class*="bg-transparent"]),
+.horse-page-override section a[class*="bg-"].btn:not([class*="bg-transparent"]),
+.horse-page-override section a[class*="bg-"].cta-button:not([class*="bg-transparent"]) {
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+
+/* Optimized section spacing - significantly reduced vertical padding */
+.section-padding {
+  padding: 3rem 0 !important;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 4rem 0 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 5rem 0 !important;
+  }
+}
+
+/* Dense grid layouts */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    gap: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem !important;
+  }
+}
+
+/* Maximum content width utilities */
+.max-content-width {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.max-content-width-lg {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.max-content-width-sm {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .max-content-width,
+  .max-content-width-lg,
+  .max-content-width-sm {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .max-content-width,
+  .max-content-width-lg,
+  .max-content-width-sm {
+    padding: 0 2rem;
+  }
+}
+
+/* Standardize container alignment - fix inconsistent container usage */
+.container {
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+/* Text containers for optimal reading width */
+.text-container {
+  max-width: 65ch;
+}
+
+/* Responsive image utilities */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .responsive-image {
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-image {
+    min-height: 300px;
+  }
+}
+
+/* Compact spacing utilities for ultra-dense layouts */
 .compact-section {
   padding: 2rem 0 !important;
 }
 
 @media (min-width: 768px) {
   .compact-section {
-    padding: 3rem 0 !important;
+    padding: 2.5rem 0 !important;
   }
 }
 
 @media (min-width: 1024px) {
   .compact-section {
-    padding: 4rem 0 !important;
+    padding: 3rem 0 !important;
+  }
+}
+
+/* Standardized section padding utilities for consistent spacing */
+.section-padding {
+  padding: 4rem 0;
+}
+
+.section-padding-sm {
+  padding: 2rem 0;
+}
+
+.section-padding-lg {
+  padding: 6rem 0;
+}
+
+.section-padding-xl {
+  padding: 8rem 0;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 5rem 0;
+  }
+  .section-padding-sm {
+    padding: 3rem 0;
+  }
+  .section-padding-lg {
+    padding: 7rem 0;
+  }
+  .section-padding-xl {
+    padding: 10rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 6rem 0;
+  }
+  .section-padding-sm {
+    padding: 4rem 0;
+  }
+  .section-padding-lg {
+    padding: 8rem 0;
+  }
+  .section-padding-xl {
+    padding: 12rem 0;
   }
 }
 
@@ -291,13 +560,13 @@ a.cta-button,
 
 @media (min-width: 768px) {
   .compact-grid {
-    gap: 1.5rem !important;
+    gap: 1.25rem !important;
   }
 }
 
 @media (min-width: 1024px) {
   .compact-grid {
-    gap: 2rem !important;
+    gap: 1.5rem !important;
   }
 }
 
@@ -317,4 +586,405 @@ a.cta-button,
   .compact-container {
     padding: 0 2rem;
   }
+}
+
+/* ========== ALIGNMENT AND LAYOUT FIXES ========== */
+
+/* Ensure consistent text alignment */
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+/* COMPREHENSIVE CENTERING FIXES - COMPLETE OVERRIDE */
+/* Force center alignment for ALL hero sections everywhere */
+.hero,
+section[class*="hero"],
+section.hero,
+.hero-section,
+*[class*="hero"] {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.hero *,
+section[class*="hero"] *,
+section.hero *,
+.hero-section *,
+*[class*="hero"] * {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Force center alignment for ALL content bubbles and cards */
+.content-bubble,
+.content-bubble *,
+.content-bubble div,
+.content-bubble p,
+.content-bubble h1,
+.content-bubble h2,
+.content-bubble h3,
+.content-bubble h4,
+.content-bubble h5,
+.content-bubble h6,
+.card,
+.card *,
+*[class*="card"] *,
+*[class*="content"] * {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Force center alignment for ALL title cards and sections */
+section[id*="intro"],
+section[id*="team"],
+section[id*="about"],
+section[class*="title"],
+.title-card,
+.title-section,
+*[class*="section"],
+section,
+section *,
+div[class*="section"],
+div[class*="section"] * {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+section[id*="intro"] *,
+section[id*="team"] *,
+section[id*="about"] *,
+section[class*="title"] *,
+.title-card *,
+.title-section * {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Force ALL footer sections to be centered */
+footer,
+footer *,
+*[class*="footer"],
+*[class*="footer"] *,
+section:last-child,
+section:last-child * {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Force center all heading and title elements */
+h1, h2, h3, h4, h5, h6,
+.title, .heading, .header,
+*[class*="title"], *[class*="heading"], *[class*="header"] {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* NUCLEAR OPTION - CENTER EVERYTHING WITH HIGHEST SPECIFICITY */
+html * {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* FORCE CENTER ALL ELEMENTS */
+html *, html *::before, html *::after {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* FORCE BUTTON CENTERING */
+button, .btn, [role="button"], a[class*="button"], *[class*="Button"] {
+  text-align: center !important;
+  margin: 0 auto !important;
+  display: block !important;
+  width: fit-content !important;
+}
+
+html div, html section, html header, html footer, html main, html article, html aside, html nav {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+html p, html span, html a, html button, html input, html textarea, html label, html h1, html h2, html h3, html h4, html h5, html h6 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+html .container, html .max-w-4xl, html .max-w-6xl, html .mx-auto {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Override ALL Tailwind classes with highest specificity */
+html .text-left {
+  text-align: center !important;
+}
+
+html .text-start {
+  text-align: center !important;
+}
+
+html .justify-start {
+  justify-content: center !important;
+}
+
+html .justify-between {
+  justify-content: center !important;
+}
+
+html .items-start {
+  align-items: center !important;
+}
+
+html .items-end {
+  align-items: center !important;
+}
+
+/* Force all flex containers to center */
+html .flex {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+html .grid {
+  justify-items: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Override any left-aligned text in centered sections */
+@media (min-width: 768px) {
+  footer .flex-row {
+    justify-content: space-between !important;
+  }
+  footer .flex-row * {
+    text-align: left !important;
+  }
+}
+
+
+/* Fix grid alignment issues */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Responsive grid fixes */
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Fix flexbox alignment issues */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.items-start {
+  align-items: flex-start !important;
+}
+
+.items-end {
+  align-items: flex-end !important;
+}
+
+.items-stretch {
+  align-items: stretch !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+
+/* Gap utilities for consistent spacing */
+.gap-1 { gap: 0.25rem !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-3 { gap: 0.75rem !important; }
+.gap-4 { gap: 1rem !important; }
+.gap-6 { gap: 1.5rem !important; }
+.gap-8 { gap: 2rem !important; }
+.gap-12 { gap: 3rem !important; }
+
+
+
+/* Duplicate flexbox utilities cleaned up above */
+
+/* Container styles consolidated above with .max-content-width utilities */
+
+/* All container styles consolidated above */
+
+/* Navigation container specifically */
+.nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .nav-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Fix image alignment issues */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure buttons are properly aligned */
+button, .btn, .button, a.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Fix content bubble alignment */
+.content-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Fix typography alignment */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* Fix list alignment */
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* FORCE CENTER ADOPTION PAGE SPECIFICALLY WITH MATHEMATICAL POSITIONING */
+#adoptable-dogs,
+#adoptable-dogs *,
+#adoptable-dogs .container,
+#adoptable-dogs .content-bubble {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100vw !important;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* FIX RED TEXT IN READY TO CHANGE A LIFE SECTION */
+section[class*="bg-brand-primary"],
+section[class*="bg-brand-primary"] *,
+section[class*="bg-brand-primary"] .container,
+section[class*="bg-brand-primary"] h2 {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
 }

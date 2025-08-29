@@ -17,7 +17,12 @@
       "Bash(npx cloudflared tunnel:*)",
       "Bash(git remote add:*)",
       "Bash(git push:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "WebFetch(domain:localhost)",
+      "WebFetch(domain:127.0.0.1)",
+      "Bash(taskkill:*)",
+      "Bash(powershell:*)",
+      "Bash(xcopy:*)"
     ],
     "deny": [],
     "ask": []

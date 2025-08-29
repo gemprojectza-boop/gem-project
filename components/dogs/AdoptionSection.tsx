@@ -21,7 +21,7 @@ const AdoptionSection: React.FC<SectionProps> = (props) => {
             <div className="content-bubble text-center max-w-4xl mx-auto">
                 <PawIcon className="w-10 h-10 text-sanctuary-dark mx-auto mb-4" />
                 <h2 className="text-3xl md:text-4xl font-bold text-sanctuary-dark">Meet Our Adoptable Dogs</h2>
-                <p className="mt-2 text-lg text-gray-600">Find your new best friend.</p>
+                <p className="mt-2 text-lg text-gray-600" style={{ textAlign: 'center', margin: '0 auto' }}>Find your new best friend.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 my-12 stagger-children">

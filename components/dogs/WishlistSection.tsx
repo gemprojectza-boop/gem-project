@@ -77,16 +77,6 @@ const WishlistSection: React.FC<SectionProps> = (props) => {
                 />
             </div>
             
-            <div className="content-bubble text-center mt-12 max-w-4xl mx-auto">
-                <PawIcon className="w-10 h-10 text-brand-secondary mx-auto mb-4" />
-                <h2 className="text-3xl font-bold text-brand-secondary mb-4">How to Donate Supplies</h2>
-                <p className="mx-auto text-lg text-gray-700 mb-6">
-                   If you would like to arrange a drop-off or delivery, please contact us. We are happy to provide directions or help coordinate delivery times. You can also email us if you have gently used pet supplies you'd like to donate. Every act of kindness counts.
-                </p>
-                <CtaButton href="/contact?subject=WishlistDonation" className="bg-brand-accent text-white hover:bg-brand-accent-hover">
-                    Contact Us to Arrange Donation
-                </CtaButton>
-            </div>
         </div>
     </section>
   );

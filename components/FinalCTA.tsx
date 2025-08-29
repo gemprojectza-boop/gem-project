@@ -34,16 +34,16 @@ const FinalCTA: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpd
             <div className="absolute inset-0 bg-brand-text-primary opacity-70"></div>
             </div>
         )}
-        <div className="relative container mx-auto px-6 text-center">
-            <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto" style={{background: 'rgba(0,0,0,0.3)'}}>
-              <div className="p-6 md:p-8">
-                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-wider text-brand-primary text-shadow-strong">
-                  <span>Give them what they’ve never had—a future.</span>
+        <div className="relative container mx-auto px-6 text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+            <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto" style={{background: 'rgba(0,0,0,0.3)', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+              <div className="p-6 md:p-8" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-wider text-brand-primary text-shadow-strong" style={{textAlign: 'center', margin: '0 auto'}}>
+                  <span>Give them what they've never had—a future.</span>
                 </h2>
-                  <p className="text-lg my-6 text-shadow-custom">
-                  Every dog and horse in our care has come from hardship, but with your help, their story doesn’t end there. Your support helps create the safety, love and second chances they deserve.
+                  <p className="text-lg my-6 text-shadow-custom" style={{textAlign: 'center', margin: '0 auto'}}>
+                  Every dog and horse in our care has come from hardship, but with your help, their story doesn't end there. Your support helps create the safety, love and second chances they deserve.
                   </p>
-                  <div className="flex flex-wrap justify-center gap-4">
+                  <div className="flex flex-wrap justify-center gap-4" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', textAlign: 'center', margin: '0 auto'}}>
                       <CtaButton href="/hands-on-dogs" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">Hands-On Care - Dogs</CtaButton>
                       <CtaButton href="/horses#hands-on" className="bg-brand-accent hover:bg-brand-accent-hover text-white">Hands-On Care - Horses</CtaButton>
                       <CtaButton href="/dogs/sponsorship" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white btn-pulse">Sponsor a Dog</CtaButton>

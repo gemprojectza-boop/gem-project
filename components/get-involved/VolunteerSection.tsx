@@ -15,7 +15,7 @@ const TierCard: React.FC<{ title: string, subtitle: string, roles: { title: stri
     <div className="content-bubble h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2 transform">
         <div className="p-6 md:p-8">
             <PawIcon className="w-8 h-8 text-sanctuary-purple mb-2" />
-            <h3 className="text-2xl font-bold text-sanctuary-purple">{title}</h3>
+            <h3 className="text-2xl font-bold text-sanctuary-purple text-center">{title}</h3>
             <p className="text-gray-500 mb-6">{subtitle}</p>
             <div className="space-y-4">
                 {roles.map(role => (

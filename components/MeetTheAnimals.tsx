@@ -40,8 +40,8 @@ const ActionCard: React.FC<ActionCardProps> = ({ bgColor, heartColor, mediaKey, 
     };
 
     return (
-        <div className={`rounded-lg p-4 md:p-6 flex flex-col items-center animate-on-scroll ${bgColor}`}>
-            <div className="relative w-32 h-32 md:w-36 md:h-36 mb-4">
+        <div className={`rounded-lg p-6 md:p-8 flex flex-col items-center animate-on-scroll ${bgColor}`}>
+            <div className="relative w-40 h-40 md:w-48 md:h-48 mb-4">
                 <div className="absolute w-full h-full">
                     {mediaUrl ? (
                         <EditableMedia
@@ -101,18 +101,18 @@ const MeetTheAnimals: React.FC<SectionProps> = (props) => {
   ];
 
   return (
-    <section id="meet-animals" className="section-padding bg-brand-bg-subtle">
+    <section id="meet-animals" className="compact-section bg-brand-bg-subtle">
         <div className="max-content-width">
-            <div className="text-center mb-12 animate-on-scroll">
+            <div className="text-center mb-8 animate-on-scroll">
                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase text-brand-primary">
                     <span>Be Part of</span>{' '}
                     <span>the Change</span>
                 </h2>
-                <p className="mt-4 text-container mx-auto text-lg text-brand-text-secondary">
+                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary">
                     Your support gives them a second chance. Explore the ways you can make a difference today.
                 </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 stagger-children">
+            <div className="compact-grid grid grid-cols-1 lg:grid-cols-3 stagger-children">
                 {cards.map(card => (
                     <ActionCard key={card.buttonText} {...card} {...props} />
                 ))}

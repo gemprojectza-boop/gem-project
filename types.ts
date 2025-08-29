@@ -1,7 +1,16 @@
 
 
+export interface FocalPoint {
+  x: number;
+  y: number;
+}
+
 export interface MediaContent {
   [key: string]: string | null;
+}
+
+export interface FocalPointData {
+  [mediaKey: string]: FocalPoint;
 }
 
 export type SectionKey = 'welcome' | 'impact_stats' | 'animal_sections' | 'community' | 'youth' | 'get_involved' | 'final_cta';

@@ -68,7 +68,7 @@ const About: React.FC<AboutProps> = ({ mediaContent, isEditMode, onMediaUpdate }
     <section id="about" className="section-padding bg-brand-bg-subtle animate-on-scroll">
       <div className="max-content-width">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
             {/* Text Content */}
             <div className="text-center lg:text-left">
               <h2 className="text-4xl md:text-5xl font-extrabold text-brand-primary mb-6 leading-tight">
@@ -83,7 +83,7 @@ const About: React.FC<AboutProps> = ({ mediaContent, isEditMode, onMediaUpdate }
 
             {/* Image Content */}
             <div className="relative flex justify-center items-center">
-              <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px]">
                   <EditableMedia
                     mediaKey="welcome_section_01"
                     mediaUrl={mediaContent.welcome_section_01!}
@@ -103,7 +103,7 @@ const About: React.FC<AboutProps> = ({ mediaContent, isEditMode, onMediaUpdate }
       </div>
     </section>
 
-    <section className="section-padding bg-brand-bg-main animate-on-scroll">
+    <section className="compact-section bg-brand-bg-main animate-on-scroll">
         <div className="max-content-width">
             <div className="card-grid stagger-children">
                 {infoCards.map(card => <InfoCard key={card.title} {...card} />)}

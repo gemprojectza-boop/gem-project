@@ -13,6 +13,7 @@ import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
 import SplashScreen from './components/SplashScreen.tsx';
 import EditingSystem from './components/EditingSystem.tsx';
+import SimplifiedEditor from './components/SimplifiedEditor.tsx';
 
 // Direct import all page components
 import HomePage from './components/HomePage.tsx';
@@ -557,6 +558,10 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
                 onToggleEditMode={toggleEditMode}
                 onSaveChanges={handleSaveChanges}
                 mediaContent={mediaContent}
+            />
+            <SimplifiedEditor 
+                isEditMode={isEditMode} 
+                onToggleEditMode={toggleEditMode} 
             />
             <Header />
             <main className="pt-[88px] animate-page-fade max-content-width-lg" key={path}>

@@ -13,10 +13,10 @@ interface SectionProps {
 const CommunityEvents: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpdate }) => {
     const { navigate } = useSafeNavigation();
     return (
-        <section id="community" className="py-20 md:py-24 bg-gradient-to-br from-brand-bg-main to-brand-bg-subtle animate-on-scroll">
-            <div className="container mx-auto px-6">
+        <section id="community" className="section-padding bg-gradient-to-br from-brand-bg-main to-brand-bg-subtle animate-on-scroll">
+            <div className="max-content-width">
                 {/* Section Header */}
-                <div className="text-center mb-16 animate-on-scroll">
+                <div className="text-center mb-12 animate-on-scroll">
                     <h2 className="text-4xl md:text-5xl font-bold text-brand-primary mb-4">Our Community</h2>
                     <p className="text-lg text-brand-text-secondary max-w-2xl mx-auto">
                         Together, we create lasting change through collaboration, compassion, and shared purpose
@@ -24,7 +24,7 @@ const CommunityEvents: React.FC<SectionProps> = ({ mediaContent, isEditMode, onM
                 </div>
 
                 {/* Enhanced Cards Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch stagger-children">
+                <div className="compact-grid grid grid-cols-1 lg:grid-cols-3 items-stretch stagger-children">
                     {/* Community Outreach Card - Spans 2 columns */}
                     <div className="lg:col-span-2 animate-on-scroll">
                         <div className="group h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
@@ -132,24 +132,6 @@ const CommunityEvents: React.FC<SectionProps> = ({ mediaContent, isEditMode, onM
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                {/* Optional: Stats or additional info */}
-                <div className="mt-16 text-center animate-on-scroll">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-white">
-                            <div className="text-3xl font-bold text-brand-primary mb-2">15+</div>
-                            <div className="text-brand-text-secondary font-medium">Partner Organizations</div>
-                        </div>
-                        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-white">
-                            <div className="text-3xl font-bold text-brand-primary mb-2">1000+</div>
-                            <div className="text-brand-text-secondary font-medium">Animals Helped</div>
-                        </div>
-                        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-white">
-                            <div className="text-3xl font-bold text-brand-primary mb-2">5</div>
-                            <div className="text-brand-text-secondary font-medium">Years of Service</div>
                         </div>
                     </div>
                 </div>

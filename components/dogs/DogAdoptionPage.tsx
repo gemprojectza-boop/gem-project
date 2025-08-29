@@ -28,12 +28,13 @@ const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
       />
 
       <section id="adoptable-dogs" className="py-16 md:py-20 bg-brand-bg-main">
-        <div className="container mx-auto px-6 max-w-7xl">
-            <div className="content-bubble text-center max-w-4xl mx-auto">
-                <PawIcon className="w-10 h-10 text-brand-primary mx-auto mb-4" />
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-primary">Meet Our Adoptable Dogs</h2>
-                <p className="mt-2 text-lg text-gray-600">Find your new best friend.</p>
-            </div>
+        <center><div className="container mx-auto px-6 max-w-7xl" style={{ textAlign: 'center !important', margin: '0 auto !important', display: 'flex !important', flexDirection: 'column !important', alignItems: 'center !important', justifyContent: 'center !important' }}>
+            <center><div className="content-bubble text-center max-w-4xl mx-auto" style={{ textAlign: 'center !important', margin: '0 auto !important', display: 'flex !important', flexDirection: 'column !important', alignItems: 'center !important', justifyContent: 'center !important' }}>
+                <center><PawIcon className="w-10 h-10 text-brand-primary mx-auto mb-4" /></center>
+                <center><h2 className="text-3xl md:text-4xl font-bold text-brand-primary" style={{ textAlign: 'center !important', margin: '0 auto !important' }}>Meet Our Adoptable Dogs</h2></center>
+                <center><p className="mt-2 text-lg text-gray-600" style={{ textAlign: 'center !important', margin: '0 auto !important', display: 'block !important' }}>Find your new best friend.</p></center>
+            </div></center>
+        </div></center>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 my-12 stagger-children">
               {adoptableDogs.map(dog => (
@@ -105,10 +106,10 @@ const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
         <p className="mt-6 text-base italic">Please note: While we remain available to offer guidance and advice after adoption, any ongoing behavioural or training services required would need to be arranged and funded independently.</p>
       </ContentSection>
 
-      <section className="py-20 bg-brand-primary">
-        <div className="container mx-auto px-6 text-center text-white">
-          <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to change a life?</h2>
+      <center><section className="py-20 bg-brand-primary" style={{ textAlign: 'center !important', display: 'flex !important', flexDirection: 'column !important', alignItems: 'center !important', justifyContent: 'center !important' }}>
+        <center><div className="container mx-auto px-6 text-center text-white" style={{ textAlign: 'center !important', margin: '0 auto !important', display: 'flex !important', flexDirection: 'column !important', alignItems: 'center !important', justifyContent: 'center !important' }}>
+          <center><PawIcon className="w-10 h-10 text-white mx-auto mb-4" /></center>
+          <center><h2 className="text-3xl md:text-4xl font-bold mb-8" style={{ color: 'white !important', textAlign: 'center !important', margin: '0 auto !important', display: 'block !important' }}>Ready to change a life?</h2></center>
           <div className="flex flex-wrap justify-center gap-4">
             <CtaButton href="/contact?subject=AdoptionApplication" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white btn-pulse">Start the Adoption Process</CtaButton>
             <CtaButton href="/faq" className="border border-white text-white hover:bg-brand-primary hover:border-brand-primary">Adoption FAQs</CtaButton>

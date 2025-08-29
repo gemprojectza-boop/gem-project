@@ -31,7 +31,7 @@ const SectionCard: React.FC<{
                     mediaKey={mediaKey}
                     mediaUrl={mediaContent[mediaKey]!}
                     alt={imageAlt}
-                    className="w-full h-40 object-cover"
+                    className="w-full h-48 md:h-56 object-cover"
                     isEditMode={isEditMode}
                     onUpdate={onMediaUpdate}
                 />
@@ -55,19 +55,19 @@ const SectionCard: React.FC<{
 
 const HowToHelp: React.FC<SectionProps> = (props) => {
   return (
-    <section id="get-involved" className="py-20 md:py-24 bg-brand-bg-main">
-        <div className="container mx-auto px-6">
-            <div className="text-center mb-16 animate-on-scroll">
+    <section id="get-involved" className="compact-section bg-brand-bg-main">
+        <div className="max-content-width">
+            <div className="text-center mb-12 animate-on-scroll">
                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase text-brand-secondary">
                     <span>Change a Life,</span>{' '}
                     <span>Be the Change</span>
                 </h2>
-                <p className="mt-4 max-w-2xl mx-auto text-lg text-brand-text-secondary">
+                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary">
                     Every act of kindness creates a ripple of hope. Discover the many ways you can contribute to our mission and make a lasting difference in an animal's life.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 stagger-children">
+            <div className="compact-grid grid grid-cols-1 lg:grid-cols-3 stagger-children">
                 <SectionCard
                     title="Our Forever Animals"
                     mediaKey="horse_hands_on_hero"

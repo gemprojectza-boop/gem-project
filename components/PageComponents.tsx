@@ -43,13 +43,13 @@ export const PageHero: React.FC<PageHeroProps> = ({
         ) : <div className="w-full h-full bg-brand-text-primary" />}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30"></div>
       </div>
-      <div className="relative container mx-auto px-6 z-10 flex items-center justify-center w-full">
-        <div className="max-w-6xl mx-auto animate-on-scroll text-center">
-          <div className="content-bubble content-bubble-inverted backdrop-blur-md border border-white/20 p-12 md:p-16 rounded-2xl" style={{ background: 'rgba(0,0,0,0.5)' }}>
-            <h1 className={`text-heading-xl ${titleColorClass} uppercase tracking-tight mb-8`}>
+      <div className="relative container mx-auto px-6 z-10 flex items-center justify-center w-full" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <div className="max-w-6xl mx-auto animate-on-scroll text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div className="content-bubble content-bubble-inverted backdrop-blur-md border border-white/20 p-12 md:p-16 rounded-2xl" style={{ background: 'rgba(0,0,0,0.5)', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h1 className={`text-heading-xl ${titleColorClass} uppercase tracking-tight mb-8`} style={{textAlign: 'center', margin: '0 auto'}}>
               <span>{title}</span>
             </h1>
-            <p className="text-body-lg max-w-4xl mx-auto leading-relaxed text-white/95">
+            <p className="text-body-lg max-w-4xl mx-auto leading-relaxed text-white/95" style={{textAlign: 'center', margin: '0 auto'}}>
               {subtitle}
             </p>
           </div>
@@ -85,17 +85,17 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
     : (isDarkBg ? '' : 'text-brand-primary');
   
   return (
-      <section id={id} className={`section-padding ${className} animate-on-scroll`}>
-          <div className="container mx-auto px-6 max-w-6xl">
-              <div className={`content-bubble p-10 md:p-16 rounded-2xl ${isDarkBg ? 'content-bubble-inverted' : 'bg-white border border-gray-100'}`}>
+      <section id={id} className={`section-padding ${className} animate-on-scroll`} style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div className="container mx-auto px-6 max-w-6xl" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+              <div className={`content-bubble p-10 md:p-16 rounded-2xl ${isDarkBg ? 'content-bubble-inverted' : 'bg-white border border-gray-100'}`} style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                   {title && (
-                    <div className={`mb-12 text-center`}>
+                    <div className={`mb-12 text-center`} style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                       <PawIcon className={`w-14 h-14 mb-8 icon-interactive mx-auto ${finalTitleColorClass || 'text-brand-primary'}`} />
-                      <h2 className={`text-heading-lg mb-6 ${titleClassName || ''} ${finalTitleColorClass} text-center`}>{title}</h2>
+                      <h2 className={`text-heading-lg mb-6 ${titleClassName || ''} ${finalTitleColorClass} text-center`} style={{textAlign: 'center', margin: '0 auto'}}>{title}</h2>
                       <div className={`w-24 h-1 rounded-full ${finalTitleColorClass ? finalTitleColorClass.replace('text-', 'bg-') : 'bg-brand-primary'} mx-auto`}></div>
                     </div>
                   )}
-                  <div className={`space-y-8 text-body leading-relaxed ${textClassName}`}>
+                  <div className={`space-y-8 text-body leading-relaxed ${textClassName}`} style={{textAlign: 'center', margin: '0 auto'}}>
                       {children}
                   </div>
               </div>

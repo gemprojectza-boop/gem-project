@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-text-primary text-white">
       <div className="max-content-width py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex flex-col items-center space-y-4 text-center">
           <SafeLink href="/" className="text-white hover:opacity-80 transition-opacity">
             <span className="font-bold">The Gem Project Sanctuary</span>
           </SafeLink>

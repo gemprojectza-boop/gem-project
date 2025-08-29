@@ -22,12 +22,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
           {mediaContent.about_hero && <EditableMedia mediaKey="about_hero" mediaUrl={mediaContent.about_hero} alt="Sanctuary landscape" className="w-full h-full object-cover" isEditMode={isEditMode} onUpdate={onMediaUpdate}/>}
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="relative container mx-auto px-6">
-          <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto animate-fade-in-up" style={{background: 'rgba(0,0,0,0.3)', animationDelay: '0.3s'}}>
-            <h1 className="text-4xl md:text-6xl font-black uppercase text-brand-primary text-shadow-strong">
+        <div className="relative container mx-auto px-6" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto animate-fade-in-up" style={{background: 'rgba(0,0,0,0.3)', animationDelay: '0.3s', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+            <h1 className="text-4xl md:text-6xl font-black uppercase text-brand-primary text-shadow-strong" style={{textAlign: 'center', margin: '0 auto'}}>
               <span>About The Sanctuary</span>
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-shadow-custom">
+            <p className="mt-4 text-lg md:text-xl text-shadow-custom" style={{textAlign: 'center', margin: '0 auto'}}>
               A promise to animals. A commitment to healing. A home for life and hope for adoption.
             </p>
           </div>
@@ -56,12 +56,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
 
       {/* Community Programmes */}
       <section className="py-20 md:py-24 bg-brand-bg-main">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto content-bubble text-center animate-on-scroll">
-            <div className="p-6 md:p-8">
+        <div className="container mx-auto px-6" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div className="max-w-3xl mx-auto content-bubble text-center animate-on-scroll" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+            <div className="p-6 md:p-8" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
               <PawIcon className="w-10 h-10 text-brand-primary mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-primary">Community Programmes</h2>
-              <p className="text-lg text-brand-text-secondary">Our care extends beyond the animals. We invest in people too.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-primary" style={{textAlign: 'center', margin: '0 auto'}}>Community Programmes</h2>
+              <p className="text-lg text-brand-text-secondary" style={{textAlign: 'center', margin: '0 auto'}}>Our care extends beyond the animals. We invest in people too.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 stagger-children">
@@ -150,12 +150,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
 
       {/* Facilities */}
       <section className="py-20 md:py-24 bg-brand-bg-subtle">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto content-bubble text-center">
-            <div className="p-6 md:p-8">
-              <PawIcon className="w-10 h-10 text-brand-primary mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-primary">Our Facilities</h2>
-              <p className="text-lg text-brand-text-secondary">Built for healing. Designed with heart. Every corner of our sanctuary reflects our belief that healing starts with feeling safe, seen and loved.</p>
+        <div className="container mx-auto px-6" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+          <div className="max-w-3xl mx-auto content-bubble text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', margin: '0 auto'}}>
+            <div className="p-6 md:p-8" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+              <PawIcon className="w-10 h-10 text-brand-primary mx-auto mb-4" style={{margin: '0 auto'}} />
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-primary" style={{textAlign: 'center !important', margin: '0 auto', display: 'block', width: '100%', textAlignLast: 'center'}}>Our Facilities</h2>
+              <p className="text-lg text-brand-text-secondary" style={{textAlign: 'center !important', margin: '0 auto', display: 'block', width: '100%', textAlignLast: 'center'}}>Built for healing. Designed with heart. Every corner of our sanctuary reflects our belief that healing starts with feeling safe, seen and loved.</p>
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-start mt-8">

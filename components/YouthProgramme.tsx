@@ -12,9 +12,9 @@ interface SectionProps {
 const YouthProgramme: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpdate }) => {
     const { navigate } = useSafeNavigation();
     return (
-        <section id="youth" className="py-20 md:py-24 bg-brand-bg-subtle animate-on-scroll">
-            <div className="container mx-auto px-6">
-                 <div className="max-w-4xl mx-auto stagger-children">
+        <section id="youth" className="compact-section bg-brand-bg-subtle animate-on-scroll">
+            <div className="max-content-width">
+                 <div className="max-w-5xl mx-auto stagger-children">
                     {/* Youth Apprenticeship Programme */}
                     <div className="content-bubble grid grid-cols-1 md:grid-cols-2 items-stretch animate-on-scroll">
                         <div className="p-6 md:p-8 flex flex-col justify-center">
@@ -33,7 +33,7 @@ const YouthProgramme: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMe
                                 alt="Teenager working with a dog"
                                 isEditMode={isEditMode}
                                 onUpdate={onMediaUpdate}
-                                className="w-full h-full object-cover min-h-[300px]"
+                                className="w-full h-full object-cover min-h-[280px] md:min-h-[320px]"
                             />
                         )}
                     </div>
