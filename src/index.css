@@ -1,4 +1,6 @@
-/* Removed Tailwind directives - using custom CSS instead */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Custom CSS variables and styles from index.html */
 :root {
