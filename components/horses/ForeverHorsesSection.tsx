@@ -16,23 +16,25 @@ const ForeverHorsesSection: React.FC<SectionProps> = (props) => {
   const foreverHorses = sampleHorses.filter(horse => horse.status === 'Forever Sanctuary');
 
   return (
-    <section id="forever" className="py-16 md:py-20 bg-brand-bg-main animate-on-scroll">
-        <div className="container mx-auto px-6 max-w-6xl">
-            <div className="content-bubble text-center max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-green-800">Forever Sanctuary Horses</h2>
-                <p className="mt-2 text-lg text-gray-600">They are not waiting for a home. They are already home.</p>
+    <section id="forever" className="py-16 md:py-20 bg-brand-bg-main animate-on-scroll" style={{textAlign: 'center'}}>
+        <div className="container mx-auto px-6 max-w-6xl" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <div className="content-bubble text-center max-w-4xl mx-auto" style={{textAlign: 'center', margin: '0 auto'}}>
+                <h2 className="text-3xl md:text-4xl font-bold" style={{textAlign: 'center', color: '#16a34a !important'}}>Forever Sanctuary Horses</h2>
+                <p className="mt-2 text-lg text-gray-600" style={{textAlign: 'center'}}>They are not waiting for a home. They are already home.</p>
             </div>
             
-            <div className="content-bubble max-w-4xl mx-auto text-lg text-gray-700 space-y-4">
-                <p>Not every horse that comes through our gates is suitable for rehoming—and that’s okay. Some horses have ongoing medical needs, trauma that requires continued specialized care, or simply thrive best in the safe, familiar environment of our sanctuary. These beloved residents are our Forever Gems.</p>
-                <p>They are not up for adoption, but they are still deeply deserving of love, support, and recognition. Each of them has a story of survival and resilience, and they continue to touch lives every day—from comforting new rescues to connecting with visitors and volunteers.</p>
-                <p>Our commitment to these horses is lifelong. They will remain under our care for the rest of their days, receiving everything they need:</p>
-                <ul className="list-disc list-inside space-y-2 pl-4">
-                    <li>Quality nutrition and veterinary care</li>
-                    <li>Therapeutic support (body work, hoof care, and more)</li>
-                    <li>Emotional stability in a safe, loving environment</li>
-                    <li>Enrichment and companionship to live with dignity and joy</li>
-                </ul>
+            <div className="content-bubble max-w-4xl mx-auto text-lg text-gray-700 space-y-4 text-center" style={{textAlign: 'center', margin: '0 auto', display: 'block'}}>
+                <p style={{textAlign: 'center'}}>Not every horse that comes through our gates is suitable for rehoming—and that's okay. Some horses have ongoing medical needs, trauma that requires continued specialized care, or simply thrive best in the safe, familiar environment of our sanctuary. These beloved residents are our Forever Gems.</p>
+                <p style={{textAlign: 'center'}}>They are not up for adoption, but they are still deeply deserving of love, support, and recognition. Each of them has a story of survival and resilience, and they continue to touch lives every day—from comforting new rescues to connecting with visitors and volunteers.</p>
+                <p style={{textAlign: 'center'}}>Our commitment to these horses is lifelong. They will remain under our care for the rest of their days, receiving everything they need:</p>
+                <div style={{textAlign: 'center', display: 'flex', justifyContent: 'center'}}>
+                    <ul className="list-disc list-inside space-y-2 text-left inline-block" style={{textAlign: 'left', display: 'inline-block'}}>
+                        <li>Quality nutrition and veterinary care</li>
+                        <li>Therapeutic support (body work, hoof care, and more)</li>
+                        <li>Emotional stability in a safe, loving environment</li>
+                        <li>Enrichment and companionship to live with dignity and joy</li>
+                    </ul>
+                </div>
             </div>
 
 

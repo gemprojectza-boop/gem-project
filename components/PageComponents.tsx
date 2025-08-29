@@ -46,10 +46,10 @@ export const PageHero: React.FC<PageHeroProps> = ({
       <div className="relative container mx-auto px-6 z-10 flex items-center justify-center w-full" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
         <div className="max-w-6xl mx-auto animate-on-scroll text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
           <div className="content-bubble content-bubble-inverted backdrop-blur-md border border-white/20 p-12 md:p-16 rounded-2xl" style={{ background: 'rgba(0,0,0,0.5)', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <h1 className={`text-heading-xl ${titleColorClass} uppercase tracking-tight mb-8`} style={{textAlign: 'center', margin: '0 auto'}}>
-              <span>{title}</span>
+            <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important', textAlign: 'center', margin: '0 auto'}} className={`text-heading-xl uppercase tracking-tight mb-8`}>
+              <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>{title}</span>
             </h1>
-            <p className="text-body-lg max-w-4xl mx-auto leading-relaxed text-white/95" style={{textAlign: 'center', margin: '0 auto'}}>
+            <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important', textAlign: 'center', margin: '0 auto'}} className="text-body-lg max-w-4xl mx-auto leading-relaxed">
               {subtitle}
             </p>
           </div>

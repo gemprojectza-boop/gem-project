@@ -16,10 +16,10 @@ const HorseProfileCard: React.FC<HorseProfileCardProps> = ({ horse, mediaContent
     const imageUrl = mediaContent[horse.media.mainPhotoKey];
 
     const statusColor = {
-        'Available': 'bg-brand-accent',
+        'Available': 'bg-green-600',
         'Adoption Pending': 'bg-brand-text-secondary',
         'Adopted': 'bg-brand-secondary',
-        'Forever Sanctuary': 'bg-brand-primary',
+        'Forever Sanctuary': 'bg-green-600',
         'Future Adoptable': 'bg-teal-500' // Kept teal for distinction, can be changed
     };
 
@@ -31,32 +31,20 @@ const HorseProfileCard: React.FC<HorseProfileCardProps> = ({ horse, mediaContent
             role="link"
             aria-label={`View profile for ${horse.name}`}
         >
-            <div className="relative">
-                {imageUrl ? (
-                    <EditableMedia
-                        mediaKey={horse.media.mainPhotoKey}
-                        mediaUrl={imageUrl}
-                        alt={`Photo of ${horse.name}`}
-                        isEditMode={isEditMode}
-                        onUpdate={onMediaUpdate}
-                        className="aspect-square w-full h-full object-cover"
-                    />
-                ) : (
-                    <div className="aspect-square w-full bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-500">No Image</span>
-                    </div>
-                )}
-                <div className={`absolute top-2 right-2 px-3 py-1 text-xs font-bold text-white rounded-full shadow-lg ${statusColor[horse.status]}`}>
-                    {horse.status}
-                </div>
-            </div>
-            <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-green-800 text-center">{horse.name}</h3>
-                <p className="text-brand-text-secondary text-sm mb-2">{horse.petInfo.breed}</p>
-                <p className="text-brand-text-secondary text-sm mb-4 flex-grow">{horse.idealHome}</p>
-                <button className="mt-auto w-full bg-green-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 hover:bg-green-700">
-                    Meet {horse.name}
-                </button>
+            {imageUrl && (
+                <EditableMedia 
+                    mediaKey={horse.media.mainPhotoKey}
+                    mediaUrl={imageUrl}
+                    alt={`${horse.name} - ${horse.breed}`}
+                    className="w-full aspect-video object-cover rounded-t-lg"
+                    isEditMode={isEditMode}
+                    onUpdate={onMediaUpdate}
+                />
+            )}
+            
+            <div className="p-4 flex-grow">
+                <h3 className="text-xl font-bold mb-2" style={{color: '#16a34a !important'}}>{horse.name}</h3>
+                <p className="text-sm" style={{color: '#6b7280'}}>{horse.breed}</p>
             </div>
         </div>
     );

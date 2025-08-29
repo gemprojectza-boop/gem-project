@@ -22,7 +22,7 @@ interface DogsLandingPageProps {
 }
 
 const Hero: React.FC<DogsLandingPageProps> = (props) => (
-    <section className="hero relative bg-brand-text-primary text-white py-20 md:py-32 text-center overflow-hidden min-h-[70vh] flex items-center justify-center">
+    <section className="hero relative bg-red-600 text-white py-20 md:py-32 text-center overflow-hidden min-h-[70vh] flex items-center justify-center">
         <div className="absolute inset-0">
           {props.mediaContent['dogs_hero_banner'] && (
             <EditableMedia 
@@ -36,13 +36,13 @@ const Hero: React.FC<DogsLandingPageProps> = (props) => (
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
         </div>
-        <div className="relative container mx-auto px-6 z-10" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-          <div className="content-bubble content-bubble-inverted max-w-5xl mx-auto backdrop-blur-md border border-white/20 rounded-2xl" style={{background: 'rgba(0,0,0,0.6)', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-            <div className="p-8 md:p-12" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tight mb-8" style={{color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', margin: '0 auto'}}>
-                <span style={{color: 'white'}}>Our Dogs</span>
+        <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', zIndex: 10, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div style={{background: 'rgba(0,0,0,0.6)', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', maxWidth: '80rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem'}}>
+            <div style={{padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+              <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', margin: '0 auto', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em', marginBottom: '2rem'}}>
+                <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Our Dogs</span>
               </h1>
-              <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed" style={{color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', margin: '0 auto'}}>
+              <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '1px 1px 2px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', margin: '0 auto', fontSize: '1.25rem', lineHeight: '1.6', maxWidth: '56rem'}}>
                 Rescue, Rebuild, Rehome – and sometimes, provide sanctuary for life.
               </p>
             </div>
@@ -118,8 +118,8 @@ const DogsLandingPage: React.FC<DogsLandingPageProps> = (props) => {
                 <div className="flex flex-wrap justify-center gap-4" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', textAlign: 'center', margin: '0 auto'}}>
                   <CtaButton href="/adopt-a-dog" className="btn-pulse shadow-lg" style={{backgroundColor: '#E30613', color: 'white', border: 'none', padding: '1rem 2rem'}}>🐕 Meet Our Dogs</CtaButton>
                   <CtaButton href="/dogs/sponsorship" className="btn-pulse shadow-lg" style={{backgroundColor: '#E30613', color: 'white', border: 'none', padding: '1rem 2rem'}}>💝 Sponsor a Dog</CtaButton>
-                  <CtaButton href="/hands-on-dogs" className="shadow-lg" style={{backgroundColor: '#39B54A', color: 'white', border: 'none', padding: '1rem 2rem'}}>🤝 Hands-On Care</CtaButton>
-                  <CtaButton href="/adopt-a-dog" className="border-2 shadow-lg" style={{backgroundColor: 'white', color: '#E30613', border: '2px solid #E30613', padding: '1rem 2rem'}}>🏡 Adopt Today</CtaButton>
+                  <CtaButton href="/get-involved#hands-on-care" className="shadow-lg" style={{backgroundColor: '#39B54A', color: 'white', border: 'none', padding: '1rem 2rem'}}>🤝 Hands-On Care</CtaButton>
+                  <CtaButton href="/adopt-a-dog" className="shadow-lg" style={{backgroundColor: '#E30613', color: 'white', border: 'none', padding: '1rem 2rem'}}>🏡 Adopt Today</CtaButton>
                 </div>
               </div>
             </div>

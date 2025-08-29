@@ -18,8 +18,13 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
         title="Youth Apprentice Program"
         subtitle="Inspiring compassion. Teaching care. Transforming lives."
         mediaKey="youth_apprenticeship_01"
+        mediaContent={{
+          ...props.mediaContent,
+          youth_apprenticeship_01: "https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg"
+        }}
+        isEditMode={props.isEditMode}
+        onMediaUpdate={props.onMediaUpdate}
         alt="Youth interacting with a sanctuary animal"
-        {...props}
       />
 
       <ContentSection>
@@ -33,10 +38,11 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
         <div className="my-8 rounded-lg overflow-hidden">
           <EditableMedia
             mediaKey="youth_program_aim"
-            mediaUrl={props.mediaContent.youth_program_aim!}
+            mediaUrl="https://i.ibb.co/C3GjGqL4/DSC00801.jpg"
             alt="Youth learning about animal care"
             isEditMode={props.isEditMode}
             onUpdate={props.onMediaUpdate}
+            className="w-full rounded-lg"
           />
         </div>
 
@@ -53,17 +59,16 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
       </ContentSection>
 
       <ContentSection title="What the Program Offers">
+        <EditableMedia
+          mediaKey="youth_apprentice_hero"
+          mediaUrl="https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg"
+          alt="Youth apprenticeship program in action"
+          isEditMode={props.isEditMode}
+          onUpdate={props.onMediaUpdate}
+          className="w-full rounded-lg mb-6"
+        />
         <p>Our dogs become co-educators in classrooms learning centres and community spaces. They are chosen for their calm nature and trained for safety and positive interaction. Each session is designed with care using research-backed methods to support literacy social-emotional learning and animal care education.</p>
         <p>We tailor each visit to meet the needs of the group whether that means encouraging a reluctant reader to share a story offering comfort to a child working through big feelings or teaching a hands-on grooming session to build confidence. The flexibility of this program is one of its strengths. It can reach children of all abilities backgrounds and needs.</p>
-         <div className="my-8 rounded-lg overflow-hidden">
-          <EditableMedia
-            mediaKey="youth_program_offers"
-            mediaUrl={props.mediaContent.youth_program_offers!}
-            alt="A dog co-educator in a learning session"
-            isEditMode={props.isEditMode}
-            onUpdate={props.onMediaUpdate}
-          />
-        </div>
       </ContentSection>
 
       <ContentSection title="Program Goals" className="bg-brand-bg-subtle">

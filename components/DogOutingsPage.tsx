@@ -31,7 +31,14 @@ const DogOutingsPage: React.FC<DogOutingsPageProps> = (props) => {
 
       <ContentSection title="What Our Outings Look Like" className="bg-brand-bg-subtle" titleColorClass="text-brand-secondary">
         <div className="content-bubble">
-           <EditableMedia mediaKey="outings_hero" mediaUrl={props.mediaContent.outings_hero!} alt="Happy dogs on an outing" isEditMode={props.isEditMode} onUpdate={props.onMediaUpdate} className="rounded-t-lg aspect-video" />
+           <EditableMedia 
+            mediaKey="outings_hero" 
+            mediaUrl="https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg" 
+            alt="Happy dogs on an outing" 
+            isEditMode={props.isEditMode} 
+            onUpdate={props.onMediaUpdate} 
+            className="rounded-t-lg aspect-video" 
+          />
            <div className="p-6 md:p-8">
             <p>Once a week, our team carefully selects small groups of dogs to enjoy tailored excursions to local beaches, parks and wide-open spaces. Outings are planned with each dog's temperament, behaviour and energy level in mind.</p>
             <p>Some outings are peaceful walks for shy or senior dogs who need quiet confidence-building. Others are joyful adventures for playful souls who thrive on running and exploring. Every dog gets the chance to experience freedom and fun on their own terms.</p>

@@ -26,8 +26,8 @@ const ServiceDogsSection: React.FC<SectionProps> = (props) => {
         <div className="content-bubble">
           <EditableMedia
             mediaKey="training_hero"
-            mediaUrl={props.mediaContent.training_hero!}
-            alt="A calm, trained dog looking attentively"
+            mediaUrl="https://i.ibb.co/MQwNTVT/DSC02148.jpg"
+            alt="A calm, trained service dog looking attentively"
             isEditMode={props.isEditMode}
             onUpdate={props.onMediaUpdate}
             className="rounded-t-lg aspect-video"

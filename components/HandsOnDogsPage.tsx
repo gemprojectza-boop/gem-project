@@ -45,12 +45,17 @@ const CarePackageCard: React.FC<{
 const HandsOnDogsPage: React.FC<HandsOnDogsPageProps> = (props) => {
   return (
     <div className="bg-brand-bg-main">
-      <PageHero
+            <PageHero
         title="Hands-On Care Programme"
         subtitle="Not able or ready to adopt? We have a great option just for you."
         mediaKey="hands_on_care_hero"
         alt="A person gently petting a sanctuary dog"
-        {...props}
+        mediaContent={{
+          ...props.mediaContent,
+          hands_on_care_hero: "https://i.ibb.co/xq5z223g/DSC06243.jpg"
+        }}
+        isEditMode={props.isEditMode}
+        onMediaUpdate={props.onMediaUpdate}
       />
 
       <ContentSection>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Focal Point Fix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #00AEEF;
+            margin-bottom: 20px;
+        }
+        .button {
+            background: #E30613;
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px;
+            display: inline-block;
+        }
+        .button:hover {
+            background: #C40011;
+        }
+        .status {
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #39B54A;
+        }
+        .info {
+            background: #fff3cd;
+            color: #856404;
+            border: 2px solid #ffc107;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #00AEEF;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 DIRECT FOCAL POINT FIX</h1>
+        
+        <div class="info status">
+            <strong>This will FORCE your focal points to work!</strong><br>
+            Click the button below to apply your settings directly.
+        </div>
+
+        <button class="button" onclick="forceFixFocalPoints()">🎯 FORCE FIX FOCAL POINTS NOW</button>
+        
+        <div id="success" class="status success" style="display: none;">
+            ✅ <strong>SUCCESS!</strong> Focal points have been forcefully applied!<br><br>
+            <strong>Now follow these steps:</strong>
+        </div>
+
+        <div id="steps" style="display: none;">
+            <div class="step">
+                <strong>Step 1:</strong> Go to your website: 
+                <a href="http://localhost:5173/gem-project/" target="_blank">http://localhost:5173/gem-project/</a>
+            </div>
+            <div class="step">
+                <strong>Step 2:</strong> Press <strong>Ctrl + F5</strong> (hard refresh) to clear cache
+            </div>
+            <div class="step">
+                <strong>Step 3:</strong> Navigate to Dogs section and check if faces are now positioned correctly
+            </div>
+            <div class="step">
+                <strong>Step 4:</strong> Check the debug panel - it should show your new focal point values
+            </div>
+        </div>
+
+        <div id="debug-info" style="display: none; background: #f1f1f1; padding: 15px; margin: 20px 0; text-align: left; font-family: monospace; font-size: 12px;">
+            <strong>Applied Focal Points:</strong><br>
+            <div id="debug-content"></div>
+        </div>
+    </div>
+
+    <script>
+        function forceFixFocalPoints() {
+            console.log('🚨 FORCE FIXING FOCAL POINTS...');
+            
+            // Your EXACT focal points
+            const yourFocalPoints = {
+                'alex_main': { x: 0.06, y: 0.35 },
+                'chandra_main': { x: 0.48, y: 0.02 },
+                'daisy_main': { x: 0.03, y: 0.42 },
+                'max_main': { x: 0.50, y: 0.02 },
+                'ruth_main': { x: 0.53, y: 0.03 },
+                'fifi_main': { x: 0.06, y: 0.46 },
+                'foxy_main': { x: 0.44, y: 0.03 },
+                'hazel_main': { x: 0.42, y: 0.01 },
+                'casper_main': { x: 0.08, y: 0.44 },
+                'jerry_main': { x: 0.45, y: 0.01 },
+                'jesse_main': { x: 0.07, y: 0.34 },
+                'simba_main': { x: 0.46, y: 0.02 },
+                'ruby_main': { x: 0.93, y: 0.46 },
+                'pretty_main': { x: 0.96, y: 0.59 }
+            };
+            
+            // FORCE clear any existing data first
+            localStorage.removeItem('gem-project-focal-points');
+            
+            // Wait a moment, then set the new data
+            setTimeout(() => {
+                localStorage.setItem('gem-project-focal-points', JSON.stringify(yourFocalPoints));
+                
+                console.log('✅ FOCAL POINTS FORCE APPLIED!');
+                console.log('Saved data:', JSON.parse(localStorage.getItem('gem-project-focal-points')));
+                
+                // Show success message
+                document.getElementById('success').style.display = 'block';
+                document.getElementById('steps').style.display = 'block';
+                document.getElementById('debug-info').style.display = 'block';
+                
+                // Show debug info
+                const debugContent = document.getElementById('debug-content');
+                debugContent.innerHTML = Object.entries(yourFocalPoints)
+                    .map(([key, point]) => `${key}: x=${point.x}, y=${point.y}`)
+                    .join('<br>');
+                
+                // Try to force refresh the main site
+                try {
+                    // This might work if both pages are on the same domain
+                    if (window.opener) {
+                        window.opener.location.reload();
+                    }
+                } catch (e) {
+                    console.log('Could not auto-refresh main site, user will need to refresh manually');
+                }
+                
+            }, 100);
+        }
+    </script>
+</body>
+</html>

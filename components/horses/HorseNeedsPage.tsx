@@ -38,7 +38,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
         subtitle="Help Us Care for Our Herd"
         mediaKey="horse_needs_hero"
         alt="Close-up of donated supplies with horses in the background"
-        titleColorClass="text-brand-accent"
+        titleColorClass="text-white"
         {...props}
       />
 
@@ -135,7 +135,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
                 <p>We welcome CSR partnerships, matching gift programs or in-kind donations from businesses.</p>
             </div>
             <div>
-                <h4 className="text-xl font-bold text-sanctuary-dark">Gift Donations</h4>
+                <h4 className="text-xl font-bold text-sanctuary-dark text-center">Gift Donations</h4>
                 <p>Donate on behalf of a friend or family member in honour of a birthday, anniversary or memorial.</p>
             </div>
             <div>

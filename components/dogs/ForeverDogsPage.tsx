@@ -24,6 +24,7 @@ const ForeverDogsPage: React.FC<ForeverDogsPageProps> = (props) => {
         subtitle="They are not waiting to be chosen. They already have been."
         mediaKey="forever_dogs_hero"
         alt="An older dog resting peacefully in a comfy bed"
+        titleColorClass="text-white"
         {...props}
       />
 

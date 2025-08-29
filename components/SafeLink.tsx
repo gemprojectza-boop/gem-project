@@ -14,19 +14,26 @@ const SafeLink: React.FC<SafeLinkProps> = ({ href, children, className, onClick 
   const { navigate } = useSafeNavigation();
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-
     if (onClick) {
-      // If an onClick is provided, it's now fully responsible for navigation.
       onClick(event);
-    } else {
-      // Otherwise, perform the default navigation.
+      return; // Assume onClick handles everything, including preventDefault and navigation
+    }
+
+    const isExternal = href.startsWith('http') || href.startsWith('//');
+    if (!isExternal && !event.ctrlKey && !event.metaKey) {
+      event.preventDefault();
       navigate(href);
     }
   };
 
   return (
-    <a href={href} onClick={handleClick} className={className}>
+    <a 
+      href={href} 
+      onClick={handleClick} 
+      className={className}
+      target={href.startsWith('http') ? '_blank' : undefined}
+      rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+    >
       {children}
     </a>
   );

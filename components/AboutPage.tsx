@@ -204,7 +204,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
                   <CtaButton href="/community#youth" className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover px-8">Our Youth Programme</CtaButton>
                   <CtaButton href="/dogs/sponsorship" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover px-8">Sponsor a Dog</CtaButton>
                   <CtaButton href="/horses#sponsor" className="bg-brand-accent text-white hover:bg-brand-accent-hover px-8">Sponsor a Horse</CtaButton>
-                  <CtaButton href="/hands-on-dogs" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover px-8">Hands-On Care (Dogs)</CtaButton>
+                  <CtaButton href="/get-involved#hands-on-care" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover px-8">Hands-On Care (Dogs)</CtaButton>
                   <CtaButton href="/horses#hands-on" className="bg-brand-accent text-white hover:bg-brand-accent-hover px-8">Hands-On Care (Horses)</CtaButton>
               </div>
             </div>

@@ -77,11 +77,17 @@ const HowToHelp: React.FC<SectionProps> = (props) => {
                         { href: '/dogs/sponsorship', text: 'Sponsor a Dog', className: 'bg-brand-secondary hover:bg-brand-secondary-hover text-white' },
                         { href: '/horses#sponsor', text: 'Sponsor a Horse', className: 'bg-brand-accent hover:bg-brand-accent-hover text-white' },
                     ]}
-                    {...props}
+                    {...{
+                      ...props,
+                      mediaContent: {
+                        ...props.mediaContent,
+                        horse_hands_on_hero: "https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg"
+                      }
+                    }}
                 >
                     <p>Some animals remain with us for life. Your sponsorship provides them with food, shelter, veterinary care and enrichment, ensuring they live out their days in comfort and dignity.</p>
                 </SectionCard>
-                 <SectionCard
+                                  <SectionCard
                     title="Our Wishlist"
                     mediaKey="wishlist_01"
                     imageAlt="A collection of donated pet supplies"
@@ -90,7 +96,13 @@ const HowToHelp: React.FC<SectionProps> = (props) => {
                         { href: '/dog-wishlist', text: 'View Dog Wishlist', className: 'bg-brand-secondary hover:bg-brand-secondary-hover' },
                         { href: '/horses/needs', text: 'View Horse Wishlist', className: 'bg-brand-accent hover:bg-brand-accent-hover' },
                     ]}
-                    {...props}
+                    {...{
+                      ...props,
+                      mediaContent: {
+                        ...props.mediaContent,
+                        wishlist_01: "https://i.ibb.co/r2xWGdw0/DSC00943.jpg"
+                      }
+                    }}
                 >
                     <p>In-kind donations are vital. From food and bedding to medical supplies and enrichment toys, every item on our wishlist directly supports the daily care of our animals.</p>
                 </SectionCard>
@@ -103,7 +115,13 @@ const HowToHelp: React.FC<SectionProps> = (props) => {
                         { href: '/get-involved#volunteer', text: 'Volunteer with Dogs', className: 'bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary' },
                         { href: '/get-involved#volunteer', text: 'Volunteer with Horses', className: 'bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary' },
                     ]}
-                    {...props}
+                    {...{
+                      ...props,
+                      mediaContent: {
+                        ...props.mediaContent,
+                        volunteer_01: "https://i.ibb.co/Y475WXP4/DSC01099.jpg"
+                      }
+                    }}
                 >
                     <p>Your time is one of the most valuable gifts you can give. Join our team of dedicated volunteers and help with daily care, enrichment, events, or administrative tasks.</p>
                 </SectionCard>

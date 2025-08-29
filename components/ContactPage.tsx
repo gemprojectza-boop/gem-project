@@ -103,16 +103,16 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name*</label>
-                                <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"/>
+                                <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"/>
                             </div>
                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email*</label>
-                                    <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"/>
+                                    <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"/>
                                 </div>
                                 <div>
                                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
-                                    <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"/>
+                                    <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"/>
                                 </div>
                             </div>
                              <div>
@@ -132,7 +132,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                              </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message*</label>
-                                <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={5} required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"></textarea>
+                                <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={5} required className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-brand-primary focus:ring-brand-primary bg-white text-brand-text-primary"></textarea>
                             </div>
                             <div>
                                 <button type="submit" className="w-full bg-brand-primary text-white font-bold py-3 px-4 rounded-md hover:bg-brand-primary-hover transition-colors">Submit</button>

@@ -34,7 +34,7 @@ const TrainingSectionCard: React.FC<HorseTrainingPageProps & {title: string, med
     <div className="content-bubble">
         <EditableMedia mediaKey={mediaKey} mediaUrl={props.mediaContent[mediaKey]!} alt={alt} {...props} className="rounded-t-lg aspect-video"/>
         <div className="p-6 md:p-8">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">{title}</h2>
+            <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{title}</h2>
             <div className="text-lg text-gray-700 space-y-4">
                 {children}
             </div>
@@ -50,13 +50,13 @@ const HorseTrainingPage: React.FC<HorseTrainingPageProps> = (props) => {
                     {props.mediaContent.horse_training_hero && <EditableMedia mediaKey="horse_training_hero" mediaUrl={props.mediaContent.horse_training_hero} alt="Calm training moment between caregiver and horse" className="w-full h-full object-cover" isEditMode={props.isEditMode} onUpdate={props.onMediaUpdate}/>}
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                 </div>
-                <div className="relative container mx-auto px-6">
-                    <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto" style={{background: 'rgba(0,0,0,0.3)'}}>
-                        <div className="p-6 md:p-8">
-                            <h1 className="text-4xl md:text-6xl font-black uppercase text-brand-accent text-shadow-strong">
-                                <span>Healing Through Trust-Based Training</span>
+                <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                    <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '64rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                        <div style={{padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                            <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em'}}>
+                                <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Healing Through Trust-Based Training</span>
                             </h1>
-                            <div className="mt-6">
+                            <div style={{marginTop: '2rem', textAlign: 'center', display: 'flex', justifyContent: 'center'}}>
                                  <CtaButton href="/horses#sponsor" className="bg-brand-accent hover:bg-brand-accent-hover text-white">
                                     Sponsor a Training Session
                                 </CtaButton>

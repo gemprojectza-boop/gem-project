@@ -17,7 +17,7 @@ interface HorsesLandingPageProps {
 }
 
 const Hero: React.FC<HorsesLandingPageProps> = (props) => (
-    <section className="hero relative bg-brand-text-primary text-white py-20 md:py-32 text-center">
+    <section className="hero relative bg-green-600 text-white py-20 md:py-32 text-center min-h-[70vh] flex items-center justify-center">
         <div className="absolute inset-0">
           {props.mediaContent['horses_landing_hero'] && (
             <EditableMedia 
@@ -30,13 +30,13 @@ const Hero: React.FC<HorsesLandingPageProps> = (props) => (
                 loading="eager"
             />
           )}
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
         </div>
-        <div className="relative container mx-auto px-6">
-          <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto" style={{background: 'rgba(0,0,0,0.3)'}}>
-            <div className="p-6 md:p-8">
-              <h1 className="text-4xl md:text-6xl font-black uppercase text-brand-accent text-shadow-strong">
-                <span>Horses at The Gem Project Sanctuary</span>
+        <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', zIndex: 10, display: 'flex', justifyContent: 'center'}}>
+          <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '80rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem'}}>
+            <div style={{padding: '3rem'}}>
+              <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em'}}>
+                <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Horses at The Gem Project Sanctuary</span>
               </h1>
             </div>
           </div>
@@ -45,12 +45,17 @@ const Hero: React.FC<HorsesLandingPageProps> = (props) => (
 );
 
 const Welcome: React.FC = () => (
-    <section className="py-16 md:py-20 bg-brand-bg-main">
-        <div className="container mx-auto px-6 max-w-4xl">
-            <div className="content-bubble">
-                <div className="p-6 md:p-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-brand-text-primary text-center mb-6">Welcome to Our Herd</h2>
-                    <div className="text-lg text-brand-text-secondary space-y-4">
+    <section className="py-20 md:py-24 bg-gradient-to-br from-brand-bg-main to-brand-bg-subtle">
+        <div className="container mx-auto px-6 max-w-6xl">
+            <div className="content-bubble bg-white/95 backdrop-blur-sm shadow-2xl rounded-3xl border border-gray-100">
+                <div className="p-10 md:p-12 text-center">
+                    <div className="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg className="w-8 h-8 text-brand-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8">Welcome to Our Herd</h2>
+                    <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl mx-auto text-center">
                         <p>At The Gem Project Sanctuary, our herd is at the heart of who we are. Every horse that arrives carries a story, stories of neglect, abandonment, hardship or quiet resilience. But here, every story is rewritten with care, patience and purpose.</p>
                         <p>Our sanctuary is home to 20 incredible horses, each with a name, a voice and a journey. Some are here for rehabilitation, others for life. What unites them is the promise that they will never again be forgotten. From the first gentle touch to the first pain-free trot, every small milestone is a victory we celebrate together.</p>
                         <p>This is more than a place of rescue. It is a place of restoration, of dignity, of connection. It is where broken bodies heal and weary spirits rise. Whether they are learning to trust again or simply enjoying the peace of a soft bed and a full bucket, our horses know they are safe. They are home.</p>
@@ -74,34 +79,43 @@ interface InfoCardProps extends HorsesLandingPageProps {
 
 const InfoCard: React.FC<InfoCardProps> = ({ mediaKey, title, text, cta, alt, reversed = false, sectionId, bgClass, ...props }) => {
     return (
-        <section id={sectionId} className={`py-16 md:py-20 ${bgClass}`}>
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className={`content-bubble ${reversed ? 'md:order-2' : ''}`}>
-                        {props.mediaContent[mediaKey] && 
-                            <EditableMedia
-                            mediaKey={mediaKey}
-                            mediaUrl={props.mediaContent[mediaKey]!}
-                            alt={alt}
-                            isEditMode={props.isEditMode}
-                            onUpdate={props.onMediaUpdate}
-                            className="rounded-t-lg aspect-video"
-                            />
-                        }
+        <section id={sectionId} className={`py-20 md:py-24 ${bgClass || 'bg-gradient-to-br from-brand-bg-main to-brand-bg-subtle'}`}>
+            <div className="container mx-auto px-6 max-w-7xl">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div className={`${reversed ? 'lg:order-2' : ''}`}>
+                        <div className="content-bubble bg-white/95 backdrop-blur-sm shadow-xl rounded-3xl border border-gray-100 overflow-hidden">
+                            {props.mediaContent[mediaKey] && 
+                                <EditableMedia
+                                mediaKey={mediaKey}
+                                mediaUrl={props.mediaContent[mediaKey]!}
+                                alt={alt}
+                                isEditMode={props.isEditMode}
+                                onUpdate={props.onMediaUpdate}
+                                className="w-full aspect-video object-cover"
+                                />
+                            }
+                        </div>
                     </div>
-                    <div className={`content-bubble ${reversed ? 'md:order-1' : ''}`}>
-                        <div className="p-6 md:p-8">
-                            <h3 className="text-3xl font-bold text-brand-text-primary">{title}</h3>
-                            <div className="text-brand-text-secondary space-y-4 my-4 text-lg">{text}</div>
-                            {cta && cta.length > 0 && (
-                                <div className="flex flex-wrap gap-3">
-                                    {cta.map(item => (
-                                        <CtaButton key={item.href} href={item.href} className={item.className || 'bg-brand-primary text-white hover:bg-brand-primary-hover'}>
-                                            {item.text}
-                                        </CtaButton>
-                                    ))}
+                    <div className={`${reversed ? 'lg:order-1' : ''}`}>
+                        <div className="content-bubble bg-white/95 backdrop-blur-sm shadow-xl rounded-3xl border border-gray-100">
+                            <div className="p-8 md:p-12 text-center">
+                                <div className="w-14 h-14 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                    <svg className="w-7 h-7 text-brand-primary" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
                                 </div>
-                            )}
+                                <h3 className="text-3xl md:text-4xl font-black text-brand-text-primary text-center mb-6">{title}</h3>
+                                <div className="text-brand-text-secondary space-y-6 my-8 text-lg leading-relaxed text-center">{text}</div>
+                                {cta && cta.length > 0 && (
+                                    <div className="flex flex-wrap gap-4 justify-center">
+                                        {cta.map(item => (
+                                            <CtaButton key={item.href} href={item.href} className={`shadow-lg btn-pulse ${item.className || 'bg-brand-primary text-white hover:bg-brand-primary-hover'}`}>
+                                                {item.text}
+                                            </CtaButton>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,13 +125,18 @@ const InfoCard: React.FC<InfoCardProps> = ({ mediaKey, title, text, cta, alt, re
 };
 
 const TextCard: React.FC<{ sectionId?: string, title: string, text: string, cta: {href: string, text: string} }> = ({ sectionId, title, text, cta }) => (
-    <section id={sectionId} className="py-16 md:py-20 bg-brand-bg-main">
+    <section id={sectionId} className="py-20 md:py-24 bg-gradient-to-br from-brand-bg-main to-brand-bg-subtle">
         <div className="container mx-auto px-6">
-            <div className="content-bubble max-w-4xl mx-auto">
-                <div className="p-6 md:p-8">
-                    <h3 className="text-3xl font-bold text-brand-text-primary">{title}</h3>
-                    <p className="text-brand-text-secondary my-4 text-lg">{text}</p>
-                     <CtaButton href={cta.href} className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover">
+            <div className="content-bubble max-w-5xl mx-auto bg-white/95 backdrop-blur-sm shadow-2xl rounded-3xl border border-gray-100">
+                <div className="p-10 md:p-12 text-center">
+                    <div className="w-16 h-16 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg className="w-8 h-8 text-brand-yellow" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8">{title}</h3>
+                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-center max-w-4xl mx-auto">{text}</p>
+                     <CtaButton href={cta.href} className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover shadow-lg btn-pulse">
                         {cta.text}
                     </CtaButton>
                 </div>
@@ -219,12 +238,24 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
         {...props}
       />
       
-      <TextCard 
-        sectionId="partnerships"
-        title="Partnerships"
-        text="At The Gem Project Sanctuary, we believe that meaningful change happens when compassionate people and organisations come together. We are actively open to collaborating with like-minded organisations and individuals who share our commitment to equine welfare, ethical care and community upliftment."
-        cta={{href: "/contact", text: "Partner With Us"}}
-      />
+      <section id="partnerships" className="py-20 md:py-24 bg-gradient-to-br from-brand-bg-main to-brand-bg-subtle" style={{textAlign: 'center'}}>
+        <div className="container mx-auto px-6" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <div className="content-bubble max-w-5xl mx-auto bg-white/95 backdrop-blur-sm shadow-2xl rounded-3xl border border-gray-100" style={{textAlign: 'center', margin: '0 auto'}}>
+                <div className="p-10 md:p-12 text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <div className="w-16 h-16 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-6 mx-auto" style={{margin: '0 auto 1.5rem auto'}}>
+                        <svg className="w-8 h-8 text-brand-yellow" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8" style={{textAlign: 'center', margin: '0 auto 2rem auto'}}>Partnerships</h3>
+                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-center max-w-4xl mx-auto" style={{textAlign: 'center', margin: '2rem auto'}}>At The Gem Project Sanctuary, we believe that meaningful change happens when compassionate people and organisations come together. We are actively open to collaborating with like-minded organisations and individuals who share our commitment to equine welfare, ethical care and community upliftment.</p>
+                     <CtaButton href="/contact" className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover shadow-lg btn-pulse" style={{margin: '0 auto'}}>
+                        Partner With Us
+                    </CtaButton>
+                </div>
+            </div>
+        </div>
+      </section>
       
       <InfoCard 
         bgClass="bg-brand-bg-subtle"

@@ -78,16 +78,24 @@ const OutreachProgramSection: React.FC<SectionProps> = (props) => {
                     <div>
                         <h4 className="text-2xl font-bold text-brand-secondary mb-3">2. Mobile Wellness Days</h4>
                         <p className="text-lg text-gray-700">In partnership with local veterinarians and sponsors we would like to bring essential services into under-resourced communities. These days are lifelines for dogs and families who cannot access regular veterinary care.</p>
-                         {props.mediaContent['outreach_mobile_clinic'] && (
+                        <div className="grid grid-cols-2 gap-4 my-4">
                             <EditableMedia
-                                mediaKey="outreach_mobile_clinic"
-                                mediaUrl={props.mediaContent['outreach_mobile_clinic']}
+                                mediaKey="outreach_mobile_clinic_1"
+                                mediaUrl="https://i.ibb.co/RpBzXpfL/DSC03709-2.jpg"
                                 alt="Vet treating a dog at pop-up mobile clinic."
                                 isEditMode={props.isEditMode}
                                 onUpdate={props.onMediaUpdate}
-                                className="rounded-lg my-4"
+                                className="rounded-lg"
                             />
-                        )}
+                            <EditableMedia
+                                mediaKey="outreach_mobile_clinic_2"
+                                mediaUrl="https://i.ibb.co/RTtm5pxX/DSC03759-2.jpg"
+                                alt="Mobile vet clinic in action"
+                                isEditMode={props.isEditMode}
+                                onUpdate={props.onMediaUpdate}
+                                className="rounded-lg"
+                            />
+                        </div>
                         <ul className="list-disc list-inside space-y-2 mt-4 text-gray-700 ml-4">
                             <li>Free or low-cost vaccinations deworming and tick treatments</li>
                             <li>Referrals and assistance for sterilisation</li>

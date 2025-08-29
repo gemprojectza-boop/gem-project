@@ -308,40 +308,6 @@ export const sampleHorses: AdoptableHorse[] = [
       videoKey: '',
     },
   },
-  {
-    id: 'opal',
-    name: 'Opal',
-    status: 'Forever Sanctuary',
-    petInfo: {
-        age: 'Born 2024',
-        breed: 'Arab Crossbreed',
-        gender: 'Mare',
-        size: 'Pony',
-    },
-    idealHome: 'A patient and loving home to continue her growth.',
-    story: {
-        title: 'Her Story',
-        text: 'Opal is a new arrival at the sanctuary with a bright future ahead of her. More details about her story will be shared soon as we get to know this beautiful young horse.',
-    },
-    personality: {
-        title: 'Personality & Progress',
-        text: 'Opal is currently settling in and showing a curious and gentle nature. She is learning to trust her caregivers and interact with the other horses in her herd.',
-    },
-    specialTrait: {
-        title: 'What Makes Her Special',
-        points: ['A beautiful young horse with lots of potential.', 'Curious and gentle nature.', 'Just beginning her journey of healing and growth.'],
-    },
-    loveReason: {
-        title: 'Why You’ll Love Her',
-        text: "Opal's journey is just beginning, and she will blossom into a wonderful companion with the right care and love. She will be available for adoption once she has matured.",
-    },
-    media: {
-        mainPhotoKey: 'opal_main',
-        storyPhotoKey: 'opal_main',
-        galleryKeys: [],
-        videoKey: '',
-    },
-  },
 
   // --- AVAILABLE FOR ADOPTION ---
   {

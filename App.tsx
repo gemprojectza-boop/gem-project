@@ -14,6 +14,7 @@ import Footer from './components/Footer.tsx';
 import SplashScreen from './components/SplashScreen.tsx';
 import EditingSystem from './components/EditingSystem.tsx';
 import SimplifiedEditor from './components/SimplifiedEditor.tsx';
+import DebugFocalPoints from './components/DebugFocalPoints.tsx';
 
 // Direct import all page components
 import HomePage from './components/HomePage.tsx';
@@ -55,7 +56,7 @@ const initialMediaContent: MediaContent = {
   sponsorship_01: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
   wishlist_01: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
   volunteer_01: 'https://images.pexels.com/photos/7473243/pexels-photo-7473243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  youth_apprenticeship_01: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  youth_apprenticeship_01: 'https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg',
   hands_on_01: 'https://i.ibb.co/38X4vg9/DSC03223.jpg',
   community_image: 'https://images.pexels.com/photos/6624177/pexels-photo-6624177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   final_cta_image: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg',
@@ -245,14 +246,14 @@ const initialMediaContent: MediaContent = {
   therapy_dog_02: 'https://i.ibb.co/MkgxrVN9/image.png',
   therapy_dog_03: 'https://images.pexels.com/photos/8434679/pexels-photo-8434679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   health_louis_story: 'https://i.ibb.co/zTqXSvvC/DSC01232.jpg',
-  outings_hero: 'https://i.ibb.co/67GQM4Jj/DSC01382.jpg',
-  training_hero: 'https://i.ibb.co/G4xw8rYt/DSC02219-2.jpg',
+  outings_hero: 'https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg',
+  training_hero: 'https://i.ibb.co/MQwNTVT/DSC02148.jpg',
   wishlist_hero: 'https://i.ibb.co/LX5p3T9M/DSC02248-2.jpg',
   hands_on_care_hero: 'https://i.ibb.co/kVBXnqQx/DSC02450.jpg',
   volunteer_hero: 'https://i.ibb.co/ZRLCnTXH/DSC02563-2.jpg',
   outreach_hero: 'https://i.ibb.co/RkbQB8t2/image.png',
   outreach_education: 'https://i.ibb.co/ymVjwrFX/image.png',
-  outreach_mobile_clinic: 'https://images.pexels.com/photos/6235233/pexels-photo-6235233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  outreach_mobile_clinic: 'https://i.ibb.co/qhJsmsM/DSC06176.jpg',
   outreach_adoption_days: 'https://i.ibb.co/pBH6nDqv/image.png',
   outreach_responsible_ownership: 'https://i.ibb.co/PsH1t3GH/image.png',
   youth_program_aim: 'https://i.ibb.co/h1M5DsWF/image.png',
@@ -463,6 +464,34 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
     }, []);
     
     useEffect(() => {
+        // Apply page-specific CSS classes and force colors
+        const body = document.body;
+        body.classList.remove('horse-page-override', 'dog-page-override');
+        
+        if (path.includes('/horses') || path === '/horses') {
+            body.classList.add('horse-page-override');
+            
+            // Force green colors on horse pages with JavaScript
+            setTimeout(() => {
+                const forceGreenColor = () => {
+                    const elements = document.querySelectorAll('.horse-page-override h1:not(.hero h1), .horse-page-override h2:not(.hero h2), .horse-page-override h3:not(.hero h3), .horse-page-override .text-3xl:not(.hero *), .horse-page-override .text-4xl:not(.hero *), .horse-page-override .text-5xl:not(.hero *), .horse-page-override .font-bold:not(.hero *), .horse-page-override .font-black:not(.hero *)');
+                    elements.forEach((el: Element) => {
+                        const htmlEl = el as HTMLElement;
+                        if (!htmlEl.style.color?.includes('white')) {
+                            htmlEl.style.setProperty('color', '#16a34a', 'important');
+                        }
+                    });
+                };
+                forceGreenColor();
+                // Re-apply every 100ms to catch dynamically loaded content
+                const interval = setInterval(forceGreenColor, 100);
+                setTimeout(() => clearInterval(interval), 2000);
+            }, 50);
+            
+        } else if (path.includes('/dogs') || path === '/dogs' || path.includes('/dog-') || path === '/adopt-a-dog' || path === '/forever-dogs') {
+            body.classList.add('dog-page-override');
+        }
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -481,7 +510,11 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
         });
         targets.forEach(target => observer.observe(target));
 
-        return () => targets.forEach(target => observer.unobserve(target));
+        return () => {
+            targets.forEach(target => observer.unobserve(target));
+            // Clean up classes when component unmounts
+            body.classList.remove('horse-page-override', 'dog-page-override');
+        };
     }, [path]);
     
     useEffect(() => {
@@ -563,6 +596,7 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
                 isEditMode={isEditMode} 
                 onToggleEditMode={toggleEditMode} 
             />
+            <DebugFocalPoints />
             <Header />
             <main className="pt-[88px] animate-page-fade max-content-width-lg" key={path}>
                 {renderPage()}

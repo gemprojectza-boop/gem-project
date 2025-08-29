@@ -60,6 +60,7 @@ const HorseTeamPage: React.FC<HorseTeamPageProps> = (props) => {
                 subtitle="The dedicated individuals who provide our horses with love, care, and expertise every day."
                 mediaKey="horse_team_hero"
                 alt="A team member smiling while caring for a horse"
+                titleColorClass="text-white"
                 {...props}
             />
 

@@ -138,7 +138,7 @@ const VolunteerSection: React.FC<SectionProps> = (props) => {
                         <CtaButton href="/contact?subject=Volunteer" className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover">
                             Contact Us to Volunteer
                         </CtaButton>
-                         <CtaButton href="/dogs" className="bg-transparent border-2 border-brand-secondary text-brand-secondary hover:bg-brand-secondary hover:text-white">
+                         <CtaButton href="/dogs" className="bg-brand-secondary border-2 border-brand-secondary text-white hover:bg-brand-secondary-hover">
                             Learn More About Our Dogs
                         </CtaButton>
                     </div>

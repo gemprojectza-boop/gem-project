@@ -14,7 +14,7 @@ interface SectionProps {
 }
 
 const FinalCTA: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpdate }) => {
-  const mediaKey = 'final_cta_image';
+  const mediaKey = 'horses_landing_hero';
   const mediaUrl = mediaContent[mediaKey];
 
   return (
@@ -44,7 +44,7 @@ const FinalCTA: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpd
                   Every dog and horse in our care has come from hardship, but with your help, their story doesn't end there. Your support helps create the safety, love and second chances they deserve.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', textAlign: 'center', margin: '0 auto'}}>
-                      <CtaButton href="/hands-on-dogs" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">Hands-On Care - Dogs</CtaButton>
+                      <CtaButton href="/get-involved#hands-on-care" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">Hands-On Care - Dogs</CtaButton>
                       <CtaButton href="/horses#hands-on" className="bg-brand-accent hover:bg-brand-accent-hover text-white">Hands-On Care - Horses</CtaButton>
                       <CtaButton href="/dogs/sponsorship" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white btn-pulse">Sponsor a Dog</CtaButton>
                       <CtaButton href="/horses#sponsor" className="bg-brand-accent hover:bg-brand-accent-hover text-white btn-pulse">Sponsor a Horse</CtaButton>

@@ -23,7 +23,7 @@ const FacilitySection: React.FC<HorseFacilitiesPageProps & { title: string; medi
             className="rounded-t-lg aspect-video"
         />
         <div className="p-6 md:p-8">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">{title}</h2>
+            <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{title}</h2>
             <div className="text-lg text-gray-700 space-y-4">
                 {children}
             </div>
@@ -40,7 +40,7 @@ const HorseFacilitiesPage: React.FC<HorseFacilitiesPageProps> = (props) => {
                 subtitle="Where safety meets healing. Where design meets dignity."
                 mediaKey="horse_facilities_hero"
                 alt="Horses grazing freely in a sunny paddock with the sanctuary in the background"
-                titleColorClass="text-brand-accent"
+                titleColorClass="text-white"
                 {...props}
             />
 

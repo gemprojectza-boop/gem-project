@@ -47,7 +47,7 @@ const HorseRehabilitationPage: React.FC<HorseRehabilitationPageProps> = (props) 
                 subtitle="REHABILITATION"
                 mediaKey="horse_rehab_hero"
                 alt="A horse being gently trained in a field"
-                titleColorClass="text-brand-accent"
+                titleColorClass="text-white"
                 {...props}
             />
 
@@ -73,7 +73,7 @@ const HorseRehabilitationPage: React.FC<HorseRehabilitationPageProps> = (props) 
                                 </div>
                             </div>
                              <div>
-                                <h3 className="text-2xl font-bold text-green-800 mb-4">Physical Healing</h3>
+                                <h3 className="text-2xl font-bold text-green-800 mb-4 text-center">Physical Healing</h3>
                                 <div className="text-lg text-brand-text-secondary space-y-4">
                                      <p>Physical healing is at the heart of every horse’s recovery. Many arrive with injuries, wounds, or emaciation. Our approach is holistic and patient, providing structured nutrition plans, rest, medical care, and supportive therapies to nurture each horse back to health, dignity, and vitality.</p>
                                 </div>

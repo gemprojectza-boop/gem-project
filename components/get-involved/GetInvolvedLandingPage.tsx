@@ -33,13 +33,13 @@ const Hero: React.FC<GetInvolvedLandingPageProps> = (props) => (
           )}
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="relative container mx-auto px-6">
-          <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto" style={{background: 'rgba(0,0,0,0.3)'}}>
-            <div className="p-6 md:p-8">
-              <h1 className="text-4xl md:text-6xl font-black uppercase text-brand-primary text-shadow-strong">
-                <span>Get Involved</span>
+        <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '64rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+            <div style={{padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+              <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em'}}>
+                <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Get Involved</span>
               </h1>
-              <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-shadow-custom">
+              <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '1px 1px 2px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', margin: '1rem auto 0 auto', fontSize: '1.25rem', lineHeight: '1.6', maxWidth: '48rem'}}>
                 Your support is vital. Become part of their story.
               </p>
             </div>

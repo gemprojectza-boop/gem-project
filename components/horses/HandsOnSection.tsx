@@ -21,7 +21,7 @@ const CarePackageCard: React.FC<{
     <div className="content-bubble flex flex-col h-full p-6">
         <div className="flex items-center mb-2">
             <PawIcon className="w-8 h-8 text-brand-text-primary mr-3" />
-            <h3 className="text-2xl font-bold text-green-800">{title}</h3>
+            <h3 className="text-2xl font-bold text-green-800 text-center">{title}</h3>
         </div>
         <div className="text-4xl font-bold my-4 text-green-600">{price}</div>
         <p className="text-brand-text-secondary mb-6 flex-grow">{description}</p>
@@ -89,15 +89,6 @@ const HandsOnSection: React.FC<SectionProps> = (props) => {
                     description="Deepen your connection with up to three hours per week, joining in on training, enrichment, and herd observation."
                     features={["Up to two visits per week (3 hours total)", "Behind-the-scenes access", "Printed certificate & surprise gift"]}
                 />
-            </div>
-             <div className="content-bubble text-center mt-8 bg-brand-primary text-white max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold mb-4">Ready to Build a Bond?</h2>
-                <p className="max-w-2xl mx-auto text-lg text-gray-200 mb-8">
-                    Email us to choose your horse and begin a journey of connection and healing.
-                </p>
-                <CtaButton href="/contact?subject=BecomeAHorseCaregiver" className="bg-brand-accent text-white hover:bg-brand-accent-hover">
-                    Become a Horse Caregiver
-                </CtaButton>
             </div>
         </div>
     </section>

@@ -29,7 +29,7 @@ const DogsPage: React.FC<DogsPageProps> = ({ mediaContent, isEditMode, onMediaUp
             <div className="flex flex-wrap justify-center gap-4">
                 <CtaButton href="/adopt-dog" className="bg-sanctuary-purple text-white hover:bg-sanctuary-purple/80">Meet Our Dogs</CtaButton>
                 <CtaButton href="/sponsor-dog" className="bg-sanctuary-green text-white hover:bg-sanctuary-green/80">Sponsor a Dog</CtaButton>
-                <CtaButton href="/hands-on-dogs" className="bg-sanctuary-light-purple text-sanctuary-dark hover:bg-sanctuary-light-purple/80">Hands-On Care</CtaButton>
+                <CtaButton href="/get-involved#hands-on-care" className="bg-sanctuary-light-purple text-sanctuary-dark hover:bg-sanctuary-light-purple/80">Hands-On Care</CtaButton>
                 <CtaButton href="/adopt-dog" className="bg-white text-sanctuary-dark hover:bg-gray-200 border border-sanctuary-dark">Adopt Today</CtaButton>
             </div>
         </div>

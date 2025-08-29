@@ -13,7 +13,7 @@ interface PartnersPageProps {
 }
 
 const PartnerList: React.FC<{ title: string; partners: string[]; id: string }> = ({ title, partners, id }) => (
-    <div id={id} className="content-bubble">
+    <div id={id}>
         <div className="p-6 md:p-8">
             <PawIcon className="w-8 h-8 text-brand-primary mb-2" />
             <h2 className="text-2xl font-bold text-brand-primary mb-6">{title}</h2>

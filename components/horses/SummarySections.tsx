@@ -29,7 +29,7 @@ const SummaryCard: React.FC<SectionProps & { mediaKey: string, title: string, te
                         }
                     </div>
                     <div className={`content-bubble ${reversed ? 'md:order-1' : ''}`}>
-                        <h3 className="text-3xl font-bold text-brand-text-primary">{title}</h3>
+                        <h3 className="text-3xl font-bold text-brand-text-primary text-center">{title}</h3>
                         <p className="text-brand-text-secondary space-y-4 my-4">{text}</p>
                         <CtaButton href={link} className="bg-brand-primary text-white hover:bg-brand-primary-hover">
                             {linkText}

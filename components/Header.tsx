@@ -199,7 +199,7 @@ const Header: React.FC = () => {
             />
           </SafeLink>
           
-          <nav className="hidden lg:flex items-center space-x-2 font-medium text-brand-text-primary">
+          <nav className="hidden lg:flex items-center space-x-2 font-medium text-brand-text-primary mx-auto">
               {navLinks.map(link => <NavItem key={link.name} link={link} />)}
           </nav>
           

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Dog Focal Points</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #00AEEF;
+            margin-bottom: 20px;
+        }
+        .button {
+            background: #00AEEF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        .button:hover {
+            background: #008FCC;
+        }
+        .success {
+            background: #39B54A;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            display: none;
+        }
+        .focal-point-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐕 Dog Focal Point Adjuster</h1>
+        <p>This will adjust the focal points for all dog profile images so their faces are properly visible.</p>
+        
+        <button class="button" onclick="setAllFocalPoints()">Set All Dog Focal Points</button>
+        <button class="button" onclick="showCurrentFocalPoints()">Show Current Focal Points</button>
+        <button class="button" onclick="clearAllFocalPoints()">Clear All Focal Points</button>
+        
+        <div id="success" class="success">
+            ✅ All dog focal points have been successfully updated! You can now close this page and refresh your Gem Project website to see the changes.
+        </div>
+        
+        <div id="focal-points" class="focal-point-list" style="display: none;">
+        </div>
+    </div>
+
+    <script>
+        function setFocalPoint(mediaKey, x, y) {
+            const focalPoints = JSON.parse(localStorage.getItem('gem-project-focal-points') || '{}');
+            focalPoints[mediaKey] = { x, y };
+            localStorage.setItem('gem-project-focal-points', JSON.stringify(focalPoints));
+            return { mediaKey, x, y };
+        }
+
+        function setAllFocalPoints() {
+            console.log('Setting dog focal points with more precise values...');
+            
+            const adjustments = [];
+            
+            // ADOPTABLE DOGS - More precise adjustments
+            adjustments.push(setFocalPoint('alex_main', 0.25, 0.35));      // Alex - shift left + up for face
+            adjustments.push(setFocalPoint('chandra_main', 0.5, 0.25));    // Chandra - shift down (focal up more)
+            adjustments.push(setFocalPoint('daisy_main', 0.75, 0.35));     // Daisy - shift right + up for face
+            adjustments.push(setFocalPoint('max_main', 0.5, 0.25));        // Max - shift down (focal up more)
+            adjustments.push(setFocalPoint('ruth_main', 0.45, 0.25));      // Ruth - shift down + slightly left
+            adjustments.push(setFocalPoint('fifi_main', 0.65, 0.35));      // Fifi - shift right + up for face
+            adjustments.push(setFocalPoint('foxy_main', 0.5, 0.2));        // Foxy - shift down more (focal up more)
+            adjustments.push(setFocalPoint('hazel_main', 0.5, 0.2));       // Hazel - shift down more (focal up more)
+            
+            // FOREVER SANCTUARY DOGS - More precise adjustments
+            adjustments.push(setFocalPoint('casper_main', 0.75, 0.35));    // Casper - shift right + up for face
+            adjustments.push(setFocalPoint('jerry_main', 0.5, 0.2));       // Jerry - shift down more (focal up more)
+            adjustments.push(setFocalPoint('jesse_main', 0.25, 0.35));     // Jesse - shift left + up for face
+            adjustments.push(setFocalPoint('simba_main', 0.5, 0.7));       // Simba - shift up (focal down more)
+            adjustments.push(setFocalPoint('ruby_main', 0.25, 0.35));      // Ruby - shift left + up for face
+            adjustments.push(setFocalPoint('pretty_main', 0.25, 0.35));    // Pretty - shift left + up for face
+            
+            console.log('Adjusted focal points:', adjustments);
+            
+            document.getElementById('success').style.display = 'block';
+        }
+
+        function showCurrentFocalPoints() {
+            const focalPoints = JSON.parse(localStorage.getItem('gem-project-focal-points') || '{}');
+            const focalPointsDiv = document.getElementById('focal-points');
+            
+            if (Object.keys(focalPoints).length === 0) {
+                focalPointsDiv.innerHTML = '<em>No focal points set yet.</em>';
+            } else {
+                focalPointsDiv.innerHTML = '<strong>Current Focal Points:</strong><br>' + 
+                    Object.entries(focalPoints)
+                        .map(([key, point]) => `${key}: x=${point.x}, y=${point.y}`)
+                        .join('<br>');
+            }
+            
+            focalPointsDiv.style.display = 'block';
+        }
+
+        function clearAllFocalPoints() {
+            if (confirm('Are you sure you want to clear all focal points? This cannot be undone.')) {
+                localStorage.removeItem('gem-project-focal-points');
+                alert('All focal points cleared!');
+                document.getElementById('focal-points').style.display = 'none';
+                document.getElementById('success').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

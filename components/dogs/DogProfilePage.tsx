@@ -56,7 +56,7 @@ const DogProfilePage: React.FC<DogProfilePageProps> = ({ dogId, mediaContent, is
                 <CtaButton href="/dogs/sponsorship" className="w-full bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary">
                     Sponsor {dog.name}
                 </CtaButton>
-                <CtaButton href="/hands-on-dogs" className="w-full bg-brand-secondary hover:bg-brand-secondary-hover text-white">
+                <CtaButton href="/get-involved#hands-on-care" className="w-full bg-brand-secondary hover:bg-brand-secondary-hover text-white">
                     Join Hands-On Care
                 </CtaButton>
             </div>

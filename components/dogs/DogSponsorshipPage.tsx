@@ -42,7 +42,7 @@ const DogSponsorshipPage: React.FC<DogSponsorshipPageProps> = (props) => {
         subtitle="Not everyone can adopt, but everyone can help a dog feel safe, seen and loved."
         mediaKey="sponsorship_01"
         alt="A warm photo of a sponsored dog receiving affection"
-        titleColorClass="text-brand-secondary"
+        titleColorClass="text-white"
         {...props}
       />
 

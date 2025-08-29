@@ -50,7 +50,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
       <PageHero
         title="Together We Create Change"
         subtitle="Where rescue meets mentorship and lives are transformed—together."
-        mediaKey="community_hero"
+        mediaKey="horses_landing_hero"
         alt="A diverse group of volunteers and youth working together with sanctuary animals"
         {...props}
       />
@@ -74,7 +74,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
         <CommunitySection
             id="outreach"
             title="Community Outreach & Support"
-            mediaKey="community_outreach"
+            mediaKey="dogs_intro"
             alt="Staff assisting with outreach in a local community"
             cta={{ href: "/get-involved#donate", text: "Support Outreach & Care" }}
             {...props}
@@ -85,7 +85,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
         <CommunitySection
             id="mobile-vet-clinic"
             title="Mobile Vet Clinic (Coming Soon)"
-            mediaKey="community_vet_clinic"
+            mediaKey="horses_facilities_cta_alt"
             alt="A mobile vet unit parked in a community setting"
             cta={{ href: "/get-involved#donate", text: "Help Fund Our Mobile Clinic" }}
             reversed
@@ -97,7 +97,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
         <CommunitySection
             id="youth"
             title="Youth Apprenticeship Programme"
-            mediaKey="community_youth_programme"
+            mediaKey="horses_training_cta"
             alt="A youth apprentice learning to groom a horse with a mentor"
             cta={{ href: "/youth", text: "Join Our Youth Programme" }}
             {...props}
@@ -108,7 +108,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
          <CommunitySection
             id="hands-on-care"
             title="Hands-On Caregiver Programme"
-            mediaKey="community_hands_on"
+            mediaKey="forever_dogs_day_in_life"
             alt="A participant in the Hands-On Care program bonding with a dog"
             cta={{ href: "/dogs/hands-on", text: "Start a Life-Changing Bond" }}
             reversed

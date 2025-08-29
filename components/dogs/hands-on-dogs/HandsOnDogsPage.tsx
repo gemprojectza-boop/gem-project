@@ -1,6 +1,14 @@
 
 import React from 'react';
-import { MediaContent } from '../../../types.ts';
+import { MediaContent } from      <PageHero
+        title="Hands-On Care Programme"
+        subtitle="Not able or ready to adopt? We have a great option just for you."
+        mediaKey="hands_on_care_hero"
+        mediaUrl="https://i.ibb.co/xq5z223g/DSC06243.jpg"
+        alt="A person gently petting a sanctuary dog"
+        titleColorClass="text-brand-secondary"
+        {...props}
+      />../types.ts';
 import CtaButton from '../../CtaButton.tsx';
 import { PageHero, ContentSection } from '../../PageComponents.tsx';
 import { PawIcon } from '../../icons.tsx';
@@ -59,7 +67,7 @@ const HandsOnDogsPage: React.FC<HandsOnDogsPageProps> = (props) => {
         subtitle="Not able or ready to adopt? We have a great option just for you."
         mediaKey="hands_on_care_hero"
         alt="A person gently petting a sanctuary dog"
-        titleColorClass="text-brand-secondary"
+        titleColorClass="text-white"
         {...props}
       />
 

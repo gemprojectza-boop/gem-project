@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Your Focal Points</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #00AEEF;
+            margin-bottom: 20px;
+        }
+        .button {
+            background: #00AEEF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 15px 10px;
+            display: inline-block;
+        }
+        .button:hover {
+            background: #008FCC;
+        }
+        .success {
+            background: #39B54A;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-weight: bold;
+            display: none;
+        }
+        .success-msg {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            display: block;
+        }
+        .focal-list {
+            text-align: left;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Apply Your Exact Focal Points</h1>
+        
+        <div class="info status">
+            <strong>Ready to apply your focal points:</strong><br>
+            These are the exact settings from your visual editor.
+        </div>
+
+        <div class="focal-list">
+            <strong>Adoptable Dogs:</strong><br>
+            • Alex: X: 0.06, Y: 0.35<br>
+            • Chandra: X: 0.48, Y: 0.02<br>
+            • Daisy: X: 0.03, Y: 0.42<br>
+            • Max: X: 0.50, Y: 0.02<br>
+            • Ruth: X: 0.53, Y: 0.03<br>
+            • Fifi: X: 0.06, Y: 0.46<br>
+            • Foxy: X: 0.44, Y: 0.03<br>
+            • Hazel: X: 0.42, Y: 0.01<br><br>
+            
+            <strong>Forever Sanctuary Dogs:</strong><br>
+            • Casper: X: 0.08, Y: 0.44<br>
+            • Jerry: X: 0.45, Y: 0.01<br>
+            • Jesse: X: 0.07, Y: 0.34<br>
+            • Simba: X: 0.46, Y: 0.02<br>
+            • Ruby: X: 0.93, Y: 0.46<br>
+            • Pretty: X: 0.96, Y: 0.59
+        </div>
+        
+        <button class="button" onclick="applyFocalPoints()">Apply These Focal Points Now</button>
+        
+        <div id="success" class="status success-msg">
+            ✅ Success! Your focal points have been applied to the website!<br>
+            <strong>Next step:</strong> Go to your website and refresh the page to see the changes.
+        </div>
+    </div>
+
+    <script>
+        function applyFocalPoints() {
+            console.log('Applying your exact focal points...');
+            
+            // Your exact focal points from the visual editor
+            const focalPoints = {
+                // Adoptable Dogs
+                'alex_main': { x: 0.06, y: 0.35 },
+                'chandra_main': { x: 0.48, y: 0.02 },
+                'daisy_main': { x: 0.03, y: 0.42 },
+                'max_main': { x: 0.50, y: 0.02 },
+                'ruth_main': { x: 0.53, y: 0.03 },
+                'fifi_main': { x: 0.06, y: 0.46 },
+                'foxy_main': { x: 0.44, y: 0.03 },
+                'hazel_main': { x: 0.42, y: 0.01 },
+                
+                // Forever Sanctuary Dogs
+                'casper_main': { x: 0.08, y: 0.44 },
+                'jerry_main': { x: 0.45, y: 0.01 },
+                'jesse_main': { x: 0.07, y: 0.34 },
+                'simba_main': { x: 0.46, y: 0.02 },
+                'ruby_main': { x: 0.93, y: 0.46 },
+                'pretty_main': { x: 0.96, y: 0.59 }
+            };
+            
+            // Save to localStorage
+            localStorage.setItem('gem-project-focal-points', JSON.stringify(focalPoints));
+            
+            console.log('Focal points saved:', focalPoints);
+            
+            // Show success message
+            document.getElementById('success').style.display = 'block';
+            
+            // Also log individual settings for verification
+            Object.entries(focalPoints).forEach(([key, point]) => {
+                console.log(`${key}: x=${point.x}, y=${point.y}`);
+            });
+        }
+    </script>
+</body>
+</html>

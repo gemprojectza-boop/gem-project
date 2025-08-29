@@ -26,7 +26,14 @@ const DogTrainingPage: React.FC<DogTrainingPageProps> = (props) => {
 
       <ContentSection>
         <div className="content-bubble">
-          <EditableMedia mediaKey="training_hero" mediaUrl={props.mediaContent.training_hero!} alt="Training a dog" isEditMode={props.isEditMode} onUpdate={props.onMediaUpdate} className="rounded-t-lg aspect-video" />
+          <EditableMedia 
+            mediaKey="training_hero" 
+            mediaUrl="https://i.ibb.co/RGZdt2VH/DSC06681.jpg" 
+            alt="Training a dog" 
+            isEditMode={props.isEditMode} 
+            onUpdate={props.onMediaUpdate} 
+            className="rounded-t-lg aspect-video" 
+          />
           <div className="p-6 md:p-8">
             <p>At The Gem Project Sanctuary, behaviour and training are at the heart of our rehabilitation work. Many of the dogs who come to us carry emotional and behavioural scars shaped by trauma, neglect, fear and isolation.</p>
             <p>Our programme focuses on how dogs think, learn and respond. We use positive, science-based methods to teach desirable behaviours and help them unlearn survival-based habits. Whether they're preparing for adoption, entering therapy or service training, or staying with us as forever residents, every dog deserves a chance to thrive.</p>

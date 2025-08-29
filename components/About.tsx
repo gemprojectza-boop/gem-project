@@ -85,8 +85,8 @@ const About: React.FC<AboutProps> = ({ mediaContent, isEditMode, onMediaUpdate }
             <div className="relative flex justify-center items-center">
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px]">
                   <EditableMedia
-                    mediaKey="welcome_section_01"
-                    mediaUrl={mediaContent.welcome_section_01!}
+                    mediaKey="dogs_intro"
+                    mediaUrl={mediaContent.dogs_intro!}
                     alt="Happy German Shepherd dog"
                     isEditMode={isEditMode}
                     onUpdate={onMediaUpdate}

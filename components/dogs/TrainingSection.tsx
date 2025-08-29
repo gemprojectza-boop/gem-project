@@ -91,13 +91,6 @@ const TrainingSection: React.FC<SectionProps> = (props) => {
                 </div>
             </div>
 
-            <div className="content-bubble bg-brand-text-primary text-white text-center">
-                <div className="p-6 md:p-8">
-                    <PawIcon className="w-8 h-8 text-white mx-auto mb-2" />
-                    <h3 className="text-2xl font-bold mb-4 text-brand-secondary">Our Partners in Behaviour</h3>
-                    <p className="text-gray-300">With expert support from Honey's Garden Medical Alert Dog Services and other external behaviourists, we continue to grow our capacity to support complex behavioural needs.</p>
-                </div>
-            </div>
 
             <div className="content-bubble text-center mt-8 bg-brand-primary text-white">
                 <div className="p-6 md:p-8">

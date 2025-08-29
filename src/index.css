@@ -4,14 +4,14 @@
 
 /* Custom CSS variables and styles from index.html */
 :root {
-  /* Brand Colors */
-  --brand-primary: #00AEEF;
-  --brand-primary-hover: #008FCC;
-  --brand-primary-light: #77D1F7;
-  --brand-secondary: #E30613;
-  --brand-accent: #39B54A;
-  --brand-text-primary-const: #333333;
-  --brand-text-secondary-const: #4D8FAC;
+  /* Brand Colors - HORSE GREEN AS DEFAULT */
+  --brand-primary: #16a34a !important;
+  --brand-primary-hover: #15803d !important;
+  --brand-primary-light: #4ade80 !important;
+  --brand-secondary: #E30613 !important;
+  --brand-accent: #39B54A !important;
+  --brand-text-primary-const: #16a34a !important;
+  --brand-text-secondary-const: #4D8FAC !important;
 
   /* Light Theme */
   --color-bg: #FAFAFA; /* Off-White */
@@ -19,7 +19,7 @@
   --color-surface: #FFFFFF; /* White */
   --color-text-base: var(--brand-text-primary-const);
   --color-text-muted: var(--brand-text-secondary-const);
-  --color-text-heading: var(--brand-primary);
+  --color-text-heading: #16a34a !important;
   --color-border: rgba(0, 0, 0, 0.1);
   --color-bubble-bg: var(--color-surface);
   --color-bubble-border: rgba(0, 0, 0, 0.05);
@@ -179,6 +179,9 @@ a.cta-button,
 /* ========== DOG PAGE OVERRIDES ========== */
 .dog-page-override {
   --brand-primary: #dc2626 !important;
+  --brand-primary-hover: #b91c1c !important;
+  --brand-primary-light: #fca5a5 !important;
+  --brand-text-primary-const: #dc2626 !important;
   --color-text-heading: #dc2626 !important;
 }
 
@@ -306,10 +309,9 @@ a.cta-button,
   text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-/* ========== HORSE PAGE OVERRIDES ========== */
+/* ========== HORSE PAGE OVERRIDES (NOW REDUNDANT - THESE ARE THE DEFAULTS) ========== */
 .horse-page-override {
-  --brand-primary: #16a34a !important;
-  --color-text-heading: #16a34a !important;
+  /* These are now the default colors, so this override does nothing */
 }
 
 /* Header and Navigation remain unchanged on horse pages */
@@ -320,21 +322,149 @@ a.cta-button,
   color: inherit !important;
 }
 
-/* Main content headings on horse pages (exclude header/nav/footer) */
-.horse-page-override main h1:not([class*="bg-"]),
-.horse-page-override main h2:not([class*="bg-"]),
-.horse-page-override main h3:not([class*="bg-"]),
-.horse-page-override main h4:not([class*="bg-"]),
-.horse-page-override main h5:not([class*="bg-"]),
-.horse-page-override main h6:not([class*="bg-"]),
-.horse-page-override main [class*="title"]:not([class*="bg-"]),
-.horse-page-override main [class*="heading"]:not([class*="bg-"]),
-.horse-page-override section h1:not([class*="bg-"]):not(header h1),
-.horse-page-override section h2:not([class*="bg-"]):not(header h2),
-.horse-page-override section h3:not([class*="bg-"]):not(header h3),
-.horse-page-override section h4:not([class*="bg-"]):not(header h4),
-.horse-page-override section h5:not([class*="bg-"]):not(header h5),
-.horse-page-override section h6:not([class*="bg-"]):not(header h6) {
+/* ALL HEADINGS AND TEXT ON HORSE PAGES MUST BE GREEN - FORCE OVERRIDE - EXCEPT HERO SECTIONS */
+.horse-page-override h1:not(.hero h1):not([style*="color: white"]),
+.horse-page-override h2:not(.hero h2):not([style*="color: white"]), 
+.horse-page-override h3:not(.hero h3):not([style*="color: white"]),
+.horse-page-override h4:not(.hero h4):not([style*="color: white"]),
+.horse-page-override h5:not(.hero h5):not([style*="color: white"]),
+.horse-page-override h6:not(.hero h6):not([style*="color: white"]),
+.horse-page-override main h1:not(.hero h1):not([style*="color: white"]),
+.horse-page-override main h2:not(.hero h2):not([style*="color: white"]),
+.horse-page-override main h3:not(.hero h3):not([style*="color: white"]),
+.horse-page-override main h4:not(.hero h4):not([style*="color: white"]),
+.horse-page-override main h5:not(.hero h5):not([style*="color: white"]),
+.horse-page-override main h6:not(.hero h6):not([style*="color: white"]),
+.horse-page-override section h1:not(.hero h1):not([style*="color: white"]),
+.horse-page-override section h2:not(.hero h2):not([style*="color: white"]),
+.horse-page-override section h3:not(.hero h3):not([style*="color: white"]),
+.horse-page-override section h4:not(.hero h4):not([style*="color: white"]),
+.horse-page-override section h5:not(.hero h5):not([style*="color: white"]),
+.horse-page-override section h6:not(.hero h6):not([style*="color: white"]),
+.horse-page-override .text-green-800,
+.horse-page-override .text-brand-text-primary:not([style*="color: white"]),
+.horse-page-override [class*="title"]:not([style*="color: white"]),
+.horse-page-override [class*="heading"]:not([style*="color: white"]),
+.horse-page-override .text-3xl:not([style*="color: white"]),
+.horse-page-override .text-4xl:not([style*="color: white"]),
+.horse-page-override .text-5xl:not([style*="color: white"]),
+.horse-page-override .text-7xl:not([style*="color: white"]),
+.horse-page-override .font-bold:not([style*="color: white"]),
+.horse-page-override .font-black:not([style*="color: white"]) {
+  color: #16a34a !important;
+}
+
+/* Hero sections must stay white - FORCE ALL HERO TEXT TO BE WHITE */
+body:not([data-page="home"]) .hero h1,
+body:not([data-page="home"]) .hero h2,
+body:not([data-page="home"]) .hero h3,
+body:not([data-page="home"]) .hero *,
+body:not([data-page="home"]) section.hero h1,
+body:not([data-page="home"]) section.hero h2,
+body:not([data-page="home"]) section.hero h3,
+body:not([data-page="home"]) section.hero *,
+.hero h1[style*="color: white"],
+.hero h2[style*="color: white"],
+.hero h3[style*="color: white"],
+.hero span[style*="color: white"],
+[style*="color: white !important"] {
+  color: white !important;
+}
+
+/* Extra strong hero white enforcement - DOGS AND HORSES PAGES */
+.dog-page-override .hero .text-5xl,
+.dog-page-override .hero .text-6xl,
+.dog-page-override .hero .text-7xl,
+.dog-page-override .hero .font-black,
+.dog-page-override .hero .font-bold,
+.dog-page-override .hero h1,
+.dog-page-override .hero span,
+.dog-page-override section.hero .text-5xl,
+.dog-page-override section.hero .text-6xl, 
+.dog-page-override section.hero .text-7xl,
+.dog-page-override section.hero .font-black,
+.dog-page-override section.hero .font-bold,
+.dog-page-override section.hero h1,
+.dog-page-override section.hero span,
+.horse-page-override .hero .text-5xl,
+.horse-page-override .hero .text-6xl,
+.horse-page-override .hero .text-7xl,
+.horse-page-override .hero .font-black,
+.horse-page-override .hero .font-bold,
+.horse-page-override .hero h1,
+.horse-page-override .hero span,
+.horse-page-override section.hero .text-5xl,
+.horse-page-override section.hero .text-6xl, 
+.horse-page-override section.hero .text-7xl,
+.horse-page-override section.hero .font-black,
+.horse-page-override section.hero .font-bold,
+.horse-page-override section.hero h1,
+.horse-page-override section.hero span {
+  color: white !important;
+}
+
+/* ULTIMATE HORSE PAGE FIX - OVERRIDE EVERYTHING */
+.horse-page-override * {
+  --brand-primary: #16a34a !important;
+  --brand-text-primary-const: #16a34a !important;
+  --color-text-heading: #16a34a !important;
+}
+
+/* ULTIMATE HERO TEXT WHITE ENFORCEMENT - NUCLEAR OPTION */
+* .hero *,
+* section.hero *,
+* .bg-red-600 *,
+* .bg-green-600 *,
+.hero .text-5xl,
+.hero .text-6xl,
+.hero .text-7xl,
+.hero .font-black,
+.hero .font-bold,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero span,
+.hero p,
+section.hero .text-5xl,
+section.hero .text-6xl,
+section.hero .text-7xl,
+section.hero .font-black,
+section.hero .font-bold,
+section.hero h1,
+section.hero h2,
+section.hero h3,
+section.hero span,
+section.hero p,
+.bg-red-600 .text-5xl,
+.bg-red-600 .text-6xl,
+.bg-red-600 .text-7xl,
+.bg-red-600 .font-black,
+.bg-red-600 .font-bold,
+.bg-red-600 h1,
+.bg-red-600 h2,
+.bg-red-600 h3,
+.bg-red-600 span,
+.bg-red-600 p,
+.bg-green-600 .text-5xl,
+.bg-green-600 .text-6xl,
+.bg-green-600 .text-7xl,
+.bg-green-600 .font-black,
+.bg-green-600 .font-bold,
+.bg-green-600 h1,
+.bg-green-600 h2,
+.bg-green-600 h3,
+.bg-green-600 span,
+.bg-green-600 p {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+}
+
+/* Override any blue colors specifically */
+.horse-page-override .text-blue-600,
+.horse-page-override .text-blue-700,
+.horse-page-override .text-blue-800,
+.horse-page-override [style*="color: #00AEEF"],
+.horse-page-override [style*="color: blue"] {
   color: #16a34a !important;
 }
 
@@ -603,180 +733,17 @@ a.cta-button,
   text-align: right !important;
 }
 
-/* COMPREHENSIVE CENTERING FIXES - COMPLETE OVERRIDE */
-/* Force center alignment for ALL hero sections everywhere */
-.hero,
-section[class*="hero"],
-section.hero,
-.hero-section,
-*[class*="hero"] {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
 
-.hero *,
-section[class*="hero"] *,
-section.hero *,
-.hero-section *,
-*[class*="hero"] * {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
 
-/* Force center alignment for ALL content bubbles and cards */
-.content-bubble,
-.content-bubble *,
-.content-bubble div,
-.content-bubble p,
-.content-bubble h1,
-.content-bubble h2,
-.content-bubble h3,
-.content-bubble h4,
-.content-bubble h5,
-.content-bubble h6,
-.card,
-.card *,
-*[class*="card"] *,
-*[class*="content"] * {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
 
-/* Force center alignment for ALL title cards and sections */
-section[id*="intro"],
-section[id*="team"],
-section[id*="about"],
-section[class*="title"],
-.title-card,
-.title-section,
-*[class*="section"],
-section,
-section *,
-div[class*="section"],
-div[class*="section"] * {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
 
-section[id*="intro"] *,
-section[id*="team"] *,
-section[id*="about"] *,
-section[class*="title"] *,
-.title-card *,
-.title-section * {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
 
-/* Force ALL footer sections to be centered */
-footer,
-footer *,
-*[class*="footer"],
-*[class*="footer"] *,
-section:last-child,
-section:last-child * {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
 
-/* Force center all heading and title elements */
-h1, h2, h3, h4, h5, h6,
-.title, .heading, .header,
-*[class*="title"], *[class*="heading"], *[class*="header"] {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
 
-/* NUCLEAR OPTION - CENTER EVERYTHING WITH HIGHEST SPECIFICITY */
-html * {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
 
-/* FORCE CENTER ALL ELEMENTS */
-html *, html *::before, html *::after {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
 
-/* FORCE BUTTON CENTERING */
-button, .btn, [role="button"], a[class*="button"], *[class*="Button"] {
-  text-align: center !important;
-  margin: 0 auto !important;
-  display: block !important;
-  width: fit-content !important;
-}
 
-html div, html section, html header, html footer, html main, html article, html aside, html nav {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  width: 100% !important;
-}
 
-html p, html span, html a, html button, html input, html textarea, html label, html h1, html h2, html h3, html h4, html h5, html h6 {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block !important;
-}
-
-html .container, html .max-w-4xl, html .max-w-6xl, html .mx-auto {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Override ALL Tailwind classes with highest specificity */
-html .text-left {
-  text-align: center !important;
-}
-
-html .text-start {
-  text-align: center !important;
-}
-
-html .justify-start {
-  justify-content: center !important;
-}
-
-html .justify-between {
-  justify-content: center !important;
-}
-
-html .items-start {
-  align-items: center !important;
-}
-
-html .items-end {
-  align-items: center !important;
-}
-
-/* Force all flex containers to center */
-html .flex {
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-}
-
-html .grid {
-  justify-items: center !important;
-  align-items: center !important;
-  text-align: center !important;
-}
 
 /* Override any left-aligned text in centered sections */
 @media (min-width: 768px) {
@@ -962,29 +929,19 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* FORCE CENTER ADOPTION PAGE SPECIFICALLY WITH MATHEMATICAL POSITIONING */
-#adoptable-dogs,
-#adoptable-dogs *,
-#adoptable-dogs .container,
-#adoptable-dogs .content-bubble {
-  position: fixed !important;
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: 100vw !important;
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  flex-direction: column !important;
+/* Force white text on specific colored backgrounds */
+.bg-brand-primary *,
+.bg-brand-secondary *,
+.bg-brand-accent *,
+.bg-blue-600 *,
+.bg-blue-700 *,
+.bg-blue-800 *,
+.bg-red-600 *,
+.bg-green-600 *,
+.bg-gray-700 *,
+.bg-gray-800 *,
+.bg-gray-900 *,
+[class*="bg-dark"] * {
+  color: white !important;
 }
 
-/* FIX RED TEXT IN READY TO CHANGE A LIFE SECTION */
-section[class*="bg-brand-primary"],
-section[class*="bg-brand-primary"] *,
-section[class*="bg-brand-primary"] .container,
-section[class*="bg-brand-primary"] h2 {
-  color: white !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
-}

@@ -26,10 +26,10 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
         <div className="content-bubble">
           <div className="p-6 md:p-8 space-y-4 text-lg text-gray-700">
             <p>At The Gem Project Sanctuary we believe in the quiet power of a dog’s presence to soothe uplift and heal. Our Therapy Dog Program gives select dogs the chance to make a difference in the lives of people beyond our sanctuary, visiting hospitals care homes, schools and outreach programs to bring comfort joy and connection.</p>
-            {props.mediaContent['therapy_dog_01'] && (
+            {props.mediaContent['dogs_hero_banner'] && (
                 <EditableMedia
-                    mediaKey="therapy_dog_01"
-                    mediaUrl={props.mediaContent['therapy_dog_01']}
+                    mediaKey="dogs_hero_banner"
+                    mediaUrl={props.mediaContent['dogs_hero_banner']}
                     alt="A calm therapy dog."
                     isEditMode={props.isEditMode}
                     onUpdate={props.onMediaUpdate}
@@ -40,16 +40,14 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
             <p>Therapy dogs are not service dogs. They do not perform medical tasks or assist with disabilities. Instead they are trained to offer emotional support through calm gentle interactions. They are friendly affectionate and well-behaved in a variety of public settings.</p>
             <p>A therapy dog is chosen for their temperament. They must enjoy meeting new people be comfortable in busy or unfamiliar environments and respond reliably to commands. Each dog undergoes socialisation and training to prepare them for the unique role of bringing emotional relief to others.</p>
             
-            {props.mediaContent['therapy_dog_02'] && (
-                <EditableMedia
-                    mediaKey="therapy_dog_02"
-                    mediaUrl={props.mediaContent['therapy_dog_02']}
-                    alt="A gentle therapy dog interacting with a person."
-                    isEditMode={props.isEditMode}
-                    onUpdate={props.onMediaUpdate}
-                    className="rounded-lg my-4"
-                />
-            )}
+            <EditableMedia
+                mediaKey="therapy_dog_02"
+                mediaUrl="https://i.ibb.co/M5Dt51FL/DSC01987.jpg"
+                alt="A gentle therapy dog interacting with a person."
+                isEditMode={props.isEditMode}
+                onUpdate={props.onMediaUpdate}
+                className="rounded-lg my-4"
+            />
             <h3 className="text-2xl font-bold text-brand-secondary pt-4">What Makes a Great Therapy Dog?</h3>
             <p>A great therapy dog is calm, gentle and deeply in tune with people. These special dogs have a natural warmth that puts others at ease. They stay composed in busy environments, respond with affection not excitement and offer comfort without asking for anything in return.</p>
             <p>Before they ever set paw into a hospital or school, each dog is temperament-tested and carefully trained. We make sure they’re not just well-behaved, but truly ready to bring peace, joy and connection to those who need it most.</p>
@@ -61,10 +59,10 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
                 <li>Happy to engage without jumping barking or demanding attention</li>
             </ul>
             <p>These dogs are trained and temperament-tested before participating in visits. We prioritise safety comfort and mutual respect in every setting.</p>
-             {props.mediaContent['therapy_dog_03'] && (
+             {props.mediaContent['forever_dogs_hero'] && (
                 <EditableMedia
-                    mediaKey="therapy_dog_03"
-                    mediaUrl={props.mediaContent['therapy_dog_03']}
+                    mediaKey="forever_dogs_hero"
+                    mediaUrl={props.mediaContent['forever_dogs_hero']}
                     alt="Therapy dog being brushed or calmly lying near a group of children."
                     isEditMode={props.isEditMode}
                     onUpdate={props.onMediaUpdate}

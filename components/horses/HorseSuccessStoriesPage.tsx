@@ -184,7 +184,7 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
                 subtitle="Every rescue begins with a moment of urgency. These are the journeys from hardship to healing."
                 mediaKey="horse_stories_hero"
                 alt="A beautiful, healthy horse running freely in a pasture"
-                titleColorClass="text-green-700"
+                titleColorClass="text-white"
                 {...props}
             />
             

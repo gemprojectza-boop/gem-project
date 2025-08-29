@@ -29,8 +29,9 @@ const CtaButton: React.FC<CtaButtonProps> = ({ href, children, className, style,
             onClick={handleClick}
             className={`${baseStyle} ${className}`}
             style={style}
+            ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }}
         >
-            {children}
+            <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>{children}</span>
         </button>
     );
 };
