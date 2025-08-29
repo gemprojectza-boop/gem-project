@@ -22,7 +22,8 @@
       "WebFetch(domain:127.0.0.1)",
       "Bash(taskkill:*)",
       "Bash(powershell:*)",
-      "Bash(xcopy:*)"
+      "Bash(xcopy:*)",
+      "Bash(gh repo view:*)"
     ],
     "deny": [],
     "ask": []

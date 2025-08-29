@@ -12,8 +12,6 @@ import { NavigationProvider, useSafeNavigation } from './contexts/NavigationCont
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
 import SplashScreen from './components/SplashScreen.tsx';
-import EditingSystem from './components/EditingSystem.tsx';
-import SimplifiedEditor from './components/SimplifiedEditor.tsx';
 import DebugFocalPoints from './components/DebugFocalPoints.tsx';
 
 // Direct import all page components
@@ -586,16 +584,6 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
     return (
         <div className="bg-brand-bg-main text-brand-text-primary font-sans transition-colors duration-300 min-h-screen">
             {mountSplash && <SplashScreen isVisible={isSplashVisible} />}
-            <EditingSystem 
-                isEditMode={isEditMode}
-                onToggleEditMode={toggleEditMode}
-                onSaveChanges={handleSaveChanges}
-                mediaContent={mediaContent}
-            />
-            <SimplifiedEditor 
-                isEditMode={isEditMode} 
-                onToggleEditMode={toggleEditMode} 
-            />
             <DebugFocalPoints />
             <Header />
             <main className="pt-[88px] animate-page-fade max-content-width-lg" key={path}>
