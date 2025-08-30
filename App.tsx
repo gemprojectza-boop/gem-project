@@ -347,7 +347,7 @@ const initialMediaContent: MediaContent = {
   zarra_video: 'https://videos.pexels.com/video-files/5257769/5257769-hd_1920_1080_25fps.mp4',
   casper_main: 'https://i.ibb.co/JjJg6Tr2/image.png',
   casper_video: 'https://videos.pexels.com/video-files/5257769/5257769-hd_1920_1080_25fps.mp4',
-  misty_main: 'https://i.ibb.co/kgLt4Fm4/image.png',
+    sneaky_pete_main: 'https://i.ibb.co/HpNPRh2H/07-2025-Pete-running-in-paddock-3.jpg',
   misty_video: 'https://videos.pexels.com/video-files/5495856/5495856-hd_1920_1080_25fps.mp4',
   doughnut_main: 'https://i.ibb.co/Z6L4X4ss/image.png',
   doughnut_story: 'https://i.ibb.co/wvNKvth/image.png',

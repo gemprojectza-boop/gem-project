@@ -43,7 +43,7 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
 
     const mainPhotoUrl = mediaContent[horse.media.mainPhotoKey];
     const storyPhotoUrl = mediaContent[horse.media.storyPhotoKey];
-    const videoUrl = mediaContent[horse.media.videoKey];
+    
 
     const ctaBlock = horse.status === 'Forever Sanctuary' ? (
         <>
@@ -163,16 +163,11 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
                  <div className="my-12">
                      <h2 className="text-3xl font-bold mb-6 text-center" style={{color: '#16a34a !important'}}>More Photos & Videos of {horse.name}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        {horse.media.galleryKeys.map(key => {
-                            const url = mediaContent[key];
-                            return url ? <EditableMedia key={key} mediaKey={key} mediaUrl={url} alt={`Gallery photo of ${horse.name}`} isEditMode={isEditMode} onUpdate={onMediaUpdate} className="aspect-video object-cover"/> : null
+                        {horse.media.galleryKeys.map((url, index) => {
+                            return url ? <EditableMedia key={index} mediaKey={`gallery-${horse.id}-${index}`} mediaUrl={url} alt={`Gallery photo of ${horse.name}`} isEditMode={isEditMode} onUpdate={onMediaUpdate} className="aspect-video object-cover"/> : null
                         })}
                     </div>
-                    {videoUrl && (
-                         <div className="mt-8">
-                            <EditableMedia mediaKey={horse.media.videoKey} mediaUrl={videoUrl} alt={`Video of ${horse.name}`} isVideo isEditMode={isEditMode} onUpdate={onMediaUpdate} className="w-full aspect-video" videoAutoPlay={true}/>
-                        </div>
-                    )}
+                    
                 </div>
 
             </main>
