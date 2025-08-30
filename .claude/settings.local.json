@@ -23,7 +23,8 @@
       "Bash(taskkill:*)",
       "Bash(powershell:*)",
       "Bash(xcopy:*)",
-      "Bash(gh repo view:*)"
+      "Bash(gh repo view:*)",
+      "Read(C:\\Users/**)"
     ],
     "deny": [],
     "ask": []

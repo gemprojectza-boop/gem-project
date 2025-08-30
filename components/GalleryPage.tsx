@@ -196,12 +196,12 @@ const GalleryPage: React.FC<GalleryPageProps> = (props) => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                                 <div className="md:col-span-1 grid grid-cols-2 gap-4">
                                     <div className="text-center transform hover:scale-105 transition-transform duration-300">
-                                        <EditableMedia mediaKey="dogs_intro" mediaUrl={props.mediaContent.dogs_intro!} alt="Before: A dog's journey begins" {...props} className="aspect-square object-cover rounded-xl shadow-lg" />
+                                        <EditableMedia mediaKey="stella_success_before_1" mediaUrl={props.mediaContent.stella_success_before_1!} alt="Before: A horse's rescue journey begins" {...props} className="aspect-square object-cover rounded-xl shadow-lg" />
                                         <p className="mt-3 font-bold text-gray-600 text-lg">Day One</p>
                                         <p className="text-sm text-gray-500">Scared & Uncertain</p>
                                     </div>
                                     <div className="text-center transform hover:scale-105 transition-transform duration-300">
-                                        <EditableMedia mediaKey="forever_dogs_day_in_life" mediaUrl={props.mediaContent.forever_dogs_day_in_life!} alt="After: Thriving in sanctuary life" {...props} className="aspect-square object-cover rounded-xl shadow-lg" />
+                                        <EditableMedia mediaKey="stella_success_after_1" mediaUrl={props.mediaContent.stella_success_after_1!} alt="After: Thriving in sanctuary life" {...props} className="aspect-square object-cover rounded-xl shadow-lg" />
                                         <p className="mt-3 font-bold text-brand-accent text-lg">Today</p>
                                         <p className="text-sm text-brand-accent">Happy & Healthy</p>
                                     </div>

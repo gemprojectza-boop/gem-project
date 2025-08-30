@@ -44,6 +44,7 @@ import HorseSuccessStoriesPage from './components/horses/HorseSuccessStoriesPage
 import HorseNeedsPage from './components/horses/HorseNeedsPage.tsx';
 import HorseRehabilitationPage from './components/horses/HorseRehabilitationPage.tsx';
 import YouthProgrammePage from './components/YouthProgrammePage.tsx';
+import DonatePage from './components/DonatePage.tsx';
 
 
 const initialMediaContent: MediaContent = {
@@ -53,14 +54,14 @@ const initialMediaContent: MediaContent = {
   forever_animals_01: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg',
   sponsorship_01: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
   wishlist_01: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
-  volunteer_01: 'https://images.pexels.com/photos/7473243/pexels-photo-7473243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  volunteer_01: 'https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg',
   youth_apprenticeship_01: 'https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg',
   hands_on_01: 'https://i.ibb.co/38X4vg9/DSC03223.jpg',
-  community_image: 'https://images.pexels.com/photos/6624177/pexels-photo-6624177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  community_image: 'https://i.ibb.co/C5XgywDr/DSC03284.jpg',
   final_cta_image: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg',
   about_hero: 'https://i.ibb.co/XfPq7BMz/DSC03353-2.jpg',
-  about_welcome_gate: 'https://images.pexels.com/photos/4056461/pexels-photo-4056461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  about_mobile_vet: 'https://images.pexels.com/photos/6235116/pexels-photo-6235116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  about_welcome_gate: 'https://i.ibb.co/XZrt0nR2/DSC00848.jpg',
+  about_mobile_vet: 'https://i.ibb.co/yFsK5D7T/DSC06133.jpg',
   about_sleeping_dogs: 'https://i.ibb.co/BVD7R6Nm/DSC00774.jpg',
   about_dog_walk: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg',
   about_drone_shot: 'https://i.ibb.co/fzqVKSRZ/DSC09212.jpg',
@@ -355,11 +356,11 @@ const initialMediaContent: MediaContent = {
   faq_programs: 'https://i.ibb.co/C5XgywDr/DSC03284.jpg',
   faq_adoption: 'https://i.ibb.co/GQG9nDY3/DSC02859-2.jpg',
   faq_sponsorship: 'https://i.ibb.co/Q3tRgvGG/DSC02919-2.jpg',
-  faq_help: 'https://images.pexels.com/photos/6624177/pexels-photo-6624177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  faq_contact: 'https://images.pexels.com/photos/7473243/pexels-photo-7473243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  contact_hero: 'https://images.pexels.com/photos/4056461/pexels-photo-4056461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  faq_help: 'https://i.ibb.co/9HCc21mq/DSC03298.jpg',
+  faq_contact: 'https://i.ibb.co/27xDp06N/DSC03489.jpg',
+  contact_hero: 'https://i.ibb.co/9HkSDNm9/DSC00598.jpg',
   contact_cta_bg: 'https://i.ibb.co/fzqVKSRZ/DSC09212.jpg',
-  partners_hero: 'https://images.pexels.com/photos/7473243/pexels-photo-7473243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  partners_hero: 'https://i.ibb.co/4w20RgcW/DSC02792.jpg',
   partners_cta: 'https://i.ibb.co/9HCc21mq/DSC03298.jpg',
   gallery_hero: 'https://i.ibb.co/tM1vj3DB/DSC03309.jpg',
   gallery_dog_1: 'https://i.ibb.co/39sSvLsZ/DSC03004-2.jpg',
@@ -377,8 +378,8 @@ const initialMediaContent: MediaContent = {
   gallery_horse_6: 'https://i.ibb.co/x8LYrgfW/DSC08102.jpg',
   gallery_horse_video: 'https://videos.pexels.com/video-files/2886287/2886287-hd_1280_720_25fps.mp4',
   gallery_community_1: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  gallery_community_2: 'https://images.pexels.com/photos/7473243/pexels-photo-7473243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  gallery_community_3: 'https://images.pexels.com/photos/6624177/pexels-photo-6624177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  gallery_community_2: 'https://i.ibb.co/0ysR5QLP/image.png',
+  gallery_community_3: 'https://i.ibb.co/tM1vj3DB/DSC03309.jpg',
   gallery_vet_1: 'https://i.ibb.co/mK3B41K/DSC08108.jpg',
   gallery_vet_2: 'https://i.ibb.co/gFftZfwx/DSC08417.jpg',
   gallery_sanctuary_1: 'https://i.ibb.co/fzqVKSRZ/DSC09212.jpg',
@@ -386,12 +387,20 @@ const initialMediaContent: MediaContent = {
   gallery_sanctuary_3: 'https://i.ibb.co/BVD7R6Nm/DSC00774.jpg', // Replaced mismatched image with a photo of napping dogs.
   gallery_bella_before: 'https://i.ibb.co/XfPq7BMz/DSC03353-2.jpg',
   gallery_bella_after: 'https://i.ibb.co/BVD7R6Nm/DSC00774.jpg',
-  community_hero: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  community_matters: 'https://images.pexels.com/photos/6624177/pexels-photo-6624177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  community_outreach: 'https://images.pexels.com/photos/7473243/pexels-photo-7473243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  community_hero: 'https://i.ibb.co/9HkSDNm9/DSC00598.jpg',
+  community_matters: 'https://i.ibb.co/R43Cg3yY/DSC03341.jpg',
+  community_outreach: 'https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg',
   community_vet_clinic: 'https://i.ibb.co/vvMM03Nr/DSC08463.jpg',
   community_youth_programme: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   community_hands_on: 'https://images.pexels.com/photos/4588052/pexels-photo-4588052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  
+  // --- DONATE PAGE IMAGES ---
+  donate_hero: 'https://i.ibb.co/kgGLTcRx/DSC00096-1.jpg',
+  donate_story_1: 'https://i.ibb.co/9k5KjBbF/DSC03214.jpg',
+  donate_story_2: 'https://i.ibb.co/qMJw6td6/image.png',
+  donate_volunteer: 'https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg',
+  donate_sponsor: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
+  donate_wishlist: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
 };
 
 const AppContent: React.FC = () => {
@@ -561,7 +570,7 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
 
             case '/youth': return <YouthProgrammePage {...pageProps} />;
             
-            case '/donate': return <PlaceholderPage title="Donate" />;
+            case '/donate': return <DonatePage {...pageProps} />;
             case '/horses-enrichment': return <PlaceholderPage title="Horse Enrichment" />;
             case '/horses-future-vision': return <PlaceholderPage title="Our Future Vision" />;
         }
