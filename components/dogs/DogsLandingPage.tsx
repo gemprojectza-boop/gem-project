@@ -80,11 +80,22 @@ const Intro: React.FC<DogsLandingPageProps> = (props) => (
   </section>
 );
 
-const MeetTheTeamSection: React.FC = () => (
+const MeetTheTeamSection: React.FC<DogsLandingPageProps> = (props) => (
     <section id="team" className="py-20 md:py-24 bg-gradient-to-br from-brand-bg-subtle to-brand-bg-main">
         <div className="container mx-auto px-6 text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
                 <div className="content-bubble bg-white/95 backdrop-blur-sm shadow-2xl rounded-3xl border border-gray-100" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                    {props.mediaContent['dog_team_photo'] && (
+                        <EditableMedia
+                            mediaKey="dog_team_photo"
+                            mediaUrl={props.mediaContent['dog_team_photo']}
+                            alt="Dog team members"
+                            isEditMode={props.isEditMode}
+                            onUpdate={props.onMediaUpdate}
+                            className="rounded-t-3xl w-full h-auto object-contain"
+                            loading="eager"
+                        />
+                    )}
                     <div className="p-10 md:p-12" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                         <PawIcon className="w-16 h-16 text-brand-primary mx-auto mb-6 icon-interactive" style={{margin: '0 auto 1.5rem auto'}} />
                         <h2 className="text-4xl md:text-5xl font-black text-brand-text-primary mb-6" style={{textAlign: 'center !important', margin: '0 auto 1.5rem auto', display: 'block', width: '100%'}}>
@@ -134,7 +145,7 @@ const DogsLandingPage: React.FC<DogsLandingPageProps> = (props) => {
         <OutreachProgramSection {...props} />
         <TrainingSection {...props} />
         <StoriesSection {...props} />
-        <MeetTheTeamSection />
+        <MeetTheTeamSection {...props} />
         
         {/* Full width sections for better readability */}
         <OutingsSection {...props} />

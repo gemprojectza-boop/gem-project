@@ -16,12 +16,6 @@ const DogProfileCard: React.FC<DogProfileCardProps> = ({ dog, mediaContent, isEd
     const { navigate } = useSafeNavigation();
     const imageUrl = mediaContent[dog.media.mainPhotoKey];
 
-    const statusColor = {
-        'Available': 'bg-brand-accent',
-        'Adoption Pending': 'bg-brand-text-secondary',
-        'Adopted': 'bg-brand-secondary',
-        'Forever Sanctuary': 'bg-brand-primary'
-    };
 
     return (
         <div 
@@ -46,9 +40,6 @@ const DogProfileCard: React.FC<DogProfileCardProps> = ({ dog, mediaContent, isEd
                         <span className="text-gray-500">No Image</span>
                     </div>
                 )}
-                <div className={`absolute top-2 right-2 px-3 py-1 text-xs font-bold text-white rounded-full shadow-lg ${statusColor[dog.status]}`}>
-                    {dog.status}
-                </div>
             </div>
             <div className="p-4 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-brand-text-primary group-hover:text-brand-primary transition-colors text-center">{dog.name}</h3>

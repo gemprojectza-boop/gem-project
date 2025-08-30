@@ -7,7 +7,6 @@ import { MediaContent, HeroConfig, SectionKey } from '../types.ts';
 
 import Hero from './Hero.tsx';
 import About from './About.tsx';
-import ImpactStats from './ImpactStats.tsx';
 import MeetTheAnimals from './MeetTheAnimals.tsx';
 import HowToHelp from './HowToHelp.tsx';
 import YouthProgramme from './YouthProgramme.tsx';
@@ -23,7 +22,7 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ mediaContent, isEditMode, heroConfig, onMediaUpdate }) => {
-    const [sections, setSections] = useState<SectionKey[]>(['welcome', 'impact_stats', 'animal_sections', 'community', 'youth', 'get_involved', 'final_cta']);
+    const [sections, setSections] = useState<SectionKey[]>(['welcome', 'animal_sections', 'community', 'youth', 'get_involved', 'final_cta']);
 
     const handleMove = (fromIndex: number, toIndex: number) => {
         if (toIndex < 0 || toIndex >= sections.length) return;
@@ -35,7 +34,6 @@ const HomePage: React.FC<HomePageProps> = ({ mediaContent, isEditMode, heroConfi
 
     const sectionComponents: Record<SectionKey, React.ReactNode> = {
         welcome: <About mediaContent={mediaContent} isEditMode={isEditMode} onMediaUpdate={onMediaUpdate} />,
-        impact_stats: <ImpactStats />,
         animal_sections: <MeetTheAnimals mediaContent={mediaContent} isEditMode={isEditMode} onMediaUpdate={onMediaUpdate} />,
         community: <CommunityEvents mediaContent={mediaContent} isEditMode={isEditMode} onMediaUpdate={onMediaUpdate} />,
         youth: <YouthProgramme mediaContent={mediaContent} isEditMode={isEditMode} onMediaUpdate={onMediaUpdate} />,

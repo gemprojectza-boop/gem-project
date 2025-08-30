@@ -348,8 +348,8 @@ export const sampleDogs: AdoptableDog[] = [
     },
     media: {
       mainPhotoKey: 'brooklyn_main',
-      storyPhotoKey: 'brooklyn_main',
-      galleryKeys: [],
+      storyPhotoKey: 'brooklyn_story',
+      galleryKeys: ['brooklyn_gallery_1', 'brooklyn_gallery_2', 'brooklyn_gallery_3', 'brooklyn_gallery_4', 'brooklyn_gallery_5', 'brooklyn_gallery_6', 'brooklyn_gallery_7', 'brooklyn_gallery_8', 'brooklyn_gallery_9', 'brooklyn_gallery_10', 'brooklyn_gallery_11', 'brooklyn_gallery_12'],
       videoKey: 'brooklyn_video',
     },
   },

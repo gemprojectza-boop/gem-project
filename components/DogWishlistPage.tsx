@@ -12,11 +12,13 @@ interface DogWishlistPageProps {
 }
 
 const WishlistCategory: React.FC<{title: string; items: string[]}> = ({title, items}) => (
-    <div className="bg-brand-surface p-6 rounded-lg shadow-md">
-        <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
-        <h3 className="text-2xl font-bold mb-4 text-brand-secondary">{title}</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
-            {items.map(item => <li key={item}>{item}</li>)}
+    <div className="bg-brand-surface p-4 md:p-6 rounded-lg shadow-md h-full flex flex-col">
+        <div className="flex items-center mb-3">
+            <PawIcon className="w-6 h-6 text-brand-secondary mr-2" />
+            <h3 className="text-xl md:text-2xl font-bold text-brand-secondary">{title}</h3>
+        </div>
+        <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm md:text-base leading-tight flex-grow">
+            {items.map(item => <li key={item} className="leading-tight">{item}</li>)}
         </ul>
     </div>
 )
@@ -43,7 +45,7 @@ const DogWishlistPage: React.FC<DogWishlistPageProps> = (props) => {
             <div className="p-6 md:p-8">
               <PawIcon className="w-10 h-10 text-brand-secondary mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-12 text-center">What Our Dogs Need Most</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <WishlistCategory 
                       title="Food & Basic Care"
                       items={[

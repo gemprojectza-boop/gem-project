@@ -15,14 +15,14 @@ interface HorseNeedsPageProps {
 
 const NeedsCategory: React.FC<{title: string; intro: string; items: string[]}> = ({title, intro, items}) => (
     <div className="content-bubble h-full flex flex-col">
-        <div className="p-6 md:p-8 flex-grow flex flex-col">
-            <h3 className="text-2xl font-bold mb-2 text-sanctuary-purple">{title}</h3>
-            <p className="text-gray-600 mb-4 flex-grow">{intro}</p>
-            <ul className="space-y-2">
+        <div className="p-4 md:p-6 flex-grow flex flex-col">
+            <h3 className="text-xl md:text-2xl font-bold mb-3 text-sanctuary-purple">{title}</h3>
+            <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">{intro}</p>
+            <ul className="space-y-3">
                 {items.map(item => (
                     <li key={item} className="flex items-start">
-                        <PawIcon className="w-4 h-4 text-sanctuary-purple mr-3 mt-1.5 flex-shrink-0" />
-                        <span className="text-gray-700">{item}</span>
+                        <PawIcon className="w-4 h-4 text-sanctuary-purple mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm md:text-base leading-relaxed">{item}</span>
                     </li>
                 ))}
             </ul>
@@ -52,7 +52,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
             <div className="content-bubble">
                 <div className="p-6 md:p-8">
                     <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-12 text-center">What Our Horses Need Most</h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <NeedsCategory 
                             title="General Needs"
                             intro="These essential tools help us keep the sanctuary clean, functional and safe for both horses and caregivers:"

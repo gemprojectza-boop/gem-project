@@ -236,7 +236,7 @@ const initialMediaContent: MediaContent = {
   forever_dogs_hero: 'https://i.ibb.co/38X4vg9/DSC03223.jpg',
   forever_dogs_day_in_life: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg',
   stories_ruby: 'https://i.ibb.co/pjgyd2Kr/image.png',
-  stories_honey: 'https://i.ibb.co/BVD7R6Nm/DSC00774.jpg',
+  stories_honey: 'https://i.ibb.co/0RVjRKrF/image.png',
   stories_queenie: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg',
   therapy_dog_01: 'https://i.ibb.co/kVHsDb0G/image.png',
   therapy_dog_02: 'https://i.ibb.co/MkgxrVN9/image.png',
@@ -272,7 +272,20 @@ const initialMediaContent: MediaContent = {
   bobby_gallery_1: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
   bobby_gallery_2: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
   bobby_video: 'https://videos.pexels.com/video-files/5257769/5257769-hd_1920_1080_25fps.mp4',
-  brooklyn_main: 'https://i.ibb.co/Kp6J0DYZ/image.png',
+  brooklyn_main: 'https://i.ibb.co/Z636TJyT/image.png',
+  brooklyn_story: 'https://i.ibb.co/ZzG08zMS/image.png',
+  brooklyn_gallery_1: 'https://i.ibb.co/7JzBqs8q/image.png',
+  brooklyn_gallery_2: 'https://i.ibb.co/tw0ks1c0/image.png',
+  brooklyn_gallery_3: 'https://i.ibb.co/S7Pz6L8L/image.png',
+  brooklyn_gallery_4: 'https://i.ibb.co/SDJns2L2/image.png',
+  brooklyn_gallery_5: 'https://i.ibb.co/j9y8vwrY/image.png',
+  brooklyn_gallery_6: 'https://i.ibb.co/wNw91Sxw/image.png',
+  brooklyn_gallery_7: 'https://i.ibb.co/j9Np4RKR/image.png',
+  brooklyn_gallery_8: 'https://i.ibb.co/LzxcV93G/image.png',
+  brooklyn_gallery_9: 'https://i.ibb.co/933hJB5T/image.png',
+  brooklyn_gallery_10: 'https://i.ibb.co/hF52D9js/image.png',
+  brooklyn_gallery_11: 'https://i.ibb.co/xK6h6mnC/image.png',
+  brooklyn_gallery_12: 'https://i.ibb.co/5xSJFMPS/image.png',
   brooklyn_video: 'https://videos.pexels.com/video-files/8259344/8259344-hd_1920_1080_25fps.mp4',
   buddy_main: 'https://i.ibb.co/zVd58gSX/image.png',
   buddy_video: 'https://videos.pexels.com/video-files/4588220/4588220-hd_1920_1080_25fps.mp4',
@@ -326,7 +339,7 @@ const initialMediaContent: MediaContent = {
   stacey_main: 'https://i.ibb.co/TDRxK7cw/image.png',
   stacey_story: 'https://i.ibb.co/Mx2znzgj/image.png',
   stacey_video: 'https://videos.pexels.com/video-files/5257769/5257769-hd_1920_1080_25fps.mp4',
-  whitney_main: 'https://i.ibb.co/0p6BknjP/image.png',
+  whitney_main: 'https://i.ibb.co/BKPNctYx/image.png',
   whitney_video: 'https://videos.pexels.com/video-files/7190369/7190369-hd_1920_1080_25fps.mp4',
   xeno_main: 'https://i.ibb.co/4nDNkR2z/image.png',
   xeno_video: 'https://videos.pexels.com/video-files/5992441/5992441-uhd_3840_2160_25fps.mp4',
@@ -374,7 +387,7 @@ const initialMediaContent: MediaContent = {
   gallery_horse_5: 'https://i.ibb.co/WvVYJNRF/DSC08062.jpg',
   gallery_horse_6: 'https://i.ibb.co/x8LYrgfW/DSC08102.jpg',
   gallery_horse_video: 'https://videos.pexels.com/video-files/2886287/2886287-hd_1280_720_25fps.mp4',
-  gallery_community_1: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  // gallery_community_1: REMOVED - problematic photo
   gallery_community_2: 'https://i.ibb.co/0ysR5QLP/image.png',
   gallery_community_3: 'https://i.ibb.co/tM1vj3DB/DSC03309.jpg',
   gallery_vet_1: 'https://i.ibb.co/mK3B41K/DSC08108.jpg',
@@ -388,7 +401,7 @@ const initialMediaContent: MediaContent = {
   community_matters: 'https://i.ibb.co/R43Cg3yY/DSC03341.jpg',
   community_outreach: 'https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg',
   community_vet_clinic: 'https://i.ibb.co/vvMM03Nr/DSC08463.jpg',
-  community_youth_programme: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  community_youth_programme: 'https://i.ibb.co/4w20RgcW/DSC02792.jpg',
   community_hands_on: 'https://images.pexels.com/photos/4588052/pexels-photo-4588052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   
   // --- DONATE PAGE IMAGES ---
@@ -398,6 +411,9 @@ const initialMediaContent: MediaContent = {
   donate_volunteer: 'https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg',
   donate_sponsor: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
   donate_wishlist: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
+  
+  // Dog team image
+  dog_team_photo: 'https://i.ibb.co/fY2SGPmf/image.png',
 };
 
 const AppContent: React.FC = () => {
