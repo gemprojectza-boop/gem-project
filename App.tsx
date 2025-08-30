@@ -198,9 +198,6 @@ const initialMediaContent: MediaContent = {
   jazz_story: 'https://i.ibb.co/DH3NqzGz/image.png',
   roxy_main: 'https://i.ibb.co/S4XFgWqq/image.png',
   roxy_story: 'https://i.ibb.co/LdFFgcmQ/image.png',
-  pete_main: 'https://i.ibb.co/1GzZFCTB/image.png',
-  pete_story: 'https://i.ibb.co/zT7Hv0X3/image.png',
-  opal_main: 'https://i.ibb.co/vXRwG3y/image.png',
   // --- HORSE SUCCESS STORIES (NEW) ---
   stella_success_before_1: 'https://i.ibb.co/gKK8zhG/image.png',
   stella_success_before_2: 'https://i.ibb.co/CpP6ZTXX/image.png',

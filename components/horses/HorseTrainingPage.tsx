@@ -95,7 +95,7 @@ const HorseTrainingPage: React.FC<HorseTrainingPageProps> = (props) => {
                             <li>Backing with a gentle rider only when the horse shows readiness</li>
                             <li>Rebuilding confidence in horses with past training trauma</li>
                         </ul>
-                        <p>We never push a horse past their comfort. Riding is not the end goal it is only pursued if it benefits the horse mentally and physically. Horses who cannot be ridden still receive daily care, attention and enrichment for life.</p>
+                        <p>We never push a horse past their comfort. Riding is not the end goal it is only pursued if it benefits the horse mentally and physically. Horses who cannot be ridden still receive daily care and attention for life.</p>
                     </TrainingSectionCard>
 
                      <TrainingSectionCard title="Emotional Recovery Through Structure" mediaKey="horse_training_emotional" alt="Horse standing quietly with trainer" {...props}>
@@ -134,7 +134,7 @@ const HorseTrainingPage: React.FC<HorseTrainingPageProps> = (props) => {
                                 title="Care & Rehabilitation"
                                 links={[
                                     { href: "/horses#hands-on", text: "Hands-On Care Programme" },
-                                    { href: "/horses/enrichment", text: "Enrichment and Daily Life" },
+                                    { href: "/horses#enrichment", text: "Enrichment and Daily Life" },
                                     { href: "/horses#day-in-life", text: "A Day in the Life" },
                                 ]}
                             />

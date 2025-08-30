@@ -86,7 +86,7 @@ const HandsOnSection: React.FC<SectionProps> = (props) => {
                 <CarePackageCard 
                     title="Sanctuary Supporter"
                     price="R1200/mo"
-                    description="Deepen your connection with up to three hours per week, joining in on training, enrichment, and herd observation."
+                    description="Deepen your connection with up to three hours per week, joining in on training and herd observation."
                     features={["Up to two visits per week (3 hours total)", "Behind-the-scenes access", "Printed certificate & surprise gift"]}
                 />
             </div>

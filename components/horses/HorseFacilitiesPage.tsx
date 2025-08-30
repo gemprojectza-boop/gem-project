@@ -84,39 +84,12 @@ const HorseFacilitiesPage: React.FC<HorseFacilitiesPageProps> = (props) => {
                     />
                     <div className="p-6 md:p-8">
                         <p>Every pathway, gate and feeding routine has been created with our horses in mind. Our team works to reduce stress triggers, avoid unnecessary confinement and promote natural behaviours.</p>
-                        <p>While our horses live in a sanctuary, their lives mirror as closely as possible the rhythm of safe, supported freedom. Daily human interaction, structured enrichment, herd companionship and choice form the heart of their days.</p>
+                        <p>While our horses live in a sanctuary, their lives mirror as closely as possible the rhythm of safe, supported freedom. Daily human interaction, herd companionship and choice form the heart of their days.</p>
                         <p className="font-bold mt-4">Because here, space is not just something they have. It’s something that heals.</p>
                     </div>
                 </div>
             </ContentSection>
 
-
-            <section className="relative py-24 md:py-40 text-white bg-brand-text-primary">
-                 <div className="absolute inset-0">
-                    <EditableMedia
-                        mediaKey="horse_facilities_cta"
-                        mediaUrl={props.mediaContent.horse_facilities_cta!}
-                        alt="Wide landscape of sanctuary with horses grazing peacefully under a warm sky"
-                        className="w-full h-full object-cover"
-                        isEditMode={props.isEditMode}
-                        onUpdate={props.onMediaUpdate}
-                    />
-                    <div className="absolute inset-0 bg-brand-text-primary opacity-70"></div>
-                </div>
-                <div className="relative container mx-auto px-6 text-center">
-                    <div className="content-bubble max-w-4xl mx-auto" style={{background: 'rgba(0,0,0,0.3)', color: 'white'}}>
-                        <div className="p-6 md:p-8">
-                          <h2 className="text-3xl md:text-4xl font-bold text-white">Be Part of the Healing</h2>
-                          <p className="text-lg text-gray-200 my-6">Your support makes it possible to maintain and improve these life-changing spaces. Whether through donations, sponsorship or volunteering, your contribution helps keep our sanctuary safe, peaceful and purpose-built for healing.</p>
-                          <div className="flex flex-wrap justify-center gap-4">
-                              <CtaButton href="/horses/facilities" className="bg-brand-primary hover:bg-brand-primary-hover text-white">See Our Facilities</CtaButton>
-                              <CtaButton href="/horses#sponsor" className="bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary">Sponsor a Horse</CtaButton>
-                              <CtaButton href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-text-primary">Contact Us</CtaButton>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 };

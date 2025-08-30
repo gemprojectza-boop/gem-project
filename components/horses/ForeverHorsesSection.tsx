@@ -32,7 +32,7 @@ const ForeverHorsesSection: React.FC<SectionProps> = (props) => {
                         <li>Quality nutrition and veterinary care</li>
                         <li>Therapeutic support (body work, hoof care, and more)</li>
                         <li>Emotional stability in a safe, loving environment</li>
-                        <li>Enrichment and companionship to live with dignity and joy</li>
+                        <li>Companionship to live with dignity and joy</li>
                     </ul>
                 </div>
             </div>

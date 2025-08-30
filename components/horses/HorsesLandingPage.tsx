@@ -196,7 +196,7 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
         sectionId="enrichment"
         mediaKey="horses_enrichment_cta"
         title="Enrichment and Daily Life"
-        text={<p>Our sanctuary offers more than safety; it offers joy. Enrichment is built into every day: sensory activities, puzzle feeders, liberty games and social time. We believe healing is not only about survival, but about happiness.</p>}
+        text={<p>Our sanctuary offers more than safety; it offers joy and the freedom to truly be horses. Every day is enriched with social interaction, open space to move and play, and quiet moments where they can simply be themselves. We believe healing is not only about survival, but about happiness and the freedom to live as horses were meant to.</p>}
         cta={[{href: "/horses-enrichment", text: "Explore Horse Enrichment", className: "bg-brand-accent hover:bg-brand-accent-hover text-white"}]}
         alt="Horse playing with enrichment toy"
         {...props}

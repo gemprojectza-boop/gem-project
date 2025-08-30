@@ -46,7 +46,7 @@ const galleryData: Record<string, { title: string; items: MediaItem[]; titleColo
             { mediaKey: 'horses_intro', type: 'image', caption: 'A moment of trust between horse and caregiver.' },
             { mediaKey: 'horses_mission', type: 'image', caption: 'Building bonds through gentle interaction.' },
             { mediaKey: 'horses_training_cta', type: 'image', caption: 'Liberty work session showcasing trust and communication.' },
-            { mediaKey: 'horses_enrichment_cta', type: 'image', caption: 'Enrichment activities bringing joy to daily life.' },
+            { mediaKey: 'horses_enrichment_cta', type: 'image', caption: 'Daily enrichment activities bringing joy and natural behavior.' },
             { mediaKey: 'horses_facilities_cta_alt', type: 'image', caption: 'Clean, safe facilities designed for healing.' },
             { mediaKey: 'gallery_horse_1', type: 'image', caption: 'Bonding through grooming and care.' },
             { mediaKey: 'gallery_horse_video', type: 'video', caption: 'Gentle training session in the round pen.' },
