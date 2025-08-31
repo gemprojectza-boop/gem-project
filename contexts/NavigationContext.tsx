@@ -23,9 +23,15 @@ const getLocation = () => {
     };
   }
   // Outside the sandbox, use standard browser location properties.
+  // Handle the /gem-project/ base path from Vite
+  let pathname = window.location.pathname;
+  if (pathname.startsWith('/gem-project/')) {
+    pathname = pathname.substring('/gem-project'.length) || '/';
+  }
+  
   return {
-      path: window.location.pathname,
-      fullPath: window.location.pathname + window.location.search + window.location.hash,
+      path: pathname,
+      fullPath: pathname + window.location.search + window.location.hash,
   };
 };
 
@@ -81,13 +87,15 @@ export const NavigationProvider: React.FC<{ children: ReactNode }> = ({ children
       window.location.hash = targetHash;
     } else {
       // For normal environments, we use the History API.
-      const targetFullPath = to;
+      // Handle the /gem-project/ base path from Vite
+      const basePath = '/gem-project';
+      const targetFullPath = basePath + (to.startsWith('/') ? to : '/' + to);
       const currentFullPath = window.location.pathname + window.location.search + window.location.hash;
        if (targetFullPath === currentFullPath) {
         handleLocationChange();
         return;
       }
-      history.pushState({}, '', to);
+      history.pushState({}, '', targetFullPath);
       // Manually dispatch a popstate event because pushState doesn't trigger it automatically.
       window.dispatchEvent(new PopStateEvent('popstate'));
     }

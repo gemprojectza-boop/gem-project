@@ -12,7 +12,6 @@ import { NavigationProvider, useSafeNavigation } from './contexts/NavigationCont
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
 import SplashScreen from './components/SplashScreen.tsx';
-import DebugFocalPoints from './components/DebugFocalPoints.tsx';
 
 // Direct import all page components
 import HomePage from './components/HomePage.tsx';
@@ -241,7 +240,7 @@ const initialMediaContent: MediaContent = {
   therapy_dog_01: 'https://i.ibb.co/kVHsDb0G/image.png',
   therapy_dog_02: 'https://i.ibb.co/MkgxrVN9/image.png',
   therapy_dog_03: 'https://images.pexels.com/photos/8434679/pexels-photo-8434679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  health_louis_story: 'https://i.ibb.co/zTqXSvvC/DSC01232.jpg',
+  health_louis_story: 'https://i.ibb.co/LhsrgX3D/Whats-App-Image-2025-08-30-at-17-58-07-4d3ce3be.jpg',
   outings_hero: 'https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg',
   training_hero: 'https://i.ibb.co/MQwNTVT/DSC02148.jpg',
   wishlist_hero: 'https://i.ibb.co/LX5p3T9M/DSC02248-2.jpg',
@@ -265,12 +264,7 @@ const initialMediaContent: MediaContent = {
   benji_video: 'https://videos.pexels.com/video-files/7190369/7190369-hd_1920_1080_25fps.mp4',
   blake_main: 'https://i.ibb.co/7djRnyqf/image.png',
   blake_video: 'https://videos.pexels.com/video-files/5992441/5992441-uhd_3840_2160_25fps.mp4',
-  bobi_main: 'https://i.ibb.co/27L2XcrW/image.png',
-  bobi_video: 'https://videos.pexels.com/video-files/5257769/5257769-hd_1920_1080_25fps.mp4',
-  bobby_main: 'https://i.ibb.co/ksk9xPhB/image.png',
-  bobby_story: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg',
-  bobby_gallery_1: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
-  bobby_gallery_2: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
+  bobby_main: 'https://i.ibb.co/27L2XcrW/image.png',
   bobby_video: 'https://videos.pexels.com/video-files/5257769/5257769-hd_1920_1080_25fps.mp4',
   brooklyn_main: 'https://i.ibb.co/Z636TJyT/image.png',
   brooklyn_story: 'https://i.ibb.co/ZzG08zMS/image.png',
@@ -294,7 +288,7 @@ const initialMediaContent: MediaContent = {
   chloe_main: 'https://i.ibb.co/SXBz7fn3/image.png',
   chloe_story: 'https://i.ibb.co/nMkpQ5tX/image.png',
   chloe_video: 'https://videos.pexels.com/video-files/5257769/5257769-hd_1920_1080_25fps.mp4',
-  cooper_main: 'https://i.ibb.co/6RNQ2Bc5/image.png',
+  cooper_main: 'https://i.ibb.co/5hvYm6wf/Whats-App-Image-2025-08-30-at-17-58-04-527da627.jpg',
   cooper_story: 'https://i.ibb.co/BVD7R6Nm/DSC00774.jpg',
   cooper_gallery_1: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg',
   cooper_gallery_2: 'https://i.ibb.co/zTqXSvvC/DSC01232.jpg',
@@ -606,7 +600,6 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
     return (
         <div className="bg-brand-bg-main text-brand-text-primary font-sans transition-colors duration-300 min-h-screen">
             {mountSplash && <SplashScreen isVisible={isSplashVisible} />}
-            <DebugFocalPoints />
             <Header />
             <main className="pt-[88px] animate-page-fade max-content-width-lg" key={path}>
                 {renderPage()}

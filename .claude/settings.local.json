@@ -24,7 +24,10 @@
       "Bash(powershell:*)",
       "Bash(xcopy:*)",
       "Bash(gh repo view:*)",
-      "Read(C:\\Users/**)"
+      "Read(C:\\Users/**)",
+      "Bash(cloudflared tunnel:*)",
+      "Bash(dir:*)",
+      "Bash(git remote set-url:*)"
     ],
     "deny": [],
     "ask": []

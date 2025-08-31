@@ -222,8 +222,8 @@ export const sampleDogs: AdoptableDog[] = [
     },
   },
   {
-    id: 'bobi',
-    name: 'Bobi',
+    id: 'bobby',
+    name: 'Bobby',
     status: 'Available',
     petInfo: {
       age: 'Young Adult',
@@ -259,53 +259,9 @@ export const sampleDogs: AdoptableDog[] = [
       text: "Bobi's joyful spirit is absolutely contagious. He'll be your loyal co-pilot on hikes, your enthusiastic playmate in the yard, and your warm companion on lazy afternoons. If you're looking for a dog to fill your home with laughter and love, Bobi is your boy."
     },
     media: {
-      mainPhotoKey: 'bobi_main',
-      storyPhotoKey: 'bobi_main',
-      galleryKeys: [],
-      videoKey: 'bobi_video',
-    },
-  },
-  {
-    id: 'bobby',
-    name: 'Bobby',
-    status: 'Available',
-    petInfo: {
-      age: 'Mature',
-      breed: 'Crossbreed',
-      gender: 'Female',
-      sterilised: 'Yes',
-      size: 'Medium',
-    },
-    compatibility: {
-      kids: 'No',
-      dogs: 'Yes',
-      cats: 'No',
-    },
-    idealHome: 'Elderly home environment',
-    story: {
-      title: 'Her Story',
-      text: 'Bobby was given another chance when her previous owners could no longer care for her. Through the compassionate support of the welfare system, she found her way to us and she’s been waiting for her perfect forever home ever since.',
-    },
-    personality: {
-      title: 'Personality',
-      text: 'With her senior years comes a charming mix of sass and sweetness. Bobby can be a little grumpy when things don’t go her way, but those who know her see the soft, affectionate soul beneath the surface. She absolutely loves back scratches, head rubs, and the gentle act of helping clean her eyes one of her favorite bonding rituals.\n\nShort strolls and slow sniff walks are her favorite pastime, and she enjoys resting in warm, cozy corners where she can keep an eye on the world around her. Bobby is seeking a gentle, understanding family that appreciates her quirks and is ready to shower her with love in her golden years.',
-    },
-    specialTrait: {
-      title: 'What Makes Her Special',
-      points: [
-        'A gentle soul with a touch of senior sass',
-        'Thrives in calm, quiet environments',
-        'Full of personality, charm, and love',
-      ],
-    },
-    loveReason: {
-      title: 'Why You’ll Love Her',
-      text: 'Bobby may be older, but her heart is as full as ever. She’s the kind of companion who will sit beside you quietly, nuzzle up when you least expect it, and bring a special kind of joy that only a senior dog can offer. If you believe in second chances and lasting bonds Bobby is waiting.',
-    },
-    media: {
       mainPhotoKey: 'bobby_main',
-      storyPhotoKey: 'bobby_story',
-      galleryKeys: ['bobby_gallery_1', 'bobby_gallery_2'],
+      storyPhotoKey: 'bobby_main',
+      galleryKeys: [],
       videoKey: 'bobby_video',
     },
   },

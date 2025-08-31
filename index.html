@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>The Gem Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -112,17 +115,32 @@
         box-sizing: border-box;
       }
       
-      /* Prevent horizontal scroll */
+      /* Prevent horizontal scroll and iOS issues */
       html, body {
         overflow-x: hidden;
         width: 100%;
+        -webkit-overflow-scrolling: touch;
+        -webkit-text-size-adjust: 100%;
+      }
+      
+      /* iOS Safari specific fixes */
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+      }
+      
+      /* Fix for iOS viewport issues */
+      @supports (-webkit-touch-callout: none) {
+        .min-h-screen {
+          min-height: -webkit-fill-available;
+        }
       }
       
       /* Content bubble improvements */
       .content-bubble {
         background: var(--color-bubble-bg);
         border-radius: 12px;
-        margin: 20px 0;
+        margin: 24px 0;
         box-shadow: none;
         border: none;
         transition: transform 0.3s ease-out, background-color 0.3s ease;
@@ -145,10 +163,91 @@
       }
       
 
+      /* Improved line spacing and header gaps */
+      body {
+        line-height: 1.7;
+      }
+      
+      /* Better typography spacing */
+      h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+        margin-bottom: 1.25rem;
+        margin-top: 2rem;
+      }
+      
+      h1 { margin-top: 2.5rem; margin-bottom: 1.5rem; }
+      h2 { margin-top: 2.25rem; margin-bottom: 1.25rem; }
+      h3 { margin-top: 2rem; margin-bottom: 1rem; }
+      
+      p {
+        line-height: 1.75;
+        margin-bottom: 1.25rem;
+      }
+      
+      /* Gap between headers and content cards */
+      h1 + .content-bubble,
+      h2 + .content-bubble,
+      h3 + .content-bubble,
+      h4 + .content-bubble {
+        margin-top: 1.5rem;
+      }
+      
+      /* Gap between headers and sections */
+      h1 + section,
+      h2 + section,
+      h3 + section {
+        margin-top: 2rem;
+      }
+      
+      /* Improved bullet point presentation */
+      ul, ol {
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+      }
+      
+      li {
+        margin-bottom: 0.25rem;
+        line-height: 1.6;
+        padding-left: 0.25rem;
+      }
+      
+      /* Remove extra spacing between sentences in bullet points */
+      li p {
+        margin-bottom: 0.25rem;
+        line-height: 1.6;
+      }
+      
+      li:last-child {
+        margin-bottom: 0;
+      }
+      
+      /* Better bullet point styling */
+      ul li {
+        list-style-type: disc;
+        list-style-position: outside;
+      }
+      
+      ol li {
+        list-style-type: decimal;
+        list-style-position: outside;
+      }
+      
+      /* Nested list improvements */
+      ul ul, ol ol, ul ol, ol ul {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        padding-left: 1.25rem;
+      }
+      
+      ul ul li, ol ol li {
+        margin-bottom: 0.15rem;
+      }
+
       .content-bubble h1, .content-bubble h2, .content-bubble h3, .content-bubble h4 {
         color: var(--color-text-heading);
-        margin-top: 0;
-        margin-bottom: 16px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         position: relative;
         transition: color 0.3s ease;
       }
@@ -281,6 +380,173 @@
         .content-bubble {
           margin: 16px 0; border-radius: 10px;
           box-shadow: none;
+        }
+        
+        /* Improved mobile typography and spacing */
+        h1 { font-size: 2.2rem !important; line-height: 1.2; margin-bottom: 1rem; }
+        h2 { font-size: 1.8rem !important; line-height: 1.3; margin-bottom: 0.8rem; }
+        h3 { font-size: 1.5rem !important; line-height: 1.3; margin-bottom: 0.7rem; }
+        h4 { font-size: 1.25rem !important; line-height: 1.3; margin-bottom: 0.6rem; }
+        
+        /* Better paragraph and line spacing on mobile */
+        p { font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; }
+        
+        /* Maintain header gaps on mobile */
+        h1 { margin-top: 2rem; margin-bottom: 1.25rem; }
+        h2 { margin-top: 1.75rem; margin-bottom: 1rem; }
+        h3 { margin-top: 1.5rem; margin-bottom: 0.8rem; }
+        
+        /* Header to content card gaps on mobile */
+        h1 + .content-bubble,
+        h2 + .content-bubble,
+        h3 + .content-bubble {
+          margin-top: 1.25rem;
+        }
+        
+        /* Improved mobile bullet points */
+        ul, ol {
+          padding-left: 1.25rem;
+          margin-bottom: 1rem;
+        }
+        
+        li {
+          margin-bottom: 0.2rem;
+          line-height: 1.5;
+          padding-left: 0.2rem;
+        }
+        
+        li p {
+          margin-bottom: 0.2rem;
+          line-height: 1.5;
+        }
+        
+        ul ul, ol ol {
+          padding-left: 1rem;
+          margin-top: 0.2rem;
+          margin-bottom: 0.2rem;
+        }
+        
+        /* Optimize button sizing */
+        .btn, button, .cta-button {
+          font-size: 0.9rem !important;
+          padding: 0.7rem 1.2rem !important;
+          margin: 0.4rem 0.2rem !important;
+        }
+        
+        /* Container padding adjustments */
+        .container { padding: 0 1rem !important; }
+        .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+        .px-8 { padding-left: 1.2rem !important; padding-right: 1.2rem !important; }
+        
+        /* Section spacing improvements */
+        .py-16 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+        .py-20 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+        .mb-8 { margin-bottom: 1.5rem !important; }
+        .mb-10 { margin-bottom: 2rem !important; }
+        .mb-12 { margin-bottom: 2.5rem !important; }
+        
+        /* Card and content spacing */
+        .content-bubble { padding: 1.2rem !important; margin: 12px 0 !important; }
+        .grid { gap: 1rem !important; }
+        
+        /* Image sizing improvements */
+        .aspect-video { aspect-ratio: 16/10 !important; }
+        .rounded-lg { border-radius: 8px !important; }
+        
+        /* Navigation and header adjustments */
+        .text-4xl { font-size: 2rem !important; }
+        .text-5xl { font-size: 2.5rem !important; }
+        .text-6xl { font-size: 3rem !important; }
+        
+        /* Horse landing page text improvements for tablets and larger phones */
+        .hero h1 {
+          font-size: 3rem !important;
+          line-height: 1.15 !important;
+        }
+        
+        .text-xl { 
+          font-size: 1.1rem !important; 
+          line-height: 1.65 !important; 
+        }
+        
+        .content-bubble .space-y-6 > * + * {
+          margin-top: 1.25rem !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        /* Extra small screens - even more compact */
+        h1 { font-size: 1.9rem !important; }
+        h2 { font-size: 1.6rem !important; }
+        h3 { font-size: 1.3rem !important; }
+        
+        /* Add side padding to prevent edge-to-edge stretching, but not for hero sections */
+        .container { padding: 0 1rem !important; }
+        .content-bubble { padding: 1rem !important; margin: 8px 0.75rem !important; }
+        
+        /* Add padding to non-hero sections only */
+        section:not([class*="hero"]):not(.hero):not([id*="hero"]) { 
+          padding-left: 0.75rem !important; 
+          padding-right: 0.75rem !important; 
+        }
+        main { padding: 0 0.25rem; }
+        
+        /* Ensure hero sections have no extra padding */
+        .hero-section,
+        section.hero,
+        [class*="hero-"],
+        [id*="hero"] {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+        
+        .py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+        .py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+        
+        .btn, button, .cta-button {
+          font-size: 0.85rem !important;
+          padding: 0.6rem 1rem !important;
+        }
+        
+        .text-4xl { font-size: 1.8rem !important; }
+        .text-5xl { font-size: 2.2rem !important; }
+        .text-6xl { font-size: 2.5rem !important; }
+        
+        /* Additional padding for specific elements that tend to stretch */
+        .px-4 { padding-left: 1rem !important; padding-right: 1rem !important; }
+        .px-6 { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+        .mx-auto { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+        
+        /* Horse landing page text improvements for mobile */
+        .hero h1 {
+          font-size: 2.5rem !important;
+          line-height: 1.1 !important;
+          padding: 1.5rem !important;
+        }
+        
+        .hero div[style*="padding: 3rem"] {
+          padding: 1.5rem !important;
+        }
+        
+        .text-xl { 
+          font-size: 1rem !important; 
+          line-height: 1.6 !important; 
+        }
+        
+        .text-lg { 
+          font-size: 0.95rem !important; 
+          line-height: 1.6 !important; 
+        }
+        
+        .content-bubble .space-y-6 > * + * {
+          margin-top: 1rem !important;
+        }
+        
+        .content-bubble p {
+          margin-bottom: 0.75rem !important;
+          font-size: 0.9rem !important;
         }
       }
       

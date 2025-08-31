@@ -84,14 +84,14 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
         
         <CommunitySection
             id="mobile-vet-clinic"
-            title="Mobile Vet Clinic (Coming Soon)"
+            title="Mobile Vet Clinic"
             mediaKey="horses_facilities_cta_alt"
             alt="A mobile vet unit parked in a community setting"
-            cta={{ href: "/get-involved#donate", text: "Help Fund Our Mobile Clinic" }}
+            cta={{ href: "/animal-health", text: "Learn About Our Veterinary Services" }}
             reversed
             {...props}
         >
-            <p>We are launching a Mobile Vet Clinic to serve under-resourced communities. It will provide vaccinations, basic treatment, and emergency care to animals who might otherwise go without help. This project will ease the burden on struggling families and improve animal wellbeing across Cape Town.</p>
+            <p>Our Mobile Vet Clinic serves under-resourced communities, providing vaccinations, basic treatment, and emergency care to animals who might otherwise go without help. This project eases the burden on struggling families and improves animal wellbeing across Cape Town.</p>
         </CommunitySection>
 
         <CommunitySection

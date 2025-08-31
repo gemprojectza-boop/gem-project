@@ -7,6 +7,11 @@ export default defineConfig(({ mode }) => {
     return {
       plugins: [react()],
       base: '/gem-project/',
+      server: {
+        host: '0.0.0.0',
+        allowedHosts: 'all',
+        strictPort: false
+      },
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
