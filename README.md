@@ -2,11 +2,13 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# The Gem Project
 
-This contains everything you need to run your app locally.
+An animal sanctuary and rescue organization website built with React, TypeScript, and Vite.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1q82xf8iu5fcmo-z8-pkTwaFAwg2pJ5Z3
+## Live Site
+
+Visit the deployed website: https://gemprojectza-boop.github.io/gem-project/
 
 ## Run Locally
 
