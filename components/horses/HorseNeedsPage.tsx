@@ -43,7 +43,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>Caring for 23 horses—many of whom are recovering from trauma, illness or neglect—requires ongoing access to high-quality equipment, feed and medical supplies. While we provide a lifelong home for our equines, we rely on the generosity of donors and supporters to meet their daily and long-term needs.</p>
+        <p>Caring for 20 horses—many of whom are recovering from trauma, illness or neglect—requires ongoing access to high-quality equipment, feed and medical supplies. While we provide a lifelong home for our equines, we rely on the generosity of donors and supporters to meet their daily and long-term needs.</p>
         <p className="mt-4">Below is a breakdown of the items we require on an ongoing basis, as well as some once-off larger donations that would significantly strengthen our operations.</p>
       </ContentSection>
       

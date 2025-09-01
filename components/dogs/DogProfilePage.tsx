@@ -165,7 +165,7 @@ const DogProfilePage: React.FC<DogProfilePageProps> = ({ dogId, mediaContent, is
                 {/* Additional Media */}
                  <div className="my-12">
                      <PawIcon className="w-10 h-10 text-brand-secondary mx-auto mb-4" />
-                     <h2 className="text-3xl font-bold text-brand-secondary mb-6 text-center">More Photos & Videos of {dog.name}</h2>
+                     <h2 className="text-3xl font-bold text-brand-secondary mb-6 text-center">More Photos of {dog.name}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {dog.media.galleryKeys.map(key => {
                             const url = mediaContent[key];

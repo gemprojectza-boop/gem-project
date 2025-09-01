@@ -94,7 +94,7 @@ const HowToHelp: React.FC<SectionProps> = (props) => {
                     titleColorClass="text-brand-secondary"
                     buttons={[
                         { href: '/dog-wishlist', text: 'View Dog Wishlist', className: 'bg-brand-secondary hover:bg-brand-secondary-hover' },
-                        { href: '/horses/needs', text: 'View Horse Wishlist', className: 'bg-brand-accent hover:bg-brand-accent-hover' },
+                        { href: '/horses/needs', text: 'View Horse Wishlist', className: 'bg-brand-accent hover:bg-brand-accent-hover text-white' },
                     ]}
                     {...{
                       ...props,

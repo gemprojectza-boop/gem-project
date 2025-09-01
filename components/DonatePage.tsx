@@ -34,7 +34,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
             Your donation makes a direct impact on the lives of rescued animals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CtaButton href="#donate-now" size="large" className="bg-brand-accent hover:bg-brand-accent-hover">
+            <CtaButton href="#donate-now" size="large" className="bg-brand-accent hover:bg-brand-accent-hover text-white">
               Donate Now
             </CtaButton>
             <CtaButton href="#monthly-giving" variant="outline" size="large" className="border-white text-white hover:bg-white hover:text-brand-primary">
@@ -134,7 +134,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
                 placeholder="Custom amount (R)" 
                 className="flex-1 px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-brand-primary"
               />
-              <CtaButton className="bg-brand-accent hover:bg-brand-accent-hover">
+              <CtaButton className="bg-brand-accent hover:bg-brand-accent-hover text-white">
                 Donate Now
               </CtaButton>
             </div>

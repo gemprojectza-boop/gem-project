@@ -489,7 +489,10 @@ export const sampleHorses: AdoptableHorse[] = [
     media: {
       mainPhotoKey: 'sashay_future_main',
       storyPhotoKey: 'sashay_future_story',
-      galleryKeys: [],
+      galleryKeys: [
+        'https://i.ibb.co/4ZWtT0DB/07-2025-Sashay-half-body-face-portrait.jpg',
+        'https://i.ibb.co/pBXK5ybM/07-2025-Sashay-full-body-conformation-shot.jpg',
+      ],
       videoKey: 'sashay_video',
     },
   },

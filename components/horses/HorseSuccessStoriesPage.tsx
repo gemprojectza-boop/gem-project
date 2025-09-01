@@ -108,12 +108,6 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                                     <div className="relative z-10 space-y-6 text-lg text-brand-text-primary leading-relaxed">
                                         <p>{story.text}</p>
                                     </div>
-                                    {/* Success indicator */}
-                                    <div className="mt-8 flex items-center justify-center">
-                                        <div className={`px-6 py-3 ${colorScheme.bg} ${colorScheme.text} rounded-full font-bold text-sm uppercase tracking-wider`}>
-                                            ✓ Rescue Complete
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +210,7 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
                     <div className="flex flex-wrap justify-center gap-4">
                         <CtaButton href="/horses#adoption" className="bg-green-500 hover:bg-green-400 text-white">Adopt a Horse</CtaButton>
                         <CtaButton href="/horses#sponsor" className="bg-green-600 hover:bg-green-500 text-white">Sponsor a Horse</CtaButton>
-                        <CtaButton href="/donate" className="bg-white text-green-700 hover:bg-green-50">Donate Now</CtaButton>
+                        <CtaButton href="/donate" className="bg-green-700 text-white hover:bg-green-800">Donate Now</CtaButton>
                     </div>
                 </div>
             </section>

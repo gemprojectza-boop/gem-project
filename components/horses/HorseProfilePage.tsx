@@ -161,7 +161,7 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
 
                 {/* Additional Media */}
                  <div className="my-12">
-                     <h2 className="text-3xl font-bold mb-6 text-center" style={{color: '#16a34a !important'}}>More Photos & Videos of {horse.name}</h2>
+                     <h2 className="text-3xl font-bold mb-6 text-center" style={{color: '#16a34a !important'}}>More Photos of {horse.name}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {horse.media.galleryKeys.map((url, index) => {
                             return url ? <EditableMedia key={index} mediaKey={`gallery-${horse.id}-${index}`} mediaUrl={url} alt={`Gallery photo of ${horse.name}`} isEditMode={isEditMode} onUpdate={onMediaUpdate} className="aspect-video object-cover"/> : null
