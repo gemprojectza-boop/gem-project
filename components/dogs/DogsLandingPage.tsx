@@ -34,15 +34,14 @@ const Hero: React.FC<DogsLandingPageProps> = (props) => (
                 onUpdate={props.onMediaUpdate}
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
         </div>
         <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', zIndex: 10, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-          <div style={{background: 'rgba(0,0,0,0.6)', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', maxWidth: '80rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem'}}>
+          <div style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', maxWidth: '80rem', margin: '0 auto'}}>
             <div style={{padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-              <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', margin: '0 auto', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em', marginBottom: '2rem'}}>
-                <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Our Dogs</span>
+              <h1 className="text-white" style={{textAlign: 'center', margin: '0 auto', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em', marginBottom: '2rem', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)'}}>
+                Our Dogs
               </h1>
-              <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '1px 1px 2px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', margin: '0 auto', fontSize: '1.25rem', lineHeight: '1.6', maxWidth: '56rem'}}>
+              <p className="text-white" style={{textAlign: 'center', margin: '0 auto', fontSize: '1.25rem', lineHeight: '1.6', maxWidth: '56rem', textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>
                 Rescue, Rebuild, Rehome – and sometimes, provide sanctuary for life.
               </p>
             </div>

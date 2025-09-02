@@ -18,8 +18,8 @@ const DogTrainingPage: React.FC<DogTrainingPageProps> = (props) => {
       <PageHero
         title="Behaviour & Training"
         subtitle="Helping our dogs rediscover trust, confidence, and joy."
-        mediaKey="training_hero"
-        alt="A person training a dog with positive reinforcement"
+        mediaKey="about_mobile_vet"
+        alt="Youth helping with animal care"
         titleColorClass="text-brand-secondary"
         {...props}
       />

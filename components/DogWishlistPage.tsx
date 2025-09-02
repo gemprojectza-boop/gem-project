@@ -12,13 +12,13 @@ interface DogWishlistPageProps {
 }
 
 const WishlistCategory: React.FC<{title: string; items: string[]}> = ({title, items}) => (
-    <div className="bg-brand-surface p-4 md:p-6 rounded-lg shadow-md h-full flex flex-col">
-        <div className="flex items-center mb-3">
-            <PawIcon className="w-6 h-6 text-brand-secondary mr-2" />
-            <h3 className="text-xl md:text-2xl font-bold text-brand-secondary">{title}</h3>
+    <div className="bg-brand-surface p-6 md:p-8 rounded-xl shadow-lg h-full flex flex-col">
+        <div className="flex items-center mb-6">
+            <PawIcon className="w-8 h-8 text-brand-secondary mr-3" />
+            <h3 className="text-2xl md:text-3xl font-bold text-brand-secondary">{title}</h3>
         </div>
-        <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm md:text-base leading-tight flex-grow">
-            {items.map(item => <li key={item} className="leading-tight">{item}</li>)}
+        <ul className="list-disc list-inside space-y-3 text-gray-700 text-base md:text-lg leading-relaxed flex-grow">
+            {items.map(item => <li key={item} className="leading-relaxed">{item}</li>)}
         </ul>
     </div>
 )
@@ -29,8 +29,8 @@ const DogWishlistPage: React.FC<DogWishlistPageProps> = (props) => {
       <PageHero
         title="Our Dog Wishlist"
         subtitle="Help Us Meet Their Daily Needs"
-        mediaKey="wishlist_hero"
-        alt="A dog surrounded by toys and food donations"
+        mediaKey="about_sleeping_dogs"
+        alt="Peaceful sleeping dog"
         titleColorClass="text-brand-secondary"
         {...props}
       />
@@ -40,47 +40,53 @@ const DogWishlistPage: React.FC<DogWishlistPageProps> = (props) => {
       </ContentSection>
       
       <section className="py-16 md:py-20 bg-brand-bg-subtle">
-        <div className="container mx-auto px-6">
-          <div className="content-bubble">
-            <div className="p-6 md:p-8">
-              <PawIcon className="w-10 h-10 text-brand-secondary mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-12 text-center">What Our Dogs Need Most</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <WishlistCategory 
-                      title="Food & Basic Care"
-                      items={[
-                          "Quality dry and wet dog food (all formulas)",
-                          "Stainless steel dog bowls",
-                          "Durable collars, leads, and harnesses",
-                          "Soft blankets and pet beds",
-                          "Dog jerseys and raincoats (all sizes)",
-                          "Towels and large water buckets",
-                          "Shade cloth and outdoor kennels"
-                      ]}
-                  />
-                  <WishlistCategory 
-                      title="Health & Hygiene"
-                      items={[
-                          "Tick, flea, and deworming treatments",
-                          "Dog-safe shampoo and grooming brushes",
-                          "Nail clippers and ear cleaning solution",
-                          "Heavy-duty cleaning supplies (disinfectant, mops)",
-                          "Poop scoopers and biodegradable waste bags",
-                          "Latex gloves"
-                      ]}
-                  />
-                   <WishlistCategory 
-                      title="Enrichment & Training"
-                      items={[
-                          "Durable chew toys (e.g., KONG)",
-                          "Rope toys and enrichment puzzles",
-                          "Licki mats and slow feeders",
-                          "Sensory toys and training aids",
-                          "Treat pouches and clickers",
-                          "Agility equipment"
-                      ]}
-                  />
-              </div>
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-12">
+            <PawIcon className="w-16 h-16 text-brand-secondary mx-auto mb-8" />
+            <h2 className="text-5xl md:text-6xl font-bold text-brand-secondary mb-6">What Our Dogs Need Most</h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-brand-secondary to-brand-primary mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Every donation makes a direct impact on the daily comfort and wellbeing of our rescued dogs</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <WishlistCategory 
+              title="Food & Basic Care"
+              items={[
+                "Quality dry and wet dog food (all formulas)",
+                "Stainless steel dog bowls",
+                "Durable collars, leads, and harnesses",
+                "Soft blankets and pet beds",
+                "Dog jerseys and raincoats (all sizes)",
+                "Towels and large water buckets",
+                "Shade cloth and outdoor kennels"
+              ]}
+            />
+            <WishlistCategory 
+              title="Health & Hygiene"
+              items={[
+                "Tick, flea, and deworming treatments",
+                "Dog-safe shampoo and grooming brushes",
+                "Nail clippers and ear cleaning solution",
+                "Heavy-duty cleaning supplies (disinfectant, mops)",
+                "Poop scoopers and biodegradable waste bags",
+                "Latex gloves"
+              ]}
+            />
+          </div>
+          
+          <div className="flex justify-center mt-10">
+            <div className="max-w-md">
+              <WishlistCategory 
+                title="Enrichment & Training"
+                items={[
+                  "Durable chew toys (e.g., KONG)",
+                  "Rope toys and enrichment puzzles",
+                  "Licki mats and slow feeders",
+                  "Sensory toys and training aids",
+                  "Treat pouches and clickers",
+                  "Agility equipment"
+                ]}
+              />
             </div>
           </div>
         </div>

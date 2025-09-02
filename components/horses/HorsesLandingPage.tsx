@@ -30,13 +30,12 @@ const Hero: React.FC<HorsesLandingPageProps> = (props) => (
                 loading="eager"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
         </div>
         <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', zIndex: 10, display: 'flex', justifyContent: 'center'}}>
-          <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '80rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem'}}>
+          <div style={{maxWidth: '80rem', margin: '0 auto'}}>
             <div style={{padding: '3rem'}}>
-              <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em'}}>
-                <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Horses at The Gem Project Sanctuary</span>
+              <h1 className="text-white" style={{textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)'}}>
+                Horses at The Gem Project Sanctuary
               </h1>
             </div>
           </div>
@@ -223,18 +222,6 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
         text={<p>Make a lasting impact by sponsoring one of our forever horses. Your monthly support covers feed, veterinary care, hoof trimming and more. You’ll receive updates, photos and the joy of knowing you’re part of their journey.</p>}
         cta={[{href: "/horses#sponsor", text: "Sponsor Now", className: "bg-brand-accent hover:bg-brand-accent-hover text-white"}]}
         alt="Sponsored horse with printed photo"
-        {...props}
-      />
-      
-      <InfoCard 
-        bgClass="bg-brand-bg-main"
-        sectionId="future-vision"
-        mediaKey="horses_future_cta"
-        title="Looking Ahead – Expanding Our Reach"
-        text={<p>Our vision includes building an onsite equine clinic and launching a mobile ambulance service. These will bring essential care to horses in underserved communities. We are working toward a future where no horse is left without help.</p>}
-        cta={[{href: "/horses-future-vision", text: "Support Future Projects", className: "bg-brand-primary hover:bg-brand-primary-hover text-white"}]}
-        alt="Concept image of future equine clinic"
-        reversed={true}
         {...props}
       />
       

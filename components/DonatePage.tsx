@@ -17,7 +17,6 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
         className="hero relative min-h-[80vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${mediaContent.donate_hero})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 
             className="text-5xl md:text-6xl lg:text-7xl font-black mb-6"

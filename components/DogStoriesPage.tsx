@@ -170,7 +170,7 @@ const DogStoriesPage: React.FC<DogStoriesPageProps> = (props) => {
               <div className="flex flex-wrap justify-center gap-4">
                   <CtaButton href="/dogs/sponsorship" className="bg-red-500 hover:bg-red-400 text-white">Sponsor a Dog in Recovery</CtaButton>
                   <CtaButton href="/donate" className="bg-red-600 hover:bg-red-500 text-white">Donate Toward Vet Care</CtaButton>
-                  <CtaButton href="/adopt-a-dog" className="bg-white text-red-700 hover:bg-red-50">Meet Our Adoptable Dogs</CtaButton>
+                  <CtaButton href="/adopt-a-dog" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover">Meet Our Adoptable Dogs</CtaButton>
               </div>
             </div>
           </div>

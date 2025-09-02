@@ -48,7 +48,6 @@ const HorseTrainingPage: React.FC<HorseTrainingPageProps> = (props) => {
             <section className="hero relative bg-brand-text-primary text-white py-20 md:py-32 text-center">
                 <div className="absolute inset-0">
                     {props.mediaContent.horse_training_hero && <EditableMedia mediaKey="horse_training_hero" mediaUrl={props.mediaContent.horse_training_hero} alt="Calm training moment between caregiver and horse" className="w-full h-full object-cover" isEditMode={props.isEditMode} onUpdate={props.onMediaUpdate}/>}
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
                 </div>
                 <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                     <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '64rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>

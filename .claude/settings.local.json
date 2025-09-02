@@ -27,7 +27,8 @@
       "Read(C:\\Users/**)",
       "Bash(cloudflared tunnel:*)",
       "Bash(dir:*)",
-      "Bash(git remote set-url:*)"
+      "Bash(git remote set-url:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

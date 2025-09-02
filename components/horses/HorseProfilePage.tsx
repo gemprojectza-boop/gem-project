@@ -89,10 +89,9 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
                         loading="eager"
                     />
                 )}
-                <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10 text-center p-4">
-                    <p className="text-lg text-gray-200 font-semibold">Meet</p>
-                    <h1 className="text-6xl md:text-8xl font-black uppercase text-brand-primary text-shadow-strong">{horse.name}</h1>
+                    <p className="text-lg text-white font-semibold" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>Meet</p>
+                    <h1 className="text-6xl md:text-8xl font-black uppercase text-white" style={{textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)'}}>{horse.name}</h1>
                 </div>
             </section>
 

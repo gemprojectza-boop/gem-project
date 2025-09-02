@@ -41,15 +41,14 @@ export const PageHero: React.FC<PageHeroProps> = ({
             loading="eager"
           />
         ) : <div className="w-full h-full bg-brand-text-primary" />}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30"></div>
       </div>
       <div className="relative container mx-auto px-6 z-10 flex items-center justify-center w-full" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
         <div className="max-w-6xl mx-auto animate-on-scroll text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-          <div className="content-bubble content-bubble-inverted backdrop-blur-md border border-white/20 p-12 md:p-16 rounded-2xl" style={{ background: 'rgba(0,0,0,0.5)', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important', textAlign: 'center', margin: '0 auto'}} className={`text-heading-xl uppercase tracking-tight mb-8`}>
-              <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>{title}</span>
+          <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h1 className={`text-heading-xl uppercase tracking-tight mb-8 text-white`} style={{textAlign: 'center', margin: '0 auto', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)'}}>
+              {title}
             </h1>
-            <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important', textAlign: 'center', margin: '0 auto'}} className="text-body-lg max-w-4xl mx-auto leading-relaxed">
+            <p className="text-body-lg max-w-4xl mx-auto leading-relaxed text-white" style={{textAlign: 'center', margin: '0 auto', textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>
               {subtitle}
             </p>
           </div>

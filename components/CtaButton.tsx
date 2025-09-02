@@ -11,7 +11,7 @@ interface CtaButtonProps {
   onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const baseStyle = "font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out text-center transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg";
+const baseStyle = "btn font-semibold text-center";
 
 const CtaButton: React.FC<CtaButtonProps> = ({ href, children, className, style, onClick }) => {
     const { navigate } = useSafeNavigation();

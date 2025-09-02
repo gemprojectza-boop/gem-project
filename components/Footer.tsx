@@ -37,15 +37,16 @@ const Footer: React.FC = () => {
                 <ul className="mt-4 space-y-2">
                     <li><SafeLink href="/get-involved#volunteer" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Volunteer</span></SafeLink></li>
                     <li><SafeLink href="/donate" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Donate</span></SafeLink></li>
-                    <li><SafeLink href="/dog-wishlist" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Our Wishlist</span></SafeLink></li>
+                    <li><SafeLink href="/dog-wishlist" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Dog Wishlist</span></SafeLink></li>
+                    <li><SafeLink href="/horse-wishlist" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Horse Wishlist</span></SafeLink></li>
                 </ul>
             </div>
             <div className="text-center">
                 <h4 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}} className="text-base font-semibold">Our Animals</h4>
                 <ul className="mt-4 space-y-2">
-                    <li><SafeLink href="/adopt-a-dog" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Adopt a Dog</span></SafeLink></li>
-                    <li><SafeLink href="/forever-dogs" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Sanctuary Dogs</span></SafeLink></li>
+                    <li><SafeLink href="/dogs" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Our Dogs</span></SafeLink></li>
                     <li><SafeLink href="/horses" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Our Horses</span></SafeLink></li>
+                    <li><SafeLink href="/community" className="hover:opacity-80"><span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Our Community</span></SafeLink></li>
                 </ul>
             </div>
             <div className="text-center">

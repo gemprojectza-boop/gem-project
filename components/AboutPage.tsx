@@ -20,7 +20,6 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
       <section className="relative bg-brand-text-primary text-white py-20 md:py-32 text-center">
         <div className="absolute inset-0">
           {mediaContent.about_hero && <EditableMedia mediaKey="about_hero" mediaUrl={mediaContent.about_hero} alt="Sanctuary landscape" className="w-full h-full object-cover" isEditMode={isEditMode} onUpdate={onMediaUpdate}/>}
-          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative container mx-auto px-6" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
           <div className="content-bubble content-bubble-inverted max-w-4xl mx-auto animate-fade-in-up" style={{background: 'rgba(0,0,0,0.3)', animationDelay: '0.3s', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
@@ -158,7 +157,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
               <p className="text-lg text-brand-text-secondary" style={{textAlign: 'center !important', margin: '0 auto', display: 'block', width: '100%', textAlignLast: 'center'}}>Built for healing. Designed with heart. Every corner of our sanctuary reflects our belief that healing starts with feeling safe, seen and loved.</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-start mt-8">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch mt-8">
             <div className="content-bubble">
                 <div className="p-6 md:p-8">
                  <PawIcon className="w-8 h-8 text-brand-primary mb-2" />

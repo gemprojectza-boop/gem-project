@@ -40,8 +40,6 @@ const CommunityEvents: React.FC<SectionProps> = ({ mediaContent, isEditMode, onM
                                             className="w-full h-full object-cover min-h-[350px] group-hover:scale-105 transition-transform duration-300"
                                         />
                                     )}
-                                    {/* Overlay gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                                 <div className="p-8 flex flex-col justify-center relative">
                                     {/* Background decoration */}

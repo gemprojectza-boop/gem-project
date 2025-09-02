@@ -14,7 +14,7 @@ interface SectionProps {
 }
 
 const FinalCTA: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpdate }) => {
-  const mediaKey = 'horses_landing_hero';
+  const mediaKey = 'about_drone_shot';
   const mediaUrl = mediaContent[mediaKey];
 
   return (
@@ -31,7 +31,6 @@ const FinalCTA: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpd
                 isEditMode={isEditMode}
                 onUpdate={onMediaUpdate}
             />
-            <div className="absolute inset-0 bg-brand-text-primary opacity-70"></div>
             </div>
         )}
         <div className="relative container mx-auto px-6 text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>

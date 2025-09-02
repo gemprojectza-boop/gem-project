@@ -31,15 +31,14 @@ const Hero: React.FC<GetInvolvedLandingPageProps> = (props) => (
                 onUpdate={props.onMediaUpdate}
             />
           )}
-          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-          <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '64rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div style={{maxWidth: '64rem', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
             <div style={{padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-              <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em'}}>
-                <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Get Involved</span>
+              <h1 className="text-white" style={{textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)'}}>
+                Get Involved
               </h1>
-              <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '1px 1px 2px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', margin: '1rem auto 0 auto', fontSize: '1.25rem', lineHeight: '1.6', maxWidth: '48rem'}}>
+              <p className="text-white" style={{textAlign: 'center', margin: '1rem auto 0 auto', fontSize: '1.25rem', lineHeight: '1.6', maxWidth: '48rem', textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>
                 Your support is vital. Become part of their story.
               </p>
             </div>
@@ -76,9 +75,9 @@ const HandsOnCareSection: React.FC<GetInvolvedLandingPageProps> = (props) => {
                         )}
                     </div>
                     <div className="p-6 md:p-8 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-brand-primary">Build a Bond</h3>
+                      <h3 className="text-3xl font-bold text-brand-primary">Part-Owning Programme</h3>
                       <p className="text-brand-text-secondary space-y-4 my-6 flex-grow">
-                         Build a meaningful, long-term bond with one of our forever sanctuary animals. This is more than visiting—it’s becoming personally involved in the life of a specific animal.
+                         Our Hands-On Care programme is a unique part-owning experience that allows you to form a deep, personal connection with one of our dogs or horses. You become a co-caregiver, sharing responsibility for their daily care, enrichment, and wellbeing while they remain safely in our sanctuary.
                       </p>
                       <div className="flex flex-wrap gap-3 mt-auto">
                           <button onClick={() => navigate('/hands-on-dogs')} className="inline-block bg-brand-secondary text-white font-bold py-3 px-6 rounded-full transition duration-300 hover:bg-brand-secondary-hover">

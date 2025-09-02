@@ -309,6 +309,29 @@
         filter: brightness(0) invert(1);
       }
 
+      /* Enhanced text shadows for better readability without overlays */
+      .text-shadow-strong {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 
+                     1px 1px 2px rgba(0, 0, 0, 0.9),
+                     0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .text-shadow-custom {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7),
+                     0 0 8px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Hero sections text contrast improvements */
+      .hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 
+                     1px 1px 3px rgba(0, 0, 0, 0.9) !important;
+      }
+
+      .hero p, .hero span, .hero div {
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7),
+                     0 0 8px rgba(0, 0, 0, 0.5) !important;
+      }
+
       /* --- New Animation Styles --- */
       @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -1228,16 +1251,64 @@
         object-position: center;
       }
       
-      /* Enhanced visual consistency */
-      .btn, button, .button {
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        font-weight: 600;
-        letter-spacing: 0.025em;
+      /* Enhanced visual consistency for buttons and CTAs */
+      .btn, button, .button, [class*="cta-button"] {
+        border-radius: 12px !important;
+        transition: all 0.3s ease !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.025em !important;
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+        min-height: 48px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-decoration: none !important;
+        cursor: pointer !important;
+        border: none !important;
       }
       
-      .btn:hover, button:hover, .button:hover {
-        transform: translateY(-1px);
+      .btn:hover, button:hover, .button:hover, [class*="cta-button"]:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .btn:focus, button:focus, .button:focus, [class*="cta-button"]:focus {
+        outline: 3px solid rgba(0, 174, 239, 0.4) !important;
+        outline-offset: 2px !important;
+      }
+
+      /* Size variants */
+      .btn-sm, .button-sm { 
+        padding: 8px 16px !important; 
+        font-size: 14px !important; 
+        min-height: 36px !important; 
+      }
+      
+      .btn-lg, .button-lg { 
+        padding: 16px 32px !important; 
+        font-size: 18px !important; 
+        min-height: 56px !important; 
+      }
+
+      /* Pulse animation for important CTAs */
+      @keyframes btn-pulse {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(0, 174, 239, 0.4);
+        }
+        50% {
+          transform: scale(1.02);
+          box-shadow: 0 0 0 8px rgba(0, 174, 239, 0);
+        }
+      }
+
+      .btn-pulse {
+        animation: btn-pulse 2.5s infinite !important;
+      }
+
+      .btn-pulse:hover {
+        animation: none !important;
       }
       
       /* Improved text readability */

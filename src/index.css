@@ -33,6 +33,35 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Global image optimization */
+img:not([loading]) {
+  loading: lazy;
+  decoding: async;
+}
+
+/* Prioritize above-the-fold images */
+img[data-priority="high"] {
+  loading: eager;
+}
+
+/* Performance optimizations */
+img {
+  content-visibility: auto; /* Enable content-visibility for better performance */
+}
+
+/* Optimized image transitions */
+img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"]:not([src]) {
+  opacity: 0;
+}
+
+img[loading="lazy"][src] {
+  opacity: 1;
+}
+
 /* Text contrast rules */
 .bg-brand-primary:not(.preserve-color),
 .bg-brand-secondary:not(.preserve-color),
@@ -76,12 +105,26 @@ a.cta-button[class*="bg-"]:not(.bg-transparent) {
 .content-bubble {
   background: var(--color-bubble-bg);
   border-radius: 12px;
-  margin: 8px 0;
+  margin: 8px auto; /* Center the box itself */
   box-shadow: none;
   border: none;
   transition: transform 0.3s ease-out, background-color 0.3s ease;
   overflow: hidden;
   max-width: 100%;
+}
+
+/* Default text alignment for content bubbles - left aligned unless specified otherwise */
+.content-bubble:not(.text-center):not([class*="text-center"]) {
+  text-align: left;
+}
+
+/* Ensure headings and centered elements still center properly */
+.content-bubble.text-center,
+.content-bubble .text-center,
+.content-bubble h1,
+.content-bubble h2,
+.content-bubble h3 {
+  text-align: center;
 }
 
 .content-bubble:hover {
@@ -119,8 +162,11 @@ a.cta-button[class*="bg-"]:not(.bg-transparent) {
 .content-bubble video {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.4s ease-out;
+  loading: lazy; /* Lazy load images for better performance */
+  decoding: async; /* Async decoding for non-blocking rendering */
 }
 
 .content-bubble:hover img, .content-bubble:hover video {
@@ -131,6 +177,23 @@ a.cta-button[class*="bg-"]:not(.bg-transparent) {
 .content-bubble .media-container {
   max-width: 100%;
   overflow: hidden;
+}
+
+/* Improve text and image alignment in grid layouts */
+.content-bubble.grid,
+.content-bubble[class*="grid"] {
+  align-items: stretch;
+}
+
+.content-bubble.grid > *,
+.content-bubble[class*="grid"] > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-bubble img[class*="h-full"],
+.content-bubble video[class*="h-full"] {
+  min-height: 250px;
 }
 
 /* Animation utilities */

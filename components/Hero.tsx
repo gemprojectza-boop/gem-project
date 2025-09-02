@@ -36,7 +36,6 @@ const Hero: React.FC<HeroProps> = ({ media, isEditMode }) => {
   return (
     <>
       <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-10"></div>
         <div className="absolute top-0 left-0 w-full h-full">
             {media.map((mediaItem, index) => {
                  const cleanMediaUrl = mediaItem.url.split('#')[0];
@@ -89,13 +88,13 @@ const Hero: React.FC<HeroProps> = ({ media, isEditMode }) => {
           </div>
         </div>
          {/* Navigation Dots */}
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
             {media.map((_, index) => (
                 <button
                     key={index}
                     onClick={() => handleDotClick(index)}
                     aria-label={`Go to slide ${index + 1}`}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'}`}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === index ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/75'}`}
                 />
             ))}
         </div>

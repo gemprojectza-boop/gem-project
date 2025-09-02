@@ -42,6 +42,7 @@ import TeamPage from './components/TeamPage.tsx';
 import HorseSuccessStoriesPage from './components/horses/HorseSuccessStoriesPage.tsx';
 import HorseNeedsPage from './components/horses/HorseNeedsPage.tsx';
 import HorseRehabilitationPage from './components/horses/HorseRehabilitationPage.tsx';
+import HorseWishlistPage from './components/HorseWishlistPage.tsx';
 import YouthProgrammePage from './components/YouthProgrammePage.tsx';
 import DonatePage from './components/DonatePage.tsx';
 
@@ -574,12 +575,12 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
             case '/horses/success-stories': return <HorseSuccessStoriesPage {...pageProps} />;
             case '/horses/needs': return <HorseNeedsPage {...pageProps} />;
             case '/horses/rehabilitation': return <HorseRehabilitationPage {...pageProps} />;
+            case '/horse-wishlist': return <HorseWishlistPage {...pageProps} />;
 
             case '/youth': return <YouthProgrammePage {...pageProps} />;
             
             case '/donate': return <DonatePage {...pageProps} />;
             case '/horses-enrichment': return <PlaceholderPage title="Horse Enrichment" />;
-            case '/horses-future-vision': return <PlaceholderPage title="Our Future Vision" />;
         }
 
         // Then, handle dynamic routes

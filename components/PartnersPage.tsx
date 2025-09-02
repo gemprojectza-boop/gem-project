@@ -82,13 +82,12 @@ const PartnersPage: React.FC<PartnersPageProps> = (props) => {
                 isEditMode={props.isEditMode}
                 onUpdate={props.onMediaUpdate}
             />
-            <div className="absolute inset-0 bg-brand-text-primary opacity-70"></div>
         </div>
         <div className="relative container mx-auto px-6 text-center">
-            <div className="content-bubble max-w-3xl mx-auto" style={{background: 'rgba(0,0,0,0.4)', color: 'white'}}>
+            <div className="max-w-3xl mx-auto">
                 <div className="p-6 md:p-8">
-                    <h2 className="text-3xl font-bold">Become a Partner</h2>
-                    <p className="my-6">If your organisation shares our commitment to compassionate, ethical animal care, we would love to connect. Whether you are a welfare group, a veterinary practice, or a business with a heart for animals, there are many ways we can work together.</p>
+                    <h2 className="text-3xl font-bold text-white" style={{textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)'}}>Become a Partner</h2>
+                    <p className="my-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>If your organisation shares our commitment to compassionate, ethical animal care, we would love to connect. Whether you are a welfare group, a veterinary practice, or a business with a heart for animals, there are many ways we can work together.</p>
                     <CtaButton href="/contact?subject=Partnership" className="bg-brand-accent hover:bg-brand-accent-hover text-white">
                         Partner With Us
                     </CtaButton>

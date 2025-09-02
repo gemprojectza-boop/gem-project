@@ -50,7 +50,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
       <PageHero
         title="Together We Create Change"
         subtitle="Where rescue meets mentorship and lives are transformed—together."
-        mediaKey="horses_landing_hero"
+        mediaKey="community_image"
         alt="A diverse group of volunteers and youth working together with sanctuary animals"
         {...props}
       />

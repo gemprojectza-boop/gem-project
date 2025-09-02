@@ -46,10 +46,10 @@ const HandsOnDogsPage: React.FC<HandsOnDogsPageProps> = (props) => {
   return (
     <div className="bg-brand-bg-main">
             <PageHero
-        title="Hands-On Care Programme"
-        subtitle="Not able or ready to adopt? We have a great option just for you."
-        mediaKey="hands_on_care_hero"
-        alt="A person gently petting a sanctuary dog"
+        title="Part-Owning Programme"
+        subtitle="Experience the joy of having your own dog or horse without full adoption."
+        mediaKey="outreach_hero"
+        alt="Community outreach program in action"
         mediaContent={{
           ...props.mediaContent,
           hands_on_care_hero: "https://i.ibb.co/xq5z223g/DSC06243.jpg"
@@ -59,59 +59,60 @@ const HandsOnDogsPage: React.FC<HandsOnDogsPageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>You might live somewhere that doesn’t allow animals. Or your schedule could be too full for daily care. Perhaps your heart is open, but your life just isn’t set up for it right now. That’s why we created the Hands-On Care Programme.</p>
-        <p className="font-semibold text-brand-text-primary">Choose a dog who lives safely at our sanctuary and becomes yours in every way that matters. Build a real relationship through visits, bonding time and shared routines. Watch as they begin to recognise your voice and light up each time you arrive.</p>
-        <p>This is your dog. Your connection. Your joy. We take care of their daily needs including food, shelter and vet care while you experience the love, presence and companionship of having your own dog.</p>
+        <p>You might live somewhere that doesn't allow animals. Or your schedule could be too full for daily care. Perhaps your heart is open, but your life just isn't set up for it right now. That's why we created our Part-Owning Programme.</p>
+        <p className="font-semibold text-brand-text-primary">Choose a dog or horse who lives safely at our sanctuary and becomes yours in every way that matters. Build a real relationship through visits, bonding time and shared routines. Watch as they begin to recognise your voice and light up each time you arrive.</p>
+        <p>This is your animal companion. Your connection. Your joy. We take care of their daily needs including food, shelter and vet care while you experience the love, presence and companionship of having your own dog or horse.</p>
         <div className="mt-4 p-4 bg-brand-primary/10 border-l-4 border-brand-primary text-brand-text-secondary rounded">
             <p><strong>Part of a company or team?</strong> We offer unforgettable corporate team building experiences that combine connection, purpose and impact. Spend time together in a beautiful setting, bond through dog-friendly activities, and make a lasting difference in the lives of rescued animals.</p>
         </div>
       </ContentSection>
 
-      <ContentSection title="Choose a Hands-On Caregiver Package" className="bg-brand-bg-subtle">
+      <ContentSection title="Choose a Part-Owning Package" className="bg-brand-bg-subtle">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <CarePackageCard 
                 title="Make-a-Day"
                 price="R80"
-                description="Spend three meaningful hours with one of our beloved sanctuary dogs. A once-off experience without any ongoing commitment."
-                features={["One-time 3-hour visit", "Walk, brush, and relax with a dog", "Perfect for a single day of connection"]}
+                description="Spend three meaningful hours with one of our beloved sanctuary animals. A once-off experience without any ongoing commitment."
+                features={["One-time 3-hour visit", "Walk, brush, and relax with a dog or gentle horse", "Perfect for a single day of connection"]}
             />
             <CarePackageCard 
-                title="Caregiver"
+                title="Part-Owner"
                 price="R300/mo"
-                description="Enjoy two calm hours per week getting to know your chosen sanctuary dog through relaxed walks and quiet companionship."
-                features={["One visit per week (2 hours)", "Your dog’s story", "Digital caregiver certificate"]}
+                description="Enjoy two calm hours per week getting to know your chosen sanctuary animal through relaxed walks and quiet companionship."
+                features={["One visit per week (2 hours)", "Your animal's story", "Digital part-owner certificate"]}
                 isPopular={true}
             />
             <CarePackageCard 
-                title="Caregiver Plus"
+                title="Part-Owner Plus"
                 price="R600/mo"
-                description="Deepen your relationship with your dog across two visits and three hours per week of calm interaction and light enrichment."
+                description="Deepen your relationship with your animal across two visits and three hours per week of calm interaction and light enrichment."
                 features={["Two visits per week (3 hours total)", "Access to occasional training sessions", "Includes certificate & story"]}
             />
              <CarePackageCard 
                 title="Enrichment Champion"
                 price="R900/mo"
-                description="Spend up to five hours a week deepening your bond through scent work, food puzzles, and structured enrichment."
+                description="Spend up to five hours a week deepening your bond through scent work, food puzzles, and structured enrichment activities."
                 features={["Up to three visits per week (5 hours total)", "Priority scheduling", "Behind-the-scenes access", "Printed certificate & surprise gift"]}
             />
              <CarePackageCard 
-                title="Tailored Caregiver"
+                title="Tailored Part-Owner"
                 price="Custom"
-                description="Design a custom experience with your chosen dog. Ideal for senior dogs, trauma recovery or therapeutic goals."
+                description="Design a custom experience with your chosen animal. Ideal for senior animals, trauma recovery or therapeutic goals."
                 features={["Personalised schedule", "Guided sessions available", "Welcome call with our team", "Perfect for specific needs"]}
             />
         </div>
         <div className="mt-12 text-center text-brand-text-secondary italic">
-            <p>Every package supports your chosen dog’s daily food, medical care, enrichment and safety. You’re not just visiting. You’re stepping into a role that matters – to them and to you.</p>
+            <p>Every package supports your chosen animal's daily food, medical care, enrichment and safety. You're not just visiting. You're stepping into a role that matters – to them and to you.</p>
         </div>
       </ContentSection>
 
       <ContentSection title="Corporate Team Building Days">
         <p>Looking for a powerful way to bring your team together while making a real impact? Spend a full day at our peaceful sanctuary and reconnect with purpose, nature and each other through meaningful, guided activities:</p>
         <ul className="list-disc list-inside space-y-3 my-6">
-            <li>Dog-friendly obstacle courses and collaborative team challenges</li>
+            <li>Animal-friendly obstacle courses and collaborative team challenges</li>
             <li>Fun group games and shared bonding experiences</li>
-            <li>Gentle, hands-on involvement in enrichment and dog care</li>
+            <li>Gentle, hands-on involvement in enrichment and animal care</li>
+            <li>Interactive sessions with both dogs and gentle horses</li>
             <li>Optional catered lunch or a relaxed picnic setup at our sanctuary</li>
         </ul>
         <p>Your team will leave feeling energised, united and fulfilled, knowing they’ve made a real difference for animals who need it most.</p>
@@ -123,10 +124,10 @@ const HandsOnDogsPage: React.FC<HandsOnDogsPageProps> = (props) => {
             <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to build a bond that matters?</h2>
             <p className="max-w-2xl mx-auto text-lg text-gray-200 mb-8">
-                Email us to choose your dog and begin your journey today.
+                Email us to choose your animal companion and begin your part-owning journey today.
             </p>
-            <CtaButton href="/contact?subject=BecomeACaregiver" className="bg-white text-brand-text-primary hover:bg-gray-200">
-                Become a Caregiver
+            <CtaButton href="/contact?subject=BecomeAPartOwner" className="bg-white text-brand-text-primary hover:bg-gray-200">
+                Become a Part-Owner
             </CtaButton>
         </div>
       </section>
