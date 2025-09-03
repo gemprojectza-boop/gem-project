@@ -297,7 +297,7 @@ export const sampleHorses: AdoptableHorse[] = [
   },
   {
     id: 'princess-of-monaco',
-    name: 'Princess of Monaco',
+    name: 'Princess Monaco',
     status: 'Forever Sanctuary',
     petInfo: {
       age: 'Born 2021',
@@ -542,7 +542,7 @@ export const sampleHorses: AdoptableHorse[] = [
     name: 'Cinnamon & Spice (\'Spice\')',
     status: 'Future Adoptable',
     petInfo: {
-      age: 'Born 2021/2022',
+      age: 'Born 2022/2023',
       breed: 'Cross Breed, Chestnut',
       gender: 'Mare',
       size: 'Horse',

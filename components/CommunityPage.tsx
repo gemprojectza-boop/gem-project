@@ -31,7 +31,7 @@ const CommunitySection: React.FC<CommunityPageProps & { id: string; title: strin
                 <div className={`text-center md:text-left ${reversed ? 'md:order-1' : ''}`}>
                     <PawIcon className="w-10 h-10 text-brand-primary mb-4 mx-auto md:mx-0" />
                     <h2 className="text-3xl font-bold text-brand-primary mb-4">{title}</h2>
-                    <div className="text-lg text-brand-text-secondary space-y-4 mb-6">
+                    <div className="text-lg text-brand-text-secondary space-y-4 mb-6 text-left">
                         {children}
                     </div>
                     <CtaButton href={cta.href} className="bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary">
@@ -61,7 +61,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
                 <div className="p-6 md:p-8">
                     <PawIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" />
                     <h2 className="text-3xl font-bold text-brand-primary">Why Community Matters</h2>
-                    <div className="text-lg text-brand-text-secondary space-y-4 my-6">
+                    <div className="text-lg text-brand-text-secondary space-y-4 my-6 text-left">
                         <p>At The Gem Project Sanctuary, rescue is not a single moment. It is a shared journey rooted in compassion and connection. While we care deeply for the animals who call our sanctuary home, we are equally committed to the people and communities around them. Adoption is also a vital part of this connection, helping rescued animals heal and begin new lives as cherished family members.</p>
                         <p>Our dual focus is what sets us apart. Through our growing outreach, we build meaningful partnerships with animal organisations, support families in crisis, and offer youth the chance to gain purpose and practical skills. It is about lifting one another up and creating a ripple effect of healing.</p>
                     </div>

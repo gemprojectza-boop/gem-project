@@ -95,7 +95,7 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                     {/* Main Content Section */}
                     <div className="xl:col-span-3 space-y-8">
                         <header className="mb-8">
-                            <h2 className="text-5xl lg:text-6xl font-black text-green-800 leading-tight mb-4">{story.title}</h2>
+                            <h2 className="text-5xl lg:text-6xl font-black text-green-800 leading-tight mb-4 text-center">{story.title}</h2>
                             <div className={`w-32 h-1 ${colorScheme.bg} rounded-full`}></div>
                         </header>
                         
@@ -156,12 +156,12 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                         </div>
                         
                         {/* Accent Color Highlight Box */}
-                        <div className={`${colorScheme.bg} ${colorScheme.text} rounded-2xl p-6 text-center`}>
+                        <div className={`${colorScheme.bg} ${colorScheme.text} rounded-2xl p-6`}>
                             <div className="mb-3">
                                 <PawIcon className={`w-8 h-8 mx-auto ${colorScheme.text}`} />
                             </div>
-                            <h5 className="font-black text-sm uppercase tracking-wider mb-2 text-white">Success Story</h5>
-                            <p className="text-sm opacity-90 text-white">From rescue to recovery</p>
+                            <h5 className="font-black text-sm uppercase tracking-wider mb-2 text-white text-center">Success Story</h5>
+                            <p className="text-sm text-white font-semibold text-left" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.5)'}}>From rescue to recovery</p>
                         </div>
                     </div>
                 </div>
@@ -183,16 +183,16 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
             />
             
             <ContentSection>
-                <div className="text-center">
-                    <p>Every rescue at The Gem Project Sanctuary begins with a moment of urgency—a call for help, a heartbreaking scene, a horse on the edge of survival. This section shares those raw, unfiltered beginnings. These are the horses in their most vulnerable state: malnourished, neglected, injured, forgotten.</p>
-                    <p className="mt-4">Here, you’ll learn about:</p>
-                    <ul className="list-disc list-inside space-y-2 my-4 text-left max-w-2xl mx-auto">
+                <div>
+                    <p className="text-left">Every rescue at The Gem Project Sanctuary begins with a moment of urgency—a call for help, a heartbreaking scene, a horse on the edge of survival. This section shares those raw, unfiltered beginnings. These are the horses in their most vulnerable state: malnourished, neglected, injured, forgotten.</p>
+                    <p className="mt-4 text-left">Here, you'll learn about:</p>
+                    <ul className="list-disc list-inside space-y-2 my-4 text-left max-w-2xl">
                         <li>The conditions in which each horse was found</li>
                         <li>How we responded—sometimes in remote areas, often in collaboration with communities or animal welfare partners</li>
                         <li>The immediate care they received upon arrival, from emergency veterinary intervention to gentle first handling</li>
                         <li>The emotional state of the horse: scared, shut down, reactive, or withdrawn</li>
                     </ul>
-                    <p>These are the "before" stories—the crucial, difficult first steps in every horse's journey to healing. They are not easy to read, but they are powerful reminders of why our sanctuary exists.</p>
+                    <p className="text-left">These are the "before" stories—the crucial, difficult first steps in every horse's journey to healing. They are not easy to read, but they are powerful reminders of why our sanctuary exists.</p>
                 </div>
             </ContentSection>
 
@@ -201,10 +201,10 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
             ))}
 
             <section className="py-20 bg-green-700">
-                <div className="container mx-auto px-6 text-center text-white">
+                <div className="container mx-auto px-6 text-white">
                     <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Be Part of the Next Success Story</h2>
-                    <p className="max-w-3xl mx-auto text-lg text-green-100 mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white text-center">Be Part of the Next Success Story</h2>
+                    <p className="text-lg text-green-100 mb-8 text-left">
                         Your support makes these transformations possible. By donating, sponsoring, or volunteering, you help us give more horses the future they deserve.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">

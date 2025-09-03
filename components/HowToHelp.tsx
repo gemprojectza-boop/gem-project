@@ -39,7 +39,7 @@ const SectionCard: React.FC<{
             <div className="flex flex-col flex-grow p-4">
                 <PawIcon className={`w-6 h-6 ${titleColorClass || 'text-brand-primary'} mb-2 icon-interactive`} />
                 <h4 className={`text-lg font-bold ${titleColorClass || 'text-brand-primary'} mb-2`}>{title}</h4>
-                <div className="text-brand-text-secondary space-y-2 mb-4 flex-grow text-sm">{children}</div>
+                <div className="text-brand-text-secondary space-y-2 mb-4 flex-grow text-sm text-left">{children}</div>
                  <div className="flex flex-wrap gap-2 mt-auto">
                     {buttons.map(btn => (
                          <button key={btn.href} onClick={() => navigate(btn.href)} className={`inline-block text-white font-semibold py-1.5 px-3 rounded-full transition duration-300 text-xs ${btn.className}`}>
@@ -62,7 +62,7 @@ const HowToHelp: React.FC<SectionProps> = (props) => {
                     <span>Change a Life,</span>{' '}
                     <span>Be the Change</span>
                 </h2>
-                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary">
+                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary text-left">
                     Every act of kindness creates a ripple of hope. Discover the many ways you can contribute to our mission and make a lasting difference in an animal's life.
                 </p>
             </div>

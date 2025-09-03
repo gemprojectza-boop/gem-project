@@ -30,7 +30,7 @@ const AccordionItem: React.FC<{ question: string; children: React.ReactNode }> =
                 className={`grid transition-all duration-500 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
             >
                 <div className="overflow-hidden">
-                    <div className="p-6 pt-0 text-brand-text-secondary space-y-4 text-base leading-relaxed">
+                    <div className="p-6 pt-0 text-brand-text-secondary space-y-4 text-base leading-relaxed text-left">
                         {children}
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const FAQPage: React.FC<FAQPageProps> = (props) => {
         <div className="container mx-auto px-6 max-w-4xl">
             <div className="content-bubble text-center">
                  <div className="p-6 md:p-8">
-                    <p className="text-lg">Whether you are thinking of adopting, sponsoring, volunteering, donating or just learning more, this page covers the questions we get asked most often. Still wondering about something? Reach out. We are happy to help.</p>
+                    <p className="text-lg text-left">Whether you are thinking of adopting, sponsoring, volunteering, donating or just learning more, this page covers the questions we get asked most often. Still wondering about something? Reach out. We are happy to help.</p>
                     <div className="flex flex-wrap justify-center gap-4 mt-8">
                         <CtaButton href="/dogs" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover">Meet the Dogs</CtaButton>
                         <CtaButton href="/horses" className="bg-brand-primary text-white hover:bg-brand-primary-hover">Meet the Horses</CtaButton>
@@ -190,7 +190,7 @@ const FAQPage: React.FC<FAQPageProps> = (props) => {
                 <div className="p-6 md:p-8 text-center">
                     <PawIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" />
                     <h2 className="text-3xl font-bold text-brand-primary">Still Have Questions?</h2>
-                    <p className="my-6 text-lg">We would love to hear from you. Whether you are ready to adopt, want to help or just want to learn more our team is here.</p>
+                    <p className="my-6 text-lg text-left">We would love to hear from you. Whether you are ready to adopt, want to help or just want to learn more our team is here.</p>
                      <div className="flex flex-wrap justify-center gap-4">
                         <CtaButton href="/contact" className="bg-brand-primary text-white hover:bg-brand-primary-hover">Contact the Team</CtaButton>
                         <CtaButton href="/get-involved#donate" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover">Donate Now</CtaButton>

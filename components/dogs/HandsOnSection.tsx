@@ -23,7 +23,7 @@ const CarePackageCard: React.FC<{
             <PawIcon className="w-8 h-8 text-sanctuary-dark mx-auto mb-2" />
             <h3 className="text-2xl font-bold text-sanctuary-dark text-center">{title}</h3>
             <div className="text-4xl font-bold text-center my-4 text-brand-primary">{price}</div>
-            <p className="text-gray-600 text-center mb-6 flex-grow">{description}</p>
+            <p className="text-gray-600 text-left mb-6 flex-grow">{description}</p>
             <ul className="space-y-3 mb-8">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-start">

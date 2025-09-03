@@ -61,32 +61,35 @@ const HandsOnCareSection: React.FC<GetInvolvedLandingPageProps> = (props) => {
                     </div>
                 </div>
 
-                <div className="content-bubble grid grid-cols-1 md:grid-cols-2 items-stretch mt-8">
-                    <div className="h-full">
-                        {mediaContent['hands_on_01'] && (
-                            <EditableMedia
-                                mediaKey="hands_on_01"
-                                mediaUrl={mediaContent['hands_on_01']!}
-                                alt="Caregiver walking with a sanctuary dog"
-                                isEditMode={isEditMode}
-                                onUpdate={onMediaUpdate}
-                                className="w-full h-full object-cover min-h-[300px]"
-                            />
-                        )}
-                    </div>
-                    <div className="p-6 md:p-8 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-brand-primary">Part-Owning Programme</h3>
-                      <p className="text-brand-text-secondary space-y-4 my-6 flex-grow">
-                         Our Hands-On Care programme is a unique part-owning experience that allows you to form a deep, personal connection with one of our dogs or horses. You become a co-caregiver, sharing responsibility for their daily care, enrichment, and wellbeing while they remain safely in our sanctuary.
-                      </p>
-                      <div className="flex flex-wrap gap-3 mt-auto">
-                          <button onClick={() => navigate('/hands-on-dogs')} className="inline-block bg-brand-secondary text-white font-bold py-3 px-6 rounded-full transition duration-300 hover:bg-brand-secondary-hover">
-                              Hands-On – Dogs
-                          </button>
-                           <button onClick={() => navigate('/horses#hands-on')} className="inline-block bg-brand-accent text-white font-bold py-3 px-6 rounded-full transition duration-300 hover:bg-brand-accent-hover">
-                              Hands-On – Horses
-                          </button>
-                      </div>
+                <div className="content-bubble mt-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            {mediaContent['hands_on_01'] && (
+                                <EditableMedia
+                                    mediaKey="hands_on_01"
+                                    mediaUrl={mediaContent['hands_on_01']!}
+                                    alt="Caregiver walking with a sanctuary dog"
+                                    isEditMode={isEditMode}
+                                    onUpdate={onMediaUpdate}
+                                    className="w-full h-auto object-cover rounded-lg aspect-video"
+                                />
+                            )}
+                        </div>
+                        <div className="p-6 md:p-8 flex flex-col justify-center">
+                            <h3 className="text-4xl font-bold text-brand-primary mb-6">Part-Owning Programme</h3>
+                            <div className="text-lg text-brand-text-secondary space-y-6 leading-relaxed flex-grow">
+                                <p>Our Hands-On Care programme is a unique part-owning experience that allows you to form a deep, personal connection with one of our dogs or horses.</p>
+                                <p>You become a co-caregiver, sharing responsibility for their daily care, enrichment, and wellbeing while they remain safely in our sanctuary.</p>
+                            </div>
+                            <div className="flex flex-wrap gap-4 mt-8">
+                                <button onClick={() => navigate('/hands-on-dogs')} className="bg-brand-secondary text-white font-bold py-4 px-8 rounded-full transition duration-300 hover:bg-brand-secondary-hover text-lg">
+                                    Hands-On – Dogs
+                                </button>
+                                <button onClick={() => navigate('/horses#hands-on')} className="bg-brand-accent text-white font-bold py-4 px-8 rounded-full transition duration-300 hover:bg-brand-accent-hover text-lg">
+                                    Hands-On – Horses
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -114,42 +117,44 @@ const GetInvolvedLandingPage: React.FC<GetInvolvedLandingPageProps> = (props) =>
             </div>
           </div>
 
-          <div className="content-bubble grid grid-cols-1 md:grid-cols-2 items-stretch mt-8">
-            <div className="h-full">
-              {props.mediaContent['community_vet_clinic'] && (
-                <EditableMedia
-                  mediaKey="community_vet_clinic"
-                  mediaUrl={props.mediaContent['community_vet_clinic']!}
-                  alt="Mobile veterinary clinic in action"
-                  isEditMode={props.isEditMode}
-                  onUpdate={props.onMediaUpdate}
-                  className="w-full h-full object-cover min-h-[300px]"
-                />
-              )}
-            </div>
-            <div className="p-6 md:p-8 flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-brand-primary">Community Health</h3>
-              <p className="text-brand-text-secondary space-y-4 my-6 flex-grow">
-                Our mobile veterinary clinic brings essential veterinary services directly to underserved communities. We provide vaccinations, basic health checks, and emergency care to ensure all animals have access to proper healthcare, regardless of their owners' circumstances.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-brand-text-secondary">Free vaccinations and health screenings</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-brand-text-secondary">Emergency veterinary care</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-brand-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-brand-text-secondary">Community education programs</p>
-                </div>
+          <div className="content-bubble mt-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                {props.mediaContent['community_vet_clinic'] && (
+                  <EditableMedia
+                    mediaKey="community_vet_clinic"
+                    mediaUrl={props.mediaContent['community_vet_clinic']!}
+                    alt="Mobile veterinary clinic in action"
+                    isEditMode={props.isEditMode}
+                    onUpdate={props.onMediaUpdate}
+                    className="w-full h-auto object-cover rounded-lg aspect-video"
+                  />
+                )}
               </div>
-              <div className="mt-6">
-                <CtaButton href="/contact" className="bg-brand-accent text-white hover:bg-brand-accent-hover">
-                  Support Our Mobile Clinic
-                </CtaButton>
+              <div className="order-1 lg:order-2 p-6 md:p-8 flex flex-col justify-center">
+                <h3 className="text-4xl font-bold text-brand-primary mb-6">Community Health</h3>
+                <div className="text-lg text-brand-text-secondary leading-relaxed mb-8">
+                  <p>Our mobile veterinary clinic brings essential veterinary services directly to underserved communities. We provide vaccinations, basic health checks, and emergency care to ensure all animals have access to proper healthcare, regardless of their owners' circumstances.</p>
+                </div>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-brand-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-brand-text-secondary">Free vaccinations and health screenings</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-brand-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-brand-text-secondary">Emergency veterinary care</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-brand-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-brand-text-secondary">Community education programs</p>
+                  </div>
+                </div>
+                <div>
+                  <CtaButton href="/contact" className="bg-brand-accent text-white hover:bg-brand-accent-hover px-8 py-4 text-lg">
+                    Support Our Mobile Clinic
+                  </CtaButton>
+                </div>
               </div>
             </div>
           </div>

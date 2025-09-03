@@ -62,10 +62,10 @@ const Intro: React.FC<DogsLandingPageProps> = (props) => (
                 onUpdate={props.onMediaUpdate}
                 className="rounded-t-3xl aspect-video w-full object-cover"
             />
-            <div className="p-10 md:p-12 text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-              <PawIcon className="w-14 h-14 text-brand-secondary mx-auto mb-6 icon-interactive" style={{margin: '0 auto 1.5rem auto'}} />
-              <h2 className="text-4xl md:text-5xl font-black text-brand-secondary text-center mb-8" style={{textAlign: 'center !important', margin: '0 auto 2rem auto', display: 'block', width: '100%'}}>Introduction to Our Dog Sanctuary</h2>
-              <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl" style={{textAlign: 'center !important', margin: '0 auto', display: 'block', width: '100%'}}>
+            <div className="p-10 md:p-12">
+              <PawIcon className="w-14 h-14 text-brand-secondary mx-auto mb-6 icon-interactive" />
+              <h2 className="text-4xl md:text-5xl font-black text-brand-secondary text-center mb-8">Introduction to Our Dog Sanctuary</h2>
+              <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl text-left mx-auto">
                   <p>The Gem Project's Dog Sanctuary is an all-breed animal rescue based in Cape Town. Our work is driven by a clear and powerful mission: to protect dogs from neglect, abuse and exploitation. We provide the care, healing and love they need to recover and thrive.</p>
                   <p>We rescue dogs from a wide range of situations including abandonment, abuse, neglect and medical or behavioural challenges. Every dog that enters our sanctuary receives tailored support: rehabilitation, veterinary care, behavioural guidance and emotional healing. Some go on to find loving adoptive homes. Others, who may not be suitable for rehoming, live out their days with us in safety, surrounded by people who value and care for them deeply.</p>
                   <p>Our sanctuary provides a permanent home for dogs who cannot be rehomed due to age, trauma or health needs. Here, they are not just sheltered. They are part of a family.</p>

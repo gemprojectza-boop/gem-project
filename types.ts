@@ -69,6 +69,7 @@ export interface AdoptableDog {
     gender: string;
     sterilised: 'Yes' | 'No' | 'Too Young';
     size: 'Small' | 'Medium' | 'Large' | 'Extra Large';
+    color?: string;
   };
   compatibility: {
     kids: 'Yes' | 'No' | 'Older Kids Only' | 'Unknown';

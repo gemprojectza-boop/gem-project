@@ -18,13 +18,13 @@ const TierCard: React.FC<{
     price: string;
     description: string;
 }> = ({ icon, title, price, description }) => (
-    <div className="content-bubble flex flex-col h-full text-center p-6 md:p-8">
+    <div className="content-bubble flex flex-col h-full p-6 md:p-8">
         <div className="mx-auto w-16 h-16 bg-brand-secondary/10 rounded-full flex items-center justify-center mb-4">
             {React.cloneElement(icon, { className: 'w-8 h-8 text-brand-secondary' })}
         </div>
-        <h3 className="text-2xl font-bold text-brand-secondary">{title}</h3>
-        <p className="text-brand-secondary font-bold text-3xl my-4">{price}</p>
-        <p className="text-brand-text-secondary flex-grow mb-6">{description}</p>
+        <h3 className="text-2xl font-bold text-brand-secondary text-center">{title}</h3>
+        <p className="text-brand-secondary font-bold text-3xl my-4 text-center">{price}</p>
+        <p className="text-brand-text-secondary flex-grow mb-6 text-left">{description}</p>
         <div className="mt-auto">
             <CtaButton href="/contact?subject=Sponsorship" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover w-full">
                 Choose Tier
@@ -92,20 +92,20 @@ const DogSponsorshipPage: React.FC<DogSponsorshipPageProps> = (props) => {
             <div className="content-bubble text-center mt-12">
                 <div className="p-6">
                     <h3 className="text-2xl font-bold text-brand-secondary">Choose Your Own Amount</h3>
-                    <p className="my-4 text-brand-text-secondary">Every gift, big or small, helps us provide the safety and love every dog deserves.</p>
+                    <p className="my-4 text-brand-text-secondary text-left">Every gift, big or small, helps us provide the safety and love every dog deserves.</p>
                      <CtaButton href="/contact?subject=Sponsorship" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">
                         Start Sponsoring Today
                     </CtaButton>
                 </div>
             </div>
-             <p className="text-center text-lg mt-8 text-brand-text-secondary">You can sponsor a dog that speaks to your heart or allow us to match you with one most in need.</p>
+             <p className="text-lg mt-8 text-brand-text-secondary text-left mx-auto max-w-4xl">You can sponsor a dog that speaks to your heart or allow us to match you with one most in need.</p>
         </div>
       </section>
       
       <ContentSection title="What You Will Receive" titleColorClass="text-brand-secondary">
         <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <ul className="space-y-4 text-lg">
+                <ul className="space-y-4 text-lg text-left">
                     <li className="flex items-start"><PawIcon className="w-5 h-5 text-brand-secondary mr-3 mt-1.5 flex-shrink-0" />A personalised welcome email with the story and photo of your sponsored dog</li>
                     <li className="flex items-start"><PawIcon className="w-5 h-5 text-brand-secondary mr-3 mt-1.5 flex-shrink-0" />Quarterly updates including progress notes and new photos</li>
                     <li className="flex items-start"><PawIcon className="w-5 h-5 text-brand-secondary mr-3 mt-1.5 flex-shrink-0" />An official digital sponsorship certificate</li>

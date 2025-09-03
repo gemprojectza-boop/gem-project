@@ -87,17 +87,6 @@ const Hero: React.FC<HeroProps> = ({ media, isEditMode }) => {
               <CtaButton href="/donate" className="bg-brand-primary hover:bg-brand-primary-hover text-white text-sm md:text-base btn-pulse animate-fade-in-up" style={{ animationDelay: '900ms' }}>Donate</CtaButton>
           </div>
         </div>
-         {/* Navigation Dots */}
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
-            {media.map((_, index) => (
-                <button
-                    key={index}
-                    onClick={() => handleDotClick(index)}
-                    aria-label={`Go to slide ${index + 1}`}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === index ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/75'}`}
-                />
-            ))}
-        </div>
       </section>
     </>
   );

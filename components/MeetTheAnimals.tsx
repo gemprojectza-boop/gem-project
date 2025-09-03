@@ -40,8 +40,8 @@ const ActionCard: React.FC<ActionCardProps> = ({ bgColor, heartColor, mediaKey, 
     };
 
     return (
-        <div className={`rounded-lg p-4 md:p-6 flex flex-col items-center animate-on-scroll ${bgColor}`}>
-            <div className="relative w-32 h-32 md:w-36 md:h-36 mb-4">
+        <div className={`rounded-lg p-3 md:p-4 flex flex-col items-center animate-on-scroll ${bgColor}`}>
+            <div className="relative w-24 h-24 md:w-28 md:h-28 mb-3">
                 <div className="absolute w-full h-full">
                     {mediaUrl ? (
                         <EditableMedia
@@ -57,14 +57,14 @@ const ActionCard: React.FC<ActionCardProps> = ({ bgColor, heartColor, mediaKey, 
                     )}
                 </div>
                 {/* Floating hearts */}
-                <HeartIcon className={`absolute -top-1 -left-1 w-6 h-6 transform -rotate-12 ${heartColor}`} />
-                <HeartIcon className={`absolute top-6 -right-3 w-8 h-8 transform rotate-12 ${heartColor}`} />
-                <HeartIcon className={`absolute -bottom-1 -right-1 w-5 h-5 transform rotate-6 ${heartColor}`} />
-                <HeartIcon className={`absolute bottom-4 -left-3 w-10 h-10 transform -rotate-20 ${heartColor}`} />
+                <HeartIcon className={`absolute -top-1 -left-1 w-4 h-4 transform -rotate-12 ${heartColor}`} />
+                <HeartIcon className={`absolute top-4 -right-2 w-5 h-5 transform rotate-12 ${heartColor}`} />
+                <HeartIcon className={`absolute -bottom-1 -right-1 w-3 h-3 transform rotate-6 ${heartColor}`} />
+                <HeartIcon className={`absolute bottom-3 -left-2 w-6 h-6 transform -rotate-20 ${heartColor}`} />
             </div>
             <button
                 onClick={() => navigate(href)}
-                className={`${getButtonClasses(buttonText)} font-bold uppercase tracking-wider text-xs py-2 px-6 rounded-md shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}
+                className={`${getButtonClasses(buttonText)} font-bold uppercase tracking-wider text-xs py-1.5 px-4 rounded-md shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}
             >
                 {buttonText}
             </button>
@@ -108,7 +108,7 @@ const MeetTheAnimals: React.FC<SectionProps> = (props) => {
                     <span>Be Part of</span>{' '}
                     <span>the Change</span>
                 </h2>
-                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary">
+                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary text-left">
                     Your support gives them a second chance. Explore the ways you can make a difference today.
                 </p>
             </div>

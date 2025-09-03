@@ -26,6 +26,18 @@ const HealthChecklistItem: React.FC<{ icon: React.ReactNode, title: string, chil
 
 const AnimalHealthPage: React.FC<AnimalHealthPageProps> = (props) => {
   return (
+    <>
+      <style>{`
+        .force-white-heading-override {
+          color: #ffffff !important;
+        }
+        .dog-page-override .force-white-heading-override {
+          color: #ffffff !important;
+        }
+        body.dog-page-override .force-white-heading-override {
+          color: #ffffff !important;
+        }
+      `}</style>
     <div className="bg-brand-bg-main">
       <PageHero
         title="Animal Health & Wellbeing"
@@ -54,7 +66,11 @@ const AnimalHealthPage: React.FC<AnimalHealthPageProps> = (props) => {
                   <HealthChecklistItem icon={<TennisBallIcon className="w-7 h-7" />} title="Mental & Behavioral Health">Daily social interaction, enrichment, and positive reinforcement training to build confidence.</HealthChecklistItem>
                   <HealthChecklistItem icon={<ClipboardIcon className="w-7 h-7" />} title="Recognizing Signs of Illness">Vigilant monitoring for changes in appetite, energy, or behaviour to address concerns promptly.</HealthChecklistItem>
                   <HealthChecklistItem icon={<BedIcon className="w-7 h-7" />} title="Safe Living Conditions">Warm, secure shelter, proper fencing, and safe play areas free from harmful substances.</HealthChecklistItem>
-                   <HealthChecklistItem icon={<SyringeIcon className="w-7 h-7" />} title="Public and Zoonotic Health">Preventing disease transmission through strict hygiene practices and prompt veterinary reporting.</HealthChecklistItem>
+              </div>
+              <div className="flex justify-center mt-8">
+                  <div className="max-w-sm">
+                      <HealthChecklistItem icon={<SyringeIcon className="w-7 h-7" />} title="Public and Zoonotic Health">Preventing disease transmission through strict hygiene practices and prompt veterinary reporting.</HealthChecklistItem>
+                  </div>
               </div>
             </div>
           </div>
@@ -63,14 +79,18 @@ const AnimalHealthPage: React.FC<AnimalHealthPageProps> = (props) => {
 
       <ContentSection title="Louis' Success Story" titleColorClass="text-brand-secondary">
         <div className="content-bubble">
-            <EditableMedia
-                mediaKey="health_louis_story"
-                mediaUrl={props.mediaContent.health_louis_story!}
-                alt="A happy golden retriever-like dog running"
-                isEditMode={props.isEditMode}
-                onUpdate={props.onMediaUpdate}
-                className="rounded-t-lg aspect-video"
-            />
+            <div className="p-6">
+                <div className="flex justify-center">
+                    <EditableMedia
+                        mediaKey="health_louis_story"
+                        mediaUrl={props.mediaContent.health_louis_story!}
+                        alt="A happy golden retriever-like dog running"
+                        isEditMode={props.isEditMode}
+                        onUpdate={props.onMediaUpdate}
+                        className="rounded-lg max-w-md"
+                    />
+                </div>
+            </div>
             <div className="p-6 md:p-8">
                 <div className="space-y-4 text-gray-700">
                     <p>Louis arrived with a quiet sadness in his eyes and a limp that betrayed the pain he was trying to hide. Once full of playful energy, his spirit had grown subdued under the weight of a severe cruciate ligament injury. Every step was a reminder of what he could no longer do.</p>
@@ -81,10 +101,18 @@ const AnimalHealthPage: React.FC<AnimalHealthPageProps> = (props) => {
         </div>
       </ContentSection>
 
-       <section className="py-20 bg-brand-primary">
+       <section className="py-20 bg-brand-primary force-white-text">
         <div className="container mx-auto px-6 text-center text-white">
             <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-brand-secondary">Help Us Heal More Dogs Like Louis</h2>
+            <span className="force-white-heading-override" style={{
+                display: 'block',
+                fontSize: '2.25rem',
+                fontWeight: 'bold',
+                marginBottom: '2rem',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
+                textAlign: 'center',
+                fontFamily: 'inherit'
+            }}>Help Us Heal More Dogs Like Louis</span>
             <div className="flex flex-wrap justify-center gap-4">
                 <CtaButton href="/donate" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">Donate for Medical Care</CtaButton>
                 <CtaButton href="/dogs/sponsorship" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">Sponsor a Dog's Recovery</CtaButton>
@@ -92,6 +120,7 @@ const AnimalHealthPage: React.FC<AnimalHealthPageProps> = (props) => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

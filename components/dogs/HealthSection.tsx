@@ -61,15 +61,17 @@ const HealthSection: React.FC<SectionProps> = (props) => {
             
             <div className="max-w-4xl mx-auto">
                 <div className="content-bubble mt-12">
-                     <EditableMedia
-                        mediaKey="health_louis_story"
-                        mediaUrl={props.mediaContent.health_louis_story!}
-                        alt="A happy golden retriever-like dog running"
-                        isEditMode={props.isEditMode}
-                        onUpdate={props.onMediaUpdate}
-                        className="rounded-t-lg aspect-video"
-                    />
                     <div className="p-6 md:p-8">
+                        <div className="mb-6">
+                            <EditableMedia
+                                mediaKey="health_louis_story"
+                                mediaUrl={props.mediaContent.health_louis_story!}
+                                alt="A happy golden retriever-like dog running"
+                                isEditMode={props.isEditMode}
+                                onUpdate={props.onMediaUpdate}
+                                className="rounded-lg w-full h-64 object-contain bg-gray-50"
+                            />
+                        </div>
                         <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
                         <h3 className="text-2xl font-bold text-brand-secondary">Louis' Success Story</h3>
                         <div className="space-y-4 text-gray-700 mt-4">

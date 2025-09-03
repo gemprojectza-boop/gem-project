@@ -224,7 +224,7 @@ export const sampleDogs: AdoptableDog[] = [
   {
     id: 'bobby',
     name: 'Bobby',
-    status: 'Available',
+    status: 'Forever Dogs',
     petInfo: {
       age: 'Young Adult',
       breed: 'Shepherd Mix',
@@ -359,7 +359,7 @@ export const sampleDogs: AdoptableDog[] = [
     status: 'Forever Sanctuary',
     petInfo: {
       age: 'Adult',
-      breed: 'Samoyed Cross',
+      breed: 'Cross breed',
       gender: 'Male',
       sterilised: 'Yes',
       size: 'Large',
@@ -375,8 +375,8 @@ export const sampleDogs: AdoptableDog[] = [
       text: "Casper is a big, fluffy bundle of joy with a coat as white as snow and a smile that never fades. He's a friendly giant who loves people, playtime, and getting his magnificent coat brushed. He has a gentle and playful nature that makes him a favourite among volunteers.",
     },
     personality: {
-      title: 'Sanctuary Life',
-      text: "Casper is a permanent resident at The Gem Project Sanctuary, where his cheerful spirit brightens every day. While not available for adoption, he thrives on attention and would love a sponsor or Hands-On Care partner to share his joy with.",
+      title: 'Personality',
+      text: "Casper is shy and avoids fast movements, but warms up once comfortable. He's a gentle giant who loves people, playtime, and getting his magnificent coat brushed. He has a gentle and playful nature that makes him a favourite among volunteers.",
     },
     specialTrait: {
       title: 'What Makes Him Special',
@@ -437,7 +437,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'chandra_main',
       storyPhotoKey: 'chandra_main',
-      galleryKeys: [],
+      galleryKeys: [], // TODO: Add more photos
       videoKey: 'chandra_video',
     },
   },
@@ -464,7 +464,7 @@ export const sampleDogs: AdoptableDog[] = [
     },
     personality: {
       title: 'Personality',
-      text: 'Chloe is a boisterous, playful girl who loves human interaction. She can be a little vocal around unfamiliar animals but is joyful and confident with people she knows. She thrives on attention, enjoys splashing in water, and loves her off-leash walks.',
+      text: 'Chloe is a boisterous, playful girl who loves human interaction. She can be a little vocal around unfamiliar animals but is joyful and confident with people she knows. She thrives on attention, enjoys splashing in water, and loves her off-leash walks. She does well with other animals, is sociable, and does well with other animals.',
     },
     specialTrait: {
       title: 'What Makes Her Special',
@@ -488,7 +488,7 @@ export const sampleDogs: AdoptableDog[] = [
   {
     id: 'cooper',
     name: 'Cooper',
-    status: 'Available',
+    status: 'Forever Sanctuary Dogs',
     petInfo: {
       age: 'Puppy',
       breed: 'X breed',
@@ -569,7 +569,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'daisy_main',
       storyPhotoKey: 'daisy_story',
-      galleryKeys: [],
+      galleryKeys: [], // TODO: Add missing photos
       videoKey: 'daisy_video',
     },
   },
@@ -627,6 +627,7 @@ export const sampleDogs: AdoptableDog[] = [
       gender: 'Male',
       sterilised: 'Yes',
       size: 'Large',
+      color: 'Beige and Black',
     },
     compatibility: {
       kids: 'Older Kids Only',
@@ -655,7 +656,7 @@ export const sampleDogs: AdoptableDog[] = [
       text: 'Jerry brings adventure and fun into every day. He has the heart of an explorer and the loyalty of a best friend. Life is never boring with Jerry by your side.',
     },
     media: {
-      mainPhotoKey: 'jerry_main',
+      mainPhotoKey: 'jerry_main', // TODO: Swap image
       storyPhotoKey: 'jerry_main',
       galleryKeys: [],
       videoKey: 'jerry_video',
@@ -699,7 +700,7 @@ export const sampleDogs: AdoptableDog[] = [
       text: 'Jesse brings balance wherever he goes. He’s full of curiosity and joy, but also knows when to slow down and share a quiet moment. With Jesse, every day feels like an adventure worth taking.',
     },
     media: {
-      mainPhotoKey: 'jesse_main',
+      mainPhotoKey: 'jesse_main', // TODO: Swap image
       storyPhotoKey: 'jesse_main',
       galleryKeys: [],
       videoKey: 'jesse_video',
@@ -745,7 +746,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'lady_main',
       storyPhotoKey: 'lady_main',
-      galleryKeys: [],
+      galleryKeys: [], // TODO: Add missing photos
       videoKey: 'lady_video',
     },
   },
@@ -789,7 +790,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'lee_gallery_1',
       storyPhotoKey: 'lee_gallery_1',
-      galleryKeys: ['lee_gallery_1', 'lee_gallery_2', 'lee_gallery_3'],
+      galleryKeys: ['lee_gallery_1', 'lee_gallery_2', 'lee_gallery_3'], // TODO: Add missing photos
       videoKey: 'lee_video',
     },
   },
@@ -934,7 +935,7 @@ export const sampleDogs: AdoptableDog[] = [
       breed: 'Terrier Cross',
       gender: 'Female',
       sterilised: 'Yes',
-      size: 'Small',
+      size: 'Medium',
     },
     compatibility: {
       kids: 'Older Kids Only',
@@ -965,14 +966,14 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'misty_main',
       storyPhotoKey: 'misty_main',
-      galleryKeys: [],
+      galleryKeys: [], // TODO: Insert images
       videoKey: 'misty_video',
     },
   },
   {
     id: 'fifi',
     name: 'Fifi',
-    status: 'Available',
+    status: 'Forever Sanctuary',
     petInfo: {
       age: 'Young Adult',
       breed: 'Crossbreed',
@@ -1009,7 +1010,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'fifi_main',
       storyPhotoKey: 'fifi_main',
-      galleryKeys: [],
+      galleryKeys: [], // TODO: Add more photos
       videoKey: 'fifi_video',
     },
   },
@@ -1097,7 +1098,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'ruth_main',
       storyPhotoKey: 'ruth_main',
-      galleryKeys: [],
+      galleryKeys: [], // TODO: Add missing photos
       videoKey: 'ruth_video',
     },
   },
@@ -1227,7 +1228,7 @@ export const sampleDogs: AdoptableDog[] = [
       text: 'Stacey has a heart as big as her smile. With her quiet charm and soft presence, she’s a sanctuary sweetheart who makes every day brighter for those around her.',
     },
     media: {
-      mainPhotoKey: 'stacey_main',
+      mainPhotoKey: 'stacey_main', // TODO: Replace image and ensure fit
       storyPhotoKey: 'stacey_story',
       galleryKeys: [],
       videoKey: 'stacey_video',
@@ -1273,7 +1274,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'whitney_main',
       storyPhotoKey: 'whitney_main',
-      galleryKeys: [],
+      galleryKeys: [], // TODO: Add missing photos
       videoKey: 'whitney_video',
     },
   },
@@ -1327,7 +1328,7 @@ export const sampleDogs: AdoptableDog[] = [
     status: 'Forever Sanctuary',
     petInfo: {
       age: 'Mature',
-      breed: 'German Shepherd Cross',
+      breed: 'Staffie cross',
       gender: 'Female',
       sterilised: 'Yes',
       size: 'Large',
@@ -1359,7 +1360,7 @@ export const sampleDogs: AdoptableDog[] = [
       text: 'Zarra has a calming energy that soothes everyone around her. She reminds us that love can be quiet, steady, and profound.',
     },
     media: {
-      mainPhotoKey: 'zarra_main',
+      mainPhotoKey: 'zarra_main', // TODO: Resize image and replace story
       storyPhotoKey: 'zarra_main',
       galleryKeys: [],
       videoKey: 'zarra_video',
@@ -1368,7 +1369,7 @@ export const sampleDogs: AdoptableDog[] = [
   {
     id: 'doughnut',
     name: 'Doughnut',
-    status: 'Available',
+    status: 'Adopted',
     petInfo: {
       age: 'Adult',
       breed: 'Crossbreed',
@@ -1476,7 +1477,7 @@ export const sampleDogs: AdoptableDog[] = [
     },
     personality: {
       title: 'Personality',
-      text: 'Coco is playful, curious, and incredibly sweet. She loves everyone she meets and is always ready for a game or a cuddle.',
+      text: 'Coco is playful, curious, and incredibly sweet. She loves everyone she meets and is always ready for a game or a cuddle. She can be insecure when uncertain, barks when unsure, and is quite insecure when uncertain.',
     },
     specialTrait: {
       title: 'What Makes Her Special',
@@ -1504,7 +1505,7 @@ export const sampleDogs: AdoptableDog[] = [
     petInfo: {
       age: 'Adult',
       breed: 'Crossbreed',
-      gender: 'Female',
+      gender: 'Male',
       sterilised: 'Yes',
       size: 'Medium',
     },
@@ -1513,26 +1514,26 @@ export const sampleDogs: AdoptableDog[] = [
       dogs: 'With Proper Introduction',
       cats: 'No',
     },
-    idealHome: 'An experienced owner who can give her confidence and love.',
+    idealHome: 'An experienced owner who can give him confidence and love.',
     story: {
-      title: 'Her Story',
-      text: 'Foxy is a beautiful girl with a shy heart. She is learning to trust and is looking for a patient and loving home to help her continue to blossom.',
+      title: 'His Story',
+      text: 'Foxy is a beautiful boy with a shy heart. He is learning to trust and is looking for a patient and loving home to help him continue to blossom.',
     },
     personality: {
       title: 'Personality',
-      text: 'Foxy is gentle and a bit timid at first, but once she warms up, she is incredibly sweet and loyal. She enjoys calm walks and a peaceful environment.',
+      text: 'Foxy is gentle and a bit timid at first, but once he warms up, he is incredibly sweet and loyal. He enjoys calm walks and a peaceful environment.',
     },
     specialTrait: {
-      title: 'What Makes Her Special',
+      title: 'What Makes Him Special',
       points: [
-        'Gentle and sweet once she trusts you',
+        'Gentle and sweet once he trusts you',
         'Beautiful and unique look',
         'A very loyal companion',
       ],
     },
     loveReason: {
-      title: 'Why You’ll Love Her',
-      text: "Earning Foxy's trust is a truly rewarding experience. She has so much love to give to the right person.",
+      title: "Why You'll Love Him",
+      text: "Earning Foxy's trust is a truly rewarding experience. He has so much love to give to the right person.",
     },
     media: {
       mainPhotoKey: 'foxy_main',
@@ -1544,7 +1545,7 @@ export const sampleDogs: AdoptableDog[] = [
     {
     id: 'hazel',
     name: 'Hazel',
-    status: 'Available',
+    status: 'Forever Sanctuary',
     petInfo: {
       age: 'Young Adult',
       breed: 'Crossbreed',
@@ -1711,7 +1712,7 @@ export const sampleDogs: AdoptableDog[] = [
       text: "Pretty's calm and loving presence is a gift. She reminds us of the beauty in quiet connections and a peaceful life.",
     },
     media: {
-      mainPhotoKey: 'pretty_main',
+      mainPhotoKey: 'pretty_main', // TODO: Replace profile picture
       storyPhotoKey: 'pretty_main',
       galleryKeys: [],
       videoKey: 'blake_video',

@@ -21,7 +21,7 @@ const ContactInfoItem: React.FC<{ icon: React.ReactNode; title: string; children
         </div>
         <div>
             <h4 className="font-bold text-brand-text-primary">{title}</h4>
-            <div className="text-brand-text-secondary text-sm">{children}</div>
+            <div className="text-brand-text-secondary text-sm text-left">{children}</div>
         </div>
     </div>
 );
@@ -77,8 +77,8 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                      <div className="content-bubble">
                         <div className="p-6 md:p-8">
                             <PawIcon className="w-8 h-8 text-brand-primary mb-2" />
-                            <h3 className="text-xl font-bold text-brand-primary mb-4">Follow Our Journey</h3>
-                            <p className="text-brand-text-secondary mb-4">See the daily lives you are changing by following us on social media.</p>
+                            <h3 className="text-xl font-bold text-brand-primary mb-4 text-center">Follow Our Journey</h3>
+                            <p className="text-brand-text-secondary mb-4 text-left">See the daily lives you are changing by following us on social media.</p>
                             <div className="flex space-x-4">
                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-brand-text-secondary hover:text-brand-primary transition-colors"><FacebookIcon className="w-8 h-8"/></a>
                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-brand-text-secondary hover:text-brand-primary transition-colors"><InstagramIcon className="w-8 h-8"/></a>
@@ -91,13 +91,13 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                 <div className="content-bubble">
                     <div className="p-6 md:p-8">
                         <PawIcon className="w-10 h-10 text-brand-primary mb-4" />
-                        <h2 className="text-3xl font-bold text-brand-primary mb-2">Send Us a Message</h2>
-                        <p className="text-brand-text-secondary mb-6">Fill in the form below and we will get back to you as soon as possible.</p>
+                        <h2 className="text-3xl font-bold text-brand-primary mb-2 text-center">Send Us a Message</h2>
+                        <p className="text-brand-text-secondary mb-6 text-left">Fill in the form below and we will get back to you as soon as possible.</p>
                         
                         {isSubmitted ? (
                             <div className="text-center bg-brand-accent/20 text-brand-accent-hover p-8 rounded-lg">
-                                <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-                                <p>Your message has been sent. We aim to respond within 1 to 2 working days.</p>
+                                <h3 className="text-2xl font-bold mb-2 text-center">Thank You!</h3>
+                                <p className="text-left">Your message has been sent. We aim to respond within 1 to 2 working days.</p>
                             </div>
                         ) : (
                         <form onSubmit={handleSubmit} className="space-y-4">
@@ -151,8 +151,8 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
              <div className="content-bubble">
                 <div className="p-6 md:p-8 text-center">
                     <PawIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" />
-                    <h2 className="text-3xl font-bold text-brand-primary">Be Part of Something Life-Changing</h2>
-                    <p className="my-6 text-lg">Every message opens the door to a kinder world. Whether you choose to adopt, sponsor or support in your own way, you are helping animals feel safe, seen and loved.</p>
+                    <h2 className="text-3xl font-bold text-brand-primary text-center">Be Part of Something Life-Changing</h2>
+                    <p className="my-6 text-lg text-left">Every message opens the door to a kinder world. Whether you choose to adopt, sponsor or support in your own way, you are helping animals feel safe, seen and loved.</p>
                      <div className="flex flex-wrap justify-center gap-4">
                         <CtaButton href="/dogs" className="bg-brand-primary text-white hover:bg-brand-primary-hover">View Adoptable Dogs</CtaButton>
                         <CtaButton href="/horses" className="bg-brand-primary text-white hover:bg-brand-primary-hover">View Adoptable Horses</CtaButton>

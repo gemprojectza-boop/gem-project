@@ -57,7 +57,7 @@ const PartnersPage: React.FC<PartnersPageProps> = (props) => {
                 <div className="p-6 md:p-8">
                     <PawIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" />
                     <h2 className="text-3xl font-bold text-brand-primary">Stronger Together</h2>
-                    <div className="text-lg text-brand-text-secondary space-y-4 my-6">
+                    <div className="text-lg text-brand-text-secondary space-y-4 my-6 text-left">
                         <p>No single organisation can solve the challenges facing animal welfare alone. That's why we are deeply committed to building meaningful partnerships with welfare organisations, veterinary clinics, and community groups who share our values. By working together, we extend our reach, share resources, and create a stronger safety net for animals in need.</p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ const PartnersPage: React.FC<PartnersPageProps> = (props) => {
             <div className="max-w-3xl mx-auto">
                 <div className="p-6 md:p-8">
                     <h2 className="text-3xl font-bold text-white" style={{textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)'}}>Become a Partner</h2>
-                    <p className="my-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>If your organisation shares our commitment to compassionate, ethical animal care, we would love to connect. Whether you are a welfare group, a veterinary practice, or a business with a heart for animals, there are many ways we can work together.</p>
+                    <p className="my-6 text-white text-left" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>If your organisation shares our commitment to compassionate, ethical animal care, we would love to connect. Whether you are a welfare group, a veterinary practice, or a business with a heart for animals, there are many ways we can work together.</p>
                     <CtaButton href="/contact?subject=Partnership" className="bg-brand-accent hover:bg-brand-accent-hover text-white">
                         Partner With Us
                     </CtaButton>

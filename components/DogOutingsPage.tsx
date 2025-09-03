@@ -72,9 +72,9 @@ const DogOutingsPage: React.FC<DogOutingsPageProps> = (props) => {
         </div>
       </ContentSection>
 
-      <ContentSection title="Our Favourite Spots" className="bg-brand-bg-subtle" titleColorClass="text-brand-secondary">
-        <p>We choose our locations carefully to ensure a positive and safe experience for every dog.</p>
-        <ul className="list-disc list-inside space-y-2 mt-4">
+      <ContentSection title="Our Favourite Spots" className="bg-brand-bg-subtle text-left" titleColorClass="text-brand-secondary">
+        <p className="text-left">We choose our locations carefully to ensure a positive and safe experience for every dog.</p>
+        <ul className="list-disc list-inside space-y-2 mt-4 text-left">
             <li><strong>Melkbosstrand Beach:</strong> perfect for early morning walks and gentle waves</li>
             <li><strong>Philadelphia greenbelt trails:</strong> safe, quiet and calming for sensitive dogs</li>
             <li><strong>Durbanville parks:</strong> grassy and spacious, ideal for active dogs</li>

@@ -43,8 +43,8 @@ const DogProfileCard: React.FC<DogProfileCardProps> = ({ dog, mediaContent, isEd
             </div>
             <div className="p-4 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold text-brand-text-primary group-hover:text-brand-primary transition-colors text-center">{dog.name}</h3>
-                <p className="text-brand-text-secondary text-sm mb-2 text-center">{dog.petInfo.breed}</p>
-                <p className="text-brand-text-secondary text-sm mb-4 flex-grow text-center">{dog.idealHome}</p>
+                <p className="text-brand-text-secondary text-sm mb-2 text-left">{dog.petInfo.breed}</p>
+                <p className="text-brand-text-secondary text-sm mb-4 flex-grow text-left">{dog.idealHome}</p>
                 <button className="mt-auto w-full bg-brand-primary text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 hover:bg-brand-primary-hover">
                     Meet {dog.name}
                 </button>

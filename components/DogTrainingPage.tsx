@@ -41,23 +41,23 @@ const DogTrainingPage: React.FC<DogTrainingPageProps> = (props) => {
         </div>
       </ContentSection>
 
-      <ContentSection title="Our Training Approach" className="bg-brand-bg-subtle" titleColorClass="text-brand-secondary">
-        <div className="grid md:grid-cols-2 gap-8">
-            <div>
+      <ContentSection title="Our Training Approach" className="bg-brand-bg-subtle text-left" titleColorClass="text-brand-secondary">
+        <div className="grid md:grid-cols-2 gap-8 text-left">
+            <div className="text-left">
                 <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
-                <h3 className="text-2xl font-bold mb-4 text-brand-secondary">What We Focus On</h3>
-                <p>Each training journey is tailored to the dog's unique needs, considering breed, genetics, past experiences, environment and health. We engage their natural instincts—sniffing, chewing, digging, scratching, vocalising and bonding—encouraging curiosity and confidence.</p>
-                 <p className="mt-4">Training offered includes basic obedience, behaviour rehabilitation, social integration, agility skills, and preparation for emotional support roles.</p>
+                <h3 className="text-2xl font-bold mb-4 text-brand-secondary text-left">What We Focus On</h3>
+                <p className="text-left">Each training journey is tailored to the dog's unique needs, considering breed, genetics, past experiences, environment and health. We engage their natural instincts—sniffing, chewing, digging, scratching, vocalising and bonding—encouraging curiosity and confidence.</p>
+                 <p className="mt-4 text-left">Training offered includes basic obedience, behaviour rehabilitation, social integration, agility skills, and preparation for emotional support roles.</p>
             </div>
-             <div>
+             <div className="text-left">
                 <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
-                <h3 className="text-2xl font-bold mb-4 text-brand-secondary">Our Golden Rules</h3>
-                <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Reward-based training:</strong> Celebrate and reinforce what's right.</li>
-                    <li><strong>Consistency:</strong> Use the same cues, gestures, and outcomes.</li>
-                    <li><strong>Timing matters:</strong> Immediate rewards build understanding.</li>
-                    <li><strong>Keep it short and fun:</strong> Frequent mini sessions work best.</li>
-                    <li><strong>No punishment:</strong> Fear breaks trust. We never use it.</li>
+                <h3 className="text-2xl font-bold mb-4 text-brand-secondary text-left">Our Golden Rules</h3>
+                <ul className="list-disc space-y-3 text-left pl-5">
+                    <li className="text-left"><strong>Reward-based training:</strong><br/>Celebrate and reinforce what's right.</li>
+                    <li className="text-left"><strong>Consistency:</strong><br/>Use the same cues, gestures, and outcomes.</li>
+                    <li className="text-left"><strong>Timing matters:</strong><br/>Immediate rewards build understanding.</li>
+                    <li className="text-left"><strong>Keep it short and fun:</strong><br/>Frequent mini sessions work best.</li>
+                    <li className="text-left"><strong>No punishment:</strong><br/>Fear breaks trust. We never use it.</li>
                 </ul>
             </div>
         </div>

@@ -24,7 +24,7 @@ const FacilitySection: React.FC<HorseFacilitiesPageProps & { title: string; medi
         />
         <div className="p-6 md:p-8">
             <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{title}</h2>
-            <div className="text-lg text-gray-700 space-y-4">
+            <div className="text-lg text-gray-700 space-y-4 text-left">
                 {children}
             </div>
         </div>
@@ -50,8 +50,8 @@ const HorseFacilitiesPage: React.FC<HorseFacilitiesPageProps> = (props) => {
 
             <section className="py-16 md:py-20 bg-brand-bg-subtle">
                 <div className="container mx-auto px-6 max-w-4xl space-y-12">
-                    <FacilitySection title="Open Paddocks for Freedom and Trust" mediaKey="horse_facilities_paddock_run" alt="Horses walking or running together across a paddock" {...props}>
-                        <p>Our sanctuary offers spacious, open paddocks where horses can roam, graze and interact as a natural herd. Here, they rediscover what it means to move freely and choose their own pace. Many arrive having lived in cramped or isolated conditions. This space is often the first step in their healing.</p>
+                    <FacilitySection title="Spacious Paddocks for Freedom and Trust" mediaKey="horse_facilities_paddock_run" alt="Horses walking or running together across a paddock" {...props}>
+                        <p>Our sanctuary offers spacious paddocks where horses can roam, graze and interact as a natural herd. Here, they rediscover what it means to move freely and choose their own pace. Many arrive having lived in cramped or isolated conditions. This space is often the first step in their healing.</p>
                         <p>Horses are carefully grouped to ensure compatibility and low stress. Each paddock is equipped with clean water troughs and natural shade, encouraging healthy routines and calm social bonds.</p>
                     </FacilitySection>
 
@@ -60,8 +60,8 @@ const HorseFacilitiesPage: React.FC<HorseFacilitiesPageProps> = (props) => {
                         <p className="mt-4">Shelters are designed with open visibility to prevent trapped feelings and allow each horse to feel safe while still connected to their environment.</p>
                     </FacilitySection>
 
-                    <FacilitySection title="Rehabilitation and Training Zones" mediaKey="horse_facilities_training" alt="Staff member doing liberty work or groundwork with a horse" {...props}>
-                        <p>Some of our horses come to us with behavioural trauma, anxiety or medical conditions that limit mobility. For these horses, we have created dedicated rehabilitation and training zones. These calm, quiet spaces allow for groundwork, desensitisation, liberty work and light schooling.</p>
+                    <FacilitySection title="Rehabilitation and Training Areas" mediaKey="horse_facilities_training" alt="Staff member doing liberty work or groundwork with a horse" {...props}>
+                        <p>Some of our horses come to us with behavioural trauma, anxiety or medical conditions that limit mobility. For these horses, we have created dedicated rehabilitation and training areas. These calm, quiet spaces allow for groundwork, desensitisation, liberty work and light schooling.</p>
                         <p>The goal is not obedience, but trust. Here, horses are never pushed beyond their limits. They are guided with patience, consistency and compassion.</p>
                     </FacilitySection>
 

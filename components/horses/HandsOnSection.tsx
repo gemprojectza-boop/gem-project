@@ -24,7 +24,7 @@ const CarePackageCard: React.FC<{
             <h3 className="text-2xl font-bold text-green-800 text-center">{title}</h3>
         </div>
         <div className="text-4xl font-bold my-4 text-green-600">{price}</div>
-        <p className="text-brand-text-secondary mb-6 flex-grow">{description}</p>
+        <p className="text-brand-text-secondary mb-6 flex-grow text-left">{description}</p>
         <ul className="space-y-3 mb-8">
             {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -46,8 +46,8 @@ const HandsOnSection: React.FC<SectionProps> = (props) => {
         <div className="container mx-auto px-6 max-w-6xl">
             <div className="max-w-4xl mx-auto">
                 <div className="content-bubble text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-brand-text-primary">Hands-On Care Programme – Horses</h2>
-                    <p className="mt-2 text-lg text-brand-text-secondary">Form a profound bond without the commitment of ownership.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-brand-text-primary text-center">Hands-On Care Programme – Horses</h2>
+                    <p className="mt-2 text-lg text-brand-text-secondary text-left">Form a profound bond without the commitment of ownership.</p>
                 </div>
                  <div className="content-bubble">
                      <div className="mb-6 rounded-lg overflow-hidden">
@@ -59,14 +59,14 @@ const HandsOnSection: React.FC<SectionProps> = (props) => {
                             onUpdate={props.onMediaUpdate}
                         />
                     </div>
-                    <div className="text-lg text-brand-text-secondary space-y-4">
+                    <div className="text-lg text-brand-text-secondary space-y-4 text-left">
                         <p>The Hands-On Care Programme allows you to build a meaningful, long-term relationship with one of our sanctuary horses. This is more than just visiting—it’s becoming personally involved in the life of a specific horse through regular grooming, groundwork, and quiet companionship.</p>
                         <p className="font-semibold text-brand-text-primary">This is your horse. Your connection. Your peace. We take care of their daily needs while you experience the profound bond that only a horse can offer.</p>
                     </div>
                 </div>
 
                 <div className="content-bubble text-center mt-12">
-                  <h2 className="text-3xl font-bold text-brand-text-primary">Choose Your Caregiver Package</h2>
+                  <h2 className="text-3xl font-bold text-brand-text-primary text-center">Choose Your Caregiver Package</h2>
                 </div>
             </div>
 

@@ -55,7 +55,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-brand-primary mb-6">Your Impact</h2>
-            <p className="text-xl text-brand-text-primary max-w-3xl mx-auto">
+            <p className="text-xl text-brand-text-primary max-w-3xl mx-auto text-left">
               Every donation directly supports our rescue, rehabilitation, and care programs for animals in need.
             </p>
           </div>
@@ -75,7 +75,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
                 />
                 <div>
                   <h4 className="text-xl font-bold text-brand-primary mb-2">Charlie's Recovery</h4>
-                  <p className="text-brand-text-primary">
+                  <p className="text-brand-text-primary text-left">
                     Thanks to donor support, Charlie received life-saving surgery and is now thriving in his forever home.
                   </p>
                 </div>
@@ -90,7 +90,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
                 />
                 <div>
                   <h4 className="text-xl font-bold text-brand-primary mb-2">Bella's Journey</h4>
-                  <p className="text-brand-text-primary">
+                  <p className="text-brand-text-primary text-left">
                     From malnourished rescue to healthy companion - your donations made Bella's transformation possible.
                   </p>
                 </div>
@@ -105,7 +105,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black text-brand-primary mb-6">Choose Your Donation</h2>
-            <p className="text-xl text-brand-text-primary">
+            <p className="text-xl text-brand-text-primary text-left mx-auto max-w-3xl">
               Select the option that works best for you
             </p>
           </div>
@@ -142,7 +142,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
           {/* Monthly Giving */}
           <div id="monthly-giving" className="bg-brand-primary rounded-lg p-8 text-white">
             <h3 className="text-2xl font-bold mb-6">Monthly Giving Program</h3>
-            <p className="text-lg mb-6 opacity-90">
+            <p className="text-lg mb-6 opacity-90 text-left">
               Join our monthly giving program for sustained impact. Monthly donors provide consistent support that helps us plan long-term care and rehabilitation programs.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -176,7 +176,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-brand-primary mb-6">Other Ways to Help</h2>
-            <p className="text-xl text-brand-text-primary max-w-3xl mx-auto">
+            <p className="text-xl text-brand-text-primary max-w-3xl mx-auto text-left">
               There are many ways to support our mission beyond financial donations
             </p>
           </div>
@@ -191,7 +191,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />
               <h3 className="text-2xl font-bold text-brand-primary mb-4">Volunteer</h3>
-              <p className="text-brand-text-primary mb-6">
+              <p className="text-brand-text-primary mb-6 text-left">
                 Donate your time and skills to help care for our rescued animals
               </p>
               <CtaButton href="/get-involved" className="bg-brand-primary hover:bg-brand-primary-hover">
@@ -208,7 +208,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />
               <h3 className="text-2xl font-bold text-brand-primary mb-4">Sponsor an Animal</h3>
-              <p className="text-brand-text-primary mb-6">
+              <p className="text-brand-text-primary mb-6 text-left">
                 Provide ongoing support for a specific animal in our care
               </p>
               <CtaButton href="/dogs/sponsorship" className="bg-brand-primary hover:bg-brand-primary-hover">
@@ -225,7 +225,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />
               <h3 className="text-2xl font-bold text-brand-primary mb-4">Wishlist Items</h3>
-              <p className="text-brand-text-primary mb-6">
+              <p className="text-brand-text-primary mb-6 text-left">
                 Donate specific items we need for daily animal care and operations
               </p>
               <CtaButton href="/dog-wishlist" className="bg-brand-primary hover:bg-brand-primary-hover">
@@ -240,7 +240,7 @@ const DonatePage: React.FC<DonatePageProps> = ({ mediaContent, isEditMode, onMed
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-brand-primary mb-6">Planning a Large Gift?</h2>
-          <p className="text-xl text-brand-text-primary mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-brand-text-primary mb-8 max-w-3xl mx-auto text-left">
             For major donations, planned giving, or corporate partnerships, we'd love to discuss how your contribution can create maximum impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -16,7 +16,7 @@ interface HorseTrainingPageProps {
 const ExploreMoreCard: React.FC<{title: string, links: {href: string, text: string}[]}> = ({ title, links }) => (
     <div className="content-bubble h-full">
         <div className="p-6 md:p-8">
-            <h3 className="text-xl font-bold text-green-800 mb-4">{title}</h3>
+            <h3 className="text-xl font-bold text-green-800 mb-4 text-center">{title}</h3>
             <ul className="space-y-3">
                 {links.map(link => (
                     <li key={link.href}>
@@ -45,17 +45,17 @@ const TrainingSectionCard: React.FC<HorseTrainingPageProps & {title: string, med
 const HorseTrainingPage: React.FC<HorseTrainingPageProps> = (props) => {
     return (
         <div className="bg-brand-bg-main">
-            <section className="hero relative bg-brand-text-primary text-white py-20 md:py-32 text-center">
+            <section className="hero relative bg-brand-text-primary text-white py-20 md:py-32">
                 <div className="absolute inset-0">
                     {props.mediaContent.horse_training_hero && <EditableMedia mediaKey="horse_training_hero" mediaUrl={props.mediaContent.horse_training_hero} alt="Calm training moment between caregiver and horse" className="w-full h-full object-cover" isEditMode={props.isEditMode} onUpdate={props.onMediaUpdate}/>}
                 </div>
-                <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                    <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '64rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                        <div style={{padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                            <h1 ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em'}}>
+                <div style={{position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                    <div style={{background: 'rgba(0,0,0,0.6)', maxWidth: '64rem', margin: '0 auto', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                        <div style={{padding: '3rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                            <h1 className="text-center" ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); el.style.setProperty('text-shadow', '2px 2px 4px rgba(0,0,0,0.8)', 'important'); } }} style={{color: 'white !important', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', textAlign: 'center', fontSize: '4rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '-0.025em'}}>
                                 <span ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>Healing Through Trust-Based Training</span>
                             </h1>
-                            <div style={{marginTop: '2rem', textAlign: 'center', display: 'flex', justifyContent: 'center'}}>
+                            <div style={{marginTop: '2rem', display: 'flex', justifyContent: 'center'}}>
                                  <CtaButton href="/horses#sponsor" className="bg-brand-accent hover:bg-brand-accent-hover text-white">
                                     Sponsor a Training Session
                                 </CtaButton>

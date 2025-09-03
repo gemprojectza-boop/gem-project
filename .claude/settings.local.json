@@ -28,7 +28,11 @@
       "Bash(cloudflared tunnel:*)",
       "Bash(dir:*)",
       "Bash(git remote set-url:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Read(C:\\Users/**)",
+      "Bash(sed:*)",
+      "Bash(cat:*)",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": [],
     "ask": []

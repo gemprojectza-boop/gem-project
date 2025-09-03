@@ -54,7 +54,7 @@ const Welcome: React.FC = () => (
                         </svg>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8">Welcome to Our Herd</h2>
-                    <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl mx-auto text-center">
+                    <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl mx-auto text-left">
                         <p>At The Gem Project Sanctuary, our herd is at the heart of who we are. Every horse that arrives carries a story, stories of neglect, abandonment, hardship or quiet resilience. But here, every story is rewritten with care, patience and purpose.</p>
                         <p>Our sanctuary is home to 20 incredible horses, each with a name, a voice and a journey. Some are here for rehabilitation, others for life. What unites them is the promise that they will never again be forgotten. From the first gentle touch to the first pain-free trot, every small milestone is a victory we celebrate together.</p>
                         <p>This is more than a place of rescue. It is a place of restoration, of dignity, of connection. It is where broken bodies heal and weary spirits rise. Whether they are learning to trust again or simply enjoying the peace of a soft bed and a full bucket, our horses know they are safe. They are home.</p>
@@ -104,7 +104,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ mediaKey, title, text, cta, alt, re
                                     </svg>
                                 </div>
                                 <h3 className="text-3xl md:text-4xl font-black text-brand-text-primary text-center mb-6">{title}</h3>
-                                <div className="text-brand-text-secondary space-y-6 my-8 text-lg leading-relaxed text-center">{text}</div>
+                                <div className="text-brand-text-secondary space-y-6 my-8 text-lg leading-relaxed text-left">{text}</div>
                                 {cta && cta.length > 0 && (
                                     <div className="flex flex-wrap gap-4 justify-center">
                                         {cta.map(item => (
@@ -134,7 +134,7 @@ const TextCard: React.FC<{ sectionId?: string, title: string, text: string, cta:
                         </svg>
                     </div>
                     <h3 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8">{title}</h3>
-                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-center max-w-4xl mx-auto">{text}</p>
+                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-left max-w-4xl mx-auto">{text}</p>
                      <CtaButton href={cta.href} className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover shadow-lg btn-pulse">
                         {cta.text}
                     </CtaButton>
@@ -235,7 +235,7 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
                         </svg>
                     </div>
                     <h3 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8" style={{textAlign: 'center', margin: '0 auto 2rem auto'}}>Partnerships</h3>
-                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-center max-w-4xl mx-auto" style={{textAlign: 'center', margin: '2rem auto'}}>At The Gem Project Sanctuary, we believe that meaningful change happens when compassionate people and organisations come together. We are actively open to collaborating with like-minded organisations and individuals who share our commitment to equine welfare, ethical care and community upliftment.</p>
+                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-left max-w-4xl mx-auto" style={{textAlign: 'left', margin: '2rem auto'}}>At The Gem Project Sanctuary, we believe that meaningful change happens when compassionate people and organisations come together. We are actively open to collaborating with like-minded organisations and individuals who share our commitment to equine welfare, ethical care and community upliftment.</p>
                      <CtaButton href="/contact" className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover shadow-lg btn-pulse" style={{margin: '0 auto'}}>
                         Partner With Us
                     </CtaButton>

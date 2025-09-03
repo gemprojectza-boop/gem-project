@@ -150,11 +150,13 @@ const DogProfilePage: React.FC<DogProfilePageProps> = ({ dogId, mediaContent, is
                     {/* Right Column (Info Cards) */}
                     <div className="lg:col-span-1 space-y-8">
                         <InfoTable title="Pet Info" data={dog.petInfo} />
-                        <div className="bg-brand-surface p-6 rounded-lg shadow-md border">
-                            <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
-                            <h3 className="text-xl font-bold text-brand-secondary mb-4">Ideal Home</h3>
-                            <p className="text-brand-text-secondary">{dog.idealHome}</p>
-                        </div>
+                        {dog.status !== 'Forever Sanctuary' && (
+                            <div className="bg-brand-surface p-6 rounded-lg shadow-md border">
+                                <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
+                                <h3 className="text-xl font-bold text-brand-secondary mb-4">Ideal Home</h3>
+                                <p className="text-brand-text-secondary">{dog.idealHome}</p>
+                            </div>
+                        )}
                          <div className="sticky top-28 bg-brand-surface p-6 rounded-lg shadow-lg border border-brand-primary">
                             {ctaBlock}
                         </div>
