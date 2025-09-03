@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MediaContent } from '../../types.ts';
 import CtaButton from '../CtaButton.tsx';
 import { PageHero, ContentSection } from '../PageComponents.tsx';
@@ -17,8 +17,66 @@ interface DogAdoptionPageProps {
 const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
   const adoptableDogs = sampleDogs.filter(dog => dog.status === 'Available');
   
+  useEffect(() => {
+    // Extremely aggressive white text forcing
+    const forceWhiteText = () => {
+      // Try multiple selectors
+      const selectors = [
+        'h2',
+        '.bg-brand-primary h2',
+        'section h2',
+        '[class*="bg-brand-primary"] h2',
+        '.py-20 h2'
+      ];
+      
+      selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach((el) => {
+          if (el.textContent && el.textContent.includes('Ready to change a life?')) {
+            // Change the text to confirm JS is working
+            el.textContent = 'JAVASCRIPT IS WORKING - WHITE TEXT';
+            
+            // Remove all possible red classes
+            el.className = 'text-white text-3xl md:text-4xl font-bold mb-8';
+            
+            // Force styles in every possible way
+            el.style.cssText = 'color: #ffffff !important; background-color: green !important; -webkit-text-fill-color: #ffffff !important; text-shadow: none !important; font-weight: bold !important;';
+            el.setAttribute('style', 'color: #ffffff !important; background-color: green !important; -webkit-text-fill-color: #ffffff !important; text-shadow: none !important; font-weight: bold !important;');
+            
+            // Direct style property override
+            Object.assign(el.style, {
+              color: '#ffffff !important',
+              backgroundColor: 'green !important',
+              webkitTextFillColor: '#ffffff !important',
+              textShadow: 'none !important'
+            });
+            
+            console.log('Found and modified element:', el);
+          }
+        });
+      });
+    };
+    
+    // Run multiple times with different delays
+    forceWhiteText();
+    setTimeout(forceWhiteText, 50);
+    setTimeout(forceWhiteText, 200);
+    setTimeout(forceWhiteText, 500);
+    const timer = setInterval(forceWhiteText, 100);
+    
+    // Also run on any DOM changes
+    const observer = new MutationObserver(forceWhiteText);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+    
+    // Cleanup
+    return () => {
+      clearInterval(timer);
+      observer.disconnect();
+    };
+  }, []);
+  
   return (
-    <div className="bg-brand-bg-main">
+    <div className="bg-brand-bg-main dog-page-override">
       <PageHero
         title="Every Dog Deserves a Home"
         subtitle="Adoption is one of the most powerful ways to transform a life."
@@ -109,7 +167,24 @@ const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
       <center><section className="py-20 bg-brand-primary" style={{ textAlign: 'center !important', display: 'flex !important', flexDirection: 'column !important', alignItems: 'center !important', justifyContent: 'center !important' }}>
         <center><div className="container mx-auto px-6 text-center text-white" style={{ textAlign: 'center !important', margin: '0 auto !important', display: 'flex !important', flexDirection: 'column !important', alignItems: 'center !important', justifyContent: 'center !important' }}>
           <center><PawIcon className="w-10 h-10 text-white mx-auto mb-4" /></center>
-          <center><h2 className="text-3xl md:text-4xl font-bold mb-8" style={{ color: 'white !important', textAlign: 'center !important', margin: '0 auto !important', display: 'block !important' }}>Ready to change a life?</h2></center>
+          <center><h2 
+            className="text-3xl md:text-4xl font-bold mb-8" 
+            style={{ 
+              color: '#ffffff !important', 
+              textAlign: 'center !important', 
+              margin: '0 auto !important', 
+              display: 'block !important', 
+              fontWeight: 'bold !important',
+              WebkitTextFillColor: '#ffffff !important',
+              MozTextFillColor: '#ffffff !important'
+            }}
+            ref={(el) => {
+              if (el) {
+                el.style.setProperty('color', '#ffffff', 'important');
+                el.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+              }
+            }}
+          >Ready to change a life?</h2></center>
           <div className="flex flex-wrap justify-center gap-4">
             <CtaButton href="/contact?subject=AdoptionApplication" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white btn-pulse">Start the Adoption Process</CtaButton>
             <CtaButton href="/faq" className="border border-white text-white hover:bg-brand-primary hover:border-brand-primary">Adoption FAQs</CtaButton>

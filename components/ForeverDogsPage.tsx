@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MediaContent } from '../types.ts';
 import EditableMedia from './EditableMedia.tsx';
 import CtaButton from './CtaButton.tsx';
@@ -17,8 +17,41 @@ interface ForeverDogsPageProps {
 const ForeverDogsPage: React.FC<ForeverDogsPageProps> = (props) => {
   const foreverDogs = sampleDogs.filter(dog => dog.status === 'Forever Sanctuary');
 
+  useEffect(() => {
+    // Force white text on footer headings
+    const forceWhiteText = () => {
+      const elements = document.querySelectorAll('h2');
+      elements.forEach((el) => {
+        if (el.textContent && (
+          el.textContent.includes('Support a Lifelong') ||
+          el.textContent.includes('Forever Residents') ||
+          el.textContent.includes('Lifelong Resident') ||
+          el.textContent.includes('Ready to change a life?') || 
+          el.textContent.includes('Ready to make a difference?') ||
+          el.textContent.includes('Ready to transform lives?') ||
+          el.textContent.includes('Ready for an adventure?') ||
+          el.textContent.includes('Ready to help?')
+        )) {
+          el.style.setProperty('color', '#ffffff', 'important');
+          el.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+          el.style.setProperty('text-shadow', 'none', 'important');
+          el.style.removeProperty('background-color');
+          
+          // Remove any red classes
+          el.classList.remove('text-brand-secondary', 'text-red-600');
+          el.classList.add('text-white');
+        }
+      });
+    };
+    
+    forceWhiteText();
+    const timer = setInterval(forceWhiteText, 100);
+    
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div className="bg-brand-bg-main">
+    <div className="bg-brand-bg-main dog-page-override">
       <PageHero
         title="Forever Sanctuary Dogs"
         subtitle="They are not waiting to be chosen. They already have been."

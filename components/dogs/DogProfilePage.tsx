@@ -43,8 +43,9 @@ const DogProfilePage: React.FC<DogProfilePageProps> = ({ dogId, mediaContent, is
         );
     }
 
-    const mainPhotoUrl = mediaContent[dog.media.mainPhotoKey];
-    const storyPhotoUrl = mediaContent[dog.media.storyPhotoKey];
+    // Handle both media keys and direct URLs
+    const mainPhotoUrl = dog.media.mainPhotoKey.startsWith('http') ? dog.media.mainPhotoKey : mediaContent[dog.media.mainPhotoKey];
+    const storyPhotoUrl = dog.media.storyPhotoKey.startsWith('http') ? dog.media.storyPhotoKey : mediaContent[dog.media.storyPhotoKey];
     const videoUrl = mediaContent[dog.media.videoKey];
 
     const ctaBlock = dog.status === 'Forever Sanctuary' ? (

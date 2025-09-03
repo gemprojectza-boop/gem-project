@@ -1721,7 +1721,7 @@ export const sampleDogs: AdoptableDog[] = [
   {
     id: 'queeni',
     name: 'Queeni',
-    status: 'Available',
+    status: 'Forever Sanctuary',
     petInfo: {
       age: 'Adult',
       breed: 'Crossbreed',
@@ -1734,30 +1734,30 @@ export const sampleDogs: AdoptableDog[] = [
       dogs: 'Yes',
       cats: 'Unknown',
     },
-    idealHome: 'A loving family home where she can play and be cherished.',
+    idealHome: 'The playful spirit of the sanctuary. Energetic, joyful and always ready for a game of fetch.',
     story: {
-      title: 'Her Story',
-      text: 'Queeni is a wonderful dog who loves to play and enjoys the company of both people and other dogs. She is ready to find her forever home.',
+      title: 'The Ball-Chasing Champion',
+      text: "Meet Queeni, our resident fetch enthusiast who turns every day into playtime. With boundless energy and an infectious joy for life, she's the dog who reminds everyone that happiness can be as simple as chasing a ball across an open field. Her enthusiasm is contagious, and her spirit brightens every corner of the sanctuary.",
     },
     personality: {
-      title: 'Personality',
-      text: 'Queeni is playful, energetic, and loves fetching balls. She enjoys outdoor activities and is always eager to engage in games and exercise.',
+      title: 'Sanctuary Life',
+      text: 'Queeni is one of our most energetic Forever Sanctuary residents. While she is not up for adoption, she lives her best life here at The Gem Project Sanctuary with daily play sessions, ball games, and plenty of room to run. She is available for sponsorship or Hands-On Care. If you love watching pure joy in motion, Queeni would love your support.',
     },
     specialTrait: {
       title: 'What Makes Her Special',
       points: [
-        'Loves to play fetch and chase balls',
-        'Very social and gets along well with other dogs',
-        'Energetic and fun-loving companion',
+        'Ball Obsessed: Turns every moment into a game of fetch',
+        'Pure Joy: Her happiness is absolutely infectious',
+        'Social Butterfly: Loves playing with other dogs and people',
       ],
     },
     loveReason: {
       title: "Why You'll Love Her",
-      text: 'Queeni will bring endless joy and energy to your life. Her playful spirit and loving nature make her a perfect addition to any active family.',
+      text: 'Queeni embodies pure, unbridled joy. Watching her chase balls and play with such enthusiasm reminds us why dogs are such incredible companions. Supporting Queeni means supporting a life filled with happiness and play.',
     },
     media: {
-      mainPhotoKey: 'queeni_main',
-      storyPhotoKey: 'queeni_main',
+      mainPhotoKey: 'https://i.ibb.co/Q3pbHHph/15-07-2025-Queeni-looking-at-camera1.jpg',
+      storyPhotoKey: 'https://i.ibb.co/JwgwvFM8/15-07-2025-Queeni-picking-up-ball.jpg',
       galleryKeys: ['https://i.ibb.co/JwgwvFM8/15-07-2025-Queeni-picking-up-ball.jpg', 'https://i.ibb.co/Q3pbHHph/15-07-2025-Queeni-looking-at-camera1.jpg', 'https://i.ibb.co/6cHGtT1m/15-07-2025-Queeni-looking-at-camera.jpg', 'https://i.ibb.co/Q72GSP32/15-07-2025-Queeni-fetching-ball1.jpg', 'https://i.ibb.co/PG1rQdC0/15-07-2025-Queeni-fetching-ball.jpg', 'https://i.ibb.co/zHmmQzzt/15-07-2025-Queeni-chasing-ball1.jpg'],
       videoKey: 'alex_video', 
     },

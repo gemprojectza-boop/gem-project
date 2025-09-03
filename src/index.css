@@ -274,12 +274,12 @@ a.cta-button,
 .dog-page-override main h6:not([class*="bg-"]):not(.bg-gradient-to-r *),
 .dog-page-override main [class*="title"]:not([class*="bg-"]):not(.bg-gradient-to-r *),
 .dog-page-override main [class*="heading"]:not([class*="bg-"]):not(.bg-gradient-to-r *),
-.dog-page-override section h1:not([class*="bg-"]):not(header h1):not(.bg-gradient-to-r *),
-.dog-page-override section h2:not([class*="bg-"]):not(header h2):not(.bg-gradient-to-r *),
-.dog-page-override section h3:not([class*="bg-"]):not(header h3):not(.bg-gradient-to-r *),
-.dog-page-override section h4:not([class*="bg-"]):not(header h4):not(.bg-gradient-to-r *),
-.dog-page-override section h5:not([class*="bg-"]):not(header h5):not(.bg-gradient-to-r *),
-.dog-page-override section h6:not([class*="bg-"]):not(header h6):not(.bg-gradient-to-r *) {
+.dog-page-override section:not([class*="bg-"]) h1:not([class*="bg-"]):not(header h1):not(.bg-gradient-to-r *),
+.dog-page-override section:not([class*="bg-"]) h2:not([class*="bg-"]):not(header h2):not(.bg-gradient-to-r *),
+.dog-page-override section:not([class*="bg-"]) h3:not([class*="bg-"]):not(header h3):not(.bg-gradient-to-r *),
+.dog-page-override section:not([class*="bg-"]) h4:not([class*="bg-"]):not(header h4):not(.bg-gradient-to-r *),
+.dog-page-override section:not([class*="bg-"]) h5:not([class*="bg-"]):not(header h5):not(.bg-gradient-to-r *),
+.dog-page-override section:not([class*="bg-"]) h6:not([class*="bg-"]):not(header h6):not(.bg-gradient-to-r *) {
   color: #dc2626 !important;
 }
 
@@ -301,6 +301,37 @@ a.cta-button,
 .dog-page-override section [class*="bg-red"] {
   background-color: #dc2626 !important;
   color: white !important;
+}
+
+/* Override heading color for elements inside bg-brand-primary sections */
+.dog-page-override section[class*="bg-brand-primary"] h1,
+.dog-page-override section[class*="bg-brand-primary"] h2,
+.dog-page-override section[class*="bg-brand-primary"] h3,
+.dog-page-override section[class*="bg-brand-primary"] h4,
+.dog-page-override section[class*="bg-brand-primary"] h5,
+.dog-page-override section[class*="bg-brand-primary"] h6,
+.dog-page-override .bg-brand-primary h1,
+.dog-page-override .bg-brand-primary h2,
+.dog-page-override .bg-brand-primary h3,
+.dog-page-override .bg-brand-primary h4,
+.dog-page-override .bg-brand-primary h5,
+.dog-page-override .bg-brand-primary h6 {
+  color: white !important;
+}
+
+/* Force white text for specific elements */
+.dog-page-override .force-white-text,
+.force-white-text {
+  color: white !important;
+}
+
+/* Ultra-specific override for the adoption page footer */
+.dog-page-override section.bg-brand-primary h2,
+.dog-page-override .bg-brand-primary h2,
+div.dog-page-override section.bg-brand-primary h2,
+body .dog-page-override section.bg-brand-primary h2 {
+  color: #ffffff !important;
+  text-shadow: none !important;
 }
 
 /* All buttons on red backgrounds must have white text */

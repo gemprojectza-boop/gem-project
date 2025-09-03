@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MediaContent } from '../types.ts';
 import CtaButton from './CtaButton.tsx';
 import { PageHero, ContentSection } from './PageComponents.tsx';
@@ -16,8 +16,34 @@ interface DogAdoptionPageProps {
 const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
   const adoptableDogs = sampleDogs.filter(dog => dog.status === 'Available');
   
+  useEffect(() => {
+    // Force white text on the footer heading
+    const forceWhiteText = () => {
+      const elements = document.querySelectorAll('h2');
+      elements.forEach((el) => {
+        if (el.textContent && (el.textContent.includes('Ready to change a life?') || el.textContent.includes('JAVASCRIPT WORKING'))) {
+          // Reset to original text and make it white
+          el.textContent = 'Ready to change a life?';
+          el.style.setProperty('color', '#ffffff', 'important');
+          el.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+          el.style.setProperty('text-shadow', 'none', 'important');
+          el.style.removeProperty('background-color');
+          
+          // Remove any red classes
+          el.classList.remove('text-brand-secondary', 'text-red-600');
+          el.classList.add('text-white');
+        }
+      });
+    };
+    
+    forceWhiteText();
+    const timer = setInterval(forceWhiteText, 100);
+    
+    return () => clearInterval(timer);
+  }, []);
+  
   return (
-    <div className="bg-brand-bg-main">
+    <div className="bg-brand-bg-main dog-page-override">
       <PageHero
         title="Every Dog Deserves a Home"
         subtitle="Adoption is one of the most powerful ways to transform a life."
@@ -110,7 +136,7 @@ const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
       <section className="py-20 bg-brand-primary">
         <div className="container mx-auto px-6 text-center text-white">
           <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-brand-secondary">Ready to change a life?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 force-white-text" style={{color: 'white !important'}}>Ready to change a life?</h2>
           <div className="flex flex-wrap justify-center gap-4">
             <CtaButton href="/contact?subject=AdoptionApplication" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white btn-pulse">Start the Adoption Process</CtaButton>
             <CtaButton href="/faq" className="border border-white text-white hover:bg-brand-primary hover:border-brand-primary">Adoption FAQs</CtaButton>

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MediaContent } from '../types.ts';
 import CtaButton from './CtaButton.tsx';
 import { PageHero, ContentSection } from './PageComponents.tsx';
@@ -13,8 +13,40 @@ interface DogOutingsPageProps {
 }
 
 const DogOutingsPage: React.FC<DogOutingsPageProps> = (props) => {
+  useEffect(() => {
+    // Force white text on footer headings
+    const forceWhiteText = () => {
+      const elements = document.querySelectorAll('h2');
+      elements.forEach((el) => {
+        if (el.textContent && (
+          el.textContent.includes('Help Fund') ||
+          el.textContent.includes('Adventure') ||
+          el.textContent.includes('Ready to change a life?') || 
+          el.textContent.includes('Ready to make a difference?') ||
+          el.textContent.includes('Ready to transform lives?') ||
+          el.textContent.includes('Ready for an adventure?') ||
+          el.textContent.includes('Ready to help?')
+        )) {
+          el.style.setProperty('color', '#ffffff', 'important');
+          el.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+          el.style.setProperty('text-shadow', 'none', 'important');
+          el.style.removeProperty('background-color');
+          
+          // Remove any red classes
+          el.classList.remove('text-brand-secondary', 'text-red-600');
+          el.classList.add('text-white');
+        }
+      });
+    };
+    
+    forceWhiteText();
+    const timer = setInterval(forceWhiteText, 100);
+    
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div className="bg-brand-bg-main">
+    <div className="bg-brand-bg-main dog-page-override">
       <PageHero
         title="Dog Outings"
         subtitle="Where healing meets freedom."
