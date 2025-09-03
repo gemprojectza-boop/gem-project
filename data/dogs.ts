@@ -41,7 +41,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'alex_main',
       storyPhotoKey: 'alex_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/XZHt3smV/Alex-posing-looking-brave-07-2025-1.jpg'],
       videoKey: 'alex_video',
     },
   },
@@ -173,7 +173,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'benji_main',
       storyPhotoKey: 'benji_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/r2q5DRbj/15-07-2025-Benji-sideways-face.jpg', 'https://i.ibb.co/9mg99GPT/15-07-2025-Benji-walking-on-leash.jpg'],
       videoKey: 'benji_video',
     },
   },
@@ -217,7 +217,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'blake_main',
       storyPhotoKey: 'blake_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/YTYsfZnC/15-07-2025-Blake-standing-in-the-field1.jpg', 'https://i.ibb.co/dwn9HKBs/15-07-2025-Blake-standing-in-the-field.jpg', 'https://i.ibb.co/0RB9MpwM/15-07-2025-Blake-standing-in-field-and-licking-his-lips.jpg', 'https://i.ibb.co/D2TK1tC/15-07-2025-Blake-sitting-infornt-of-handler.jpg', 'https://i.ibb.co/ZRhDVMSn/15-07-2025-Blake-walking-in-the-field.jpg'],
       videoKey: 'blake_video',
     },
   },
@@ -305,7 +305,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'brooklyn_main',
       storyPhotoKey: 'brooklyn_story',
-      galleryKeys: ['brooklyn_gallery_1', 'brooklyn_gallery_2', 'brooklyn_gallery_3', 'brooklyn_gallery_4', 'brooklyn_gallery_5', 'brooklyn_gallery_6', 'brooklyn_gallery_7', 'brooklyn_gallery_8', 'brooklyn_gallery_9', 'brooklyn_gallery_10', 'brooklyn_gallery_11', 'brooklyn_gallery_12'],
+      galleryKeys: ['https://i.ibb.co/TxgYskks', 'https://i.ibb.co/wr6ZqJJ7', 'https://i.ibb.co/YBgdjRr0', 'https://i.ibb.co/5gWbYzK1', 'https://i.ibb.co/Z636TJyT', 'https://i.ibb.co/ZzG08zMS', 'https://i.ibb.co/7JzBqs8q', 'https://i.ibb.co/tw0ks1c0', 'https://i.ibb.co/S7Pz6L8L', 'https://i.ibb.co/SDJns2L2', 'https://i.ibb.co/j9y8vwrY', 'https://i.ibb.co/wNw91Sxw', 'https://i.ibb.co/j9Np4RKR', 'https://i.ibb.co/LzxcV93G', 'https://i.ibb.co/933hJB5T', 'https://i.ibb.co/hF52D9js', 'https://i.ibb.co/xK6h6mnC', 'https://i.ibb.co/5xSJFMPS'],
       videoKey: 'brooklyn_video',
     },
   },
@@ -437,7 +437,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'chandra_main',
       storyPhotoKey: 'chandra_main',
-      galleryKeys: [], // TODO: Add more photos
+      galleryKeys: ['https://i.ibb.co/456GVFf/Chandra-sitting-on-dog-bed-with-toys-looking-up-with-open-mount-and-looks-like-she-is-smiling-07-202.jpg', 'https://i.ibb.co/4y6HtPn/Chandra-looking-at-the-camera-and-it-looks-like-she-is-smiling-07-2025.jpg', 'https://i.ibb.co/233DZNnN/15-07-2025-Chandra-sitting-on-bed-and-seem-to-be-smiling.jpg'],
       videoKey: 'chandra_video',
     },
   },
@@ -569,7 +569,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'daisy_main',
       storyPhotoKey: 'daisy_story',
-      galleryKeys: [], // TODO: Add missing photos
+      galleryKeys: ['https://i.ibb.co/jkTfBPLt/Daisy-laying-on-her-back-and-getting-love-from-her-handler-looks-like-a-belly-scratch-07-2025.jpg', 'https://i.ibb.co/tPxZY8xY/Daisy-laying-on-dog-bed-and-chowing-a-toy-07-2025.jpg', 'https://i.ibb.co/WL0HmXp/Daisy-laying-on-a-dog-bed-with-toys-with-a-toy-in-her-mouth-07-2025.jpg', 'https://i.ibb.co/0yy8XKXX/Daisy-laying-on-a-dog-bed-and-looking-at-the-camera-07-2025.jpg', 'https://i.ibb.co/b57HpZbp/Daisy-being-groomed-by-a-handler-07-2025.jpg'],
       videoKey: 'daisy_video',
     },
   },
@@ -613,7 +613,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'honey_main',
       storyPhotoKey: 'honey_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/Ps47W0rV/15-07-2025-Honey-running-in-the-field-with-slight-head-tilt.jpg', 'https://i.ibb.co/k6G2MCNN/15-07-2025-Honey-running-in-field.jpg', 'https://i.ibb.co/Ndp4Vzn5/Honey-looking-past-the-camera-with-a-head-tilt-mouth-open-and-tongue-out-07-2025.jpg', 'https://i.ibb.co/4ZJmBQ1G/Honey-running-in-the-field-towards-the-camera-tongue-hanging-out-07-2025.jpg', 'https://i.ibb.co/mFNCMZTr/Honey-running-towards-the-camera-with-mouth-open-and-tongue-out-07-2025.jpg', 'https://i.ibb.co/wZ2ydVdr/Honey-running-in-the-field-towards-camera-but-captured-from-a-distance-07-2025.jpg'],
       videoKey: 'honey_video',
     },
   },
@@ -746,7 +746,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'lady_main',
       storyPhotoKey: 'lady_main',
-      galleryKeys: [], // TODO: Add missing photos
+      galleryKeys: ['https://i.ibb.co/7tQG6F6G/Lady-running-in-the-field-with-a-ball-in-her-mouth-07-2025.jpg', 'https://i.ibb.co/JjNgyHJn/Lady-posing-sitting-upright-looking-at-the-camera-with-an-open-mouth-and-tongue-hanging-out-from-the.jpg', 'https://i.ibb.co/Mk652f2q/Lady-laying-on-the-dog-bed-with-toys-and-looking-at-the-camera-with-an-open-mouth-and-tongue-out-07.jpg', 'https://i.ibb.co/ymThzXKL/Lady-in-training-with-a-handler-where-they-are-walking-over-the-tilting-bridge-07-2025.jpg'],
       videoKey: 'lady_video',
     },
   },
@@ -1142,7 +1142,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'simba_main',
       storyPhotoKey: 'simba_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/8gVSRSJJ/Simba-Heartfelt-moment-between-Simba-and-Jody-as-they-gaze-at-eachother-07-2025.jpg', 'https://i.ibb.co/xKF3kGWR/15-07-2025-Simba-side-ways.jpg', 'https://i.ibb.co/kPmj3V1/15-07-2025-Simba-looking-at-camera.jpg'],
       videoKey: 'simba_video',
     },
   },
@@ -1274,7 +1274,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'whitney_main',
       storyPhotoKey: 'whitney_main',
-      galleryKeys: [], // TODO: Add missing photos
+      galleryKeys: ['https://i.ibb.co/23VX8zpT/Whitney-sitting-on-the-dog-bed-gazing-past-the-camera-07-2025.jpg', 'https://i.ibb.co/pBrq6k9Y/Whitney-Sitting-on-dog-bed-and-posing-looking-away-from-the-camera-07-2025-1.jpg'],
       videoKey: 'whitney_video',
     },
   },
@@ -1318,7 +1318,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'xeno_main',
       storyPhotoKey: 'xeno_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/NnpsSWwt/Xeno-being-bathed-and-enjoying-the-moment-tongue-out-07-2025.jpg', 'https://i.ibb.co/MDGfZRg6/15-07-2025-Xeno-bath-time-5.jpg', 'https://i.ibb.co/tPCpvFS8/15-07-2025-Xeno-bath-time-3.jpg', 'https://i.ibb.co/Nd7WM84T/15-07-2025-Xeno-bath-time-7.jpg', 'https://i.ibb.co/2YSjWSjt/15-07-2025-Xeno-bath-time-2.jpg'],
       videoKey: 'xeno_video',
     },
   },
@@ -1406,7 +1406,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'doughnut_main',
       storyPhotoKey: 'doughnut_story',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/Qwswcr7/Doughnut-looking-at-the-camera-with-tongue-out-07-2025.jpg', 'https://i.ibb.co/HL17kk4R/Doughnut-laying-on-the-dog-be-and-looking-at-the-camera-07-2025.jpg'],
       videoKey: 'alex_video', 
     },
   },
@@ -1450,7 +1450,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'maxi_main',
       storyPhotoKey: 'maxi_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/KpdtgZKq/Maxi-heartfelt-moment-between-handler-and-him-as-the-handler-s-hand-is-resting-on-his-head-07-2025.jpg', 'https://i.ibb.co/nqsjWD67/Maxi-sitting-on-the-dog-bed-and-posing-to-the-camera-07-2025.jpg', 'https://i.ibb.co/0j19NCb6/Maxi-heartfelt-moment-between-Maxi-and-handler-as-the-handler-is-touching-his-head-and-he-appears-to.jpg', 'https://i.ibb.co/JRGCNGvL/Maxi-running-in-the-field-with-his-mouth-open-tongue-out-and-water-splashing-in-the-background-07-20.jpg'],
       videoKey: 'alex_video', 
     },
   },
@@ -1538,7 +1538,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'foxy_main',
       storyPhotoKey: 'foxy_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/svssVhqr/Foxy-laying-on-a-dog-bed-with-toys-around-looking-at-the-camera-with-mouth-open-and-tongue-out-07-20.jpg', 'https://i.ibb.co/KpTLBZVY/Foxy-laying-on-the-dog-bed-and-playing-with-toys-07-2025.jpg'],
       videoKey: 'alex_video', 
     },
   },
@@ -1626,7 +1626,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'angel_main',
       storyPhotoKey: 'angel_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/TxgYskks', 'https://i.ibb.co/wr6ZqJJ7', 'https://i.ibb.co/YBgdjRr0', 'https://i.ibb.co/5gWbYzK1'],
       videoKey: 'alex_video', 
     },
   },
@@ -1670,7 +1670,7 @@ export const sampleDogs: AdoptableDog[] = [
     media: {
       mainPhotoKey: 'ruby_main',
       storyPhotoKey: 'ruby_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/zVhb5jVR/15-07-2025-Ruby-standing-mouth-open.jpg', 'https://i.ibb.co/F47LZ6rP/15-07-2025-Ruby-running-in-field1.jpg', 'https://i.ibb.co/y2qWx7s/15-07-2025-Ruby-running-in-field.jpg', 'https://i.ibb.co/ccDKfQtv/15-07-2025-Ruby-looking-sideways.jpg', 'https://i.ibb.co/svbgKZqK/15-07-2025-Ruby-laying-down-with-training.jpg', 'https://i.ibb.co/WWJNFpRX/15-07-2025-Ruby-getting-belly-rubs.jpg', 'https://i.ibb.co/8nCVTmy2/15-07-2025-Queeni-chasing-ball.jpg'],
       videoKey: 'benji_video',
     },
   },
@@ -1712,10 +1712,54 @@ export const sampleDogs: AdoptableDog[] = [
       text: "Pretty's calm and loving presence is a gift. She reminds us of the beauty in quiet connections and a peaceful life.",
     },
     media: {
-      mainPhotoKey: 'pretty_main', // TODO: Replace profile picture
+      mainPhotoKey: 'pretty_main',
       storyPhotoKey: 'pretty_main',
-      galleryKeys: [],
+      galleryKeys: ['https://i.ibb.co/JWyhkf9X/Pretty-playing-with-a-ball-while-laying-in-the-field-07-2025.jpg', 'https://i.ibb.co/Xx2pGDY2/Pretty-laying-in-the-field-and-playing-with-a-ball-with-one-paw-in-the-air-07-2025.jpg', 'https://i.ibb.co/XZjgtXBJ/Pretty-laying-down-in-the-field-while-playing-with-a-ball-07-2025.jpg', 'https://i.ibb.co/dJMRN1vt/15-07-2025-Pretty-running-in-the-field.jpg', 'https://i.ibb.co/YTdgv3Kx/Pretty-running-in-the-field-looking-away-from-the-camera-with-both-ears-lifted-07-2025.jpg', 'https://i.ibb.co/gFzQ7bRw/Pretty-running-and-looking-towards-the-camera-07-2025.jpg'],
       videoKey: 'blake_video',
     },
-  }
+  },
+  {
+    id: 'queeni',
+    name: 'Queeni',
+    status: 'Available',
+    petInfo: {
+      age: 'Adult',
+      breed: 'Crossbreed',
+      gender: 'Female',
+      sterilised: 'Yes',
+      size: 'Medium',
+    },
+    compatibility: {
+      kids: 'Yes',
+      dogs: 'Yes',
+      cats: 'Unknown',
+    },
+    idealHome: 'A loving family home where she can play and be cherished.',
+    story: {
+      title: 'Her Story',
+      text: 'Queeni is a wonderful dog who loves to play and enjoys the company of both people and other dogs. She is ready to find her forever home.',
+    },
+    personality: {
+      title: 'Personality',
+      text: 'Queeni is playful, energetic, and loves fetching balls. She enjoys outdoor activities and is always eager to engage in games and exercise.',
+    },
+    specialTrait: {
+      title: 'What Makes Her Special',
+      points: [
+        'Loves to play fetch and chase balls',
+        'Very social and gets along well with other dogs',
+        'Energetic and fun-loving companion',
+      ],
+    },
+    loveReason: {
+      title: "Why You'll Love Her",
+      text: 'Queeni will bring endless joy and energy to your life. Her playful spirit and loving nature make her a perfect addition to any active family.',
+    },
+    media: {
+      mainPhotoKey: 'queeni_main',
+      storyPhotoKey: 'queeni_main',
+      galleryKeys: ['https://i.ibb.co/JwgwvFM8/15-07-2025-Queeni-picking-up-ball.jpg', 'https://i.ibb.co/Q3pbHHph/15-07-2025-Queeni-looking-at-camera1.jpg', 'https://i.ibb.co/6cHGtT1m/15-07-2025-Queeni-looking-at-camera.jpg', 'https://i.ibb.co/Q72GSP32/15-07-2025-Queeni-fetching-ball1.jpg', 'https://i.ibb.co/PG1rQdC0/15-07-2025-Queeni-fetching-ball.jpg', 'https://i.ibb.co/zHmmQzzt/15-07-2025-Queeni-chasing-ball1.jpg'],
+      videoKey: 'alex_video', 
+    },
+  },
 ];

@@ -165,23 +165,12 @@ const DogProfilePage: React.FC<DogProfilePageProps> = ({ dogId, mediaContent, is
 
                 {/* Additional Media */}
                  <div className="my-12">
-                     <PawIcon className="w-10 h-10 text-brand-secondary mx-auto mb-4" />
                      <h2 className="text-3xl font-bold text-brand-secondary mb-6 text-center">More Photos of {dog.name}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        {dog.media.galleryKeys.map(key => {
-                            const url = mediaContent[key];
-                            return url ? (
-                                <div key={key} className="w-32 h-24 md:w-40 md:h-30 lg:w-48 lg:h-36">
-                                    <EditableMedia 
-                                        mediaKey={key} 
-                                        mediaUrl={url} 
-                                        alt={`Gallery photo of ${dog.name}`} 
-                                        isEditMode={isEditMode} 
-                                        onUpdate={onMediaUpdate} 
-                                        className="w-full h-full object-contain rounded-lg"
-                                    />
-                                </div>
-                            ) : null
+                        {dog.media.galleryKeys.map((keyOrUrl, index) => {
+                            // Handle both media keys and direct URLs
+                            const url = keyOrUrl.startsWith('http') ? keyOrUrl : mediaContent[keyOrUrl];
+                            return url ? <EditableMedia key={index} mediaKey={`gallery-${dog.id}-${index}`} mediaUrl={url} alt={`Gallery photo of ${dog.name}`} isEditMode={isEditMode} onUpdate={onMediaUpdate} className="w-full h-auto object-contain max-h-60 rounded-lg"/> : null
                         })}
                     </div>
                     {videoUrl && (
