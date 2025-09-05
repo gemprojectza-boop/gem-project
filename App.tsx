@@ -78,9 +78,11 @@ const initialMediaContent: MediaContent = {
   change_life_wishlist: 'https://i.ibb.co/XfDs0T7c/image.png', // Our Wishlist
   change_life_volunteer: 'https://i.ibb.co/Kc37Y6gK/image.png', // Volunteer Your Time
   // ABOUT PAGE UPDATES
-  about_hero: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg', // About Page Step 1: Hero Banner (Fixed URL)
-  about_welcome_gate: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg', // About Page Step 2: Who We Are section (Fixed URL)
+  about_hero: 'https://i.ibb.co/mrdDBD7w/image.png', // About Page Step 1: Hero Banner - Dogs visible
+  about_welcome_gate: 'https://i.ibb.co/Pzm784SP/image.png', // About Page Step 2: Who We Are section - handler + dog landscape 3:2
   about_who_we_are: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg', // About Page Step 2: Who We Are section (Fixed URL)
+  about_under_who_we_are: 'https://i.ibb.co/jkYLNHXF/image.png', // About Page: Image under Who We Are section
+  about_under_community_programmes: 'https://i.ibb.co/7tYS0MHr/image.png', // About Page: Image under Community Programme boxes
   about_full_width_banner_1: 'https://i.ibb.co/38X4vg9/DSC03223.jpg', // About Page Step 3: Handler stroking white dog outdoors (Fixed URL)
   
   // About Page Steps 4-5: Community Programmes
@@ -89,8 +91,8 @@ const initialMediaContent: MediaContent = {
   about_hands_on_caregiver: 'https://i.ibb.co/GvwgC6Fp/DSC01400.jpg', // Horse being brushed in stable (Fixed URL)
   
   // Missing About Page images
-  about_sleeping_dogs: 'https://i.ibb.co/38X4vg9/DSC03223.jpg', // Peaceful sleeping dog
-  about_dog_walk: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg', // Group dog walk
+  about_sleeping_dogs: 'https://i.ibb.co/cSRGtGQD/image.png', // What Makes Us Different - anchor image
+  about_dog_walk: 'https://i.ibb.co/tT03prhg/image.png', // Life at the Sanctuary - following What Makes Us Different
   about_drone_shot: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg', // Aerial view of sanctuary
   
   about_community_anchor: 'https://i.ibb.co/pjgyd2Kr/image.png', // About Page Step 6: Dog lying in grass with yellow toy (Fixed URL)
@@ -98,10 +100,10 @@ const initialMediaContent: MediaContent = {
   about_life_at_sanctuary: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg', // About Page Step 8: Dogs playing fetch in sunlight (Fixed URL)
   
   // About Page Step 9: Our Facilities (2x2 grid)
-  facility_dog_kennels: 'https://i.ibb.co/kVHsDb0G/image.png', // Dog kennel facilities (Fixed URL)
-  facility_play_areas: 'https://i.ibb.co/MkgxrVN9/image.png', // Dog playing with ball in facility (Fixed URL)
-  facility_horse_paddocks: 'https://i.ibb.co/84Smg3bG/DSC02276.jpg', // White horse walking with handler (Fixed URL)
-  facility_stables: 'https://i.ibb.co/7tX8xjd4/DSC00980.jpg', // Stable interior with Kim (Fixed URL)
+  facility_dog_kennels: 'https://i.ibb.co/NgKNNX03/image.png', // Dog facility 1 - top left
+  facility_play_areas: 'https://i.ibb.co/pjcRshHf/image.png', // Dog facility 2 - top right  
+  facility_horse_paddocks: 'https://i.ibb.co/QLDm0TZ/image.png', // Horse facility 1 - bottom left
+  facility_stables: 'https://i.ibb.co/JRqYSNZk/image.png', // Horse facility 2 - bottom right
   
   // --- HORSE IMAGES ---
   horses_gallery_01: 'https://i.ibb.co/k6PstKp0/DSC00279.jpg',

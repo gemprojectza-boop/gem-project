@@ -48,7 +48,25 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
             </div>
           </div>
           <div className="content-bubble animate-on-scroll">
-            {mediaContent.about_welcome_gate && <EditableMedia mediaKey="about_welcome_gate" mediaUrl={mediaContent.about_welcome_gate} alt="Animal being welcomed to the sanctuary" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="rounded-t-lg" />}
+            {mediaContent.about_welcome_gate && <EditableMedia mediaKey="about_welcome_gate" mediaUrl={mediaContent.about_welcome_gate} alt="Handler with dog - centered landscape crop" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="w-full aspect-[3/2] object-cover object-center rounded-lg" />}
+          </div>
+        </div>
+      </section>
+
+      {/* Image section under Who We Are */}
+      <section className="py-12 bg-brand-bg-subtle">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto animate-on-scroll">
+            {mediaContent.about_under_who_we_are && (
+              <EditableMedia
+                mediaKey="about_under_who_we_are"
+                mediaUrl={mediaContent.about_under_who_we_are}
+                alt="About sanctuary image"
+                isEditMode={isEditMode}
+                onUpdate={onMediaUpdate}
+                className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+              />
+            )}
           </div>
         </div>
       </section>
@@ -98,8 +116,23 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
                </div>
             </div>
           </div>
-          <div className="mt-12 content-bubble animate-on-scroll">
-            {mediaContent.about_mobile_vet && <EditableMedia mediaKey="about_mobile_vet" mediaUrl={mediaContent.about_mobile_vet} alt="Youth helping with animal care" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="rounded-t-lg" />}
+        </div>
+      </section>
+
+      {/* Image section under Community Programme boxes */}
+      <section className="py-12 bg-brand-bg-main">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto animate-on-scroll">
+            {mediaContent.about_under_community_programmes && (
+              <EditableMedia
+                mediaKey="about_under_community_programmes"
+                mediaUrl={mediaContent.about_under_community_programmes}
+                alt="Community programmes image"
+                isEditMode={isEditMode}
+                onUpdate={onMediaUpdate}
+                className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+              />
+            )}
           </div>
         </div>
       </section>
@@ -118,7 +151,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
             </div>
           </div>
           <div className="md:order-1 content-bubble animate-on-scroll">
-            {mediaContent.about_sleeping_dogs && <EditableMedia mediaKey="about_sleeping_dogs" mediaUrl={mediaContent.about_sleeping_dogs} alt="Peaceful sleeping dog" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="rounded-t-lg" />}
+            {mediaContent.about_sleeping_dogs && <EditableMedia mediaKey="about_sleeping_dogs" mediaUrl={mediaContent.about_sleeping_dogs} alt="What makes us different anchor image" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="w-full h-80 md:h-96 object-cover rounded-lg shadow-lg" />}
           </div>
         </div>
       </section>
@@ -142,7 +175,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
             </div>
           </div>
           <div className="content-bubble animate-on-scroll">
-            {mediaContent.about_dog_walk && <EditableMedia mediaKey="about_dog_walk" mediaUrl={mediaContent.about_dog_walk} alt="Group dog walk on the beach" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="rounded-t-lg" />}
+            {mediaContent.about_dog_walk && <EditableMedia mediaKey="about_dog_walk" mediaUrl={mediaContent.about_dog_walk} alt="Life at the Sanctuary image" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="w-full h-80 md:h-96 object-cover rounded-lg shadow-lg" />}
           </div>
         </div>
       </section>
@@ -184,8 +217,60 @@ const AboutPage: React.FC<AboutPageProps> = ({ mediaContent, isEditMode, onMedia
                 </div>
             </div>
           </div>
-           <div className="mt-12 content-bubble">
-            {mediaContent.about_drone_shot && <EditableMedia mediaKey="about_drone_shot" mediaUrl={mediaContent.about_drone_shot} alt="Aerial view of the sanctuary facilities" isEditMode={isEditMode} onUpdate={onMediaUpdate} className="rounded-t-lg"/>}
+           
+          {/* 2x2 Grid of Facility Images */}
+          <div className="mt-12 grid grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Top row - Dogs */}
+            <div className="animate-on-scroll">
+              {mediaContent.facility_dog_kennels && (
+                <EditableMedia
+                  mediaKey="facility_dog_kennels"
+                  mediaUrl={mediaContent.facility_dog_kennels}
+                  alt="Dog facility 1"
+                  isEditMode={isEditMode}
+                  onUpdate={onMediaUpdate}
+                  className="w-full h-48 md:h-56 object-cover rounded-lg shadow-lg"
+                />
+              )}
+            </div>
+            <div className="animate-on-scroll">
+              {mediaContent.facility_play_areas && (
+                <EditableMedia
+                  mediaKey="facility_play_areas"
+                  mediaUrl={mediaContent.facility_play_areas}
+                  alt="Dog facility 2"
+                  isEditMode={isEditMode}
+                  onUpdate={onMediaUpdate}
+                  className="w-full h-48 md:h-56 object-cover rounded-lg shadow-lg"
+                />
+              )}
+            </div>
+            
+            {/* Bottom row - Horses */}
+            <div className="animate-on-scroll">
+              {mediaContent.facility_horse_paddocks && (
+                <EditableMedia
+                  mediaKey="facility_horse_paddocks"
+                  mediaUrl={mediaContent.facility_horse_paddocks}
+                  alt="Horse facility 1"
+                  isEditMode={isEditMode}
+                  onUpdate={onMediaUpdate}
+                  className="w-full h-48 md:h-56 object-cover rounded-lg shadow-lg"
+                />
+              )}
+            </div>
+            <div className="animate-on-scroll">
+              {mediaContent.facility_stables && (
+                <EditableMedia
+                  mediaKey="facility_stables"
+                  mediaUrl={mediaContent.facility_stables}
+                  alt="Horse facility 2"
+                  isEditMode={isEditMode}
+                  onUpdate={onMediaUpdate}
+                  className="w-full h-48 md:h-56 object-cover rounded-lg shadow-lg"
+                />
+              )}
+            </div>
           </div>
         </div>
       </section>
