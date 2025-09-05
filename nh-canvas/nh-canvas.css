@@ -1,0 +1,712 @@
+/**
+ * NH Canvas - Site-wide Design Canvas System
+ * Namespaced CSS styles
+ */
+
+/* Base styles and variables */
+:root {
+  --nh-primary: #007acc;
+  --nh-primary-hover: #005a9d;
+  --nh-success: #2ed573;
+  --nh-error: #ff4757;
+  --nh-warning: #ffa502;
+  --nh-dark: rgba(0, 0, 0, 0.9);
+  --nh-light: rgba(255, 255, 255, 0.9);
+  --nh-border: rgba(255, 255, 255, 0.1);
+  --nh-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --nh-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --nh-border-radius: 6px;
+  --nh-border-radius-lg: 8px;
+  --nh-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --nh-font-size-xs: 10px;
+  --nh-font-size-sm: 11px;
+  --nh-font-size-base: 12px;
+  --nh-font-size-lg: 14px;
+  --nh-transition: all 0.2s ease;
+  --nh-transition-fast: all 0.1s ease;
+}
+
+/* Prevent interference with existing styles */
+.nh-canvas-overlay * {
+  box-sizing: border-box;
+}
+
+/* Selection visual indicator */
+.nh-selected {
+  outline: 2px solid var(--nh-primary) !important;
+  outline-offset: -2px !important;
+}
+
+.nh-selected::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(0, 122, 204, 0.1);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Wrapper for movable elements */
+.nh-canvas-wrap {
+  position: relative !important;
+  display: inline-block !important;
+  pointer-events: auto !important;
+}
+
+/* Body states */
+body.nh-dragging {
+  cursor: move !important;
+}
+
+body.nh-dragging * {
+  cursor: move !important;
+  user-select: none !important;
+}
+
+body.nh-resizing {
+  cursor: nw-resize !important;
+}
+
+body.nh-resizing * {
+  user-select: none !important;
+}
+
+/* Ghost element during drag */
+.nh-ghost-element {
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+  z-index: 10000 !important;
+  border: 2px dashed var(--nh-primary) !important;
+  background: rgba(0, 122, 204, 0.1) !important;
+}
+
+/* Resize handles */
+.nh-resize-handle {
+  position: absolute;
+  background: var(--nh-primary);
+  border: 1px solid white;
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  z-index: 10001;
+  pointer-events: auto;
+  transition: var(--nh-transition-fast);
+}
+
+.nh-resize-handle:hover {
+  background: var(--nh-primary-hover);
+  transform: scale(1.2);
+}
+
+.nh-resize-nw { cursor: nw-resize; }
+.nh-resize-n { cursor: n-resize; }
+.nh-resize-ne { cursor: ne-resize; }
+.nh-resize-w { cursor: w-resize; }
+.nh-resize-e { cursor: e-resize; }
+.nh-resize-sw { cursor: sw-resize; }
+.nh-resize-s { cursor: s-resize; }
+.nh-resize-se { cursor: se-resize; }
+
+/* Marquee selection */
+.nh-marquee {
+  border: 1px dashed var(--nh-primary);
+  background: rgba(0, 122, 204, 0.1);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Rulers */
+.nh-canvas-rulers {
+  pointer-events: none;
+  font-family: var(--nh-font-family);
+}
+
+.nh-canvas-ruler {
+  position: absolute;
+  background: var(--nh-dark);
+  color: white;
+  font-size: var(--nh-font-size-xs);
+  overflow: hidden;
+}
+
+.nh-canvas-ruler-corner {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.nh-ruler-indicator {
+  background: #ff0000 !important;
+}
+
+/* Crosshair */
+.nh-canvas-crosshair {
+  pointer-events: none;
+}
+
+.nh-canvas-crosshair > div {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+/* Grid overlay */
+.nh-canvas-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 122, 204, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 122, 204, 0.2) 1px, transparent 1px);
+}
+
+/* Guides/snaplines */
+.nh-guide {
+  pointer-events: none;
+}
+
+.nh-guide-vertical {
+  background: var(--nh-primary);
+}
+
+.nh-guide-horizontal {
+  background: var(--nh-primary);
+}
+
+.nh-guide-center {
+  background: #ff6b35;
+}
+
+/* Main control panel */
+.nh-canvas-main-panel {
+  font-family: var(--nh-font-family);
+  font-size: var(--nh-font-size-base);
+  line-height: 1.4;
+}
+
+.nh-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--nh-border);
+}
+
+.nh-panel-title {
+  font-weight: 600;
+  font-size: var(--nh-font-size-lg);
+}
+
+.nh-panel-section {
+  margin-bottom: 12px;
+}
+
+.nh-panel-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Form controls */
+.nh-control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.nh-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: var(--nh-font-size-sm);
+}
+
+.nh-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.nh-checkmark {
+  width: 14px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--nh-border);
+  border-radius: 3px;
+  position: relative;
+  transition: var(--nh-transition);
+}
+
+.nh-checkbox input[type="checkbox"]:checked + .nh-checkmark {
+  background: var(--nh-primary);
+  border-color: var(--nh-primary);
+}
+
+.nh-checkbox input[type="checkbox"]:checked + .nh-checkmark::after {
+  content: '✓';
+  position: absolute;
+  left: 2px;
+  top: -1px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.nh-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--nh-border);
+  border-radius: var(--nh-border-radius);
+  color: white;
+  padding: 4px 8px;
+  font-size: var(--nh-font-size-sm);
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: var(--nh-transition);
+}
+
+.nh-select:hover,
+.nh-select:focus {
+  border-color: var(--nh-primary);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nh-select option {
+  background: #333;
+  color: white;
+}
+
+.nh-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--nh-border);
+  border-radius: var(--nh-border-radius);
+  color: white;
+  padding: 6px 8px;
+  font-size: var(--nh-font-size-sm);
+  font-family: inherit;
+  outline: none;
+  transition: var(--nh-transition);
+  width: 100%;
+}
+
+.nh-input:hover,
+.nh-input:focus {
+  border-color: var(--nh-primary);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nh-input-small {
+  padding: 4px 6px;
+  width: 50px;
+  text-align: center;
+}
+
+.nh-input-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--nh-font-size-xs);
+}
+
+.nh-input-group label {
+  min-width: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+.nh-btn {
+  background: var(--nh-primary);
+  border: none;
+  border-radius: var(--nh-border-radius);
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--nh-font-size-sm);
+  font-weight: 500;
+  outline: none;
+  padding: 8px 12px;
+  transition: var(--nh-transition);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nh-btn:hover {
+  background: var(--nh-primary-hover);
+  transform: translateY(-1px);
+}
+
+.nh-btn:active {
+  transform: translateY(0);
+}
+
+.nh-btn-small {
+  padding: 6px 10px;
+  font-size: var(--nh-font-size-xs);
+}
+
+.nh-btn-icon {
+  padding: 6px;
+  width: 28px;
+  height: 28px;
+}
+
+.nh-btn-full-width {
+  width: 100%;
+}
+
+.nh-btn-outline {
+  background: transparent;
+  border: 1px solid var(--nh-border);
+}
+
+.nh-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--nh-primary);
+}
+
+.nh-btn-danger {
+  background: var(--nh-error);
+}
+
+.nh-btn-danger:hover {
+  background: #e84c3d;
+}
+
+.nh-btn-toggle {
+  background: var(--nh-success);
+  min-width: 50px;
+}
+
+.nh-btn-toggle:hover {
+  background: #27ae60;
+}
+
+.nh-button-group {
+  display: flex;
+  gap: 4px;
+}
+
+.nh-icon {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Context toolbar */
+.nh-canvas-context-toolbar {
+  font-family: var(--nh-font-family);
+  font-size: var(--nh-font-size-sm);
+  min-width: 200px;
+}
+
+.nh-toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.nh-toolbar-section:not(:last-child) {
+  border-bottom: 1px solid var(--nh-border);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.nh-toolbar-arrow {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0.9);
+}
+
+/* Help modal */
+.nh-canvas-help-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--nh-font-family);
+}
+
+.nh-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.nh-modal-content {
+  position: relative;
+  background: var(--nh-light);
+  color: #333;
+  border-radius: var(--nh-border-radius-lg);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: var(--nh-shadow);
+}
+
+.nh-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nh-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nh-modal-close {
+  background: transparent;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 4px;
+  line-height: 1;
+}
+
+.nh-modal-close:hover {
+  color: #333;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.nh-modal-body {
+  padding: 24px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.nh-shortcut-section {
+  margin-bottom: 24px;
+}
+
+.nh-shortcut-section:last-child {
+  margin-bottom: 0;
+}
+
+.nh-shortcut-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.nh-shortcut-list {
+  display: grid;
+  gap: 8px;
+}
+
+.nh-shortcut-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: var(--nh-border-radius);
+}
+
+.nh-shortcut-key {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+  background: #333;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.nh-shortcut-desc {
+  color: #666;
+  font-size: 14px;
+}
+
+.nh-tips-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.nh-tips-list li {
+  margin-bottom: 8px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Notifications */
+.nh-notification {
+  font-family: var(--nh-font-family);
+  font-size: var(--nh-font-size-lg);
+  font-weight: 500;
+  border-radius: var(--nh-border-radius);
+  box-shadow: var(--nh-shadow-sm);
+}
+
+.nh-notification-success {
+  background: var(--nh-success);
+}
+
+.nh-notification-error {
+  background: var(--nh-error);
+}
+
+.nh-notification-info {
+  background: var(--nh-primary);
+}
+
+/* Utility classes */
+.nh-hidden {
+  display: none !important;
+}
+
+.nh-invisible {
+  visibility: hidden !important;
+}
+
+.nh-pointer-none {
+  pointer-events: none !important;
+}
+
+.nh-pointer-auto {
+  pointer-events: auto !important;
+}
+
+/* File input styling */
+.nh-file-input {
+  display: none;
+}
+
+/* Animation utilities */
+@keyframes nh-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nh-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.nh-animate-in {
+  animation: nh-fade-in 0.2s ease forwards;
+}
+
+.nh-animate-out {
+  animation: nh-fade-out 0.2s ease forwards;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .nh-canvas-overlay *,
+  .nh-canvas-overlay *::before,
+  .nh-canvas-overlay *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .nh-ghost-element {
+    opacity: 0.8 !important;
+  }
+  
+  .nh-btn:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --nh-primary: #0066cc;
+    --nh-border: rgba(255, 255, 255, 0.3);
+  }
+  
+  .nh-selected {
+    outline-width: 3px !important;
+  }
+  
+  .nh-resize-handle {
+    border-width: 2px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .nh-modal-content {
+    background: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  .nh-modal-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nh-shortcut-item {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .nh-shortcut-desc,
+  .nh-tips-list li {
+    color: #aaa;
+  }
+  
+  .nh-modal-close {
+    color: #aaa;
+  }
+  
+  .nh-modal-close:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nh-canvas-main-panel {
+    width: 180px;
+    font-size: 11px;
+  }
+  
+  .nh-canvas-context-toolbar {
+    min-width: 150px;
+  }
+  
+  .nh-modal-content {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .nh-modal-body {
+    padding: 16px;
+  }
+  
+  .nh-resize-handle {
+    width: 12px;
+    height: 12px;
+  }
+}

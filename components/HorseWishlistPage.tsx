@@ -35,7 +35,7 @@ const HorseWishlistPage: React.FC<HorseWishlistPageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>Caring for horses requires specialized equipment, feed, and medical supplies. Your in-kind donations make it possible for us to provide the best care for these gentle giants who have found sanctuary with us. Every donation, whether large or small, directly impacts their daily comfort and wellbeing.</p>
+        <p className="text-center">Caring for horses requires specialized equipment, feed, and medical supplies. Your in-kind donations make it possible for us to provide the best care for these gentle giants who have found sanctuary with us. Every donation, whether large or small, directly impacts their daily comfort and wellbeing.</p>
       </ContentSection>
       
       <section className="py-16 md:py-20 bg-brand-bg-subtle">
@@ -136,8 +136,8 @@ const HorseWishlistPage: React.FC<HorseWishlistPageProps> = (props) => {
               <PawIcon className="w-10 h-10 text-brand-accent mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-bold text-brand-accent mb-6">How to Donate Items</h2>
               <div className="text-lg text-gray-700 space-y-4 mb-8">
-                <p>Donating is easy! Contact us to arrange drop-off times or to discuss large donations. We're grateful for items in good condition that can make a real difference in our horses' lives.</p>
-                <p>For perishable items like feed, please coordinate with us first to ensure freshness and storage space.</p>
+                <p className="text-center">Donating is easy! Contact us to arrange drop-off times or to discuss large donations. We're grateful for items in good condition that can make a real difference in our horses' lives.</p>
+                <p className="text-center">For perishable items like feed, please coordinate with us first to ensure freshness and storage space.</p>
               </div>
               <div className="flex flex-wrap justify-center gap-4">
                 <CtaButton href="/contact" className="bg-brand-accent text-white hover:bg-brand-accent-hover">

@@ -79,7 +79,7 @@ const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
       </section>
 
       <ContentSection title="Your New Best Friend is Waiting" titleColorClass="text-brand-secondary">
-        <p>At The Gem Project Sanctuary we believe that adoption is one of the most powerful ways to transform a life. While some animals stay with us for life, many of our dogs are looking for loving homes where they can continue their journey of healing.</p>
+        <p className="text-center">At The Gem Project Sanctuary we believe that adoption is one of the most powerful ways to transform a life. While some animals stay with us for life, many of our dogs are looking for loving homes where they can continue their journey of healing.</p>
         <div className="my-6 rounded-lg overflow-hidden">
           <EditableMedia
             mediaKey="about_dog_walk"
@@ -89,13 +89,13 @@ const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
             onUpdate={props.onMediaUpdate}
           />
         </div>
-        <p>All dogs available for adoption have received comprehensive veterinary care and behavioural support. They are vaccinated, sterilised and assessed by our team to ensure they are emotionally and physically ready for a new start. Each dog goes through daily enrichment, structured training and one-on-one socialisation to prepare them for life in a home environment.</p>
+        <p className="text-center">All dogs available for adoption have received comprehensive veterinary care and behavioural support. They are vaccinated, sterilised and assessed by our team to ensure they are emotionally and physically ready for a new start. Each dog goes through daily enrichment, structured training and one-on-one socialisation to prepare them for life in a home environment.</p>
       </ContentSection>
 
       <ContentSection title="Our Adoption Process" className="bg-brand-bg-subtle" titleColorClass="text-brand-secondary">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <p>Our adoption process is designed to ensure that each dog is placed in a home where they will thrive. We are committed to full transparency and ongoing support.</p>
+            <p className="text-center">Our adoption process is designed to ensure that each dog is placed in a home where they will thrive. We are committed to full transparency and ongoing support.</p>
             <ol className="list-decimal list-inside space-y-4 text-lg mt-4">
                 <li><strong>Submit an Application:</strong> Let us know about your lifestyle, experience and what you are looking for.</li>
                 <li><strong>Chat with Our Team:</strong> We'll get in touch to recommend dogs that may be a good fit for you.</li>
@@ -118,8 +118,8 @@ const DogAdoptionPage: React.FC<DogAdoptionPageProps> = (props) => {
       </ContentSection>
 
        <ContentSection title="Why Adopt from Us?" titleColorClass="text-brand-secondary">
-        <p>We do things differently. Our dogs live in family-style units, not in kennels. They receive daily enrichment, personalised training and consistent care. We get to know them deeply—their quirks, their joys and their ideal home environment.</p>
-        <p>By adopting from us, you are not just saving a life. You are joining a journey of love and transformation.</p>
+        <p className="text-center">We do things differently. Our dogs live in family-style units, not in kennels. They receive daily enrichment, personalised training and consistent care. We get to know them deeply—their quirks, their joys and their ideal home environment.</p>
+        <p className="text-center">By adopting from us, you are not just saving a life. You are joining a journey of love and transformation.</p>
         <div className="mt-8">
             <h3 className="text-2xl font-bold text-brand-secondary mb-4">Benefits of Adopting from The Gem Project Sanctuary:</h3>
             <ul className="list-disc list-inside space-y-2">

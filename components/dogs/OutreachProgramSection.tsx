@@ -24,7 +24,7 @@ const OutreachProgramSection: React.FC<SectionProps> = (props) => {
 
         <div className="content-bubble">
           <div className="p-6 md:p-8 space-y-4 text-lg text-gray-700">
-            <p>At The Gem Project Sanctuary our Outreach Program is more than education. It is connection. We believe that every animal deserves a life of dignity and every person deserves the tools and knowledge to help create that world. Our outreach is rooted in compassion and action reaching beyond our sanctuary walls to uplift communities through awareness hands-on care and meaningful support.</p>
+            <p className="text-center">At The Gem Project Sanctuary our Outreach Program is more than education. It is connection. We believe that every animal deserves a life of dignity and every person deserves the tools and knowledge to help create that world. Our outreach is rooted in compassion and action reaching beyond our sanctuary walls to uplift communities through awareness hands-on care and meaningful support.</p>
             {props.mediaContent['outreach_hero'] && (
                 <EditableMedia
                     mediaKey="outreach_hero"

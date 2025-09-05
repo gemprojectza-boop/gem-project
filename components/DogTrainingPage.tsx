@@ -67,42 +67,42 @@ const DogTrainingPage: React.FC<DogTrainingPageProps> = (props) => {
             className="rounded-t-lg aspect-video" 
           />
           <div className="p-6 md:p-8">
-            <p>At The Gem Project Sanctuary, behaviour and training are at the heart of our rehabilitation work. Many of the dogs who come to us carry emotional and behavioural scars shaped by trauma, neglect, fear and isolation.</p>
-            <p>Our programme focuses on how dogs think, learn and respond. We use positive, science-based methods to teach desirable behaviours and help them unlearn survival-based habits. Whether they're preparing for adoption, entering therapy or service training, or staying with us as forever residents, every dog deserves a chance to thrive.</p>
+            <p className="text-center">At The Gem Project Sanctuary, behaviour and training are at the heart of our rehabilitation work. Many of the dogs who come to us carry emotional and behavioural scars shaped by trauma, neglect, fear and isolation.</p>
+            <p className="text-center">Our programme focuses on how dogs think, learn and respond. We use positive, science-based methods to teach desirable behaviours and help them unlearn survival-based habits. Whether they're preparing for adoption, entering therapy or service training, or staying with us as forever residents, every dog deserves a chance to thrive.</p>
           </div>
         </div>
       </ContentSection>
 
-      <ContentSection title="Our Training Approach" className="bg-brand-bg-subtle text-left" titleColorClass="text-brand-secondary">
-        <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div className="text-left">
+      <ContentSection title="Our Training Approach" className="bg-brand-bg-subtle text-center" titleColorClass="text-brand-secondary">
+        <div className="grid md:grid-cols-2 gap-8 text-center">
+            <div className="text-center">
                 <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
-                <h3 className="text-2xl font-bold mb-4 text-brand-secondary text-left">What We Focus On</h3>
-                <p className="text-left">Each training journey is tailored to the dog's unique needs, considering breed, genetics, past experiences, environment and health. We engage their natural instincts—sniffing, chewing, digging, scratching, vocalising and bonding—encouraging curiosity and confidence.</p>
-                 <p className="mt-4 text-left">Training offered includes basic obedience, behaviour rehabilitation, social integration, agility skills, and preparation for emotional support roles.</p>
+                <h3 className="text-2xl font-bold mb-4 text-brand-secondary text-center">What We Focus On</h3>
+                <p className="text-center">Each training journey is tailored to the dog's unique needs, considering breed, genetics, past experiences, environment and health. We engage their natural instincts—sniffing, chewing, digging, scratching, vocalising and bonding—encouraging curiosity and confidence.</p>
+                 <p className="mt-4 text-center">Training offered includes basic obedience, behaviour rehabilitation, social integration, agility skills, and preparation for emotional support roles.</p>
             </div>
-             <div className="text-left">
+             <div className="text-center">
                 <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
-                <h3 className="text-2xl font-bold mb-4 text-brand-secondary text-left">Our Golden Rules</h3>
-                <ul className="list-disc space-y-3 text-left pl-5">
-                    <li className="text-left"><strong>Reward-based training:</strong><br/>Celebrate and reinforce what's right.</li>
-                    <li className="text-left"><strong>Consistency:</strong><br/>Use the same cues, gestures, and outcomes.</li>
-                    <li className="text-left"><strong>Timing matters:</strong><br/>Immediate rewards build understanding.</li>
-                    <li className="text-left"><strong>Keep it short and fun:</strong><br/>Frequent mini sessions work best.</li>
-                    <li className="text-left"><strong>No punishment:</strong><br/>Fear breaks trust. We never use it.</li>
+                <h3 className="text-2xl font-bold mb-4 text-brand-secondary text-center">Our Golden Rules</h3>
+                <ul className="list-disc space-y-3 text-center pl-5">
+                    <li className="text-center"><strong>Reward-based training:</strong><br/>Celebrate and reinforce what's right.</li>
+                    <li className="text-center"><strong>Consistency:</strong><br/>Use the same cues, gestures, and outcomes.</li>
+                    <li className="text-center"><strong>Timing matters:</strong><br/>Immediate rewards build understanding.</li>
+                    <li className="text-center"><strong>Keep it short and fun:</strong><br/>Frequent mini sessions work best.</li>
+                    <li className="text-center"><strong>No punishment:</strong><br/>Fear breaks trust. We never use it.</li>
                 </ul>
             </div>
         </div>
       </ContentSection>
 
       <ContentSection title="Behaviour Transformation" titleColorClass="text-brand-secondary">
-        <p>Many of our dogs came from isolated lives, confined in enclosures with little human interaction. Some blossom quickly with love and care, while others need patience, space and gentle structure.</p>
-        <p>Through ongoing work, we've seen remarkable changes. Dogs once too shy to make eye contact now run joyfully in packs. Some sleep soundly beside our staff, curled up in warm homes with people who understand their needs.</p>
-        <p>Their true personalities emerge when they feel safe. And once they do, they shine.</p>
+        <p className="text-center">Many of our dogs came from isolated lives, confined in enclosures with little human interaction. Some blossom quickly with love and care, while others need patience, space and gentle structure.</p>
+        <p className="text-center">Through ongoing work, we've seen remarkable changes. Dogs once too shy to make eye contact now run joyfully in packs. Some sleep soundly beside our staff, curled up in warm homes with people who understand their needs.</p>
+        <p className="text-center">Their true personalities emerge when they feel safe. And once they do, they shine.</p>
       </ContentSection>
 
       <ContentSection title="Environmental Enrichment: More Than Just Play" className="bg-brand-bg-subtle" titleColorClass="text-brand-secondary">
-        <p>Enrichment isn't a luxury; it's essential for a healthy mind. Our dogs need stimulation, exploration and meaningful experiences beyond food and shelter. We've developed a comprehensive enrichment programme to keep their minds and bodies active.</p>
+        <p className="text-center">Enrichment isn't a luxury; it's essential for a healthy mind. Our dogs need stimulation, exploration and meaningful experiences beyond food and shelter. We've developed a comprehensive enrichment programme to keep their minds and bodies active.</p>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-base">
             <div className="p-4 border bg-brand-surface rounded-lg"><strong>Sensory Stimulation:</strong> Scent trails, 'sniffaris', and calming soundscapes.</div>
             <div className="p-4 border bg-brand-surface rounded-lg"><strong>Food-Based Fun:</strong> KONGs, puzzle feeders, and lick mats for relaxation.</div>

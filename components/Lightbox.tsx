@@ -56,7 +56,7 @@ const Lightbox: React.FC<LightboxProps> = ({ images, startIndex, onClose }) => {
                 />
                 {currentImage.caption && (
                      <div className="text-center text-white mt-3 p-2 bg-black/30 rounded-b-lg">
-                        <p>{currentImage.caption}</p>
+                        <p className="text-center">{currentImage.caption}</p>
                     </div>
                 )}
             </div>

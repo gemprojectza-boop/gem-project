@@ -166,7 +166,7 @@ const WebsiteBuilder: React.FC<WebsiteBuilderProps> = ({ isEditMode, onToggleEdi
     modal.innerHTML = `
       <div style="background: white; padding: 30px; border-radius: 12px; max-width: 80%; max-height: 80%; overflow: auto; box-shadow: 0 20px 25px rgba(0,0,0,0.1);">
         <h2 style="margin: 0 0 20px 0; color: #333;">🚀 Export Website Code</h2>
-        <p style="color: #666; margin-bottom: 15px;">Your website has been generated as clean HTML/CSS code:</p>
+        <p className="text-center" style="color: #666; margin-bottom: 15px;">Your website has been generated as clean HTML/CSS code:</p>
         <textarea readonly style="width: 100%; height: 400px; font-family: monospace; font-size: 12px; padding: 10px; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9;">${htmlCode}</textarea>
         <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: flex-end;">
           <button onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`).then(() => alert('Code copied to clipboard!')).catch(() => alert('Copy failed'))" 
@@ -179,7 +179,7 @@ const WebsiteBuilder: React.FC<WebsiteBuilderProps> = ({ isEditMode, onToggleEdi
           </button>
         </div>
         <div style="margin-top: 15px; padding: 15px; background: #f0f9ff; border-radius: 6px; border-left: 4px solid #00AEEF;">
-          <p style="margin: 0; font-size: 14px; color: #0369a1;">
+          <p className="text-center" style="margin: 0; font-size: 14px; color: #0369a1;">
             <strong>📝 Usage:</strong> Save this code as an HTML file and open it in any browser. The code is production-ready and optimized for performance.
           </p>
         </div>

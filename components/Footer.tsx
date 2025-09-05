@@ -59,10 +59,10 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-            <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}} className="text-sm">
+            <p className="text-center text-sm" ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>
               A sanctuary for rescued dogs and horses, providing them with a forever home and a second chance at life.
             </p>
-            <p ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}} className="text-xs mt-2">
+            <p className="text-center text-xs mt-2" ref={(el) => { if (el) { el.style.setProperty('color', 'white', 'important'); } }} style={{color: 'white !important'}}>
               © 2024 The Gem Project Sanctuary. All rights reserved.
             </p>
           </div>

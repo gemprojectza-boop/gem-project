@@ -68,49 +68,49 @@ const HorseTrainingPage: React.FC<HorseTrainingPageProps> = (props) => {
             <section className="py-16 md:py-20 bg-brand-bg-subtle">
                 <div className="container mx-auto px-6 max-w-4xl space-y-12">
                      <TrainingSectionCard title="Our Approach" mediaKey="horse_training_liberty" alt="Horse engaging in liberty work in a round pen" {...props}>
-                        <p>At The Gem Project Sanctuary, rehabilitation means far more than physical recovery. It’s about emotional healing too. Our training is based on observation, patience and positive reinforcement not punishment or dominance.</p>
-                        <p>We assess each horse’s background and behavioural signals before creating a tailored training plan. Many of the horses we care for were previously overworked, handled with force or neglected entirely. Some arrive unhaltered or untouched. Others flinch at every movement. We meet them where they are. We honour their past and help them feel safe in the present.</p>
-                        <p>There is no rigid timeline. We move at their speed, giving them space to express themselves. Trust is earned step by step.</p>
+                        <p className="text-center">At The Gem Project Sanctuary, rehabilitation means far more than physical recovery. It’s about emotional healing too. Our training is based on observation, patience and positive reinforcement not punishment or dominance.</p>
+                        <p className="text-center">We assess each horse’s background and behavioural signals before creating a tailored training plan. Many of the horses we care for were previously overworked, handled with force or neglected entirely. Some arrive unhaltered or untouched. Others flinch at every movement. We meet them where they are. We honour their past and help them feel safe in the present.</p>
+                        <p className="text-center">There is no rigid timeline. We move at their speed, giving them space to express themselves. Trust is earned step by step.</p>
                     </TrainingSectionCard>
                     
                     <TrainingSectionCard title="Desensitisation and Groundwork" mediaKey="horse_training_desensitisation" alt="Close-up of gentle haltering of a horse" {...props}>
-                         <p>Many horses arrive fearful of touch or unfamiliar objects. We begin with gentle desensitisation, using our voices, body language and patience to teach them that they are safe. Groundwork builds communication from the ground up.</p>
-                        <p>This phase includes:</p>
+                         <p className="text-center">Many horses arrive fearful of touch or unfamiliar objects. We begin with gentle desensitisation, using our voices, body language and patience to teach them that they are safe. Groundwork builds communication from the ground up.</p>
+                        <p className="text-center">This phase includes:</p>
                         <ul className="list-disc list-inside space-y-2 my-4">
                             <li>Calm haltering and leading in a familiar space</li>
                             <li>Touch work with brushes and ropes to increase comfort</li>
                             <li>Fence-line bonding sessions for highly anxious horses</li>
                             <li>Basic liberty work to encourage voluntary interaction</li>
                         </ul>
-                        <p>Progress can be subtle. A horse that once froze may finally take a step forward. Another may drop their head and release a breath. These moments are the building blocks of trust.</p>
+                        <p className="text-center">Progress can be subtle. A horse that once froze may finally take a step forward. Another may drop their head and release a breath. These moments are the building blocks of trust.</p>
                     </TrainingSectionCard>
 
                     <TrainingSectionCard title="Backing, Schooling and Re-Schooling" mediaKey="horse_training_schooling" alt="Quiet connection between rider and horse during groundwork" {...props}>
-                         <p>For horses who are ready, we carefully introduce light schooling. Many have never been ridden before. Others need to unlearn harsh or fear-based training.</p>
-                        <p>This stage includes:</p>
+                         <p className="text-center">For horses who are ready, we carefully introduce light schooling. Many have never been ridden before. Others need to unlearn harsh or fear-based training.</p>
+                        <p className="text-center">This stage includes:</p>
                         <ul className="list-disc list-inside space-y-2 my-4">
                             <li>Long-lining and lunge work to build strength and responsiveness</li>
                             <li>Voice cues to create calm communication</li>
                             <li>Backing with a gentle rider only when the horse shows readiness</li>
                             <li>Rebuilding confidence in horses with past training trauma</li>
                         </ul>
-                        <p>We never push a horse past their comfort. Riding is not the end goal it is only pursued if it benefits the horse mentally and physically. Horses who cannot be ridden still receive daily care and attention for life.</p>
+                        <p className="text-center">We never push a horse past their comfort. Riding is not the end goal it is only pursued if it benefits the horse mentally and physically. Horses who cannot be ridden still receive daily care and attention for life.</p>
                     </TrainingSectionCard>
 
                      <TrainingSectionCard title="Emotional Recovery Through Structure" mediaKey="horse_training_emotional" alt="Horse standing quietly with trainer" {...props}>
-                        <p>Healing takes more than training it takes consistency. Predictable routines help horses feel secure and build confidence. Our caregivers work with each horse daily, offering:</p>
+                        <p className="text-center">Healing takes more than training it takes consistency. Predictable routines help horses feel secure and build confidence. Our caregivers work with each horse daily, offering:</p>
                         <ul className="list-disc list-inside space-y-2 my-4">
                             <li>Calm feeding routines</li>
                             <li>Consistent caregivers for familiar interaction</li>
                             <li>Low-stimulation environments for anxious horses</li>
                         </ul>
-                        <p>For many, this is the first time they have known what it means to feel safe. Emotional rehabilitation is a key part of our training programme and we measure progress not by performance but by comfort and trust.</p>
+                        <p className="text-center">For many, this is the first time they have known what it means to feel safe. Emotional rehabilitation is a key part of our training programme and we measure progress not by performance but by comfort and trust.</p>
                     </TrainingSectionCard>
 
                     <TrainingSectionCard title="Why It Matters" mediaKey="horse_training_final" alt="Horse walking freely beside trainer in warm sunset light" {...props}>
-                        <p>Some of our horses will go on to find forever homes. Others will remain with us for life due to medical or behavioural reasons. Regardless of their journey, every horse deserves dignity and confidence.</p>
-                        <p>Rehabilitation training builds their ability to form safe relationships with people, reduces fear-based behaviours and gives them tools to navigate the world more comfortably. We have seen shutdown horses come alive again. We’ve watched the fearful approach for a touch. These moments are our reward.</p>
-                        <p>Your support helps make it all possible. From basic halter training to advanced re-schooling, every stage matters and your donations ensure we never have to rush the process.</p>
+                        <p className="text-center">Some of our horses will go on to find forever homes. Others will remain with us for life due to medical or behavioural reasons. Regardless of their journey, every horse deserves dignity and confidence.</p>
+                        <p className="text-center">Rehabilitation training builds their ability to form safe relationships with people, reduces fear-based behaviours and gives them tools to navigate the world more comfortably. We have seen shutdown horses come alive again. We’ve watched the fearful approach for a touch. These moments are our reward.</p>
+                        <p className="text-center">Your support helps make it all possible. From basic halter training to advanced re-schooling, every stage matters and your donations ensure we never have to rush the process.</p>
                     </TrainingSectionCard>
                 </div>
             </section>

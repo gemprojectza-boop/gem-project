@@ -60,7 +60,7 @@ const TeamMemberCard: React.FC<{
         </div>
         <div className="p-4">
             <h3 className="text-xl font-bold" style={{ color: teamColor }}>{name}</h3>
-            {role && <p className="text-sm text-brand-text-secondary mt-1 text-left">{role}</p>}
+            {role && <p className="text-sm text-brand-text-secondary mt-1 text-center">{role}</p>}
         </div>
     </div>
     );
@@ -84,7 +84,7 @@ const TeamPage: React.FC<TeamPageProps> = (props) => {
                   <div className="content-bubble text-center mb-12">
                       <div className="p-6 md:p-8">
                           <h2 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-4">Dog Team</h2>
-                          <p className="text-lg text-brand-text-secondary text-left">Our dedicated dog care specialists who provide daily love and attention to our canine residents.</p>
+                          <p className="text-lg text-brand-text-secondary text-center">Our dedicated dog care specialists who provide daily love and attention to our canine residents.</p>
                       </div>
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 stagger-children">
@@ -109,7 +109,7 @@ const TeamPage: React.FC<TeamPageProps> = (props) => {
                   <div className="content-bubble text-center mb-12">
                       <div className="p-6 md:p-8">
                           <h2 className="text-3xl md:text-4xl font-bold text-brand-accent mb-4">Horse Team</h2>
-                          <p className="text-lg text-brand-text-secondary text-left">Our skilled horse care professionals who work with our equine friends on rehabilitation and daily care.</p>
+                          <p className="text-lg text-brand-text-secondary text-center">Our skilled horse care professionals who work with our equine friends on rehabilitation and daily care.</p>
                       </div>
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 stagger-children">

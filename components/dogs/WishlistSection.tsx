@@ -46,8 +46,8 @@ const WishlistSection: React.FC<SectionProps> = (props) => {
                         </div>
                         <div className="order-1 lg:order-2 p-6 md:p-8 flex flex-col justify-center">
                             <div className="text-lg text-gray-700 space-y-6 leading-relaxed">
-                                <p>In-kind donations are just as vital as financial gifts. From bowls of food to warm bedding and training tools, every donated item helps us care for the dogs who call our sanctuary home.</p>
-                                <p>These practical gifts stretch our resources and bring immediate comfort and support to dogs on their healing journey.</p>
+                                <p className="text-center">In-kind donations are just as vital as financial gifts. From bowls of food to warm bedding and training tools, every donated item helps us care for the dogs who call our sanctuary home.</p>
+                                <p className="text-center">These practical gifts stretch our resources and bring immediate comfort and support to dogs on their healing journey.</p>
                             </div>
                         </div>
                     </div>
@@ -106,8 +106,8 @@ const WishlistSection: React.FC<SectionProps> = (props) => {
                         <PawIcon className="w-12 h-12 text-brand-secondary mb-6" />
                         <h3 className="text-3xl font-bold text-brand-secondary mb-6">Ready to Help?</h3>
                         <div className="text-lg text-gray-700 space-y-6 flex-grow leading-relaxed">
-                            <p>Every donated item makes a direct impact on a dog's comfort and happiness. You can drop off items at our sanctuary or contact us to arrange collection.</p>
-                            <p>Your generosity helps us focus our resources on rescue, rehabilitation, and giving these deserving animals the second chance they need.</p>
+                            <p className="text-center">Every donated item makes a direct impact on a dog's comfort and happiness. You can drop off items at our sanctuary or contact us to arrange collection.</p>
+                            <p className="text-center">Your generosity helps us focus our resources on rescue, rehabilitation, and giving these deserving animals the second chance they need.</p>
                         </div>
                         <div className="mt-8">
                             <CtaButton href="/contact?subject=Wishlist%20Donation" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover px-8 py-4 text-lg">

@@ -36,7 +36,7 @@ const DogWishlistPage: React.FC<DogWishlistPageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>In-kind donations are just as vital as financial gifts. From bowls of food to warm bedding and training tools, every donated item helps us care for the dogs who call our sanctuary home. These practical gifts stretch our resources and bring immediate comfort and support to dogs on their healing journey.</p>
+        <p className="text-center">In-kind donations are just as vital as financial gifts. From bowls of food to warm bedding and training tools, every donated item helps us care for the dogs who call our sanctuary home. These practical gifts stretch our resources and bring immediate comfort and support to dogs on their healing journey.</p>
       </ContentSection>
       
       <section className="py-16 md:py-20 bg-brand-bg-subtle">

@@ -25,7 +25,7 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
         
         <div className="content-bubble">
           <div className="p-6 md:p-8 space-y-4 text-lg text-gray-700">
-            <p>At The Gem Project Sanctuary we believe in the quiet power of a dog’s presence to soothe uplift and heal. Our Therapy Dog Program gives select dogs the chance to make a difference in the lives of people beyond our sanctuary, visiting hospitals care homes, schools and outreach programs to bring comfort joy and connection.</p>
+            <p className="text-center">At The Gem Project Sanctuary we believe in the quiet power of a dog’s presence to soothe uplift and heal. Our Therapy Dog Program gives select dogs the chance to make a difference in the lives of people beyond our sanctuary, visiting hospitals care homes, schools and outreach programs to bring comfort joy and connection.</p>
             {props.mediaContent['dogs_hero_banner'] && (
                 <EditableMedia
                     mediaKey="dogs_hero_banner"
@@ -37,8 +37,8 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
                 />
             )}
             <h3 className="text-2xl font-bold text-brand-secondary pt-4">What is a Therapy Dog?</h3>
-            <p>Therapy dogs are not service dogs. They do not perform medical tasks or assist with disabilities. Instead they are trained to offer emotional support through calm gentle interactions. They are friendly affectionate and well-behaved in a variety of public settings.</p>
-            <p>A therapy dog is chosen for their temperament. They must enjoy meeting new people be comfortable in busy or unfamiliar environments and respond reliably to commands. Each dog undergoes socialisation and training to prepare them for the unique role of bringing emotional relief to others.</p>
+            <p className="text-center">Therapy dogs are not service dogs. They do not perform medical tasks or assist with disabilities. Instead they are trained to offer emotional support through calm gentle interactions. They are friendly affectionate and well-behaved in a variety of public settings.</p>
+            <p className="text-center">A therapy dog is chosen for their temperament. They must enjoy meeting new people be comfortable in busy or unfamiliar environments and respond reliably to commands. Each dog undergoes socialisation and training to prepare them for the unique role of bringing emotional relief to others.</p>
             
             <EditableMedia
                 mediaKey="therapy_dog_02"
@@ -49,8 +49,8 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
                 className="rounded-lg my-4"
             />
             <h3 className="text-2xl font-bold text-brand-secondary pt-4">What Makes a Great Therapy Dog?</h3>
-            <p>A great therapy dog is calm, gentle and deeply in tune with people. These special dogs have a natural warmth that puts others at ease. They stay composed in busy environments, respond with affection not excitement and offer comfort without asking for anything in return.</p>
-            <p>Before they ever set paw into a hospital or school, each dog is temperament-tested and carefully trained. We make sure they’re not just well-behaved, but truly ready to bring peace, joy and connection to those who need it most.</p>
+            <p className="text-center">A great therapy dog is calm, gentle and deeply in tune with people. These special dogs have a natural warmth that puts others at ease. They stay composed in busy environments, respond with affection not excitement and offer comfort without asking for anything in return.</p>
+            <p className="text-center">Before they ever set paw into a hospital or school, each dog is temperament-tested and carefully trained. We make sure they’re not just well-behaved, but truly ready to bring peace, joy and connection to those who need it most.</p>
             <ul className="list-disc list-inside space-y-2 my-4">
                 <li>Steady temperament and calm energy</li>
                 <li>Affectionate and people-loving nature</li>
@@ -58,7 +58,7 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
                 <li>Able to remain composed with wheelchairs hospital equipment or active children</li>
                 <li>Happy to engage without jumping barking or demanding attention</li>
             </ul>
-            <p>These dogs are trained and temperament-tested before participating in visits. We prioritise safety comfort and mutual respect in every setting.</p>
+            <p className="text-center">These dogs are trained and temperament-tested before participating in visits. We prioritise safety comfort and mutual respect in every setting.</p>
              {props.mediaContent['forever_dogs_hero'] && (
                 <EditableMedia
                     mediaKey="forever_dogs_hero"
@@ -70,7 +70,7 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
                 />
             )}
             <h3 className="text-2xl font-bold text-brand-secondary pt-4">Where Our Therapy Dogs Visit</h3>
-            <p>Our therapy dogs are invited into a wide range of spaces where emotional wellbeing is needed most. Each visit is supervised by a trained handler and tailored to the needs of the setting.</p>
+            <p className="text-center">Our therapy dogs are invited into a wide range of spaces where emotional wellbeing is needed most. Each visit is supervised by a trained handler and tailored to the needs of the setting.</p>
             <ul className="list-disc list-inside space-y-2 my-4">
                 <li>Hospitals and clinics: offering comfort to patients before or after procedures</li>
                 <li>Care homes: bringing companionship to elderly residents</li>
@@ -78,8 +78,8 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
             </ul>
 
             <h3 className="text-2xl font-bold text-brand-secondary pt-4">Why It Matters</h3>
-            <p>A wagging tail. A calm presence. A soft head to stroke. These simple moments can transform an experience of fear into one of peace. For people facing medical stress emotional hardship or social isolation the presence of a therapy dog can be grounding reassuring and healing.</p>
-            <p>This program allows children to find courage to read aloud seniors reconnect with forgotten memories and hospital patients breathe more easily just by spending time with our therapy dogs. These are not small miracles. They are the power of presence.</p>
+            <p className="text-center">A wagging tail. A calm presence. A soft head to stroke. These simple moments can transform an experience of fear into one of peace. For people facing medical stress emotional hardship or social isolation the presence of a therapy dog can be grounding reassuring and healing.</p>
+            <p className="text-center">This program allows children to find courage to read aloud seniors reconnect with forgotten memories and hospital patients breathe more easily just by spending time with our therapy dogs. These are not small miracles. They are the power of presence.</p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
             <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
             <h3 className="text-3xl font-bold mb-4 text-brand-secondary">How You Can Support This Program</h3>
             <p className="text-gray-200 mb-6 max-w-2xl mx-auto">Every visit takes planning preparation training and resources. You can help us continue this work by supporting the therapy dog program directly.</p>
-            <ul className="text-left max-w-md mx-auto space-y-2 mb-8">
+            <ul className="text-center max-w-md mx-auto space-y-2 mb-8">
                 <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Sponsor a Therapy Dog: Help cover costs of training gear transport and wellness</li>
                 <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Fund a Therapy Visit: Make it possible for dogs and handlers to attend facilities in need</li>
                 <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Donate Supplies: Toys treats grooming kits and calming aids</li>

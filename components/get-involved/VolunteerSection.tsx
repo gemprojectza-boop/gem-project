@@ -51,8 +51,8 @@ const VolunteerSection: React.FC<SectionProps> = (props) => {
                     className="rounded-t-lg aspect-video"
                 />
                 <div className="p-6 md:p-8 space-y-4 text-lg text-gray-700">
-                    <p>At The Gem Project Sanctuary every helping hand matters. Whether you are passionate about dogs, horses, or both, volunteering with our rescued animals is a meaningful way to support healing, trust-building, and a second chance at life.</p>
-                    <p>Our Volunteer Packages offer something for everyone working with both dogs and horses. From basic care and playtime to advanced behavioural support. Choose the tier that suits your skills, availability and passion.</p>
+                    <p className="text-center">At The Gem Project Sanctuary every helping hand matters. Whether you are passionate about dogs, horses, or both, volunteering with our rescued animals is a meaningful way to support healing, trust-building, and a second chance at life.</p>
+                    <p className="text-center">Our Volunteer Packages offer something for everyone working with both dogs and horses. From basic care and playtime to advanced behavioural support. Choose the tier that suits your skills, availability and passion.</p>
                 </div>
             </div>
 

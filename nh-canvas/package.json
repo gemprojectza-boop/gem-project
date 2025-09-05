@@ -1,0 +1,106 @@
+{
+  "name": "nh-canvas",
+  "version": "1.0.0",
+  "description": "Site-wide design canvas system - make every element draggable, resizable, and alignable",
+  "main": "dist/nh-canvas.umd.js",
+  "module": "dist/nh-canvas.esm.js",
+  "types": "dist/nh-canvas.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/nh-canvas.esm.js",
+      "require": "./dist/nh-canvas.umd.js",
+      "types": "./dist/nh-canvas.d.ts"
+    },
+    "./css": "./dist/nh-canvas.css",
+    "./react": {
+      "import": "./dist/react-bindings.esm.js",
+      "require": "./dist/react-bindings.umd.js",
+      "types": "./dist/react-bindings.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "dev": "rollup -c -w --environment NODE_ENV:development",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx --fix",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "demo": "vite demo --open",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "design",
+    "canvas",
+    "drag",
+    "resize",
+    "visual-editor",
+    "page-builder",
+    "layout",
+    "alignment",
+    "gui",
+    "ui",
+    "editor",
+    "wysiwyg",
+    "interactive",
+    "draggable",
+    "resizable"
+  ],
+  "author": {
+    "name": "NH Canvas Contributors",
+    "url": "https://github.com/your-org/nh-canvas"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/nh-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/nh-canvas/issues"
+  },
+  "homepage": "https://github.com/your-org/nh-canvas#readme",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.7.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vitest": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
+}

@@ -50,14 +50,14 @@ const Welcome: React.FC = () => (
                 <div className="p-10 md:p-12 text-center">
                     <div className="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <svg className="w-8 h-8 text-brand-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            <p className="text-center"ath d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                         </svg>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8">Welcome to Our Herd</h2>
-                    <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl mx-auto text-left">
-                        <p>At The Gem Project Sanctuary, our herd is at the heart of who we are. Every horse that arrives carries a story, stories of neglect, abandonment, hardship or quiet resilience. But here, every story is rewritten with care, patience and purpose.</p>
-                        <p>Our sanctuary is home to 20 incredible horses, each with a name, a voice and a journey. Some are here for rehabilitation, others for life. What unites them is the promise that they will never again be forgotten. From the first gentle touch to the first pain-free trot, every small milestone is a victory we celebrate together.</p>
-                        <p>This is more than a place of rescue. It is a place of restoration, of dignity, of connection. It is where broken bodies heal and weary spirits rise. Whether they are learning to trust again or simply enjoying the peace of a soft bed and a full bucket, our horses know they are safe. They are home.</p>
+                    <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl mx-auto text-center">
+                        <p className="text-center">At The Gem Project Sanctuary, our herd is at the heart of who we are. Every horse that arrives carries a story, stories of neglect, abandonment, hardship or quiet resilience. But here, every story is rewritten with care, patience and purpose.</p>
+                        <p className="text-center">Our sanctuary is home to 20 incredible horses, each with a name, a voice and a journey. Some are here for rehabilitation, others for life. What unites them is the promise that they will never again be forgotten. From the first gentle touch to the first pain-free trot, every small milestone is a victory we celebrate together.</p>
+                        <p className="text-center">This is more than a place of rescue. It is a place of restoration, of dignity, of connection. It is where broken bodies heal and weary spirits rise. Whether they are learning to trust again or simply enjoying the peace of a soft bed and a full bucket, our horses know they are safe. They are home.</p>
                     </div>
                 </div>
             </div>
@@ -100,11 +100,11 @@ const InfoCard: React.FC<InfoCardProps> = ({ mediaKey, title, text, cta, alt, re
                             <div className="p-8 md:p-12 text-center">
                                 <div className="w-14 h-14 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6 mx-auto">
                                     <svg className="w-7 h-7 text-brand-primary" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        <p className="text-center"ath d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                     </svg>
                                 </div>
                                 <h3 className="text-3xl md:text-4xl font-black text-brand-text-primary text-center mb-6">{title}</h3>
-                                <div className="text-brand-text-secondary space-y-6 my-8 text-lg leading-relaxed text-left">{text}</div>
+                                <div className="text-brand-text-secondary space-y-6 my-8 text-lg leading-relaxed text-center">{text}</div>
                                 {cta && cta.length > 0 && (
                                     <div className="flex flex-wrap gap-4 justify-center">
                                         {cta.map(item => (
@@ -130,11 +130,11 @@ const TextCard: React.FC<{ sectionId?: string, title: string, text: string, cta:
                 <div className="p-10 md:p-12 text-center">
                     <div className="w-16 h-16 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <svg className="w-8 h-8 text-brand-yellow" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            <p className="text-center"ath d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                     </div>
                     <h3 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8">{title}</h3>
-                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-left max-w-4xl mx-auto">{text}</p>
+                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-center max-w-4xl mx-auto">{text}</p>
                      <CtaButton href={cta.href} className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover shadow-lg btn-pulse">
                         {cta.text}
                     </CtaButton>
@@ -155,9 +155,9 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
         mediaKey="horses_mission"
         title="Mission and Vision"
         text={<>
-            <p>At The Gem Project Sanctuary, our mission is to be a voice for the voiceless. To protect, heal and advocate for equines who have suffered neglect, abuse, abandonment or hardship. We exist to offer them not just survival, but a full and meaningful life.</p>
-            <p>We are committed to: Rescuing horses in need, rehabilitating body and spirit, providing lifelong sanctuary, and educating the public.</p>
-            <p>Our vision is a world where no horse is forgotten. Looking ahead, we aim to establish an onsite equine clinic, launch a mobile ambulance, and build deeper community partnerships.</p>
+            <p className="text-center">At The Gem Project Sanctuary, our mission is to be a voice for the voiceless. To protect, heal and advocate for equines who have suffered neglect, abuse, abandonment or hardship. We exist to offer them not just survival, but a full and meaningful life.</p>
+            <p className="text-center">We are committed to: Rescuing horses in need, rehabilitating body and spirit, providing lifelong sanctuary, and educating the public.</p>
+            <p className="text-center">Our vision is a world where no horse is forgotten. Looking ahead, we aim to establish an onsite equine clinic, launch a mobile ambulance, and build deeper community partnerships.</p>
         </>}
         cta={[{href: "/about", text: "Learn More About Our Mission"}]}
         alt="A horse standing calmly with a caregiver, morning light behind them"
@@ -195,7 +195,7 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
         sectionId="enrichment"
         mediaKey="horses_enrichment_cta"
         title="Enrichment and Daily Life"
-        text={<p>Our sanctuary offers more than safety; it offers joy and the freedom to truly be horses. Every day is enriched with social interaction, open space to move and play, and quiet moments where they can simply be themselves. We believe healing is not only about survival, but about happiness and the freedom to live as horses were meant to.</p>}
+        text={<p className="text-center">Our sanctuary offers more than safety; it offers joy and the freedom to truly be horses. Every day is enriched with social interaction, open space to move and play, and quiet moments where they can simply be themselves. We believe healing is not only about survival, but about happiness and the freedom to live as horses were meant to.</p>}
         cta={[{href: "/horses-enrichment", text: "Explore Horse Enrichment", className: "bg-brand-accent hover:bg-brand-accent-hover text-white"}]}
         alt="Horse playing with enrichment toy"
         {...props}
@@ -219,7 +219,7 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
         sectionId="sponsor"
         mediaKey="horses_sponsor_cta"
         title="Sponsor a Horse"
-        text={<p>Make a lasting impact by sponsoring one of our forever horses. Your monthly support covers feed, veterinary care, hoof trimming and more. You’ll receive updates, photos and the joy of knowing you’re part of their journey.</p>}
+        text={<p className="text-center">Make a lasting impact by sponsoring one of our forever horses. Your monthly support covers feed, veterinary care, hoof trimming and more. You’ll receive updates, photos and the joy of knowing you’re part of their journey.</p>}
         cta={[{href: "/horses#sponsor", text: "Sponsor Now", className: "bg-brand-accent hover:bg-brand-accent-hover text-white"}]}
         alt="Sponsored horse with printed photo"
         {...props}
@@ -231,11 +231,11 @@ const HorsesLandingPage: React.FC<HorsesLandingPageProps> = (props) => {
                 <div className="p-10 md:p-12 text-center" style={{textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <div className="w-16 h-16 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-6 mx-auto" style={{margin: '0 auto 1.5rem auto'}}>
                         <svg className="w-8 h-8 text-brand-yellow" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            <p className="text-center"ath d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                     </div>
                     <h3 className="text-4xl md:text-5xl font-black text-brand-text-primary text-center mb-8" style={{textAlign: 'center', margin: '0 auto 2rem auto'}}>Partnerships</h3>
-                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-left max-w-4xl mx-auto" style={{textAlign: 'left', margin: '2rem auto'}}>At The Gem Project Sanctuary, we believe that meaningful change happens when compassionate people and organisations come together. We are actively open to collaborating with like-minded organisations and individuals who share our commitment to equine welfare, ethical care and community upliftment.</p>
+                    <p className="text-brand-text-secondary my-8 text-xl leading-relaxed text-center max-w-4xl mx-auto" style={{textAlign: 'left', margin: '2rem auto'}}>At The Gem Project Sanctuary, we believe that meaningful change happens when compassionate people and organisations come together. We are actively open to collaborating with like-minded organisations and individuals who share our commitment to equine welfare, ethical care and community upliftment.</p>
                      <CtaButton href="/contact" className="bg-brand-yellow text-brand-text-primary hover:bg-brand-yellow-hover shadow-lg btn-pulse" style={{margin: '0 auto'}}>
                         Partner With Us
                     </CtaButton>

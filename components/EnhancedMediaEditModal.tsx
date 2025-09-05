@@ -580,7 +580,7 @@ mediaContent['${key}'] = '${url || urlInput}';
                         <span className="text-sm text-green-600 font-normal">Copied!</span>
                       )}
                     </h4>
-                    <pre className="text-xs bg-gray-100 p-3 rounded overflow-x-auto">
+                    <pre className="text-center text-xs bg-gray-100 p-3 rounded overflow-x-auto">
                       {generatedCode}
                     </pre>
                   </div>

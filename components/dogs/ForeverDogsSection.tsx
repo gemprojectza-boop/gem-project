@@ -37,7 +37,7 @@ const ForeverDogsSection: React.FC<SectionProps> = (props) => {
             <div className="max-w-4xl mx-auto">
                 <div className="content-bubble">
                     <div className="space-y-4 text-lg text-gray-700">
-                        <p>Some dogs arrive at our gates carrying silent stories. Wounds we can see and many more that we cannot. They have known hunger, fear and abandonment. But the moment they step through our gates, everything changes. This is not a stop along the way. This is home.</p>
+                        <p className="text-center">Some dogs arrive at our gates carrying silent stories. Wounds we can see and many more that we cannot. They have known hunger, fear and abandonment. But the moment they step through our gates, everything changes. This is not a stop along the way. This is home.</p>
                         <p className="font-bold text-sanctuary-dark">A forever sanctuary dog is one who will remain with us for life. Whether because of past trauma, complex behaviour, chronic illness or advanced age, these dogs are not up for adoption. They have already been chosen by us.</p>
                     </div>
                 </div>

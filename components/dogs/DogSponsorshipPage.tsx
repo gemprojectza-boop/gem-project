@@ -24,7 +24,7 @@ const TierCard: React.FC<{
         </div>
         <h3 className="text-2xl font-bold text-brand-secondary text-center">{title}</h3>
         <p className="text-brand-secondary font-bold text-3xl my-4 text-center">{price}</p>
-        <p className="text-brand-text-secondary flex-grow mb-6 text-left">{description}</p>
+        <p className="text-brand-text-secondary flex-grow mb-6 text-center">{description}</p>
         <div className="mt-auto">
             <CtaButton href="/contact?subject=Sponsorship" className="bg-brand-secondary text-white hover:bg-brand-secondary-hover w-full">
                 Choose Tier
@@ -47,8 +47,8 @@ const DogSponsorshipPage: React.FC<DogSponsorshipPageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>At The Gem Project Sanctuary, we care for over 50 dogs, each one rescued from circumstances no animal should ever endure. Some were abandoned on roadsides. Others were pulled from neglect or surrendered in crisis. Many arrived shut down and withdrawn, uncertain of gentle touch and unsure if they were finally safe.</p>
-        <p>Here, their healing begins. Some will go on to find forever homes. Others will remain with us for life due to age, medical needs or emotional trauma. But they will not just exist. They will live as cherished members of our sanctuary family.</p>
+        <p className="text-center">At The Gem Project Sanctuary, we care for over 50 dogs, each one rescued from circumstances no animal should ever endure. Some were abandoned on roadsides. Others were pulled from neglect or surrendered in crisis. Many arrived shut down and withdrawn, uncertain of gentle touch and unsure if they were finally safe.</p>
+        <p className="text-center">Here, their healing begins. Some will go on to find forever homes. Others will remain with us for life due to age, medical needs or emotional trauma. But they will not just exist. They will live as cherished members of our sanctuary family.</p>
         <p className="font-semibold text-brand-secondary">We give each dog what they need most: time, safety, care and love. A second chance. But we cannot do it without you.</p>
          <div className="my-8 rounded-lg overflow-hidden shadow-lg">
           <EditableMedia
@@ -59,7 +59,7 @@ const DogSponsorshipPage: React.FC<DogSponsorshipPageProps> = (props) => {
             onUpdate={props.onMediaUpdate}
           />
         </div>
-        <p>When you sponsor a dog, you walk alongside them in their recovery. You help fill their bowl, fund their medical care, support their training and offer comfort they may never have known before.</p>
+        <p className="text-center">When you sponsor a dog, you walk alongside them in their recovery. You help fill their bowl, fund their medical care, support their training and offer comfort they may never have known before.</p>
         <p className="text-xl font-bold text-center mt-6 text-brand-secondary">You may not be able to adopt. But you can still change everything.</p>
       </ContentSection>
 
@@ -92,20 +92,20 @@ const DogSponsorshipPage: React.FC<DogSponsorshipPageProps> = (props) => {
             <div className="content-bubble text-center mt-12">
                 <div className="p-6">
                     <h3 className="text-2xl font-bold text-brand-secondary">Choose Your Own Amount</h3>
-                    <p className="my-4 text-brand-text-secondary text-left">Every gift, big or small, helps us provide the safety and love every dog deserves.</p>
+                    <p className="my-4 text-brand-text-secondary text-center">Every gift, big or small, helps us provide the safety and love every dog deserves.</p>
                      <CtaButton href="/contact?subject=Sponsorship" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">
                         Start Sponsoring Today
                     </CtaButton>
                 </div>
             </div>
-             <p className="text-lg mt-8 text-brand-text-secondary text-left mx-auto max-w-4xl">You can sponsor a dog that speaks to your heart or allow us to match you with one most in need.</p>
+             <p className="text-lg mt-8 text-brand-text-secondary text-center mx-auto max-w-4xl">You can sponsor a dog that speaks to your heart or allow us to match you with one most in need.</p>
         </div>
       </section>
       
       <ContentSection title="What You Will Receive" titleColorClass="text-brand-secondary">
         <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <ul className="space-y-4 text-lg text-left">
+                <ul className="space-y-4 text-lg text-center">
                     <li className="flex items-start"><PawIcon className="w-5 h-5 text-brand-secondary mr-3 mt-1.5 flex-shrink-0" />A personalised welcome email with the story and photo of your sponsored dog</li>
                     <li className="flex items-start"><PawIcon className="w-5 h-5 text-brand-secondary mr-3 mt-1.5 flex-shrink-0" />Quarterly updates including progress notes and new photos</li>
                     <li className="flex items-start"><PawIcon className="w-5 h-5 text-brand-secondary mr-3 mt-1.5 flex-shrink-0" />An official digital sponsorship certificate</li>
@@ -153,7 +153,7 @@ const DogSponsorshipPage: React.FC<DogSponsorshipPageProps> = (props) => {
         </div>
        </section>
       
-       <section className="py-20 bg-brand-primary">
+       <section className="py-8 bg-brand-primary">
         <div className="container mx-auto px-6 text-center text-white">
             <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-secondary">Sponsor a Dog Today</h2>

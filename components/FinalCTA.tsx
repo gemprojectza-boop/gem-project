@@ -14,7 +14,7 @@ interface SectionProps {
 }
 
 const FinalCTA: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMediaUpdate }) => {
-  const mediaKey = 'about_drone_shot';
+  const mediaKey = 'final_cta_image'; // Updated to use new Final CTA Banner image
   const mediaUrl = mediaContent[mediaKey];
 
   return (

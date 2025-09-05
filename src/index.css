@@ -113,9 +113,9 @@ a.cta-button[class*="bg-"]:not(.bg-transparent) {
   max-width: 100%;
 }
 
-/* Default text alignment for content bubbles - left aligned unless specified otherwise */
-.content-bubble:not(.text-center):not([class*="text-center"]) {
-  text-align: left;
+/* Default text alignment for content bubbles - CENTER by default */
+.content-bubble {
+  text-align: center;
 }
 
 /* Ensure headings and centered elements still center properly */
@@ -814,13 +814,38 @@ section.hero p,
 
 /* ========== ALIGNMENT AND LAYOUT FIXES ========== */
 
-/* Ensure consistent text alignment */
-.text-center {
+/* SITE-WIDE TEXT CENTERING - DEFENSIVE APPROACH */
+/* Force center alignment on all paragraphs, divs, spans, and lists by default */
+p:not(.text-left):not(.text-right), 
+div.content-bubble p:not(.text-left):not(.text-right), 
+div.text-container p:not(.text-left):not(.text-right), 
+section p:not(.text-left):not(.text-right), 
+.content-bubble div:not(.text-left):not(.text-right),
+.text-container:not(.text-left):not(.text-right), 
+.content-section:not(.text-left):not(.text-right), 
+.section-content:not(.text-left):not(.text-right), 
+.card-content:not(.text-left):not(.text-right),
+ul:not(.text-left):not(.text-right), 
+ol:not(.text-left):not(.text-right), 
+li:not(.text-left):not(.text-right), 
+dl:not(.text-left):not(.text-right), 
+dt:not(.text-left):not(.text-right), 
+dd:not(.text-left):not(.text-right), 
+span.text-content:not(.text-left):not(.text-right), 
+.description:not(.text-left):not(.text-right) {
   text-align: center !important;
 }
 
-.text-left {
+/* Override specific cases where left alignment is actually needed */
+.text-left, .text-left *, nav, nav *, header, header *, footer .flex-row, 
+footer .flex-row *, .navigation, .form-field, input, textarea, button, 
+.header-text, .nav-item, .breadcrumb {
   text-align: left !important;
+}
+
+/* Ensure consistent text alignment utilities */
+.text-center, .text-center * {
+  text-align: center !important;
 }
 
 .text-right {

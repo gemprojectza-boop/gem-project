@@ -508,7 +508,7 @@ const Slideshow: React.FC<GalleryPageProps> = (props) => {
                 <div className="text-center mb-8">
                     <PawIcon className="w-12 h-12 text-brand-primary mb-4 mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-brand-primary mb-3">Our Photo Gallery</h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto text-left">Discover the heartwarming moments and incredible transformations</p>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center">Discover the heartwarming moments and incredible transformations</p>
                 </div>
                 <div className="content-bubble bg-white shadow-2xl flex-grow flex flex-col">
                     <div className="p-4 md:p-6 flex-grow flex flex-col">
@@ -640,7 +640,7 @@ const GalleryPage: React.FC<GalleryPageProps> = (props) => {
                 <div className="max-w-4xl mx-auto">
                     <PawIcon className="w-16 h-16 text-white mx-auto mb-8 opacity-90" />
                     <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">Be Part of Their Story</h2>
-                    <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed text-left">
+                    <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed text-center">
                         Every day brings new moments of hope, healing, and happiness. Follow our journey and see how your support creates the stories captured in these photos.
                     </p>
                     
@@ -657,7 +657,7 @@ const GalleryPage: React.FC<GalleryPageProps> = (props) => {
                     </div>
                     
                     <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                        <p className="text-xl mb-6 text-blue-100 text-left">Follow our daily journey on social media</p>
+                        <p className="text-xl mb-6 text-blue-100 text-center">Follow our daily journey on social media</p>
                         <div className="flex justify-center items-center gap-8">
                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-white/20 p-4 rounded-full text-white hover:bg-white hover:text-brand-primary transition-all duration-300 transform hover:scale-110 backdrop-blur-sm">
                                <FacebookIcon className="w-8 h-8"/>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NH Canvas - Quick Integration Snippet</title>
+</head>
+<body>
+    <!-- Your existing website content here -->
+    <h1>Your Website Content</h1>
+    <p>Add the NH Canvas snippet below to make elements draggable.</p>
+    
+    <!-- 
+    ========================================
+    NH CANVAS - COPY THIS SECTION TO YOUR SITE
+    ========================================
+    -->
+    
+    <!-- NH Canvas CSS -->
+    <link rel="stylesheet" href="./nh-canvas.css">
+    
+    <!-- NH Canvas JavaScript -->
+    <script type="module">
+        import { NHCanvasAPI } from './nh-canvas.js';
+        
+        // Make NH Canvas available globally
+        window.NHCanvas = NHCanvasAPI;
+        
+        // Optional: Auto-enable on page load (for development)
+        // NHCanvasAPI.enable();
+        
+        // Configure which elements should be draggable
+        NHCanvasAPI.addSelector('img, p, h1, h2, h3, h4, h5, h6');
+        NHCanvasAPI.addSelector('.card, .section, .hero, .content-block');
+        NHCanvasAPI.addSelector('[data-nh-draggable]');
+        
+        // Exclude elements that shouldn't be draggable
+        NHCanvasAPI.blacklistSelector('nav, .modal, .dropdown, [data-nh-ignore]');
+        
+        // Optional: Add event listeners
+        const canvas = NHCanvasAPI.getGlobal();
+        canvas.on('enable', () => console.log('🎨 Design mode enabled'));
+        canvas.on('disable', () => console.log('✅ Design mode disabled'));
+        canvas.on('change', () => console.log('💾 Layout saved automatically'));
+        
+        console.log('NH Canvas loaded! Use NHCanvas.enable() to start designing.');
+    </script>
+    
+    <!-- Optional: Add a toggle button -->
+    <button 
+        onclick="window.NHCanvas.toggle()" 
+        style="position:fixed;bottom:20px;right:20px;z-index:1000;padding:10px 20px;background:#007acc;color:white;border:none;border-radius:6px;cursor:pointer;font-weight:600;"
+    >
+        Toggle Design Mode
+    </button>
+    
+    <!-- 
+    ========================================
+    END NH CANVAS INTEGRATION
+    ========================================
+    -->
+</body>
+</html>

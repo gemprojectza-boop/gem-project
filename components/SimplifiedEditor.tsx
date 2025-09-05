@@ -21,7 +21,7 @@ const SimplifiedEditor: React.FC<SimplifiedEditorProps> = ({ isEditMode, onToggl
         </button>
       </div>
       <div className="text-xs text-gray-600">
-        <p>Click on images to edit them.</p>
+        <p className="text-center">Click on images to edit them.</p>
         <p className="mt-1">Press <kbd className="px-1 py-0.5 bg-gray-100 rounded text-xs">Ctrl+E</kbd> to toggle edit mode.</p>
       </div>
     </div>

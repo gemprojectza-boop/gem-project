@@ -28,10 +28,10 @@ const CommunitySection: React.FC<CommunityPageProps & { id: string; title: strin
                         />
                     </div>
                 </div>
-                <div className={`text-center md:text-left ${reversed ? 'md:order-1' : ''}`}>
+                <div className={`text-center md:text-center ${reversed ? 'md:order-1' : ''}`}>
                     <PawIcon className="w-10 h-10 text-brand-primary mb-4 mx-auto md:mx-0" />
                     <h2 className="text-3xl font-bold text-brand-primary mb-4">{title}</h2>
-                    <div className="text-lg text-brand-text-secondary space-y-4 mb-6 text-left">
+                    <div className="text-lg text-brand-text-secondary space-y-4 mb-6 text-center">
                         {children}
                     </div>
                     <CtaButton href={cta.href} className="bg-brand-yellow hover:bg-brand-yellow-hover text-brand-text-primary">
@@ -61,9 +61,9 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
                 <div className="p-6 md:p-8">
                     <PawIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" />
                     <h2 className="text-3xl font-bold text-brand-primary">Why Community Matters</h2>
-                    <div className="text-lg text-brand-text-secondary space-y-4 my-6 text-left">
-                        <p>At The Gem Project Sanctuary, rescue is not a single moment. It is a shared journey rooted in compassion and connection. While we care deeply for the animals who call our sanctuary home, we are equally committed to the people and communities around them. Adoption is also a vital part of this connection, helping rescued animals heal and begin new lives as cherished family members.</p>
-                        <p>Our dual focus is what sets us apart. Through our growing outreach, we build meaningful partnerships with animal organisations, support families in crisis, and offer youth the chance to gain purpose and practical skills. It is about lifting one another up and creating a ripple effect of healing.</p>
+                    <div className="text-lg text-brand-text-secondary space-y-4 my-6 text-center">
+                        <p className="text-center">At The Gem Project Sanctuary, rescue is not a single moment. It is a shared journey rooted in compassion and connection. While we care deeply for the animals who call our sanctuary home, we are equally committed to the people and communities around them. Adoption is also a vital part of this connection, helping rescued animals heal and begin new lives as cherished family members.</p>
+                        <p className="text-center">Our dual focus is what sets us apart. Through our growing outreach, we build meaningful partnerships with animal organisations, support families in crisis, and offer youth the chance to gain purpose and practical skills. It is about lifting one another up and creating a ripple effect of healing.</p>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
             cta={{ href: "/get-involved#donate", text: "Support Outreach & Care" }}
             {...props}
         >
-            <p>We are proud to be part of a compassionate network of animal welfare organisations. When space allows, we foster dogs and horses from partner groups, offering them care and stability. We also walk alongside families facing challenges in caring for their animals. Though still growing, every connection builds a bridge of trust.</p>
+            <p className="text-center">We are proud to be part of a compassionate network of animal welfare organisations. When space allows, we foster dogs and horses from partner groups, offering them care and stability. We also walk alongside families facing challenges in caring for their animals. Though still growing, every connection builds a bridge of trust.</p>
         </CommunitySection>
         
         <CommunitySection
@@ -91,7 +91,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
             reversed
             {...props}
         >
-            <p>Our Mobile Vet Clinic serves under-resourced communities, providing vaccinations, basic treatment, and emergency care to animals who might otherwise go without help. This project eases the burden on struggling families and improves animal wellbeing across Cape Town.</p>
+            <p className="text-center">Our Mobile Vet Clinic serves under-resourced communities, providing vaccinations, basic treatment, and emergency care to animals who might otherwise go without help. This project eases the burden on struggling families and improves animal wellbeing across Cape Town.</p>
         </CommunitySection>
 
         <CommunitySection
@@ -102,7 +102,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
             cta={{ href: "/youth", text: "Join Our Youth Programme" }}
             {...props}
         >
-            <p>This mentorship programme offers young people hands-on experience with animals while gaining life skills, structure, and confidence. Open to in-school and out-of-school youth, it encourages empathy and responsibility through real engagement, supported by staff mentors.</p>
+            <p className="text-center">This mentorship programme offers young people hands-on experience with animals while gaining life skills, structure, and confidence. Open to in-school and out-of-school youth, it encourages empathy and responsibility through real engagement, supported by staff mentors.</p>
         </CommunitySection>
 
          <CommunitySection
@@ -114,7 +114,7 @@ const CommunityPage: React.FC<CommunityPageProps> = (props) => {
             reversed
             {...props}
         >
-            <p>This unique programme allows individuals to form a deep, long-term bond with a specific dog or horse. Participants walk, groom, and spend meaningful time with their chosen animal, becoming a trusted companion in their healing journey. It's a powerful experience that offers connection without replacing the need for permanent homes.</p>
+            <p className="text-center">This unique programme allows individuals to form a deep, long-term bond with a specific dog or horse. Participants walk, groom, and spend meaningful time with their chosen animal, becoming a trusted companion in their healing journey. It's a powerful experience that offers connection without replacing the need for permanent homes.</p>
         </CommunitySection>
       </div>
 

@@ -77,24 +77,24 @@ const MeetTheAnimals: React.FC<SectionProps> = (props) => {
     {
       bgColor: 'bg-brand-secondary',
       heartColor: 'text-red-300/80',
-      mediaKey: 'gallery_dog_1',
-      alt: 'A happy rescued dog',
+      mediaKey: 'cta_adopt_dog', // Updated to use new CTA image - Close-up of hopeful dog's face
+      alt: 'Close-up of hopeful dog\'s face',
       buttonText: 'Adopt a Dog',
       href: '/adopt-a-dog',
     },
     {
       bgColor: 'bg-brand-accent',
       heartColor: 'text-green-300/80',
-      mediaKey: 'spirit_main',
-      alt: 'A beautiful rescued horse',
+      mediaKey: 'cta_adopt_horse', // Updated to use new CTA image - Horse looking out stable window
+      alt: 'Horse looking out stable window',
       buttonText: 'Adopt a Horse',
       href: '/horses#adoption',
     },
     {
       bgColor: 'bg-brand-yellow',
       heartColor: 'text-yellow-300/80',
-      mediaKey: 'volunteer_01',
-      alt: 'A volunteer with a dog',
+      mediaKey: 'cta_get_involved', // Updated to use new CTA image - Team walking dogs together
+      alt: 'Team walking dogs together',
       buttonText: 'Get Involved',
       href: '/get-involved',
     },
@@ -108,7 +108,7 @@ const MeetTheAnimals: React.FC<SectionProps> = (props) => {
                     <span>Be Part of</span>{' '}
                     <span>the Change</span>
                 </h2>
-                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary text-left">
+                <p className="mt-3 text-container mx-auto text-lg text-brand-text-secondary text-center">
                     Your support gives them a second chance. Explore the ways you can make a difference today.
                 </p>
             </div>

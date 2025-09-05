@@ -7,6 +7,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { MediaContent, HeroConfig } from './types.ts';
 import { NavigationProvider, useSafeNavigation } from './contexts/NavigationContext.tsx';
+import { DragDropProvider } from './contexts/DragDropContext.tsx';
 
 // Import shared components directly
 import Header from './components/Header.tsx';
@@ -45,26 +46,62 @@ import HorseRehabilitationPage from './components/horses/HorseRehabilitationPage
 import HorseWishlistPage from './components/HorseWishlistPage.tsx';
 import YouthProgrammePage from './components/YouthProgrammePage.tsx';
 import DonatePage from './components/DonatePage.tsx';
+import EditModeToolbar from './components/EditModeToolbar.tsx';
 
 
 const initialMediaContent: MediaContent = {
   hero_banner_03: 'https://i.ibb.co/kgGLTcRx/DSC00096-1.jpg',
-  welcome_section_01: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg',
+  welcome_section_01: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg', // Homepage Step 2: Replace Welcome Section image (Fixed URL)
   welcome_intro_video: 'https://videos.pexels.com/video-files/2886287/2886287-hd_1280_720_25fps.mp4',
   forever_animals_01: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg',
   sponsorship_01: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
   wishlist_01: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
+  // Homepage Step 3: Four Pillars Section images
+  pillar_rescue_sanctuary: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg', // Handler caring for multiple dogs (Fixed URL)
+  pillar_healing_connection: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg', // White dog running with joy (Fixed URL)
+  pillar_community_impact: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg', // Handler bonding with horse (Fixed URL)
+  pillar_seeds_of_change: 'https://i.ibb.co/38X4vg9/DSC03223.jpg', // Golden dog running playfully (Fixed URL)
+  
+  // Homepage Step 4: Be Part of Change Section images
+  cta_adopt_dog: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg', // Close-up of hopeful dog's face (Fixed URL)
+  cta_adopt_horse: 'https://i.ibb.co/GvwgC6Fp/DSC01400.jpg', // Horse looking out stable window (Fixed URL)
+  cta_get_involved: 'https://i.ibb.co/kVHsDb0G/image.png', // Team walking dogs together (Fixed URL)
+  
   volunteer_01: 'https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg',
-  youth_apprenticeship_01: 'https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg',
+  youth_apprenticeship_01: 'https://i.ibb.co/MkgxrVN9/image.png', // Homepage Step 7: Youth Apprenticeship Section (Fixed URL)
   hands_on_01: 'https://i.ibb.co/38X4vg9/DSC03223.jpg',
-  community_image: 'https://i.ibb.co/C5XgywDr/DSC03284.jpg',
-  final_cta_image: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg',
-  about_hero: 'https://i.ibb.co/XfPq7BMz/DSC03353-2.jpg',
-  about_welcome_gate: 'https://i.ibb.co/XZrt0nR2/DSC00848.jpg',
-  about_mobile_vet: 'https://i.ibb.co/yFsK5D7T/DSC06133.jpg',
-  about_sleeping_dogs: 'https://i.ibb.co/BVD7R6Nm/DSC00774.jpg',
-  about_dog_walk: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg',
-  about_drone_shot: 'https://i.ibb.co/fzqVKSRZ/DSC09212.jpg',
+  community_image: 'https://i.ibb.co/pjgyd2Kr/image.png', // Homepage Step 5: Our Community Section (Fixed URL)
+  final_cta_image: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg', // Homepage Step 9: Final CTA Banner (Fixed URL)
+  
+  // Homepage Step 8: Change a Life Section images
+  change_life_forever_animals: 'https://i.ibb.co/0RVjRKrF/image.png', // Senior black dog walking forward (Fixed URL)
+  change_life_wishlist: 'https://i.ibb.co/84Smg3bG/DSC02276.jpg', // Two horses sharing hay (Fixed URL)
+  change_life_volunteer: 'https://i.ibb.co/kVHsDb0G/image.png', // Handler surrounded by dogs during training (Fixed URL)
+  // ABOUT PAGE UPDATES
+  about_hero: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg', // About Page Step 1: Hero Banner (Fixed URL)
+  about_welcome_gate: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg', // About Page Step 2: Who We Are section (Fixed URL)
+  about_who_we_are: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg', // About Page Step 2: Who We Are section (Fixed URL)
+  about_full_width_banner_1: 'https://i.ibb.co/38X4vg9/DSC03223.jpg', // About Page Step 3: Handler stroking white dog outdoors (Fixed URL)
+  
+  // About Page Steps 4-5: Community Programmes
+  about_mobile_vet: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg', // Dog paw being clipped (Fixed URL)
+  about_youth_apprenticeship: 'https://i.ibb.co/kVHsDb0G/image.png', // Training session with cones (Fixed URL)
+  about_hands_on_caregiver: 'https://i.ibb.co/GvwgC6Fp/DSC01400.jpg', // Horse being brushed in stable (Fixed URL)
+  
+  // Missing About Page images
+  about_sleeping_dogs: 'https://i.ibb.co/38X4vg9/DSC03223.jpg', // Peaceful sleeping dog
+  about_dog_walk: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg', // Group dog walk
+  about_drone_shot: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg', // Aerial view of sanctuary
+  
+  about_community_anchor: 'https://i.ibb.co/pjgyd2Kr/image.png', // About Page Step 6: Dog lying in grass with yellow toy (Fixed URL)
+  about_what_makes_different: 'https://i.ibb.co/0RVjRKrF/image.png', // About Page Step 7: Dog surrounded by toys on blanket (Fixed URL)
+  about_life_at_sanctuary: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg', // About Page Step 8: Dogs playing fetch in sunlight (Fixed URL)
+  
+  // About Page Step 9: Our Facilities (2x2 grid)
+  facility_dog_kennels: 'https://i.ibb.co/kVHsDb0G/image.png', // Dog kennel facilities (Fixed URL)
+  facility_play_areas: 'https://i.ibb.co/MkgxrVN9/image.png', // Dog playing with ball in facility (Fixed URL)
+  facility_horse_paddocks: 'https://i.ibb.co/84Smg3bG/DSC02276.jpg', // White horse walking with handler (Fixed URL)
+  facility_stables: 'https://i.ibb.co/7tX8xjd4/DSC00980.jpg', // Stable interior with Kim (Fixed URL)
   
   // --- HORSE IMAGES ---
   horses_gallery_01: 'https://i.ibb.co/k6PstKp0/DSC00279.jpg',
@@ -362,6 +399,46 @@ const initialMediaContent: MediaContent = {
   pretty_main: 'https://i.ibb.co/4RQrkL6c/image.png',
   ruby_main: 'https://i.ibb.co/pjgyd2Kr/image.png',
 
+  // COMMUNITY PAGE UPDATES
+  community_hero: 'assets/images/DSC00096.jpg', // Community Page Step 1: Hero Banner
+  community_why_matters: 'assets/images/DSC02412.jpg', // Community Page Step 2: Horse lineup group shot (3:2 crop, keep horses centered)
+  community_outreach: 'assets/images/DSC06309.jpg', // Community Page Step 3: Dog receiving grooming care (3/4 crop)
+  community_mobile_vet: 'assets/images/DSC06078.jpg', // Community Page Step 4: Dog being bathed (3/4 crop, emphasize water + dog expression)
+  community_youth_apprenticeship: 'assets/images/DSC01310.jpg', // Community Page Step 5: Two boys learning with dogs (16/9 crop, keep both boys and dogs)
+  community_hands_on_caregiver: 'assets/images/DSC05308.jpg', // Community Page Step 6: Dog licking man's face (4/3 crop, highlight bond)
+
+  // GET INVOLVED PAGE UPDATES
+  get_involved_hero: 'assets/images/DSC07735.jpg', // Get Involved Page Step 1: Hero Banner
+  volunteer_dogs_section: 'assets/images/DSC02175.jpg', // Get Involved Page Step 2: Tan dog holding tennis ball outdoors
+  volunteer_horses_section: 'assets/images/DSC09242.jpg', // Get Involved Page Step 3: Chestnut horse with white blaze in paddock
+  
+  // Get Involved Page Step 4: Dog Volunteer Tiers (8 cards)
+  volunteer_junior_helpers: 'assets/images/DSC00524.jpg', // Scruffy dog with toy
+  volunteer_beginner_buddies: 'assets/images/DSC00656.jpg', // Group of dogs running
+  volunteer_practical_heroes: 'assets/images/DSC02175.jpg', // Man playing tug with tan dog
+  volunteer_creative_collaborators: 'assets/images/DSC03505.jpg', // Dog with handler in beanie
+  volunteer_confident_companions: 'assets/images/DSC04412.jpg', // Tan dog mid-lick
+  volunteer_emotional_support: 'assets/images/DSC05782.jpg', // Dog in training posture
+  volunteer_behavior_training_dogs: 'assets/images/DSC06691.jpg', // Dog with handler in obedience stance
+  volunteer_specialised_support_dogs: 'assets/images/DSC07673.jpg', // Dog with handler showing close partnership
+  
+  // Horse Volunteer Tiers (6 cards)
+  volunteer_junior_horse_helpers: 'assets/images/DSC07991.jpg', // Pony with handler
+  volunteer_beginner_horse_buddies: 'assets/images/DSC08456.jpg', // Horses with handler
+  volunteer_practical_heroes_horses: 'assets/images/DSC07654.jpg', // Horse stable maintenance
+  volunteer_confident_horse_companions: 'assets/images/DSC01848.jpg', // White horse
+  volunteer_behavior_training_horses: 'assets/images/DSC03507.jpg', // Horse trotting in paddock
+  volunteer_specialised_horse_support: 'assets/images/DSC08201.jpg', // Handler leading horse from stable
+  
+  // Get Involved Page Step 5: Ready to Join Us CTA
+  get_involved_cta: 'assets/images/DSC00498.jpg', // Volunteer walking several dogs on leads
+  
+  // Get Involved Page Steps 6-7: Hands-On Care Programme
+  hands_on_dogs_programme: 'assets/images/DSC01232.jpg', // Black and white dog being held by volunteer
+  hands_on_horses_programme: 'assets/images/DSC08858.jpg', // Brown horse being fed by hand
+  
+  // Get Involved Page Step 8: Dog Wishlist
+  dog_wishlist_section: 'assets/images/DSC04176.jpg', // Dog resting with colourful toys
 
   // --- GALLERY AND OTHER PAGES (Dog images updated) ---
   faq_hero: 'https://images.pexels.com/photos/7210639/pexels-photo-7210639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -614,6 +691,7 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
                 {renderPage()}
             </main>
             <Footer />
+            <EditModeToolbar onToggleEditMode={toggleEditMode} />
         </div>
     );
 };
@@ -622,7 +700,16 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
 const App: React.FC = () => {
   return (
     <NavigationProvider>
-        <AppContent />
+        <DragDropProvider
+          onLayoutChange={(newLayout) => {
+            console.log('Layout changed:', newLayout);
+          }}
+          onItemUpdate={(id, updates) => {
+            console.log('Item updated:', id, updates);
+          }}
+        >
+          <AppContent />
+        </DragDropProvider>
     </NavigationProvider>
   );
 };

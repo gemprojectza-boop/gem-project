@@ -22,7 +22,7 @@ interface DogsLandingPageProps {
 }
 
 const Hero: React.FC<DogsLandingPageProps> = (props) => (
-    <section className="hero relative bg-red-600 text-white py-20 md:py-32 text-center overflow-hidden min-h-[70vh] flex items-center justify-center">
+    <section className="hero relative bg-sanctuary-dark text-white py-20 md:py-32 text-center overflow-hidden min-h-[70vh] flex items-center justify-center">
         <div className="absolute inset-0">
           {props.mediaContent['dogs_hero_banner'] && (
             <EditableMedia 
@@ -65,13 +65,13 @@ const Intro: React.FC<DogsLandingPageProps> = (props) => (
             <div className="p-10 md:p-12">
               <PawIcon className="w-14 h-14 text-brand-secondary mx-auto mb-6 icon-interactive" />
               <h2 className="text-4xl md:text-5xl font-black text-brand-secondary text-center mb-8">Introduction to Our Dog Sanctuary</h2>
-              <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl text-left mx-auto">
-                  <p>The Gem Project's Dog Sanctuary is an all-breed animal rescue based in Cape Town. Our work is driven by a clear and powerful mission: to protect dogs from neglect, abuse and exploitation. We provide the care, healing and love they need to recover and thrive.</p>
-                  <p>We rescue dogs from a wide range of situations including abandonment, abuse, neglect and medical or behavioural challenges. Every dog that enters our sanctuary receives tailored support: rehabilitation, veterinary care, behavioural guidance and emotional healing. Some go on to find loving adoptive homes. Others, who may not be suitable for rehoming, live out their days with us in safety, surrounded by people who value and care for them deeply.</p>
-                  <p>Our sanctuary provides a permanent home for dogs who cannot be rehomed due to age, trauma or health needs. Here, they are not just sheltered. They are part of a family.</p>
-                  <p>Beyond direct rescue and care, we are committed to uplifting the communities around us. Through our outreach programme, we provide animal care education and basic training in under-resourced areas, while partnering with other organisations to deliver support and resources where they're needed most.</p>
-                  <p>We are currently in the implementation phase of our Recycling-for-Care Token Programme – a community initiative that will allow individuals to exchange recyclable materials for essential animal supplies such as food, health products and pet accessories. This initiative not only supports pet owners but also promotes environmental responsibility and fosters pride, dignity and empowerment in underserved communities.</p>
-                  <p>Some of our dogs also take part in specialised training to support therapy work, emotional support services and other community-based assistance roles. At every stage, we remain focused on ensuring the wellbeing of our animals and deepening the connection between people and the dogs who change their lives.</p>
+              <div className="text-xl text-brand-text-secondary space-y-6 leading-relaxed max-w-4xl text-center mx-auto">
+                  <p className="text-center">The Gem Project's Dog Sanctuary is an all-breed animal rescue based in Cape Town. Our work is driven by a clear and powerful mission: to protect dogs from neglect, abuse and exploitation. We provide the care, healing and love they need to recover and thrive.</p>
+                  <p className="text-center">We rescue dogs from a wide range of situations including abandonment, abuse, neglect and medical or behavioural challenges. Every dog that enters our sanctuary receives tailored support: rehabilitation, veterinary care, behavioural guidance and emotional healing. Some go on to find loving adoptive homes. Others, who may not be suitable for rehoming, live out their days with us in safety, surrounded by people who value and care for them deeply.</p>
+                  <p className="text-center">Our sanctuary provides a permanent home for dogs who cannot be rehomed due to age, trauma or health needs. Here, they are not just sheltered. They are part of a family.</p>
+                  <p className="text-center">Beyond direct rescue and care, we are committed to uplifting the communities around us. Through our outreach programme, we provide animal care education and basic training in under-resourced areas, while partnering with other organisations to deliver support and resources where they're needed most.</p>
+                  <p className="text-center">We are currently in the implementation phase of our Recycling-for-Care Token Programme – a community initiative that will allow individuals to exchange recyclable materials for essential animal supplies such as food, health products and pet accessories. This initiative not only supports pet owners but also promotes environmental responsibility and fosters pride, dignity and empowerment in underserved communities.</p>
+                  <p className="text-center">Some of our dogs also take part in specialised training to support therapy work, emotional support services and other community-based assistance roles. At every stage, we remain focused on ensuring the wellbeing of our animals and deepening the connection between people and the dogs who change their lives.</p>
               </div>
             </div>
         </div>

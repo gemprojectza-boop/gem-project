@@ -144,7 +144,7 @@ const Header: React.FC = () => {
                                 <SafeLink 
                                     key={item.name} 
                                     href={item.href} 
-                                    className="block w-full text-left px-4 py-3 text-base text-brand-text-secondary hover:bg-brand-primary/20 hover:text-brand-text-primary transition-colors rounded-md"
+                                    className="block w-full text-center px-4 py-3 text-base text-brand-text-secondary hover:bg-brand-primary/20 hover:text-brand-text-primary transition-colors rounded-md"
                                     onClick={(e) => { e.preventDefault(); e.stopPropagation(); closeMenuAndNavigate(item.href); }}
                                 >
                                     {item.name}
@@ -171,7 +171,7 @@ const Header: React.FC = () => {
                     <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-white rounded-xl border border-gray-200/50 py-3 z-50 transition-all duration-300 ease-out ${openDropdown === link.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
                         <div className="px-2">
                             {link.dropdown?.map(item => (
-                                <SafeLink key={item.name} href={item.href} className="block w-full text-left px-4 py-3 text-sm text-brand-text-primary hover:bg-brand-primary/10 transition-all duration-200 rounded-lg font-medium">
+                                <SafeLink key={item.name} href={item.href} className="block w-full text-center px-4 py-3 text-sm text-brand-text-primary hover:bg-brand-primary/10 transition-all duration-200 rounded-lg font-medium">
                                     {item.name}
                                 </SafeLink>
                             ))}
@@ -187,20 +187,16 @@ const Header: React.FC = () => {
         );
     };
     
-    const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-sm border-b border-gray-200' : 'bg-transparent'}`;
+    const headerClasses = `navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300`; // Updated to use GEM BLUE navbar styling
 
     return (
       <header ref={headerRef} className={`${headerClasses} header-animate`}>
         <div className="nav-container py-4 lg:py-5 flex justify-between items-center">
           <SafeLink href="/" aria-label="The Gem Project Sanctuary homepage" className="flex items-center transition-all duration-300 hover:scale-105 z-10" onClick={() => closeMenuAndNavigate('/')}>
-            <img 
-                src="https://i.ibb.co/WvHMJfYM/logo-screen-1-3.png" 
-                alt="The Gem Project Sanctuary Logo"
-                className="h-14 lg:h-16 w-auto object-contain" 
-            />
+            <span className="logo">THE GEM PROJECT</span>
           </SafeLink>
           
-          <nav className="hidden lg:flex items-center space-x-2 font-medium text-brand-text-primary mx-auto">
+          <nav className="hidden lg:flex items-center space-x-2 font-medium text-white mx-auto">
               {navLinks.map(link => <NavItem key={link.name} link={link} />)}
           </nav>
           

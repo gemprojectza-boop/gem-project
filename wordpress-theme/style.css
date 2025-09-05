@@ -1,0 +1,175 @@
+/*
+Theme Name: The Gem Project
+Description: A comprehensive WordPress theme for The Gem Project animal sanctuary website with advanced visual editing capabilities, custom post types for horses and dogs, and complete content management system.
+Author: Claude AI Assistant
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GPL v2 or later
+Text Domain: gem-project
+Tags: animals, sanctuary, custom-post-types, block-editor-styles, editor-style, featured-images, custom-colors, custom-logo, custom-menu, translation-ready
+*/
+
+/* Import Tailwind CSS */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@3.3.6/dist/tailwind.min.css');
+
+/* Custom CSS Variables for Brand Colors */
+:root {
+  --brand-primary: #2563eb;
+  --brand-secondary: #16a34a;
+  --brand-accent: #dc2626;
+  --brand-bg-main: #ffffff;
+  --brand-bg-secondary: #f8fafc;
+  --brand-text-primary: #1e293b;
+  --brand-text-secondary: #64748b;
+  --brand-border: #e2e8f0;
+}
+
+/* Brand Color Classes */
+.bg-brand-bg-main { background-color: var(--brand-bg-main); }
+.bg-brand-bg-secondary { background-color: var(--brand-bg-secondary); }
+.bg-brand-primary { background-color: var(--brand-primary); }
+.bg-brand-secondary { background-color: var(--brand-secondary); }
+.text-brand-text-primary { color: var(--brand-text-primary); }
+.text-brand-text-secondary { color: var(--brand-text-secondary); }
+.border-brand-border { border-color: var(--brand-border); }
+
+/* Horse Page Overrides */
+.horse-page-override h1:not(.hero h1),
+.horse-page-override h2:not(.hero h2),
+.horse-page-override h3:not(.hero h3),
+.horse-page-override .text-3xl:not(.hero *),
+.horse-page-override .text-4xl:not(.hero *),
+.horse-page-override .text-5xl:not(.hero *),
+.horse-page-override .font-bold:not(.hero *),
+.horse-page-override .font-black:not(.hero *) {
+  color: #16a34a !important;
+}
+
+/* Dog Page Overrides */
+.dog-page-override h1:not(.hero h1),
+.dog-page-override h2:not(.hero h2),
+.dog-page-override h3:not(.hero h3) {
+  color: var(--brand-primary) !important;
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children .animate-on-scroll {
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+.animate-page-fade {
+  animation: pageFade 0.5s ease-in-out;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Max Content Width */
+.max-content-width-lg {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Responsive Typography */
+.responsive-text-hero {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.responsive-text-large {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* WordPress Admin Bar Compatibility */
+.admin-bar .fixed-header {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .fixed-header {
+    top: 46px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print, .wp-admin-bar, .fixed-header, .footer {
+    display: none !important;
+  }
+}
+
+/* WordPress Block Editor Styles */
+.wp-block {
+  max-width: 100%;
+}
+
+.wp-block-group {
+  margin: 2rem 0;
+}
+
+/* Accessibility Improvements */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: var(--brand-bg-main);
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: var(--brand-text-primary);
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}

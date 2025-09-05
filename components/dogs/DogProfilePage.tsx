@@ -34,7 +34,7 @@ const DogProfilePage: React.FC<DogProfilePageProps> = ({ dogId, mediaContent, is
 
     if (!dog) {
         return (
-            <div className="text-center py-20">
+            <div className="text-center py-8">
                 <h1 className="text-2xl font-bold">Dog not found</h1>
                 <SafeLink href="/dogs#adoption" className="text-brand-primary hover:underline mt-4 inline-block">
                     Back to all adoptable dogs

@@ -26,7 +26,7 @@ const InfoCard: React.FC<{
                 {React.cloneElement(icon, { className: `w-8 h-8 ${textColor} ${icon.props.className || ''}` })}
             </div>
             <h3 className="text-xl font-bold text-brand-text-primary mb-2">{title}</h3>
-            <p className="text-brand-text-secondary text-sm flex-grow">{text}</p>
+            <p className="text-center text-brand-text-secondary text-sm flex-grow">{text}</p>
         </div>
     );
 };
@@ -70,14 +70,14 @@ const About: React.FC<AboutProps> = ({ mediaContent, isEditMode, onMediaUpdate }
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
             {/* Text Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-center">
               <h2 className="text-4xl md:text-5xl font-extrabold text-brand-primary mb-6 leading-tight">
                 WELCOME TO<br />
                 <span>THE GEM PROJECT SANCTUARY</span>
               </h2>
               <div className="text-lg text-brand-text-secondary space-y-4 text-container mx-auto lg:mx-0">
-                  <p>The Gem Project Sanctuary is a place of healing and hope for rescued dogs and horses. Set on a spacious 14-hectare farm in Philadelphia, Cape Town, we provide safety, care and second chances to animals who have been abused, neglected, abandoned or surrendered.</p>
-                  <p>Many of these animals go on to find loving forever homes. Others, who carry deep emotional scars or have lifelong health needs, become our beloved <SafeLink href="/forever-dogs" className="text-brand-primary hover:underline font-semibold cursor-pointer">Forever Sanctuary family members</SafeLink>. They are not waiting for a home. They are already home.</p>
+                  <p className="text-center">The Gem Project Sanctuary is a place of healing and hope for rescued dogs and horses. Set on a spacious 14-hectare farm in Philadelphia, Cape Town, we provide safety, care and second chances to animals who have been abused, neglected, abandoned or surrendered.</p>
+                  <p className="text-center">Many of these animals go on to find loving forever homes. Others, who carry deep emotional scars or have lifelong health needs, become our beloved <SafeLink href="/forever-dogs" className="text-brand-primary hover:underline font-semibold cursor-pointer">Forever Sanctuary family members</SafeLink>. They are not waiting for a home. They are already home.</p>
               </div>
             </div>
 

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Edit Mode</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            line-height: 1.6;
+        }
+        .edit-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .edit-mode .editable {
+            border: 2px dashed #2563eb;
+            padding: 10px;
+            margin: 5px;
+            background: rgba(37, 99, 235, 0.05);
+            position: relative;
+        }
+        .edit-mode .editable:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+        .edit-controls {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .edit-mode .editable:hover .edit-controls {
+            display: block;
+        }
+        .edit-controls button {
+            border: none;
+            background: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .edit-controls button:hover {
+            background: #f3f4f6;
+        }
+        .toolbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .edit-mode .toolbar {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="editable">Welcome to Test Edit Mode</h1>
+    <p class="editable">This is a simple test to verify that our edit mode concept works. Click the blue button to toggle edit mode.</p>
+    
+    <div class="editable">
+        <h2>Draggable Section 1</h2>
+        <p>This section can be edited and moved around.</p>
+        <div class="edit-controls">
+            <button onclick="editText(this)">✏️</button>
+            <button onclick="deleteElement(this)">🗑️</button>
+        </div>
+    </div>
+    
+    <div class="editable">
+        <h2>Draggable Section 2</h2>
+        <p>Another section that demonstrates the editing capabilities.</p>
+        <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=300&auto=format&fit=crop&q=60" alt="Test image" style="width: 300px; height: 200px; object-fit: cover;">
+        <div class="edit-controls">
+            <button onclick="editText(this)">✏️</button>
+            <button onclick="changeImage(this)">🖼️</button>
+            <button onclick="deleteElement(this)">🗑️</button>
+        </div>
+    </div>
+    
+    <button class="edit-button" onclick="toggleEditMode()" id="editBtn">✏️</button>
+    
+    <div class="toolbar">
+        <h3>Edit Mode Active</h3>
+        <p>✅ Hover over sections to see edit controls</p>
+        <p>✅ Click edit button to modify text</p>
+        <p>✅ Click image button to change images</p>
+        <p>✅ Use delete button to remove sections</p>
+        <button onclick="exportChanges()">📤 Export Changes</button>
+    </div>
+    
+    <script>
+        let isEditMode = false;
+        let changes = [];
+        
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            document.body.classList.toggle('edit-mode', isEditMode);
+            document.getElementById('editBtn').textContent = isEditMode ? '❌' : '✏️';
+            
+            if (isEditMode) {
+                console.log('Edit mode enabled');
+                alert('Edit mode enabled! Hover over sections to see edit controls.');
+            } else {
+                console.log('Edit mode disabled');
+            }
+        }
+        
+        function editText(button) {
+            const section = button.closest('.editable');
+            const textElement = section.querySelector('h2') || section.querySelector('h1');
+            if (!textElement) return;
+            
+            const oldText = textElement.textContent;
+            const newText = prompt('Edit text:', oldText);
+            
+            if (newText && newText !== oldText) {
+                textElement.textContent = newText;
+                changes.push({
+                    type: 'text_change',
+                    element: textElement.tagName,
+                    oldValue: oldText,
+                    newValue: newText
+                });
+                console.log('Text changed:', { oldText, newText });
+            }
+        }
+        
+        function changeImage(button) {
+            const section = button.closest('.editable');
+            const img = section.querySelector('img');
+            if (!img) return;
+            
+            const oldSrc = img.src;
+            const newSrc = prompt('Enter new image URL:', oldSrc);
+            
+            if (newSrc && newSrc !== oldSrc) {
+                img.src = newSrc;
+                changes.push({
+                    type: 'image_change',
+                    oldSrc: oldSrc,
+                    newSrc: newSrc
+                });
+                console.log('Image changed:', { oldSrc, newSrc });
+            }
+        }
+        
+        function deleteElement(button) {
+            const section = button.closest('.editable');
+            if (confirm('Delete this section?')) {
+                changes.push({
+                    type: 'delete_section',
+                    content: section.outerHTML
+                });
+                section.remove();
+                console.log('Section deleted');
+            }
+        }
+        
+        function exportChanges() {
+            const codeOutput = generateCode();
+            console.log('Generated code:', codeOutput);
+            
+            const blob = new Blob([codeOutput], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'edit-changes.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            alert('Changes exported! Check your downloads folder.');
+        }
+        
+        function generateCode() {
+            let code = '// Generated edit mode changes\n\n';
+            
+            changes.forEach((change, index) => {
+                code += `// Change ${index + 1}: ${change.type}\n`;
+                switch (change.type) {
+                    case 'text_change':
+                        code += `// Update ${change.element} text from "${change.oldValue}" to "${change.newValue}"\n`;
+                        code += `document.querySelector('${change.element}').textContent = '${change.newValue}';\n\n`;
+                        break;
+                    case 'image_change':
+                        code += `// Update image src from "${change.oldSrc}" to "${change.newSrc}"\n`;
+                        code += `document.querySelector('img[src*="${change.oldSrc.split('/').pop().split('?')[0]}"]').src = '${change.newSrc}';\n\n`;
+                        break;
+                    case 'delete_section':
+                        code += `// Section was deleted\n`;
+                        code += `// Original content: ${change.content.substring(0, 100)}...\n\n`;
+                        break;
+                }
+            });
+            
+            if (changes.length === 0) {
+                code += '// No changes made yet\n';
+            }
+            
+            return code;
+        }
+        
+        // Keyboard shortcut
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'e') {
+                e.preventDefault();
+                toggleEditMode();
+            }
+        });
+        
+        console.log('Test edit mode loaded. Press Ctrl+E or click the button to toggle edit mode.');
+    </script>
+</body>
+</html>

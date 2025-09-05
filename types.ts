@@ -13,7 +13,7 @@ export interface FocalPointData {
   [mediaKey: string]: FocalPoint;
 }
 
-export type SectionKey = 'welcome' | 'animal_sections' | 'community' | 'youth' | 'get_involved' | 'final_cta';
+export type SectionKey = 'welcome' | 'pillars' | 'animal_sections' | 'community' | 'youth' | 'get_involved' | 'final_cta';
 
 export interface HeroMedia {
   url: string;

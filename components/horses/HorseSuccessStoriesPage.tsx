@@ -106,7 +106,7 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                                     {/* Geometric accent in corner */}
                                     <div className={`absolute top-0 right-0 w-24 h-24 ${colorScheme.bg}/20 rounded-bl-3xl`}></div>
                                     <div className="relative z-10 space-y-6 text-lg text-brand-text-primary leading-relaxed">
-                                        <p>{story.text}</p>
+                                        <p className="text-center">{story.text}</p>
                                     </div>
                                 </div>
                             </div>
@@ -116,19 +116,28 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                         <div className={`${colorScheme.bg}/10 rounded-2xl p-8 border-l-4 ${colorScheme.bg.replace('bg-', 'border-')}`}>
                             <h4 className={`font-black text-green-800 mb-6 text-center uppercase tracking-wider text-lg`}>After Recovery</h4>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                {story.afterKeys.slice(0, 4).map((key, idx) => (
-                                    props.mediaContent[key] ? (
+                                {story.afterKeys.slice(0, 4).map((key, idx) => {
+                                    const imageUrl = props.mediaContent[key];
+                                    if (!imageUrl) {
+                                        console.log(`Missing image for key: ${key}`);
+                                        return (
+                                            <div key={key} className="aspect-square overflow-hidden rounded-xl border-2 border-gray-300 bg-gray-100 flex items-center justify-center">
+                                                <span className="text-gray-400 text-sm">Image not found</span>
+                                            </div>
+                                        );
+                                    }
+                                    return (
                                         <div key={key} className="aspect-square overflow-hidden rounded-xl border-2 border-white">
                                             <EditableMedia 
                                                 mediaKey={key} 
-                                                mediaUrl={props.mediaContent[key]!} 
+                                                mediaUrl={imageUrl} 
                                                 alt={`${story.name} after recovery ${idx + 1}`} 
                                                 {...props} 
                                                 className="w-full h-full object-cover" 
                                             />
                                         </div>
-                                    ) : null
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -139,19 +148,28 @@ const StorySection: React.FC<HorseSuccessStoriesPageProps & { story: typeof stor
                         <div className="bg-green-50 rounded-2xl p-6 border-l-4 border-green-400">
                             <h4 className="font-black text-green-700 mb-6 text-center uppercase tracking-wider text-sm">Before</h4>
                             <div className="space-y-4">
-                                {story.beforeKeys.slice(0, 4).map((key, idx) => (
-                                    props.mediaContent[key] ? (
+                                {story.beforeKeys.slice(0, 4).map((key, idx) => {
+                                    const imageUrl = props.mediaContent[key];
+                                    if (!imageUrl) {
+                                        console.log(`Missing image for key: ${key}`);
+                                        return (
+                                            <div key={key} className="aspect-square overflow-hidden rounded-xl border-2 border-gray-300 bg-gray-100 flex items-center justify-center">
+                                                <span className="text-gray-400 text-sm">Image not found</span>
+                                            </div>
+                                        );
+                                    }
+                                    return (
                                         <div key={key} className="aspect-square overflow-hidden rounded-xl border-2 border-white">
                                             <EditableMedia 
                                                 mediaKey={key} 
-                                                mediaUrl={props.mediaContent[key]!} 
+                                                mediaUrl={imageUrl} 
                                                 alt={`${story.name} before recovery ${idx + 1}`} 
                                                 {...props} 
                                                 className="w-full h-full object-cover" 
                                             />
                                         </div>
-                                    ) : null
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -176,15 +194,15 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
             
             <ContentSection>
                 <div>
-                    <p className="text-left">Every rescue at The Gem Project Sanctuary begins with a moment of urgency—a call for help, a heartbreaking scene, a horse on the edge of survival. This section shares those raw, unfiltered beginnings. These are the horses in their most vulnerable state: malnourished, neglected, injured, forgotten.</p>
-                    <p className="mt-4 text-left">Here, you'll learn about:</p>
-                    <ul className="list-disc list-inside space-y-2 my-4 text-left max-w-2xl">
+                    <p className="text-center">Every rescue at The Gem Project Sanctuary begins with a moment of urgency—a call for help, a heartbreaking scene, a horse on the edge of survival. This section shares those raw, unfiltered beginnings. These are the horses in their most vulnerable state: malnourished, neglected, injured, forgotten.</p>
+                    <p className="mt-4 text-center">Here, you'll learn about:</p>
+                    <ul className="list-disc list-inside space-y-2 my-4 text-center max-w-2xl">
                         <li>The conditions in which each horse was found</li>
                         <li>How we responded—sometimes in remote areas, often in collaboration with communities or animal welfare partners</li>
                         <li>The immediate care they received upon arrival, from emergency veterinary intervention to gentle first handling</li>
                         <li>The emotional state of the horse: scared, shut down, reactive, or withdrawn</li>
                     </ul>
-                    <p className="text-left">These are the "before" stories—the crucial, difficult first steps in every horse's journey to healing. They are not easy to read, but they are powerful reminders of why our sanctuary exists.</p>
+                    <p className="text-center">These are the "before" stories—the crucial, difficult first steps in every horse's journey to healing. They are not easy to read, but they are powerful reminders of why our sanctuary exists.</p>
                 </div>
             </ContentSection>
 
@@ -196,7 +214,7 @@ const HorseSuccessStoriesPage: React.FC<HorseSuccessStoriesPageProps> = (props) 
                 <div className="container mx-auto px-6 text-white">
                     <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white text-center">Be Part of the Next Success Story</h2>
-                    <p className="text-lg text-green-100 mb-8 text-left">
+                    <p className="text-lg text-green-100 mb-8 text-center">
                         Your support makes these transformations possible. By donating, sponsoring, or volunteering, you help us give more horses the future they deserve.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">

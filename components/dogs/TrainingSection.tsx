@@ -32,8 +32,8 @@ const TrainingSection: React.FC<SectionProps> = (props) => {
                     className="rounded-t-lg aspect-video"
                 />
                 <div className="p-6 md:p-8 space-y-4 text-lg text-gray-700">
-                    <p>At The Gem Project Sanctuary, behaviour and training are at the heart of our rehabilitation work. Many of the dogs who come to us carry emotional and behavioural scars shaped by trauma, neglect, fear and isolation.</p>
-                    <p>Our programme focuses on how dogs think, learn and respond. We use positive, science-based methods to teach desirable behaviours and help them unlearn survival-based habits. Whether they're preparing for adoption, entering therapy or service training, or staying with us as forever residents, every dog deserves a chance to thrive.</p>
+                    <p className="text-center">At The Gem Project Sanctuary, behaviour and training are at the heart of our rehabilitation work. Many of the dogs who come to us carry emotional and behavioural scars shaped by trauma, neglect, fear and isolation.</p>
+                    <p className="text-center">Our programme focuses on how dogs think, learn and respond. We use positive, science-based methods to teach desirable behaviours and help them unlearn survival-based habits. Whether they're preparing for adoption, entering therapy or service training, or staying with us as forever residents, every dog deserves a chance to thrive.</p>
                 </div>
             </div>
 
@@ -69,9 +69,9 @@ const TrainingSection: React.FC<SectionProps> = (props) => {
                 <div className="p-6 md:p-8">
                     <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
                     <h3 className="text-2xl font-bold text-brand-secondary">Behaviour Transformation</h3>
-                    <p>Many of our dogs came from isolated lives, confined in enclosures with little human interaction. Some blossom quickly with love and care, while others need patience, space and gentle structure.</p>
-                    <p>Through ongoing work, we've seen remarkable changes. Dogs once too shy to make eye contact now run joyfully in packs. Some sleep soundly beside our staff, curled up in warm homes with people who understand their needs.</p>
-                    <p>Their true personalities emerge when they feel safe. And once they do, they shine.</p>
+                    <p className="text-center">Many of our dogs came from isolated lives, confined in enclosures with little human interaction. Some blossom quickly with love and care, while others need patience, space and gentle structure.</p>
+                    <p className="text-center">Through ongoing work, we've seen remarkable changes. Dogs once too shy to make eye contact now run joyfully in packs. Some sleep soundly beside our staff, curled up in warm homes with people who understand their needs.</p>
+                    <p className="text-center">Their true personalities emerge when they feel safe. And once they do, they shine.</p>
                 </div>
             </div>
             

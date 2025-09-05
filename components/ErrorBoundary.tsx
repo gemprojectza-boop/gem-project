@@ -36,9 +36,9 @@ class ErrorBoundary extends Component<Props, State> {
           <p className="text-lg mb-8 text-center">
             We're sorry for the inconvenience. Please try refreshing the page or navigating back home.
           </p>
-          <div className="bg-white p-4 mt-4 rounded-lg shadow-lg w-full max-w-3xl text-left">
+          <div className="bg-white p-4 mt-4 rounded-lg shadow-lg w-full max-w-3xl text-center">
               <h2 className="text-xl font-semibold text-brand-text-primary mb-2">Error Details</h2>
-              <pre className="text-sm text-gray-700 bg-gray-100 p-3 rounded overflow-auto" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+              <pre className="text-center text-sm text-gray-700 bg-gray-100 p-3 rounded overflow-auto" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
                   {this.state.error && this.state.error.toString()}
                   <br />
                   {this.state.errorInfo?.componentStack}

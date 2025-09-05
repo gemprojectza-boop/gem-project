@@ -114,7 +114,7 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
                             )}
                             <div className="p-6 md:p-8">
                                 <h2 className="text-3xl font-bold mb-3 text-center" style={{color: '#16a34a !important'}}>{horse.story.title}</h2>
-                                <p className="text-brand-text-secondary leading-relaxed text-left">{horse.story.text}</p>
+                                <p className="text-brand-text-secondary leading-relaxed text-center">{horse.story.text}</p>
                             </div>
                         </div>
 
@@ -122,14 +122,14 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
                         <div className="content-bubble">
                             <div className="p-6 md:p-8">
                                 <h2 className="text-3xl font-bold mb-3 text-center" style={{color: '#16a34a !important'}}>{horse.personality.title}</h2>
-                                <p className="text-brand-text-secondary leading-relaxed mb-6 text-left">{horse.personality.text}</p>
+                                <p className="text-brand-text-secondary leading-relaxed mb-6 text-center">{horse.personality.text}</p>
 
                                 <h3 className="text-2xl font-bold mb-3 text-center" style={{color: '#16a34a !important'}}>{horse.specialTrait.title}</h3>
                                 <ul className="space-y-2">
                                     {horse.specialTrait.points.map((point, index) => (
                                         <li key={index} className="flex items-start">
                                             <span className="text-brand-accent mr-3 mt-1">🐴</span>
-                                            <span className="text-brand-text-secondary text-left">{point}</span>
+                                            <span className="text-brand-text-secondary text-center">{point}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -139,7 +139,7 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
                         <div className="content-bubble">
                             <div className="p-6 md:p-8">
                                 <h2 className="text-3xl font-bold mb-3 text-center" style={{color: '#16a34a !important'}}>{horse.loveReason.title}</h2>
-                                <p className="text-brand-text-secondary leading-relaxed text-left">{horse.loveReason.text}</p>
+                                <p className="text-brand-text-secondary leading-relaxed text-center">{horse.loveReason.text}</p>
                             </div>
                         </div>
                     </div>
@@ -150,7 +150,7 @@ const HorseProfilePage: React.FC<HorseProfilePageProps> = ({ horseId, mediaConte
                         <InfoTable title="Equine Info" data={horse.petInfo} />
                         <div className="bg-brand-surface p-6 rounded-lg shadow-md border">
                             <h3 className="text-xl font-bold mb-4 text-center" style={{color: '#16a34a !important'}}>Ideal Home</h3>
-                            <p className="text-brand-text-secondary text-left">{horse.idealHome}</p>
+                            <p className="text-brand-text-secondary text-center">{horse.idealHome}</p>
                         </div>
                          <div className="sticky top-28 bg-brand-surface p-6 rounded-lg shadow-lg border border-brand-primary">
                             {ctaBlock}

@@ -54,11 +54,11 @@ const HandsOnDogsPage: React.FC<HandsOnDogsPageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>You might live somewhere that doesn’t allow animals. Or your schedule could be too full for daily care. Perhaps your heart is open, but your life just isn’t set up for it right now. That’s why we created the Hands-On Care Programme.</p>
+        <p className="text-center">You might live somewhere that doesn’t allow animals. Or your schedule could be too full for daily care. Perhaps your heart is open, but your life just isn’t set up for it right now. That’s why we created the Hands-On Care Programme.</p>
         <p className="font-semibold text-brand-secondary">Choose a dog who lives safely at our sanctuary and becomes yours in every way that matters. Build a real relationship through visits, bonding time and shared routines. Watch as they begin to recognise your voice and light up each time you arrive.</p>
-        <p>This is your dog. Your connection. Your joy. We take care of their daily needs including food, shelter and vet care while you experience the love, presence and companionship of having your own dog.</p>
+        <p className="text-center">This is your dog. Your connection. Your joy. We take care of their daily needs including food, shelter and vet care while you experience the love, presence and companionship of having your own dog.</p>
         <div className="mt-4 p-4 bg-brand-primary/10 border-l-4 border-brand-primary text-brand-text-secondary rounded">
-            <p><strong>Part of a company or team?</strong> We offer unforgettable corporate team building experiences that combine connection, purpose and impact. Spend time together in a beautiful setting, bond through dog-friendly activities, and make a lasting difference in the lives of rescued animals.</p>
+            <p className="text-center"><strong>Part of a company or team?</strong> We offer unforgettable corporate team building experiences that combine connection, purpose and impact. Spend time together in a beautiful setting, bond through dog-friendly activities, and make a lasting difference in the lives of rescued animals.</p>
         </div>
       </ContentSection>
 
@@ -97,23 +97,23 @@ const HandsOnDogsPage: React.FC<HandsOnDogsPageProps> = (props) => {
             />
         </div>
         <div className="mt-12 text-center text-brand-text-secondary italic">
-            <p>Every package supports your chosen dog’s daily food, medical care, enrichment and safety. You’re not just visiting. You’re stepping into a role that matters – to them and to you.</p>
+            <p className="text-center">Every package supports your chosen dog’s daily food, medical care, enrichment and safety. You’re not just visiting. You’re stepping into a role that matters – to them and to you.</p>
         </div>
       </ContentSection>
 
       <ContentSection title="Corporate Team Building Days" titleColorClass="text-brand-secondary">
-        <p>Looking for a powerful way to bring your team together while making a real impact? Spend a full day at our peaceful sanctuary and reconnect with purpose, nature and each other through meaningful, guided activities:</p>
+        <p className="text-center">Looking for a powerful way to bring your team together while making a real impact? Spend a full day at our peaceful sanctuary and reconnect with purpose, nature and each other through meaningful, guided activities:</p>
         <ul className="list-disc list-inside space-y-3 my-6">
             <li>Dog-friendly obstacle courses and collaborative team challenges</li>
             <li>Fun group games and shared bonding experiences</li>
             <li>Gentle, hands-on involvement in enrichment and dog care</li>
             <li>Optional catered lunch or a relaxed picnic setup at our sanctuary</li>
         </ul>
-        <p>Your team will leave feeling energised, united and fulfilled, knowing they’ve made a real difference for animals who need it most.</p>
+        <p className="text-center">Your team will leave feeling energised, united and fulfilled, knowing they’ve made a real difference for animals who need it most.</p>
         <p className="font-semibold mt-4">Custom pricing based on group size and visit duration.</p>
       </ContentSection>
 
-       <section className="py-20 bg-brand-primary">
+       <section className="py-8 bg-brand-primary">
         <div className="container mx-auto px-6 text-center text-white">
             <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-secondary">Ready to build a bond that matters?</h2>

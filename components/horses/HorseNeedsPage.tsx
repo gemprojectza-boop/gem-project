@@ -43,7 +43,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>Caring for 20 horses—many of whom are recovering from trauma, illness or neglect—requires ongoing access to high-quality equipment, feed and medical supplies. While we provide a lifelong home for our equines, we rely on the generosity of donors and supporters to meet their daily and long-term needs.</p>
+        <p className="text-center">Caring for 20 horses—many of whom are recovering from trauma, illness or neglect—requires ongoing access to high-quality equipment, feed and medical supplies. While we provide a lifelong home for our equines, we rely on the generosity of donors and supporters to meet their daily and long-term needs.</p>
         <p className="mt-4">Below is a breakdown of the items we require on an ongoing basis, as well as some once-off larger donations that would significantly strengthen our operations.</p>
       </ContentSection>
       
@@ -103,7 +103,7 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
                 className="rounded-t-lg aspect-video"
             />
             <div className="p-6 md:p-8">
-                <p>These larger items are incredibly important to our growth and long-term sustainability. If you or your company would like to contribute to a legacy project, these are impactful ways to give:</p>
+                <p className="text-center">These larger items are incredibly important to our growth and long-term sustainability. If you or your company would like to contribute to a legacy project, these are impactful ways to give:</p>
                 <ul className="list-disc list-inside space-y-2 my-4">
                     <li>Chaffer (for chopping and preparing hay or feed)</li>
                     <li>Tractor and trailer (to assist with land maintenance and hay transport)</li>
@@ -120,11 +120,11 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
         <div className="space-y-6">
             <div>
                 <h4 className="text-xl font-bold text-sanctuary-dark text-center">Item Donations</h4>
-                <p className="text-left">Donate items directly from our list above.</p>
+                <p className="text-center">Donate items directly from our list above.</p>
             </div>
             <div>
                 <h4 className="text-xl font-bold text-sanctuary-dark text-center">Monetary Donations</h4>
-                <p className="text-left">One-time or recurring financial contributions allow us to cover urgent medical treatments, daily feeding and facility improvements.</p>
+                <p className="text-center">One-time or recurring financial contributions allow us to cover urgent medical treatments, daily feeding and facility improvements.</p>
                 <ul className="list-disc list-inside text-gray-600 pl-4 mt-2">
                     <li>Once-off EFTs or bank deposits</li>
                     <li>Monthly giving (sponsor a horse or fund a need)</li>
@@ -132,23 +132,23 @@ const HorseNeedsPage: React.FC<HorseNeedsPageProps> = (props) => {
             </div>
             <div>
                 <h4 className="text-xl font-bold text-sanctuary-dark text-center">Corporate Giving</h4>
-                <p className="text-left">We welcome CSR partnerships, matching gift programs or in-kind donations from businesses.</p>
+                <p className="text-center">We welcome CSR partnerships, matching gift programs or in-kind donations from businesses.</p>
             </div>
             <div>
                 <h4 className="text-xl font-bold text-sanctuary-dark text-center">Gift Donations</h4>
-                <p className="text-left">Donate on behalf of a friend or family member in honour of a birthday, anniversary or memorial.</p>
+                <p className="text-center">Donate on behalf of a friend or family member in honour of a birthday, anniversary or memorial.</p>
             </div>
             <div>
                 <h4 className="text-xl font-bold text-sanctuary-dark text-center">Legacy or Estate Gifts</h4>
-                <p className="text-left">Leave a lasting impact by including The Gem Project Sanctuary in your will or estate plan.</p>
+                <p className="text-center">Leave a lasting impact by including The Gem Project Sanctuary in your will or estate plan.</p>
             </div>
         </div>
 
         <div className="mt-8 p-4 bg-green-100 border-l-4 border-green-500 text-green-800 rounded-r-lg">
-            <p><span className="font-bold">Tax-Deductible Giving:</span> We are a registered Public Benefit Organisation (PBO) and all qualifying monetary donations are eligible for a Section 18A tax certificate. This means your donation can be tax-deductible in South Africa. Simply let us know if you’d like a certificate issued.</p>
+            <p className="text-center"><span className="font-bold">Tax-Deductible Giving:</span> We are a registered Public Benefit Organisation (PBO) and all qualifying monetary donations are eligible for a Section 18A tax certificate. This means your donation can be tax-deductible in South Africa. Simply let us know if you’d like a certificate issued.</p>
         </div>
 
-        <p className="mt-6 font-semibold text-left">Every contribution—big or small—changes a life. Because of you, a once-forgotten horse will know safety, kindness and healing.</p>
+        <p className="mt-6 font-semibold text-center">Every contribution—big or small—changes a life. Because of you, a once-forgotten horse will know safety, kindness and healing.</p>
 
         <div className="flex flex-wrap justify-center gap-4 mt-8">
             <CtaButton href="/donate" className="bg-brand-primary hover:bg-brand-primary-hover text-white">Donate Now</CtaButton>

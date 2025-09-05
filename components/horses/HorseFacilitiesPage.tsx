@@ -24,7 +24,7 @@ const FacilitySection: React.FC<HorseFacilitiesPageProps & { title: string; medi
         />
         <div className="p-6 md:p-8">
             <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{title}</h2>
-            <div className="text-lg text-gray-700 space-y-4 text-left">
+            <div className="text-lg text-gray-700 space-y-4 text-center">
                 {children}
             </div>
         </div>
@@ -45,29 +45,29 @@ const HorseFacilitiesPage: React.FC<HorseFacilitiesPageProps> = (props) => {
             />
 
             <ContentSection>
-                <p>At The Gem Project Sanctuary, our horses are not just housed. They are home. Every paddock, shelter and stable has been designed with care to ensure each horse’s physical and emotional wellbeing. These aren’t simply facilities. They are spaces of safety, recovery and peace.</p>
+                <p className="text-center">At The Gem Project Sanctuary, our horses are not just housed. They are home. Every paddock, shelter and stable has been designed with care to ensure each horse’s physical and emotional wellbeing. These aren’t simply facilities. They are spaces of safety, recovery and peace.</p>
             </ContentSection>
 
             <section className="py-16 md:py-20 bg-brand-bg-subtle">
                 <div className="container mx-auto px-6 max-w-4xl space-y-12">
                     <FacilitySection title="Spacious Paddocks for Freedom and Trust" mediaKey="horse_facilities_paddock_run" alt="Horses walking or running together across a paddock" {...props}>
-                        <p>Our sanctuary offers spacious paddocks where horses can roam, graze and interact as a natural herd. Here, they rediscover what it means to move freely and choose their own pace. Many arrive having lived in cramped or isolated conditions. This space is often the first step in their healing.</p>
-                        <p>Horses are carefully grouped to ensure compatibility and low stress. Each paddock is equipped with clean water troughs and natural shade, encouraging healthy routines and calm social bonds.</p>
+                        <p className="text-center">Our sanctuary offers spacious paddocks where horses can roam, graze and interact as a natural herd. Here, they rediscover what it means to move freely and choose their own pace. Many arrive having lived in cramped or isolated conditions. This space is often the first step in their healing.</p>
+                        <p className="text-center">Horses are carefully grouped to ensure compatibility and low stress. Each paddock is equipped with clean water troughs and natural shade, encouraging healthy routines and calm social bonds.</p>
                     </FacilitySection>
 
                     <FacilitySection title="Safe Shelters in Every Paddock" mediaKey="horse_facilities_shelter" alt="Horse standing peacefully under a sturdy shelter" {...props}>
-                        <p>Each of our paddocks includes secure shelters to protect against sun, wind and rain. Whether a horse needs rest during a hot day or shelter from a sudden Cape storm, these structures provide comfort and predictability.</p>
+                        <p className="text-center">Each of our paddocks includes secure shelters to protect against sun, wind and rain. Whether a horse needs rest during a hot day or shelter from a sudden Cape storm, these structures provide comfort and predictability.</p>
                         <p className="mt-4">Shelters are designed with open visibility to prevent trapped feelings and allow each horse to feel safe while still connected to their environment.</p>
                     </FacilitySection>
 
                     <FacilitySection title="Rehabilitation and Training Areas" mediaKey="horse_facilities_training" alt="Staff member doing liberty work or groundwork with a horse" {...props}>
-                        <p>Some of our horses come to us with behavioural trauma, anxiety or medical conditions that limit mobility. For these horses, we have created dedicated rehabilitation and training areas. These calm, quiet spaces allow for groundwork, desensitisation, liberty work and light schooling.</p>
-                        <p>The goal is not obedience, but trust. Here, horses are never pushed beyond their limits. They are guided with patience, consistency and compassion.</p>
+                        <p className="text-center">Some of our horses come to us with behavioural trauma, anxiety or medical conditions that limit mobility. For these horses, we have created dedicated rehabilitation and training areas. These calm, quiet spaces allow for groundwork, desensitisation, liberty work and light schooling.</p>
+                        <p className="text-center">The goal is not obedience, but trust. Here, horses are never pushed beyond their limits. They are guided with patience, consistency and compassion.</p>
                     </FacilitySection>
 
                     <FacilitySection title="Grooming Bays for Bonding and Care" mediaKey="horse_facilities_grooming" alt="Caregiver gently brushing or washing a horse in grooming bay" {...props}>
-                        <p>Grooming is a daily part of life at the sanctuary. Our secure grooming bays are set up for safe, relaxed interaction. Whether it’s brushing, washing or medical checks, each grooming session is a moment of connection.</p>
-                        <p>These bays are especially important for horses still learning to accept touch or recovering from past trauma. We use positive reinforcement and calming techniques to ensure every horse feels safe and respected.</p>
+                        <p className="text-center">Grooming is a daily part of life at the sanctuary. Our secure grooming bays are set up for safe, relaxed interaction. Whether it’s brushing, washing or medical checks, each grooming session is a moment of connection.</p>
+                        <p className="text-center">These bays are especially important for horses still learning to accept touch or recovering from past trauma. We use positive reinforcement and calming techniques to ensure every horse feels safe and respected.</p>
                     </FacilitySection>
                 </div>
             </section>
@@ -83,8 +83,8 @@ const HorseFacilitiesPage: React.FC<HorseFacilitiesPageProps> = (props) => {
                         className="rounded-t-lg aspect-video"
                     />
                     <div className="p-6 md:p-8">
-                        <p>Every pathway, gate and feeding routine has been created with our horses in mind. Our team works to reduce stress triggers, avoid unnecessary confinement and promote natural behaviours.</p>
-                        <p>While our horses live in a sanctuary, their lives mirror as closely as possible the rhythm of safe, supported freedom. Daily human interaction, herd companionship and choice form the heart of their days.</p>
+                        <p className="text-center">Every pathway, gate and feeding routine has been created with our horses in mind. Our team works to reduce stress triggers, avoid unnecessary confinement and promote natural behaviours.</p>
+                        <p className="text-center">While our horses live in a sanctuary, their lives mirror as closely as possible the rhythm of safe, supported freedom. Daily human interaction, herd companionship and choice form the heart of their days.</p>
                         <p className="font-bold mt-4">Because here, space is not just something they have. It’s something that heals.</p>
                     </div>
                 </div>

@@ -28,12 +28,12 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
       />
 
       <ContentSection>
-        <p>At The Gem Project Sanctuary we believe that education is a powerful tool for creating a kinder world. Our Youth Apprentice Program brings young people into a safe structured and inspiring environment. By fostering empathy emotional development and responsible care through hands-on learning we help shape the next generation of animal advocates.</p>
-        <p>This program is not just about animals. It is about connection healing and growth. Through every interaction with our dogs children learn how to build trust regulate emotions improve social skills and care for another living being. These experiences stay with them long after the session ends laying the foundation for a lifetime of compassion and confidence.</p>
+        <p className="text-center">At The Gem Project Sanctuary we believe that education is a powerful tool for creating a kinder world. Our Youth Apprentice Program brings young people into a safe structured and inspiring environment. By fostering empathy emotional development and responsible care through hands-on learning we help shape the next generation of animal advocates.</p>
+        <p className="text-center">This program is not just about animals. It is about connection healing and growth. Through every interaction with our dogs children learn how to build trust regulate emotions improve social skills and care for another living being. These experiences stay with them long after the session ends laying the foundation for a lifetime of compassion and confidence.</p>
       </ContentSection>
 
       <ContentSection title="AIM of the Youth Apprentice Program" className="bg-brand-bg-subtle">
-        <p>The Aim of the program is to find Gems in our youth and support them in their endeavors. We are Heavily Life Skills focused to train and equip the youth to become responsible young adults and ambassadors for animal in there communities. Once the apprentices have proven they are ‘Gems” then we are happy to assist them and go the extra mile for them in their endeavors and hopes:</p>
+        <p className="text-center">The Aim of the program is to find Gems in our youth and support them in their endeavors. We are Heavily Life Skills focused to train and equip the youth to become responsible young adults and ambassadors for animal in there communities. Once the apprentices have proven they are ‘Gems” then we are happy to assist them and go the extra mile for them in their endeavors and hopes:</p>
         
         <div className="my-8 rounded-lg overflow-hidden">
           <EditableMedia
@@ -49,11 +49,11 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
         <div className="space-y-6">
             <div>
                 <h3 className="text-2xl font-bold text-brand-primary mb-2">In-school youth</h3>
-                <p>Our apprenticeship program is carried out in the school holidays and weekends. It is about supporting youth to stay in school and support them as much as possible to be focused and motivated students. The heavy Life Skills aspect of the program is to also educate them about making healthy and responsible choices. We teach drug awareness, safe sex choices, personal empowerment and standing up to peer pressure. Once they have proved they are Gems and have worked hard and attended regularly we are happy to assist them with school sponsorship needs for fees and/or school materials or assist in supporting their extra-curricular interests and talents. In return we expect these young Gem’s to become Animal Ambassadors in their communities and to inspire and motivate other young people as role models.</p>
+                <p className="text-center">Our apprenticeship program is carried out in the school holidays and weekends. It is about supporting youth to stay in school and support them as much as possible to be focused and motivated students. The heavy Life Skills aspect of the program is to also educate them about making healthy and responsible choices. We teach drug awareness, safe sex choices, personal empowerment and standing up to peer pressure. Once they have proved they are Gems and have worked hard and attended regularly we are happy to assist them with school sponsorship needs for fees and/or school materials or assist in supporting their extra-curricular interests and talents. In return we expect these young Gem’s to become Animal Ambassadors in their communities and to inspire and motivate other young people as role models.</p>
             </div>
              <div>
                 <h3 className="text-2xl font-bold text-brand-primary mb-2">Out-of-school youth</h3>
-                <p>For these apprentices the program is then more vocationally focused and can be the start of Work Place Learning and Experience. Along with all the Life Skills and learning their craft caring for the animals we also assist with their curriculum vitae, interview techniques, workplace etiquette and basic computing to be able to search for jobs and post curriculum vitae and write application forms.</p>
+                <p className="text-center">For these apprentices the program is then more vocationally focused and can be the start of Work Place Learning and Experience. Along with all the Life Skills and learning their craft caring for the animals we also assist with their curriculum vitae, interview techniques, workplace etiquette and basic computing to be able to search for jobs and post curriculum vitae and write application forms.</p>
             </div>
         </div>
       </ContentSection>
@@ -67,12 +67,12 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
           onUpdate={props.onMediaUpdate}
           className="w-full rounded-lg mb-6"
         />
-        <p>Our dogs become co-educators in classrooms learning centres and community spaces. They are chosen for their calm nature and trained for safety and positive interaction. Each session is designed with care using research-backed methods to support literacy social-emotional learning and animal care education.</p>
-        <p>We tailor each visit to meet the needs of the group whether that means encouraging a reluctant reader to share a story offering comfort to a child working through big feelings or teaching a hands-on grooming session to build confidence. The flexibility of this program is one of its strengths. It can reach children of all abilities backgrounds and needs.</p>
+        <p className="text-center">Our dogs become co-educators in classrooms learning centres and community spaces. They are chosen for their calm nature and trained for safety and positive interaction. Each session is designed with care using research-backed methods to support literacy social-emotional learning and animal care education.</p>
+        <p className="text-center">We tailor each visit to meet the needs of the group whether that means encouraging a reluctant reader to share a story offering comfort to a child working through big feelings or teaching a hands-on grooming session to build confidence. The flexibility of this program is one of its strengths. It can reach children of all abilities backgrounds and needs.</p>
       </ContentSection>
 
       <ContentSection title="Program Goals" className="bg-brand-bg-subtle">
-        <p>We partner with educators youth leaders and families to achieve the following goals:</p>
+        <p className="text-center">We partner with educators youth leaders and families to achieve the following goals:</p>
         <ul className="list-disc list-inside space-y-2 mt-4">
             <li>Build empathy and responsible behaviour</li>
             <li>Support reading development and communication confidence</li>
@@ -87,21 +87,21 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
         <div className="space-y-6">
             <div>
                 <h3 className="text-2xl font-bold text-brand-primary mb-2">Canine Care and Responsibility Workshops</h3>
-                <p>These hands-on lessons teach children how to feed groom walk and care for dogs in a gentle safe manner. Children build confidence by learning how to give clear commands meet a dog’s needs and anticipate signs of stress or happiness. They walk away empowered and informed about what it takes to be a responsible caregiver.</p>
+                <p className="text-center">These hands-on lessons teach children how to feed groom walk and care for dogs in a gentle safe manner. Children build confidence by learning how to give clear commands meet a dog’s needs and anticipate signs of stress or happiness. They walk away empowered and informed about what it takes to be a responsible caregiver.</p>
             </div>
             <div>
                 <h3 className="text-2xl font-bold text-brand-primary mb-2">Social-Emotional Learning with Dogs</h3>
-                <p>Children explore emotions through guided interaction with our dogs. Activities might include practicing patience while brushing a dog expressing joy during a play session or recognizing signs of nervousness in themselves and in the dog. Dogs mirror emotions and provide immediate honest feedback making them ideal partners.</p>
+                <p className="text-center">Children explore emotions through guided interaction with our dogs. Activities might include practicing patience while brushing a dog expressing joy during a play session or recognizing signs of nervousness in themselves and in the dog. Dogs mirror emotions and provide immediate honest feedback making them ideal partners.</p>
             </div>
             <div>
                 <h3 className="text-2xl font-bold text-brand-primary mb-2">Creative Writing and Storytelling</h3>
-                <p>Children are encouraged to write stories inspired by the dogs they meet. This not only promotes literacy and creativity but also gives children a safe way to explore themes like friendship courage or overcoming fears. The dogs often become characters that help them express inner thoughts they might otherwise keep hidden.</p>
+                <p className="text-center">Children are encouraged to write stories inspired by the dogs they meet. This not only promotes literacy and creativity but also gives children a safe way to explore themes like friendship courage or overcoming fears. The dogs often become characters that help them express inner thoughts they might otherwise keep hidden.</p>
             </div>
         </div>
       </ContentSection>
       
       <ContentSection title="Safety and Supervision" className="bg-brand-bg-subtle">
-        <p>We place the safety and wellbeing of children and animals at the heart of this program. Every activity is supervised and structured to ensure calm respectful interaction. We also offer support for children who may be fearful or allergic to animals.</p>
+        <p className="text-center">We place the safety and wellbeing of children and animals at the heart of this program. Every activity is supervised and structured to ensure calm respectful interaction. We also offer support for children who may be fearful or allergic to animals.</p>
         <p className="mt-4 font-semibold text-brand-primary">Our standards include:</p>
          <ul className="list-disc list-inside space-y-2 mt-2">
             <li>Dogs are health-checked temperament-tested and trained for public interaction</li>

@@ -78,8 +78,8 @@ const HandsOnCareSection: React.FC<GetInvolvedLandingPageProps> = (props) => {
                         <div className="p-6 md:p-8 flex flex-col justify-center">
                             <h3 className="text-4xl font-bold text-brand-primary mb-6">Part-Owning Programme</h3>
                             <div className="text-lg text-brand-text-secondary space-y-6 leading-relaxed flex-grow">
-                                <p>Our Hands-On Care programme is a unique part-owning experience that allows you to form a deep, personal connection with one of our dogs or horses.</p>
-                                <p>You become a co-caregiver, sharing responsibility for their daily care, enrichment, and wellbeing while they remain safely in our sanctuary.</p>
+                                <p className="text-center">Our Hands-On Care programme is a unique part-owning experience that allows you to form a deep, personal connection with one of our dogs or horses.</p>
+                                <p className="text-center">You become a co-caregiver, sharing responsibility for their daily care, enrichment, and wellbeing while they remain safely in our sanctuary.</p>
                             </div>
                             <div className="flex flex-wrap gap-4 mt-8">
                                 <button onClick={() => navigate('/hands-on-dogs')} className="bg-brand-secondary text-white font-bold py-4 px-8 rounded-full transition duration-300 hover:bg-brand-secondary-hover text-lg">
@@ -134,7 +134,7 @@ const GetInvolvedLandingPage: React.FC<GetInvolvedLandingPageProps> = (props) =>
               <div className="order-1 lg:order-2 p-6 md:p-8 flex flex-col justify-center">
                 <h3 className="text-4xl font-bold text-brand-primary mb-6">Community Health</h3>
                 <div className="text-lg text-brand-text-secondary leading-relaxed mb-8">
-                  <p>Our mobile veterinary clinic brings essential veterinary services directly to underserved communities. We provide vaccinations, basic health checks, and emergency care to ensure all animals have access to proper healthcare, regardless of their owners' circumstances.</p>
+                  <p className="text-center">Our mobile veterinary clinic brings essential veterinary services directly to underserved communities. We provide vaccinations, basic health checks, and emergency care to ensure all animals have access to proper healthcare, regardless of their owners' circumstances.</p>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-4">

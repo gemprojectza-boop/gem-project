@@ -1,0 +1,193 @@
+/* Drag and Drop Styles */
+
+/* Drop zone hover effects */
+.drag-over {
+  @apply bg-blue-100 border-blue-400 shadow-lg scale-105;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Dragging item styles */
+.dragging {
+  @apply opacity-50 transform rotate-2 shadow-2xl;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Edit mode overlay */
+.edit-mode-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(59, 130, 246, 0.1);
+  border: 2px dashed rgba(59, 130, 246, 0.5);
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.edit-mode-overlay.visible {
+  opacity: 1;
+}
+
+/* Drag handle styles */
+.drag-handle {
+  cursor: grab;
+  transition: all 0.2s ease-in-out;
+}
+
+.drag-handle:hover {
+  @apply bg-gray-100 shadow-md;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Edit controls positioning */
+.edit-controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.draggable-wrapper:hover .edit-controls {
+  opacity: 1;
+}
+
+/* Text editing styles */
+.editable-text-hover {
+  @apply bg-yellow-50 ring-1 ring-yellow-300 cursor-text;
+}
+
+.editable-text-editing {
+  @apply ring-2 ring-blue-500 bg-white;
+}
+
+/* Image editing styles */
+.editable-image-hover {
+  @apply ring-2 ring-blue-300 ring-offset-2 cursor-pointer;
+}
+
+.image-edit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.editable-image:hover .image-edit-overlay {
+  opacity: 1;
+}
+
+/* Grid background for positioning */
+.edit-grid {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Sortable item styles */
+.sortable-item {
+  transition: transform 0.2s ease-in-out;
+}
+
+.sortable-item.is-sorting {
+  transition: none;
+}
+
+/* Drop zone styles */
+.drop-zone {
+  min-height: 120px;
+  border: 2px dashed #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.drop-zone.active {
+  @apply border-blue-400 bg-blue-50;
+}
+
+.drop-zone.over {
+  @apply border-blue-600 bg-blue-100 shadow-lg;
+}
+
+/* Position indicators */
+.position-indicator {
+  position: absolute;
+  background: rgba(59, 130, 246, 0.8);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 30;
+  pointer-events: none;
+}
+
+/* Animation keyframes */
+@keyframes dragStart {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
+
+@keyframes dragEnd {
+  from {
+    transform: scale(1.05) rotate(2deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.drag-start {
+  animation: dragStart 0.2s ease-out;
+}
+
+.drag-end {
+  animation: dragEnd 0.2s ease-out;
+}
+
+/* Mobile responsive drag handles */
+@media (max-width: 768px) {
+  .edit-controls {
+    position: relative;
+    top: auto;
+    right: auto;
+    opacity: 1;
+    margin-top: 8px;
+    justify-content: center;
+  }
+  
+  .drag-handle {
+    touch-action: none;
+  }
+}
+
+/* Print styles - hide edit controls when printing */
+@media print {
+  .edit-controls,
+  .edit-mode-overlay,
+  .drag-handle,
+  .position-indicator {
+    display: none !important;
+  }
+}

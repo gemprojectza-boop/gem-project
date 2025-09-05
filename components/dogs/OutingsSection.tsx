@@ -32,8 +32,8 @@ const OutingsSection: React.FC<SectionProps> = (props) => {
                     className="rounded-t-lg aspect-video"
                 />
                 <div className="p-6 md:p-8 space-y-4 text-lg text-gray-700">
-                    <p>At The Gem Project Sanctuary, healing doesn't just happen within our gates. It unfolds on beaches, in parks, and along quiet trails. With every pawprint in the sand and every tail wag in the wind, our dogs rediscover what it means to feel alive.</p>
-                    <p>These outings are more than a break from routine. They are moments of pure joy, growth, and connection. For dogs who have survived trauma, neglect, or confinement, stepping into the world again—safely and gently—is a powerful part of their recovery journey.</p>
+                    <p className="text-center">At The Gem Project Sanctuary, healing doesn't just happen within our gates. It unfolds on beaches, in parks, and along quiet trails. With every pawprint in the sand and every tail wag in the wind, our dogs rediscover what it means to feel alive.</p>
+                    <p className="text-center">These outings are more than a break from routine. They are moments of pure joy, growth, and connection. For dogs who have survived trauma, neglect, or confinement, stepping into the world again—safely and gently—is a powerful part of their recovery journey.</p>
                 </div>
             </div>
 
@@ -42,9 +42,9 @@ const OutingsSection: React.FC<SectionProps> = (props) => {
                     <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
                     <h3 className="text-2xl font-bold text-brand-secondary">What Our Outings Look Like</h3>
                     <div className="text-lg text-gray-700 space-y-4 mt-4">
-                      <p>Once a week, our team carefully selects small groups of dogs to enjoy tailored excursions to local beaches, parks and wide-open spaces. Outings are planned with each dog's temperament, behaviour and energy level in mind.</p>
-                      <p>Some outings are peaceful walks for shy or senior dogs who need quiet confidence-building. Others are joyful adventures for playful souls who thrive on running and exploring. Every dog gets the chance to experience freedom and fun on their own terms.</p>
-                      <p>Outings are led by experienced caregivers who understand trauma, read canine body language, and are deeply bonded with each dog. Safety is our top priority. We transport dogs in secure vehicles. On site, they are walked using fitted harnesses and long leads to ensure control and comfort.</p>
+                      <p className="text-center">Once a week, our team carefully selects small groups of dogs to enjoy tailored excursions to local beaches, parks and wide-open spaces. Outings are planned with each dog's temperament, behaviour and energy level in mind.</p>
+                      <p className="text-center">Some outings are peaceful walks for shy or senior dogs who need quiet confidence-building. Others are joyful adventures for playful souls who thrive on running and exploring. Every dog gets the chance to experience freedom and fun on their own terms.</p>
+                      <p className="text-center">Outings are led by experienced caregivers who understand trauma, read canine body language, and are deeply bonded with each dog. Safety is our top priority. We transport dogs in secure vehicles. On site, they are walked using fitted harnesses and long leads to ensure control and comfort.</p>
                     </div>
                 </div>
             </div>
@@ -59,25 +59,25 @@ const OutingsSection: React.FC<SectionProps> = (props) => {
                 <div className="content-bubble">
                     <div className="p-6">
                         <h3 className="font-bold text-xl mb-2 text-brand-secondary">Social Growth</h3>
-                        <p>Dogs practice walking on a lead, develop confidence in new environments, and learn how to share space calmly with people and other dogs.</p>
+                        <p className="text-center">Dogs practice walking on a lead, develop confidence in new environments, and learn how to share space calmly with people and other dogs.</p>
                     </div>
                 </div>
                  <div className="content-bubble">
                     <div className="p-6">
                         <h3 className="font-bold text-xl mb-2 text-brand-secondary">Mental Stimulation</h3>
-                        <p>Every scent, texture, and sound is a spark for curiosity. From sniffing seaweed to watching birds, outings stimulate the brain in healthy, non-overwhelming ways.</p>
+                        <p className="text-center">Every scent, texture, and sound is a spark for curiosity. From sniffing seaweed to watching birds, outings stimulate the brain in healthy, non-overwhelming ways.</p>
                     </div>
                 </div>
                  <div className="content-bubble">
                     <div className="p-6">
                         <h3 className="font-bold text-xl mb-2 text-brand-secondary">Emotional Healing</h3>
-                        <p>Outings create trust-building moments. Nervous dogs realise that the world is not a scary place. Shared joy deepens the bond between dogs and caregivers.</p>
+                        <p className="text-center">Outings create trust-building moments. Nervous dogs realise that the world is not a scary place. Shared joy deepens the bond between dogs and caregivers.</p>
                     </div>
                 </div>
                  <div className="content-bubble">
                     <div className="p-6">
                         <h3 className="font-bold text-xl mb-2 text-brand-secondary">Physical Health</h3>
-                        <p>Walks, runs, and swimming help improve muscle tone, joint mobility, and overall health. It also allows dogs to release built-up energy and anxiety.</p>
+                        <p className="text-center">Walks, runs, and swimming help improve muscle tone, joint mobility, and overall health. It also allows dogs to release built-up energy and anxiety.</p>
                     </div>
                 </div>
             </div>

@@ -37,8 +37,8 @@ const HealthSection: React.FC<SectionProps> = (props) => {
                 </div>
                 <div className="content-bubble text-lg text-gray-700 space-y-4">
                     <div className="p-6 md:p-8">
-                        <p>At The Gem Project Sanctuary, we believe true healing goes beyond rescue. It means ensuring every dog receives not just shelter, but the ongoing care, attention and love they need to thrive—physically, emotionally and behaviourally.</p>
-                        <p>We are deeply committed to animal health in all its forms. From veterinary care to enrichment and safe living spaces, our approach gives every dog a real chance at a full, joyful life.</p>
+                        <p className="text-center">At The Gem Project Sanctuary, we believe true healing goes beyond rescue. It means ensuring every dog receives not just shelter, but the ongoing care, attention and love they need to thrive—physically, emotionally and behaviourally.</p>
+                        <p className="text-center">We are deeply committed to animal health in all its forms. From veterinary care to enrichment and safe living spaces, our approach gives every dog a real chance at a full, joyful life.</p>
                     </div>
                 </div>
             </div>
@@ -75,9 +75,9 @@ const HealthSection: React.FC<SectionProps> = (props) => {
                         <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
                         <h3 className="text-2xl font-bold text-brand-secondary">Louis' Success Story</h3>
                         <div className="space-y-4 text-gray-700 mt-4">
-                            <p>Louis arrived with a quiet sadness in his eyes and a limp that betrayed the pain he was trying to hide. Once full of playful energy, his spirit had grown subdued under the weight of a severe cruciate ligament injury. Every step was a reminder of what he could no longer do.</p>
-                            <p>But Louis was never alone in his struggle. He underwent surgery to repair the torn ligament, followed by weeks of hydrotherapy, gentle physiotherapy, and a careful rehabilitation plan. Through it all, Louis was surrounded by love.</p>
-                            <p>Today, Louis is whole again. He bounds through the sanctuary with his trademark grin, soaking in the sun and greeting everyone with his joyful spirit. His body is healed and so is his heart. Louis isn't just a success story; he's a reminder of why we do this work and of what's possible when we refuse to give up on those who need us most.</p>
+                            <p className="text-center">Louis arrived with a quiet sadness in his eyes and a limp that betrayed the pain he was trying to hide. Once full of playful energy, his spirit had grown subdued under the weight of a severe cruciate ligament injury. Every step was a reminder of what he could no longer do.</p>
+                            <p className="text-center">But Louis was never alone in his struggle. He underwent surgery to repair the torn ligament, followed by weeks of hydrotherapy, gentle physiotherapy, and a careful rehabilitation plan. Through it all, Louis was surrounded by love.</p>
+                            <p className="text-center">Today, Louis is whole again. He bounds through the sanctuary with his trademark grin, soaking in the sun and greeting everyone with his joyful spirit. His body is healed and so is his heart. Louis isn't just a success story; he's a reminder of why we do this work and of what's possible when we refuse to give up on those who need us most.</p>
                         </div>
                     </div>
                 </div>

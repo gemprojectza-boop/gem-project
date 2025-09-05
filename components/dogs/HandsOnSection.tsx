@@ -23,7 +23,7 @@ const CarePackageCard: React.FC<{
             <PawIcon className="w-8 h-8 text-sanctuary-dark mx-auto mb-2" />
             <h3 className="text-2xl font-bold text-sanctuary-dark text-center">{title}</h3>
             <div className="text-4xl font-bold text-center my-4 text-brand-primary">{price}</div>
-            <p className="text-gray-600 text-left mb-6 flex-grow">{description}</p>
+            <p className="text-gray-600 text-center mb-6 flex-grow">{description}</p>
             <ul className="space-y-3 mb-8">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-start">
@@ -62,14 +62,9 @@ const HandsOnSection: React.FC<SectionProps> = (props) => {
                         className="rounded-t-lg aspect-video"
                     />
                     <div className="p-6 md:p-8 text-lg text-gray-700 space-y-4">
-                        <p>You might live somewhere that doesn’t allow animals. Or your schedule could be too full for daily care. Perhaps your heart is open, but your life just isn’t set up for it right now. That’s why we created the Hands-On Care Programme.</p>
+                        <p className="text-center">You might live somewhere that doesn’t allow animals. Or your schedule could be too full for daily care. Perhaps your heart is open, but your life just isn’t set up for it right now. That’s why we created the Hands-On Care Programme.</p>
                         <p className="font-semibold text-sanctuary-dark">Choose a dog who lives safely at our sanctuary and becomes yours in every way that matters. Build a real relationship through visits, bonding time and shared routines. Watch as they begin to recognise your voice and light up each time you arrive.</p>
-                        <p>This is your dog. Your connection. Your joy. We take care of their daily needs including food, shelter and vet care while you experience the love, presence and companionship of having your own dog.</p>
-                    </div>
-                </div>
-                <div className="content-bubble mt-8 p-4 bg-red-100 border-l-4 border-red-500 text-red-800">
-                    <div className="p-4">
-                      <p><strong>Part of a company or team?</strong> We offer unforgettable corporate team building experiences that combine connection, purpose and impact. Spend time together in a beautiful setting, bond through dog-friendly activities, and make a lasting difference in the lives of rescued animals.</p>
+                        <p className="text-center">This is your dog. Your connection. Your joy. We take care of their daily needs including food, shelter and vet care while you experience the love, presence and companionship of having your own dog.</p>
                     </div>
                 </div>
 
@@ -123,7 +118,7 @@ const HandsOnSection: React.FC<SectionProps> = (props) => {
             </div>
             <div className="content-bubble italic text-center mt-12 max-w-4xl mx-auto">
                 <div className="p-6 md:p-8">
-                    <p>Every package supports your chosen dog’s daily food, medical care, enrichment and safety. You’re not just visiting. You’re stepping into a role that matters – to them and to you.</p>
+                    <p className="text-center">Every package supports your chosen dog’s daily food, medical care, enrichment and safety. You’re not just visiting. You’re stepping into a role that matters – to them and to you.</p>
                 </div>
             </div>
             

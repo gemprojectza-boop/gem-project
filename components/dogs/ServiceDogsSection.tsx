@@ -33,9 +33,9 @@ const ServiceDogsSection: React.FC<SectionProps> = (props) => {
             className="rounded-t-lg aspect-video"
           />
           <div className="p-6 md:p-8 space-y-4 text-lg text-gray-700">
-            <p>At The Gem Project Sanctuary we are proud to partner with leading specialists in medical service dog training to give select dogs the opportunity to transform lives. These exceptional animals are carefully chosen and professionally trained to support individuals living with disabilities or chronic medical conditions by performing vital task-specific work.</p>
-            <p>Service dogs are protected by South African law and allowed in public spaces such as restaurants shops and transport systems where pets are not typically permitted. Their legal access ensures that individuals living with disabilities can move freely and with dignity alongside their trained partner.</p>
-            <p>These are not emotional support or therapy animals. Service dogs are highly trained working dogs with responsibilities that meet their handler’s specific medical or physical needs. They undergo rigorous professional training socialisation and real-world exposure to ensure they can remain calm alert and obedient in any environment. Their behaviour and focus must be exceptional to safely share public spaces and respond appropriately in emergencies.</p>
+            <p className="text-center">At The Gem Project Sanctuary we are proud to partner with leading specialists in medical service dog training to give select dogs the opportunity to transform lives. These exceptional animals are carefully chosen and professionally trained to support individuals living with disabilities or chronic medical conditions by performing vital task-specific work.</p>
+            <p className="text-center">Service dogs are protected by South African law and allowed in public spaces such as restaurants shops and transport systems where pets are not typically permitted. Their legal access ensures that individuals living with disabilities can move freely and with dignity alongside their trained partner.</p>
+            <p className="text-center">These are not emotional support or therapy animals. Service dogs are highly trained working dogs with responsibilities that meet their handler’s specific medical or physical needs. They undergo rigorous professional training socialisation and real-world exposure to ensure they can remain calm alert and obedient in any environment. Their behaviour and focus must be exceptional to safely share public spaces and respond appropriately in emergencies.</p>
           </div>
         </div>
 
@@ -77,8 +77,8 @@ const ServiceDogsSection: React.FC<SectionProps> = (props) => {
             <PawIcon className="w-10 h-10 text-brand-secondary mb-4" />
             <h3 className="text-3xl font-bold text-brand-secondary">Why It Matters</h3>
             <div className="mt-4 text-lg text-gray-700 space-y-4">
-                <p>The work these dogs do goes beyond functional assistance. They offer freedom confidence and emotional safety. With a trained service dog by their side many individuals are able to live independently pursue education or employment and navigate public spaces with greater security.</p>
-                <p>Each dog represents a pathway to a more empowered life. They are more than trained helpers. They are trusted companions and lifelines.</p>
+                <p className="text-center">The work these dogs do goes beyond functional assistance. They offer freedom confidence and emotional safety. With a trained service dog by their side many individuals are able to live independently pursue education or employment and navigate public spaces with greater security.</p>
+                <p className="text-center">Each dog represents a pathway to a more empowered life. They are more than trained helpers. They are trusted companions and lifelines.</p>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ const ServiceDogsSection: React.FC<SectionProps> = (props) => {
             <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
             <h3 className="text-3xl font-bold mb-4 text-brand-secondary">How You Can Help</h3>
             <p className="text-gray-200 mb-6 max-w-2xl mx-auto">Service dog training requires extensive time professional expertise and ongoing support. Each dog receives one to two years of dedicated instruction socialisation and healthcare before being matched with a handler. You can be part of this life-changing journey.</p>
-            <ul className="text-left max-w-md mx-auto space-y-2 mb-8">
+            <ul className="text-center max-w-md mx-auto space-y-2 mb-8">
                 <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Sponsor a Service Dog: Support one dog’s training and care needs</li>
                 <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Donate to the Program: Every contribution funds food vet care gear and travel</li>
                 <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Spread Awareness: Share this work with others and help expand access to those in need</li>

@@ -18,10 +18,10 @@ const PlaceholderSection: React.FC<PlaceholderSectionProps> = ({ sectionId, titl
                 <h2 className="text-3xl md:text-4xl font-bold text-sanctuary-dark mb-4 text-center">
                     {title}
                 </h2>
-                <p className="text-2xl text-gray-600 mb-2 text-left">
+                <p className="text-2xl text-gray-600 mb-2 text-center">
                     Content Coming Soon!
                 </p>
-                <p className="text-lg text-gray-700 mb-10 text-left">
+                <p className="text-lg text-gray-700 mb-10 text-center">
                     We're working hard to bring this section to life. Please check back soon for more information about our {title.toLowerCase()}.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">

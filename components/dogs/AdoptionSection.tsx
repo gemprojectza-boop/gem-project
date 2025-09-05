@@ -32,7 +32,7 @@ const AdoptionSection: React.FC<SectionProps> = (props) => {
               ))}
             </div>
             {sampleDogs.filter(dog => dog.status === 'Available').length === 0 && (
-                <div className="content-bubble text-left max-w-4xl mx-auto">
+                <div className="content-bubble text-center max-w-4xl mx-auto">
                     <p className="text-lg text-gray-700">We don't have any dogs available for adoption at this moment. Please check back soon!</p>
                 </div>
             )}
