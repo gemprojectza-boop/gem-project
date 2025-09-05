@@ -57,26 +57,26 @@ const initialMediaContent: MediaContent = {
   sponsorship_01: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
   wishlist_01: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
   // Homepage Step 3: Four Pillars Section images
-  pillar_rescue_sanctuary: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg', // Handler caring for multiple dogs (Fixed URL)
-  pillar_healing_connection: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg', // White dog running with joy (Fixed URL)
-  pillar_community_impact: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg', // Handler bonding with horse (Fixed URL)
-  pillar_seeds_of_change: 'https://i.ibb.co/38X4vg9/DSC03223.jpg', // Golden dog running playfully (Fixed URL)
+  pillar_rescue_sanctuary: 'https://i.ibb.co/hFZPLvFp/image.png', // Rescue & Sanctuary
+  pillar_healing_connection: 'https://i.ibb.co/ch2x7fwB/image.png', // Healing Connection
+  pillar_community_impact: 'https://i.ibb.co/ccDFR04v/image.png', // Community Impact
+  pillar_seeds_of_change: 'https://i.ibb.co/ccMVNhN9/image.png', // Seeds of Change
   
   // Homepage Step 4: Be Part of Change Section images
-  cta_adopt_dog: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg', // Close-up of hopeful dog's face (Fixed URL)
-  cta_adopt_horse: 'https://i.ibb.co/GvwgC6Fp/DSC01400.jpg', // Horse looking out stable window (Fixed URL)
-  cta_get_involved: 'https://i.ibb.co/kVHsDb0G/image.png', // Team walking dogs together (Fixed URL)
+  cta_adopt_dog: 'https://i.ibb.co/214TWjtM/image.png', // Close-up of hopeful dog's face
+  cta_adopt_horse: 'https://i.ibb.co/KTcK07W/image.png', // Horse looking out stable window
+  cta_get_involved: 'https://i.ibb.co/DyGTZWY/image.png', // Team walking dogs together
   
   volunteer_01: 'https://i.ibb.co/5g6Ss0Ps/DSC09944.jpg',
-  youth_apprenticeship_01: 'https://i.ibb.co/MkgxrVN9/image.png', // Homepage Step 7: Youth Apprenticeship Section (Fixed URL)
+  youth_apprenticeship_01: 'https://i.ibb.co/WvBSNDV3/image.png', // Homepage Step 7: Youth Apprenticeship Section
   hands_on_01: 'https://i.ibb.co/38X4vg9/DSC03223.jpg',
-  community_image: 'https://i.ibb.co/pjgyd2Kr/image.png', // Homepage Step 5: Our Community Section (Fixed URL)
-  final_cta_image: 'https://i.ibb.co/Y475WXP4/DSC01099.jpg', // Homepage Step 9: Final CTA Banner (Fixed URL)
+  community_image: 'https://i.ibb.co/YBM21zbR/image.png', // Homepage Step 5: Our Community Section
+  final_cta_image: 'https://i.ibb.co/jPt3Lv4q/image.png', // Homepage Step 9: Final CTA Banner
   
   // Homepage Step 8: Change a Life Section images
-  change_life_forever_animals: 'https://i.ibb.co/0RVjRKrF/image.png', // Senior black dog walking forward (Fixed URL)
-  change_life_wishlist: 'https://i.ibb.co/84Smg3bG/DSC02276.jpg', // Two horses sharing hay (Fixed URL)
-  change_life_volunteer: 'https://i.ibb.co/kVHsDb0G/image.png', // Handler surrounded by dogs during training (Fixed URL)
+  change_life_forever_animals: 'https://i.ibb.co/zTWYJ8P8/image.png', // Our Forever Animals
+  change_life_wishlist: 'https://i.ibb.co/XfDs0T7c/image.png', // Our Wishlist
+  change_life_volunteer: 'https://i.ibb.co/Kc37Y6gK/image.png', // Volunteer Your Time
   // ABOUT PAGE UPDATES
   about_hero: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg', // About Page Step 1: Hero Banner (Fixed URL)
   about_welcome_gate: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg', // About Page Step 2: Who We Are section (Fixed URL)
@@ -276,7 +276,7 @@ const initialMediaContent: MediaContent = {
 
   // --- DOG IMAGES (UPDATED) ---
   dogs_hero_banner: 'https://i.ibb.co/svS8mMXX/DSC03012.jpg',
-  dogs_intro: 'https://i.ibb.co/xqfGVkv3/DSC03088.jpg',
+  dogs_intro: 'https://i.ibb.co/5g3nJtLr/image.png',
   adoption_hero: 'https://i.ibb.co/jPZXQBFs/DSC03204.jpg',
   forever_dogs_hero: 'https://i.ibb.co/38X4vg9/DSC03223.jpg',
   forever_dogs_day_in_life: 'https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg',
@@ -399,10 +399,8 @@ const initialMediaContent: MediaContent = {
   pretty_main: 'https://i.ibb.co/4RQrkL6c/image.png',
   ruby_main: 'https://i.ibb.co/pjgyd2Kr/image.png',
 
-  // COMMUNITY PAGE UPDATES
-  community_hero: 'assets/images/DSC00096.jpg', // Community Page Step 1: Hero Banner
+  // COMMUNITY PAGE UPDATES (local paths removed - using ibb.co URLs below)
   community_why_matters: 'assets/images/DSC02412.jpg', // Community Page Step 2: Horse lineup group shot (3:2 crop, keep horses centered)
-  community_outreach: 'assets/images/DSC06309.jpg', // Community Page Step 3: Dog receiving grooming care (3/4 crop)
   community_mobile_vet: 'assets/images/DSC06078.jpg', // Community Page Step 4: Dog being bathed (3/4 crop, emphasize water + dog expression)
   community_youth_apprenticeship: 'assets/images/DSC01310.jpg', // Community Page Step 5: Two boys learning with dogs (16/9 crop, keep both boys and dogs)
   community_hands_on_caregiver: 'assets/images/DSC05308.jpg', // Community Page Step 6: Dog licking man's face (4/3 crop, highlight bond)

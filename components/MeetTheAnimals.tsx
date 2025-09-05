@@ -50,7 +50,7 @@ const ActionCard: React.FC<ActionCardProps> = ({ bgColor, heartColor, mediaKey, 
                             alt={alt}
                             isEditMode={isEditMode}
                             onUpdate={onMediaUpdate}
-                            className="w-full h-full object-cover rounded-full shadow-lg border-4 border-white/50"
+                            className="w-full h-full object-cover rounded-full shadow-lg border border-white/50"
                         />
                     ) : (
                         <div className="w-full h-full bg-gray-300 rounded-full"></div>

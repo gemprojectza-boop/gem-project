@@ -34,7 +34,7 @@ const InfoCard: React.FC<{
 const About: React.FC<AboutProps> = ({ mediaContent, isEditMode, onMediaUpdate }) => {
   const infoCards = [
     {
-        icon: <SanctuaryIcon />,
+        icon: <PawIcon />,
         title: "Rescue & Sanctuary",
         text: "We provide a place of healing and hope for rescued dogs and horses, offering safety, care, and second chances.",
         bgColor: "bg-brand-primary/20",
@@ -48,14 +48,14 @@ const About: React.FC<AboutProps> = ({ mediaContent, isEditMode, onMediaUpdate }
         textColor: "text-yellow-500",
     },
     {
-        icon: <CommunityIcon />,
+        icon: <PawIcon />,
         title: "Community Impact",
         text: "Our work extends beyond our gates, uplifting communities through outreach, education, and support.",
         bgColor: "bg-brand-secondary/20",
         textColor: "text-brand-secondary",
     },
     {
-        icon: <SparklesIcon />,
+        icon: <PawIcon />,
         title: "Seeds of Change",
         text: "Explore our site to meet our residents and discover how you can become part of something truly meaningful.",
         bgColor: "bg-brand-accent/20",
