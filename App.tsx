@@ -121,7 +121,7 @@ const initialMediaContent: MediaContent = {
   horse_training_schooling: 'https://i.ibb.co/YFkT8FBH/DSC02336.jpg',
   horse_training_emotional: 'https://i.ibb.co/VWYnqzWz/image.png',
   horse_training_final: 'https://i.ibb.co/C3bCGhwk/DSC02383.jpg',
-  horse_team_hero: 'https://i.ibb.co/rftF6tYJ/DSC02469.jpg',
+  horse_team_hero: 'https://i.ibb.co/kVyPnm5z/image.png',
   kim_harvey: 'https://i.ibb.co/MycM5MgZ/image.png',
   carina_bodenstein: 'https://i.ibb.co/SwsZGzJb/image.png',
   allan_khondla: 'https://i.ibb.co/W4KBkbSz/image.png',
@@ -408,7 +408,6 @@ const initialMediaContent: MediaContent = {
   community_hands_on_caregiver: 'assets/images/DSC05308.jpg', // Community Page Step 6: Dog licking man's face (4/3 crop, highlight bond)
 
   // GET INVOLVED PAGE UPDATES
-  get_involved_hero: 'assets/images/DSC07735.jpg', // Get Involved Page Step 1: Hero Banner
   volunteer_dogs_section: 'assets/images/DSC02175.jpg', // Get Involved Page Step 2: Tan dog holding tennis ball outdoors
   volunteer_horses_section: 'assets/images/DSC09242.jpg', // Get Involved Page Step 3: Chestnut horse with white blaze in paddock
   
@@ -430,15 +429,49 @@ const initialMediaContent: MediaContent = {
   volunteer_behavior_training_horses: 'assets/images/DSC03507.jpg', // Horse trotting in paddock
   volunteer_specialised_horse_support: 'assets/images/DSC08201.jpg', // Handler leading horse from stable
   
+  // Get Involved Page Step 1: Hero Banner
+  get_involved_hero: 'https://i.ibb.co/1j9d4ZP/image.png', // Hero image with dog face and hand
+  
   // Get Involved Page Step 5: Ready to Join Us CTA
-  get_involved_cta: 'assets/images/DSC00498.jpg', // Volunteer walking several dogs on leads
+  get_involved_ready_to_join: 'https://i.ibb.co/Mxs2PnMr/image.png', // DSC00498 - dog walker with pack
+  
+  // Get Involved Page Step 10: Ready to Help CTA
+  get_involved_ready_help_dog: 'https://i.ibb.co/qM55cgg9/image.png', // DSC04412
+  get_involved_ready_help_horse: 'https://i.ibb.co/PZdKKdW8/image.png', // DSC03548
+  
+  // Get Involved Page Step 12: Final Donate CTA
+  get_involved_final_dogs: 'https://i.ibb.co/TM97w5YQ/image.png', // Three dogs running
+  get_involved_final_horses: 'https://i.ibb.co/20RTpYsK/image.png', // Carer kissing horse
+  
+  // Get Involved Page Steps 2-3: Volunteer sections
+  volunteer_dogs_section: 'https://i.ibb.co/WvZ04cH3/image.png', // DSC02175 - tan dog with tennis ball
+  volunteer_horses_section: 'https://i.ibb.co/fVtm4BQs/image.png', // DSC09242 - chestnut horse with blaze
+  
+  // Get Involved Page Step 4: Dog Volunteer Tiers (8 cards)
+  junior_dog_helpers: 'https://i.ibb.co/BHXgfmqR/image.png', // DSC00524 - scruffy dog with toy
+  beginner_animal_buddies: 'https://i.ibb.co/h1mn5Jhy/image.png', // DSC00656 - group of dogs running
+  practical_heroes_dogs: 'https://i.ibb.co/qFgRsH38/image.png', // DSC02175 - man playing tug with tan dog
+  creative_collaborators: 'https://i.ibb.co/zh9g4cK2/image.png', // DSC03505 - dog with handler in beanie
+  confident_companions: 'https://i.ibb.co/WXzQ8jw/image.png', // DSC04412 - tan dog mid-lick
+  emotional_support_ambassadors: 'https://i.ibb.co/Kc3JYRbj/image.png', // DSC05782 - dog in training posture
+  behaviour_training_dogs: 'https://i.ibb.co/w8FSmsn/image.png', // DSC06691 - dog with handler obedience
+  specialised_support_dogs: 'https://i.ibb.co/C5VDR8kY/image.png', // DSC07673 - dog with handler partnership
+  
+  // Get Involved Page Step 4: Horse Volunteer Tiers (6 cards)
+  junior_horse_helpers: 'https://i.ibb.co/ns0DjTdb/image.png', // DSC07991 - pony with handler
+  beginner_horse_buddies: 'https://i.ibb.co/pv3b3Vmy/image.png', // DSC08456 - horses with handler
+  practical_heroes_horses: 'https://i.ibb.co/b5VcF4s0/image.png', // DSC07654 - horse stable maintenance
+  confident_horse_companions: 'https://i.ibb.co/BVKn2ksG/image.png', // DSC01848 - white horse
+  behaviour_training_horses: 'https://i.ibb.co/vKZbvcc/image.png', // DSC03507 - horse trotting in paddock
+  specialised_horse_support: 'https://i.ibb.co/sdD2M4Rp/image.png', // DSC08201 - handler leading horse
   
   // Get Involved Page Steps 6-7: Hands-On Care Programme
-  hands_on_dogs_programme: 'assets/images/DSC01232.jpg', // Black and white dog being held by volunteer
-  hands_on_horses_programme: 'assets/images/DSC08858.jpg', // Brown horse being fed by hand
+  hands_on_dogs_programme: 'https://i.ibb.co/Z66bPGQx/image.png', // DSC01232 - dog cuddle
+  hands_on_horses_programme: 'https://i.ibb.co/k2QHj6CV/image.png', // DSC08858 - horse being fed by hand
   
-  // Get Involved Page Step 8: Dog Wishlist
-  dog_wishlist_section: 'assets/images/DSC04176.jpg', // Dog resting with colourful toys
+  // Get Involved Page Steps 8-9: Wishlist sections
+  dog_wishlist_section: 'https://i.ibb.co/KkjD5GW/image.png', // DSC04176 - dog with toys (corrected)
+  horse_wishlist_section: 'https://i.ibb.co/YBJD74jV/image.png', // DSC02992 - two chestnut horses eating hay
 
   // --- GALLERY AND OTHER PAGES (Dog images updated) ---
   faq_hero: 'https://images.pexels.com/photos/7210639/pexels-photo-7210639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -480,7 +513,7 @@ const initialMediaContent: MediaContent = {
   community_hero: 'https://i.ibb.co/9HkSDNm9/DSC00598.jpg',
   community_matters: 'https://i.ibb.co/R43Cg3yY/DSC03341.jpg',
   community_outreach: 'https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg',
-  community_vet_clinic: 'https://i.ibb.co/vvMM03Nr/DSC08463.jpg',
+  community_vet_clinic: 'https://i.ibb.co/4n00v3mT/image.png', // DSC03822 - vet treating dog on table
   community_youth_programme: 'https://i.ibb.co/4w20RgcW/DSC02792.jpg',
   community_hands_on: 'https://images.pexels.com/photos/4588052/pexels-photo-4588052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   
