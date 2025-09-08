@@ -46,7 +46,6 @@ import HorseRehabilitationPage from './components/horses/HorseRehabilitationPage
 import HorseWishlistPage from './components/HorseWishlistPage.tsx';
 import YouthProgrammePage from './components/YouthProgrammePage.tsx';
 import DonatePage from './components/DonatePage.tsx';
-import EditModeToolbar from './components/EditModeToolbar.tsx';
 
 
 const initialMediaContent: MediaContent = {
@@ -558,7 +557,6 @@ const AppContent: React.FC = () => {
     }, [mountSplash]);
 
     const [mediaContent, setMediaContent] = useState<MediaContent>(initialMediaContent);
-    const [isEditMode, setIsEditMode] = useState(false);
     const [heroConfig, setHeroConfig] = useState<HeroConfig>({
         media: [
             { url: initialMediaContent.hero_banner_03!, focalPoint: { x: 0.6, y: 0.5 } },
@@ -592,9 +590,6 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
         alert('Changes saved! Check the browser console for the code to update your App.tsx file.');
     }, [mediaContent]);
 
-    const toggleEditMode = useCallback(() => {
-        setIsEditMode(prev => !prev);
-    }, []);
     
     useEffect(() => {
         // Apply page-specific CSS classes and force colors
@@ -651,17 +646,9 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
     }, [path]);
     
     useEffect(() => {
-        const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.ctrlKey && e.key === 'e') {
-                e.preventDefault();
-                toggleEditMode();
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [toggleEditMode]);
+    }, []);
 
-    const pageProps = { mediaContent, isEditMode, onMediaUpdate: handleMediaUpdate };
+    const pageProps = { mediaContent, isEditMode: false, onMediaUpdate: handleMediaUpdate };
 
     const renderPage = () => {
         // Handle specific paths first to avoid being caught by dynamic routes
@@ -724,7 +711,6 @@ ${Object.entries(updatedMedia).map(([key, url]) => `  ${key}: '${url}',`).join('
                 {renderPage()}
             </main>
             <Footer />
-            <EditModeToolbar onToggleEditMode={toggleEditMode} />
         </div>
     );
 };

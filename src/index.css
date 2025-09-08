@@ -54,6 +54,30 @@ img {
   transition: opacity 0.3s ease-in-out;
 }
 
+/* Image sharpening and blur prevention */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden; /* Prevents blur during transforms */
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Override scale effects that cause blur on images */
+img:hover,
+img.hover\:scale-105:hover,
+img.group-hover\:scale-110,
+.group:hover img.group-hover\:scale-110 {
+  transform: translateZ(0) scale(1) !important;
+}
+
+/* Optimize transform transitions to reduce blur */
+img[class*="transition-transform"],
+img[class*="hover:scale"],
+img[class*="group-hover:scale"] {
+  transition: transform 0.1s ease-out !important; /* Faster, less blur-prone */
+  will-change: auto !important; /* Don't pre-optimize transforms */
+}
+
 img[loading="lazy"]:not([src]) {
   opacity: 0;
 }
