@@ -37,7 +37,7 @@ const CommunityEvents: React.FC<SectionProps> = ({ mediaContent, isEditMode, onM
                                             alt="Community members with a rescued animal"
                                             isEditMode={isEditMode}
                                             onUpdate={onMediaUpdate}
-                                            className="w-full h-full object-cover min-h-[350px] group-hover:scale-105 transition-transform duration-300"
+                                            className="w-full h-full"
                                         />
                                     )}
                                 </div>

@@ -33,7 +33,7 @@ const YouthProgramme: React.FC<SectionProps> = ({ mediaContent, isEditMode, onMe
                                 alt="Teenager working with a dog"
                                 isEditMode={isEditMode}
                                 onUpdate={onMediaUpdate}
-                                className="w-full h-full object-cover min-h-[280px] md:min-h-[320px]"
+                                className="w-full h-full"
                             />
                         )}
                     </div>

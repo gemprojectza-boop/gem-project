@@ -139,7 +139,7 @@ const VolunteerSection: React.FC<SectionProps> = (props) => {
                         alt="Volunteer working with dogs at the sanctuary"
                         isEditMode={props.isEditMode}
                         onUpdate={props.onMediaUpdate}
-                        className="w-full h-full object-cover min-h-[300px]"
+                        className="w-full h-full"
                     />
                 </div>
                 <div className="p-6 md:p-8 flex flex-col justify-center text-center">

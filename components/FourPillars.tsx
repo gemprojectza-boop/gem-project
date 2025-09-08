@@ -28,7 +28,7 @@ const PillarCard: React.FC<PillarCardProps> = ({ title, mediaKey, alt, descripti
             alt={alt}
             isEditMode={isEditMode}
             onUpdate={onMediaUpdate}
-            className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+            className="w-full"
           />
         )}
       </div>
