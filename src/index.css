@@ -82,19 +82,39 @@ img[class*="transition"],
 .card img,
 .card:hover img {
   transform: translateZ(0) scale(1) !important;
-  filter: none !important;
-  -webkit-filter: none !important;
   transition: opacity 0.2s ease !important;
   transition-property: opacity !important;
   will-change: auto !important;
-  image-rendering: crisp-edges !important;
+  
+  /* AGGRESSIVE IMAGE SHARPENING - FORCE BROWSER TO RENDER CRISP */
+  image-rendering: -moz-crisp-edges !important;
+  image-rendering: -webkit-crisp-edges !important;
   image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
   image-rendering: pixelated !important;
+  -ms-interpolation-mode: nearest-neighbor !important;
+  
+  /* DISABLE BROWSER IMAGE SMOOTHING */
+  -webkit-transform: translateZ(0) !important;
+  -moz-transform: translateZ(0) !important;
+  -ms-transform: translateZ(0) !important;
+  -o-transform: translateZ(0) !important;
+  
   backface-visibility: hidden !important;
+  perspective: 1000px !important;
+  transform-style: preserve-3d !important;
+  
+  /* FORCE PIXEL-PERFECT RENDERING */
+  image-resolution: from-image !important;
+  image-resolution: 1dppx !important;
+  
+  /* LAST RESORT: ARTIFICIAL SHARPENING FILTER */
+  -webkit-filter: contrast(1.1) brightness(1.05) saturate(1.1) !important;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1) !important;
 }
 
-/* Prevent all backdrop filters from affecting images */
-* {
+/* Prevent backdrop filters on containers, but allow image filters */
+div, section, main, header, nav, footer {
   backdrop-filter: none !important;
 }
 
@@ -110,6 +130,16 @@ img[class*="transition"],
 body {
   filter: none !important;
   backdrop-filter: none !important;
+  
+  /* FORCE HIGH-DPI RENDERING */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+  
+  /* DISABLE ANY GLOBAL TRANSFORMS THAT COULD CAUSE BLUR */
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
 }
 
 /* GLOBAL OBJECT-FIT OVERRIDE - PREVENT ALL SCALING BLUR */
