@@ -40,7 +40,7 @@ const OutingsSection: React.FC<SectionProps> = (props) => {
             <div className="content-bubble">
                 <div className="p-6 md:p-8">
                     <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
-                    <h3 className="text-2xl font-bold text-brand-secondary">What Our Outings Look Like</h3>
+                    <h3 className="text-2xl font-bold text-brand-secondary text-center">What Our Outings Look Like</h3>
                     <div className="text-lg text-gray-700 space-y-4 mt-4">
                       <p className="text-center">Once a week, our team carefully selects small groups of dogs to enjoy tailored excursions to local beaches, parks and wide-open spaces. Outings are planned with each dog's temperament, behaviour and energy level in mind.</p>
                       <p className="text-center">Some outings are peaceful walks for shy or senior dogs who need quiet confidence-building. Others are joyful adventures for playful souls who thrive on running and exploring. Every dog gets the chance to experience freedom and fun on their own terms.</p>

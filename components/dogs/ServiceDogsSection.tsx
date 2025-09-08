@@ -41,8 +41,10 @@ const ServiceDogsSection: React.FC<SectionProps> = (props) => {
 
         <div className="content-bubble">
           <div className="p-6 md:p-8">
-            <PawIcon className="w-10 h-10 text-brand-secondary mb-4" />
-            <h3 className="text-3xl font-bold text-brand-secondary">Our Training Focus Areas</h3>
+            <div className="flex flex-col items-center justify-center text-center mb-4">
+              <PawIcon className="w-10 h-10 text-brand-secondary mb-4" />
+              <h3 className="text-3xl font-bold text-brand-secondary">Our Training Focus Areas</h3>
+            </div>
             <p className="mt-4 text-lg text-gray-700">We currently train dogs in three core categories of service. Each type plays a unique and critical role in the life of their handler.</p>
             
             <div className="mt-8 space-y-8">
@@ -70,6 +72,8 @@ const ServiceDogsSection: React.FC<SectionProps> = (props) => {
               </div>
             </div>
           </div>
+<p className="content-bubble mt-8 bg-white text-black">Each dog represents a pathway to a more empowered life. They are more than trained helpers. They are trusted companions and lifelines.</p>
+<p className="content-bubble mt-8 bg-white text-black">Each dog represents a pathway to a more empowered life. They are more than trained helpers. They are trusted companions and lifelines.</p>
         </div>
         
         <div className="content-bubble">
@@ -78,12 +82,12 @@ const ServiceDogsSection: React.FC<SectionProps> = (props) => {
             <h3 className="text-3xl font-bold text-brand-secondary">Why It Matters</h3>
             <div className="mt-4 text-lg text-gray-700 space-y-4">
                 <p className="text-center">The work these dogs do goes beyond functional assistance. They offer freedom confidence and emotional safety. With a trained service dog by their side many individuals are able to live independently pursue education or employment and navigate public spaces with greater security.</p>
-                <p className="text-center">Each dog represents a pathway to a more empowered life. They are more than trained helpers. They are trusted companions and lifelines.</p>
+                <p className="content-bubble mt-8 bg-brand-primary text-white">Each dog represents a pathway to a more empowered life. They are more than trained helpers. They are trusted companions and lifelines.</p>
             </div>
           </div>
         </div>
 
-        <div className="content-bubble mt-8 bg-brand-primary text-white">
+        <div className="content-bubble mt-8 bg-white text-white">
           <div className="p-8 text-center">
             <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
             <h3 className="text-3xl font-bold mb-4 text-brand-secondary">How You Can Help</h3>

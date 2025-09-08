@@ -13,7 +13,7 @@ This document lists **ALL** images used throughout the website with their curren
   📝 **Description**: Primary hero image welcoming visitors to the sanctuary
 
 ### Welcome Section
-- **welcome_section_01**: `https://i.ibb.co/0RRZkBQn/DSC03228-2.jpg`  
+- **welcome_section_01**: `https://i.ibb.co/5g3nJtLr/image.png
   📍 **Location**: Homepage welcome section  
   📝 **Description**: Warm welcome image showing sanctuary life
 

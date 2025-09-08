@@ -20,7 +20,7 @@ const YouthProgrammePage: React.FC<YouthProgrammePageProps> = (props) => {
         mediaKey="youth_apprenticeship_01"
         mediaContent={{
           ...props.mediaContent,
-          youth_apprenticeship_01: "https://i.ibb.co/yBFj9WnZ/DSC03629-2.jpg"
+          youth_apprenticeship_01: "https://i.ibb.co/WvBSNDV3/image.png"
         }}
         isEditMode={props.isEditMode}
         onMediaUpdate={props.onMediaUpdate}

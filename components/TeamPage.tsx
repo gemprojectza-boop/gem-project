@@ -10,7 +10,7 @@ interface TeamPageProps {
   onMediaUpdate: (key: string, url: string) => void;
 }
 
-const dogTeamMembers = [
+const horseTeamMembers = [
     { name: 'Kim Harvey', mediaKey: 'kim_harvey', role: null }, // TODO: Add role
     { name: 'Carina Bodenstein', mediaKey: 'carina_bodenstein', role: null }, // TODO: Add role
     { name: 'Allan Khondla', mediaKey: 'allan_khondla', role: null }, // TODO: Add role
@@ -20,10 +20,11 @@ const dogTeamMembers = [
     { name: 'Gudla Mzoliswa', mediaKey: 'gudla_mzoliswa', role: null }, // TODO: Add role
     { name: 'Sizwe Mboyiyana', mediaKey: 'sizwe_mboyiyana', role: null }, // TODO: Add role
     { name: 'Samkele Jevu', mediaKey: 'samkele_jevu', role: null }, // TODO: Add role
+    { name: 'Blue-Shirt Man', mediaKey: 'blue_shirt_man', role: null }, // TODO: Add role and get photo
 ];
 
-const horseTeamMembers = [
-    { name: 'Fezile Mtyisha', mediaKey: 'fezile_mtyisha', role: null }, // TODO: Add role
+const dogTeamMembers = [
+    { name: 'Fezile Mtjyisha', mediaKey: 'fezile_mtjyisha', role: null }, // TODO: Add role
     { name: 'Annestacia Van Rooi', mediaKey: 'annestacia_van_rooi', role: null }, // TODO: Add role
     { name: 'Pinda Masiza', mediaKey: 'pinda_masiza', role: null }, // TODO: Add role
     { name: 'Malcolm Mouton', mediaKey: 'malcolm_mouton', role: null }, // TODO: Add role
@@ -31,7 +32,9 @@ const horseTeamMembers = [
     { name: 'Andile Khumla', mediaKey: 'andile_khumla', role: null }, // TODO: Add role
     { name: 'David Van de Westhuizen', mediaKey: 'david_van_de_westhuizen', role: null }, // TODO: Add role
     { name: 'Lawrence Nkotha', mediaKey: 'lawrence_nkotha', role: null }, // TODO: Add role
-    { name: 'Theo Arendolf', mediaKey: 'theo_arendolf', role: null }, // TODO: Add role
+    { name: 'Theo Arendoff', mediaKey: 'theo_arendoff', role: null }, // TODO: Add role
+    { name: 'Jody Africa', mediaKey: 'jody_africa', role: null }, // TODO: Add role and get photo
+    { name: 'Sheldon', mediaKey: 'sheldon', role: null }, // TODO: Add role and get photo
 ];
 
 const TeamMemberCard: React.FC<{

@@ -80,19 +80,19 @@ const TrainingSection: React.FC<SectionProps> = (props) => {
                     <PawIcon className="w-8 h-8 text-brand-secondary mb-2" />
                     <h3 className="text-2xl font-bold text-brand-secondary">Environmental Enrichment: More Than Just Play</h3>
                     <p className="text-lg text-gray-700">Enrichment isn't a luxury; it's essential for a healthy mind. Our dogs need stimulation, exploration and meaningful experiences beyond food and shelter. We've developed a comprehensive enrichment programme to keep their minds and bodies active.</p>
-                    <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-base text-gray-700">
-                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Sensory Stimulation:</strong> Scent trails, 'sniffaris', and calming soundscapes.</div>
-                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Food-Based Fun:</strong> KONGs, puzzle feeders, and lick mats for relaxation.</div>
-                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Cognitive Workouts:</strong> Trick training, hide-and-seek, and agility courses.</div>
-                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Social Enrichment:</strong> Supervised play sessions and quiet time with humans.</div>
-                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Physical Activity:</strong> Long walks, dig pits, ramps, and swimming.</div>
-                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Canine Good Citizen (CGC):</strong> Onsite training to prepare dogs for adoption or advanced roles.</div>
+                    <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-base text-gray-700 text-center">
+                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Sensory Stimulation:</strong><br />Scent trails, 'sniffaris', and calming soundscapes.</div>
+                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Food-Based Fun:</strong><br />KONGs, puzzle feeders, and lick mats for relaxation.</div>
+                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Cognitive Workouts:</strong><br />Trick training, hide-and-seek, and agility courses.</div>
+                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Social Enrichment:</strong><br />Supervised play sessions and quiet time with humans.</div>
+                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Physical Activity:</strong><br />Long walks, dig pits, ramps, and swimming.</div>
+                        <div className="p-4 border bg-brand-surface rounded-lg"><strong>Canine Good Citizen (CGC):</strong><br />Onsite training to prepare dogs for adoption or advanced roles.</div>
                     </div>
                 </div>
             </div>
 
 
-            <div className="content-bubble text-center mt-8 bg-brand-primary text-white">
+            <div className="content-bubble text-center mt-8 bg-white text-white">
                 <div className="p-6 md:p-8">
                     <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
                     <h2 className="text-3xl font-bold mb-4 text-brand-secondary">Support a Dog's Training Journey</h2>

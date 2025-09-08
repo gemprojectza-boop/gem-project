@@ -202,7 +202,12 @@
       "Read(/C:\\Users\\Luke Ngonga\\Downloads\\gem-project\\components/**)",
       "Read(/C:\\Users\\Luke Ngonga\\Downloads\\gem-project/**)",
       "Read(/C:\\Users\\Luke Ngonga\\Downloads\\gem-project/**)",
-      "Read(/C:\\Users\\Luke Ngonga\\Downloads\\gem-project/**)"
+      "Read(/C:\\Users\\Luke Ngonga\\Downloads\\gem-project/**)",
+      "Bash(curl:*)",
+      "Bash(timeout 10 npm run dev)",
+      "Bash(timeout 10 sleep 5)",
+      "Bash(timeout 15 npm run dev)",
+      "Bash(timeout 5 sleep 5)"
     ],
     "deny": [],
     "ask": []

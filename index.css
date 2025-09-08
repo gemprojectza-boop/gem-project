@@ -1,7 +1,7 @@
 /* GEM PROJECT NAVBAR STYLING - Homepage Step 0 */
 
 .navbar {
-    background-color: #2E5C8A; /* GEM BLUE background */
+    background-color: white;
     padding: 15px 0;
     position: fixed;
     top: 0;
@@ -23,7 +23,7 @@
 .logo {
     font-size: 28px; /* Enlarged logo as per notes */
     font-weight: bold;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -49,7 +49,7 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border: 3px solid #2E5C8A;
+    border: 3px solid #4A90E2;
 }
 
 /* Community Section */

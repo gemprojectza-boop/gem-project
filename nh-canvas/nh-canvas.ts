@@ -590,7 +590,6 @@ export const NHCanvasAPI = {
 
 // Export both the class and the API
 export default NHCanvas;
-export { NHCanvas };
 
 // Auto-setup global instance if in browser
 if (typeof window !== 'undefined') {

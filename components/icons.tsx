@@ -15,17 +15,17 @@ export const PawTrailIcon: React.FC<{ className?: string; style?: React.CSSPrope
         fill="currentColor"
         aria-hidden="true"
     >
-        <p className="text-center"ath d="M60.5,50.5c0,8-6.5,14.5-14.5,14.5S31.5,58.5,31.5,50.5c0-8,6.5-14.5,14.5-14.5S60.5,42.5,60.5,50.5z" />
-        <p className="text-center"ath d="M22,33.5c0,4.7-3.8,8.5-8.5,8.5S5,38.2,5,33.5s3.8-8.5,8.5-8.5S22,28.8,22,33.5z" />
-        <p className="text-center"ath d="M43,18.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5S43,13.8,43,18.5z" />
-        <p className="text-center"ath d="M64,18.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5S64,13.8,64,18.5z" />
-        <p className="text-center"ath d="M85,33.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5S85,28.8,85,33.5z" />
+        <path d="M60.5,50.5c0,8-6.5,14.5-14.5,14.5S31.5,58.5,31.5,50.5c0-8,6.5-14.5,14.5-14.5S60.5,42.5,60.5,50.5z" />
+        <path d="M22,33.5c0,4.7-3.8,8.5-8.5,8.5S5,38.2,5,33.5s3.8-8.5,8.5-8.5S22,28.8,22,33.5z" />
+        <path d="M43,18.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5S43,13.8,43,18.5z" />
+        <path d="M64,18.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5S64,13.8,64,18.5z" />
+        <path d="M85,33.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5S85,28.8,85,33.5z" />
     </svg>
 );
 
 export const MenuIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <p className="text-center"ath strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
     </svg>
 );
 

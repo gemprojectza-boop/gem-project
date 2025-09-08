@@ -11,6 +11,13 @@ interface SectionProps {
   onMediaUpdate: (key: string, url: string) => void;
 }
 
+const supportOptions = [
+  { text: 'Sponsor a Therapy Dog: Help cover costs of training gear transport and wellness' },
+  { text: 'Fund a Therapy Visit: Make it possible for dogs and handlers to attend facilities in need' },
+  { text: 'Donate Supplies: Toys treats grooming kits and calming aids' },
+  { text: 'Volunteer: Assist in training or coordination of visits' },
+];
+
 const TherapyDogsSection: React.FC<SectionProps> = (props) => {
   return (
     <section id="therapy" className="py-16 md:py-20 bg-brand-bg-subtle">
@@ -83,20 +90,19 @@ const TherapyDogsSection: React.FC<SectionProps> = (props) => {
           </div>
         </div>
 
-        <div className="content-bubble mt-8 bg-brand-primary text-white">
+        <div className="content-bubble mt-8 bg-white text-black outline-slate-950">
           <div className="p-8 text-center">
-            <PawIcon className="w-10 h-10 text-white mx-auto mb-4" />
-            <h3 className="text-3xl font-bold mb-4 text-brand-secondary">How You Can Support This Program</h3>
-            <p className="text-gray-200 mb-6 max-w-2xl mx-auto">Every visit takes planning preparation training and resources. You can help us continue this work by supporting the therapy dog program directly.</p>
-            <ul className="text-center max-w-md mx-auto space-y-2 mb-8">
-                <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Sponsor a Therapy Dog: Help cover costs of training gear transport and wellness</li>
-                <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Fund a Therapy Visit: Make it possible for dogs and handlers to attend facilities in need</li>
-                <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Donate Supplies: Toys treats grooming kits and calming aids</li>
-                <li className="flex items-start"><PawIcon className="w-5 h-5 text-white mr-3 mt-1.5 flex-shrink-0" />Volunteer: Assist in training or coordination of visits</li>
+            <PawIcon className="w-10 h-10 text-black mx-auto mb-4" />
+            <h3 className="text-3xl font-bold mb-4 text-black">How You Can Support This Program</h3>
+            <p className="text-black mb-6 max-w-2xl mx-auto">Every visit takes planning preparation training and resources. You can help us continue this work by supporting the therapy dog program directly.</p>
+            <ul className="text-left max-w-md mx-auto space-y-2 mb-8">
+              {supportOptions.map((option) => (
+                <li key={option.text} className="flex items-start"><PawIcon className="w-5 h-5 text-black mr-3 mt-1.5 flex-shrink-0" />{option.text}</li>
+              ))}
             </ul>
             <div className="flex flex-wrap justify-center gap-4">
                 <CtaButton href="/dogs/sponsorship" className="bg-brand-secondary hover:bg-brand-secondary-hover text-white">Sponsor a Therapy Dog</CtaButton>
-                <CtaButton href="/donate" className="border-2 border-white text-white hover:bg-white hover:text-brand-text-primary">Donate to the Program</CtaButton>
+                <CtaButton href="/donate" className="border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white">Donate to the Program</CtaButton>
             </div>
           </div>
         </div>
