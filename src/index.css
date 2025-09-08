@@ -49,33 +49,67 @@ img {
   content-visibility: auto; /* Enable content-visibility for better performance */
 }
 
-/* Optimized image transitions */
+/* Optimized image transitions - NO BLUR */
 img {
   transition: opacity 0.3s ease-in-out;
+  transition-property: opacity !important;
 }
 
-/* Image sharpening and blur prevention */
+/* Image sharpening and blur prevention - ENHANCED */
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
-  backface-visibility: hidden; /* Prevents blur during transforms */
-  transform: translateZ(0); /* Force hardware acceleration */
+  image-rendering: pixelated;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
-/* Override scale effects that cause blur on images */
+/* ULTIMATE IMAGE BLUR PREVENTION - NUCLEAR OPTION */
+img,
 img:hover,
 img.hover\:scale-105:hover,
 img.group-hover\:scale-110,
-.group:hover img.group-hover\:scale-110 {
+.group:hover img.group-hover\:scale-110,
+img[class*="scale"],
+img[class*="transform"],
+img[class*="transition"],
+*:hover img,
+* img:hover,
+.content-bubble img,
+.content-bubble:hover img,
+.card img,
+.card:hover img {
   transform: translateZ(0) scale(1) !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: opacity 0.2s ease !important;
+  transition-property: opacity !important;
+  will-change: auto !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: pixelated !important;
+  backface-visibility: hidden !important;
 }
 
-/* Optimize transform transitions to reduce blur */
-img[class*="transition-transform"],
-img[class*="hover:scale"],
-img[class*="group-hover:scale"] {
-  transition: transform 0.1s ease-out !important; /* Faster, less blur-prone */
-  will-change: auto !important; /* Don't pre-optimize transforms */
+/* Prevent all backdrop filters from affecting images */
+* {
+  backdrop-filter: none !important;
+}
+
+/* Global blur prevention */
+.no-blur,
+.no-blur * {
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Apply no-blur class to body */
+body {
+  filter: none !important;
+  backdrop-filter: none !important;
 }
 
 img[loading="lazy"]:not([src]) {
@@ -194,7 +228,7 @@ a.cta-button[class*="bg-"]:not(.bg-transparent) {
 }
 
 .content-bubble:hover img, .content-bubble:hover video {
-  transform: scale(1.05);
+  transform: translateZ(0) scale(1) !important;
 }
 
 /* Prevent images from being too large */
