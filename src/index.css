@@ -112,6 +112,68 @@ body {
   backdrop-filter: none !important;
 }
 
+/* GLOBAL OBJECT-FIT OVERRIDE - PREVENT ALL SCALING BLUR */
+img,
+img[class*="object-"],
+*[class*="object-"] img,
+.responsive-image,
+.pillar-card img,
+.cta-card img,
+.image-container img,
+.facility-card img,
+.content-bubble img,
+.card img {
+  object-fit: none !important;
+  object-position: center !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  filter: none !important;
+  transform: translateZ(0) !important;
+}
+
+/* OVERRIDE ALL TAILWIND OBJECT-FIT UTILITIES - CRITICAL FOR SHARPNESS */
+.object-contain,
+.object-cover,
+.object-fill,
+.object-none,
+.object-scale-down,
+img.object-contain,
+img.object-cover,
+img.object-fill,
+img.object-none,
+img.object-scale-down {
+  object-fit: none !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  filter: none !important;
+  transform: translateZ(0) !important;
+}
+
+/* OVERRIDE ALL ASPECT-RATIO UTILITIES - PREVENT SCALING BLUR */
+.aspect-square,
+.aspect-video,
+.aspect-auto,
+img.aspect-square,
+img.aspect-video,
+img.aspect-auto,
+[class*="aspect-"],
+img[class*="aspect-"] {
+  aspect-ratio: auto !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: none !important;
+  image-rendering: crisp-edges !important;
+  filter: none !important;
+  transform: translateZ(0) !important;
+}
+
 img[loading="lazy"]:not([src]) {
   opacity: 0;
 }
@@ -215,16 +277,19 @@ a.cta-button[class*="bg-"]:not(.bg-transparent) {
   color: white;
 }
 
-/* Better image sizing within content bubbles */
+/* Better image sizing within content bubbles - NO BLUR */
 .content-bubble img,
 .content-bubble video {
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: none !important;
   object-position: center;
-  transition: transform 0.4s ease-out;
+  transition: opacity 0.2s ease !important;
+  transition-property: opacity !important;
   loading: lazy; /* Lazy load images for better performance */
   decoding: async; /* Async decoding for non-blocking rendering */
+  image-rendering: crisp-edges !important;
+  transform: translateZ(0) !important;
 }
 
 .content-bubble:hover img, .content-bubble:hover video {
@@ -857,7 +922,7 @@ section.hero .container,
   width: 100%;
   height: auto;
   min-height: 200px;
-  object-fit: cover;
+  object-fit: none;
 }
 
 @media (min-width: 768px) {
