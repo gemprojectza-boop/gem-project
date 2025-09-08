@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { SafeLink } from './SafeLink.tsx';
 import CtaButton from './CtaButton.tsx';
-import { MenuIcon, XIcon, ChevronDownIcon } from './icons.tsx';
+import { MenuIcon, XIcon, ChevronDownIcon, PawIcon } from './icons.tsx';
 import { useSafeNavigation } from '../contexts/NavigationContext.tsx';
 
 const Header: React.FC = () => {
@@ -192,11 +192,16 @@ const Header: React.FC = () => {
     return (
       <header ref={headerRef} className={`${headerClasses} header-animate`}>
         <div className="nav-container py-4 lg:py-5 flex justify-between items-center">
-          <SafeLink href="/" aria-label="The Gem Project Sanctuary homepage" className="flex items-center transition-all duration-300 hover:scale-105 z-10" onClick={() => closeMenuAndNavigate('/')}>
-            <span className="logo">THE GEM PROJECT</span>
-          </SafeLink>
           
-          <nav className="hidden lg:flex items-center space-x-2 font-medium text-white mx-auto">
+          <div className="hidden lg:flex items-center">
+            <img 
+              src="https://i.ibb.co/qMKMg0wY/logo-screen-1-4.png" 
+              alt="GEM Logo" 
+              className="h-20 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+          
+          <nav className="hidden lg:flex items-center space-x-2 font-medium text-black whitespace-nowrap">
               {navLinks.map(link => <NavItem key={link.name} link={link} />)}
           </nav>
           
@@ -206,7 +211,12 @@ const Header: React.FC = () => {
             </CtaButton>
           </div>
 
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden flex items-center justify-between w-full">
+            <img 
+              src="https://i.ibb.co/qMKMg0wY/logo-screen-1-4.png" 
+              alt="GEM Logo" 
+              className="h-16 w-auto opacity-90"
+            />
             <button ref={mobileMenuButtonRef} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 rounded-md hover:bg-brand-primary/10" aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={isMobileMenuOpen} aria-controls="mobile-menu">
                 {isMobileMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>

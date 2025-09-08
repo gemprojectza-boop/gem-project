@@ -256,6 +256,39 @@ a.cta-button,
   color: inherit !important;
 }
 
+/* FORCE NAVIGATION TEXT TO BE BLACK ON ALL PAGES */
+header nav,
+header nav *,
+header nav a,
+header nav button,
+header nav span,
+.navbar nav,
+.navbar nav *,
+.navbar nav a,
+.navbar nav button,
+.navbar nav span,
+nav.hidden,
+nav.hidden *,
+nav.hidden a,
+nav.hidden button,
+nav.hidden span {
+  color: black !important;
+}
+
+/* Override any page-specific nav styling */
+.dog-page-override header nav,
+.dog-page-override header nav *,
+.dog-page-override header nav a,
+.dog-page-override header nav button,
+.dog-page-override header nav span,
+.horse-page-override header nav,
+.horse-page-override header nav *,
+.horse-page-override header nav a,
+.horse-page-override header nav button,
+.horse-page-override header nav span {
+  color: black !important;
+}
+
 /* Main content headings on dog pages - WHITE text on red backgrounds */
 .dog-page-override [class*="bg-brand-primary"] *,
 .dog-page-override [class*="bg-red"] *,
@@ -686,6 +719,73 @@ section.hero p,
   .container {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
+  }
+}
+
+/* Hero sections should go edge-to-edge on all screen sizes */
+.hero,
+section.hero,
+.full-width-banner {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Full-width sections for larger screens */
+@media (min-width: 1440px) {
+  .hero,
+  section.hero,
+  .full-width-banner {
+    width: 100vw !important;
+    max-width: none !important;
+  }
+}
+
+/* Ultra-wide screen support */
+@media (min-width: 1920px) {
+  .hero,
+  section.hero,
+  .full-width-banner {
+    width: 100vw !important;
+    max-width: none !important;
+  }
+}
+
+/* Ensure hero content container maintains proper centering */
+.hero .container,
+section.hero .container,
+.full-width-banner .container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+@media (min-width: 1024px) {
+  .hero .container,
+  section.hero .container,
+  .full-width-banner .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+/* Responsive breakpoints for larger containers on bigger screens */
+@media (min-width: 1440px) {
+  .hero .container,
+  section.hero .container,
+  .full-width-banner .container {
+    max-width: 1440px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero .container,
+  section.hero .container,
+  .full-width-banner .container {
+    max-width: 1600px !important;
   }
 }
 
